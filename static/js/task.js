@@ -18,7 +18,7 @@ var mycounterbalance = counterbalance;  // they tell you which condition you hav
 var pages = [
 "instructions/instruct-story1.html",
 "instructions/instruct-story2.html",
-"instructions/instruct-0.html",
+"instructions/instruct-0.html", // qualtrics questionnaires container 
 "instructions/instruct-1.html",
 "instructions/instruct-2.html",
 "instructions/instruct-2Q.html",
@@ -55,7 +55,7 @@ var pages = [
 psiTurk.preloadPages(pages);
 
 var instruction1Pages = [
-"instructions/instruct-0.html",
+//"instructions/instruct-0.html",
 "instructions/instruct-story1.html",
 "instructions/instruct-1.html",
 "instructions/instruct-ready.html",
