@@ -1,0 +1,55 @@
+ <script>
+    $("#nBlock").html(numBlock.toFixed(0));
+    if(selectPerBlock>1)
+        $("#selectPerBlock").html(selectPerBlock.toFixed(0) + ' randomly selected turns');
+    else
+        $("#selectPerBlock").html(selectPerBlock.toFixed(0) + ' randomly selected turn');
+    $("#initialfund").html(initialFundForLoss.toFixed(0));
+    $("body").unbind("keydown").focus().keydown(continue_handler);
+</script>
+
+
+<div id="container-instructions">
+
+    <h1>Let's COLLECT AND PROTECT gems!</h1>
+
+    <hr/>
+
+    <div class="instructions well">
+
+        <div class="row container-fluid">
+            <p>
+                <font size=5>You are about to start the real game.</font>
+                <font size=4>
+                    <br><br>
+                    As a reminder, at the beginning of the game, you own a pile of <span id='initialfund'></span> gems at your home.
+                    <br><br>
+                    There will be <span id='nBlock'></span> rounds of the game. In each round, you will perform on several turns.
+                    <br><br>
+                    <b>NOTICE:</b> In each round, the containers on <span id='selectPerBlock'></span> will be shipped to your home. <b>You don't know which turns will be selected so you should provide as many correct responses as possible on each turn.</b>
+                    <br><br>
+                    Once all shipments are finished, the gems and bombs in the received containers will be added to the gem pile at your home. <b>Each bomb added to your pile will detonate and destroy one gem.</b>
+                    <br><br>
+                    Your remaining gems in your pile will be converted to real money at the end of the game.
+                </font>
+            </p>
+        </div>
+</div>
+
+<hr />
+
+<div class="instructionsnav">
+    <div class="row">
+        <div class="col-xs-2">
+        </div>
+        <div class="col-xs-8">
+            <button type="button" id="next" value="next" class="btn btn-success btn-lg center-block continue">
+                Continue
+            </button>
+        </div>
+        <div class="col-xs-2">
+        </div>
+    </div>
+</div>
+
+</div>

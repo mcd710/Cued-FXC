@@ -1,0 +1,164 @@
+<div id="container-instructions">
+
+    <h1>Quiz</h1>
+
+    <hr />
+
+    <div class="instructions well">
+
+        <p>Please answer the following question based on the instructions that you read earlier.</p>
+
+        <ol type="1">
+
+<!--             <img src='{{ server_location }} static/images/cues/rewardPunish/Rew2.png' height="100">
+
+            <li>After you see the image above before a set of trials, you complete 15 trials in this set: 8 correctly and 7 incorrectly. How would this set affect your final payment if this set is selected?
+                <form>
+                    <input type="radio" class="answer" name="q1answer" id="q1a1"> <span id='highValue1'></span> being added to your final bonus<br />
+                    <input type="radio" class="answer" name="q1answer" id="q1a2"> <span id='highValue2'></span> being deducted from your final bonus<br />
+                    <input type="radio" class="answer" name="q1answer" id="q1a3"> <span id='highValue3'></span> being added to your final bonus<br />
+                    <input type="radio" class="answer" name="q1answer" id="q1a4"> <span id='highValue4'></span> being deducted from your final bonus<br />
+                </form>
+            </li>
+            <hr/>
+
+            <img src='{{ server_location }} static/images/cues/rewardPunish/Rew1_small.png' height="100">
+
+            <li>After you see the image above before a set of trials, you complete 10 trials in this set: 6 correctly and 4 incorrectly. How would this set affect your final payment if this set is selected?
+                <form>
+                    <input type="radio" class="answer" name="q1answer" id="q2a1"> <span id='lowValue1'></span> being added to your final bonus<br />
+                    <input type="radio" class="answer" name="q1answer" id="q2a2"> <span id='lowValue2'></span> being deducted from your final bonus<br />
+                    <input type="radio" class="answer" name="q1answer" id="q2a3"> <span id='lowValue3'></span> being added to your final bonus<br />
+                    <input type="radio" class="answer" name="q1answer" id="q2a4"> <span id='lowValue4'></span> being deducted from your final bonus<br />
+                </form>
+            </li>
+            <hr/>
+ -->
+            <li>Imagine we randomly select <b>three</b> sets in this part. <b>Two</b> of the sets we choose <b>each</b> have a total reward of <b>$0.50</b> and the other <b>one</b> set that has a total reward of <b>$2.00</b>. How much money will you get in these selected sets?
+                <form>
+                    <input type="radio" class="answer" name="q1answer" id="q1a1"> $1.00<br />
+                    <input type="radio" class="answer" name="q1answer" id="q1a2"> $3.00<br />
+                    <input type="radio" class="answer" name="q1answer" id="q1a3"> $4.00<br />
+                    <input type="radio" class="answer" name="q1answer" id="q1a4"> $6.00<br />
+                </form>
+            </li>
+            <hr/>
+
+            <li>Following the first question, <b>if this part is selected</b>, How much bonus will you get from this part? 
+                <form>
+                    <input type="radio" class="answer" name="q1answer" id="q2a1"> $0.00<br/>
+                    <input type="radio" class="answer" name="q1answer" id="q2a2"> $1.00<br/>
+                    <input type="radio" class="answer" name="q1answer" id="q2a3"> $3.00<br/>
+                    <input type="radio" class="answer" name="q1answer" id="q2a4"> $4.00<br/>
+                </form>
+            </li>
+            <hr/>
+
+            <li><b>If this part is NOT selected</b>, How much bonus will you get from this part? 
+                <form>
+                    <input type="radio" class="answer" name="q1answer" id="q3a1"> $0.00<br/>
+                    <input type="radio" class="answer" name="q1answer" id="q3a2"> $1.00<br/>
+                    <input type="radio" class="answer" name="q1answer" id="q3a3"> $3.00<br/>
+                    <input type="radio" class="answer" name="q1answer" id="q3a4"> $4.00<br/>
+                </form>
+            </li>
+            <hr/>
+<!--             <li>We will randomly choose 4 sets at the end of the session to determine your final bonus payment. Imagine 2 of the sets we choose each have a total loss of $2 and the other 2 sets that each have a total loss of $1, how much money would you lose from your starting $12 bonus payment?
+
+                <form>
+                    <input type="radio" class="answer" name="q1answer" id="q3a1"> $2.00<br />
+                    <input type="radio" class="answer" name="q1answer" id="q3a2"> $4.00<br />
+                    <input type="radio" class="answer" name="q1answer" id="q3a3"> $6.00<br />
+                    <input type="radio" class="answer" name="q1answer" id="q3a4"> $8.00<br />
+                </form>
+            </li>
+
+            <hr />
+
+            <li>In this last example, what would be your final bonus payment?
+
+                <form>
+                    <input type="radio" class="answer" name="q1answer" id="q4a1"> $4.00<br />
+                    <input type="radio" class="answer" name="q1answer" id="q4a2"> $6.00<br />
+                    <input type="radio" class="answer" name="q1answer" id="q4a3"> $8.00<br />
+                    <input type="radio" class="answer" name="q1answer" id="q4a4"> $10.00<br />
+                </form>
+            </li> -->
+
+        </ol>
+        <script type="text/javascript">
+            $("body").unbind("keydown").focus().keydown(continue_handler);
+        </script>
+    </div>
+
+<hr />
+
+<div class="instructionsnav">
+        <div class="row" id="buttons">
+            <button type="button" id="instructButton" class="btn btn-primary btn-lg" onclick="return instruct_onclick()">
+                    Return to Instructions
+            </button>
+            <button type="button" id="submitButton" class="btn btn-primary btn-lg pull-right" onclick="return submit_onclick()">
+                    Submit Answer
+            </button>
+        </div>
+    </div>
+
+</div>
+
+
+<script>
+
+    $("body").unbind("keydown").focus().keydown(continue_handler);
+
+    function instruct_onclick() {
+
+        returnToInstructCallbackBreak();
+
+        // psiTurk.doInstructions(
+        //     instructionLPages, // a list of pages you want to display in sequence
+        //     function() { currentview = new FullPractice(); } // what you want to do when you are done with instructions
+        // );
+
+    }
+
+    function submit_onclick() {
+
+        var radios = document.getElementsByClassName("answer");
+        var answers = 0;
+
+        for (var i = 0, len = radios.length; i < len; i++) {
+            if (radios[i].checked) {
+                answers ++;
+            }
+        }
+
+        if (answers == 3) {     // if number fo answers eqauls number of questions
+            check_answers()
+        } else {
+            alert('You did not answer all the questions. Please go back and answer any questions you missed.');
+        }
+    }
+
+    function check_answers() {
+        // check that the right answers where chosen 
+        if (!(document.getElementById('q1a2').checked & document.getElementById('q2a3').checked & document.getElementById('q3a1').checked)) {
+            incorrect5 = incorrect5 + 1;
+            alert('You have made an error, please check your answers.');    
+        } else {
+            var src = document.getElementById("buttons");
+            var submitButton = document.getElementById("submitButton");
+            var instructButton = document.getElementById("instructButton");
+            var nextButton = document.createElement("button");
+            nextButton.textContent = 'Correct! Press to continue.';
+            nextButton.setAttribute("id", "next");
+            nextButton.setAttribute("value", "submit");
+            nextButton.setAttribute("class", "btn btn-success btn-lg center-block continue");        
+            src.appendChild(nextButton);
+            src.removeChild(submitButton);
+            src.removeChild(instructButton);
+        };
+
+    }
+
+</script>

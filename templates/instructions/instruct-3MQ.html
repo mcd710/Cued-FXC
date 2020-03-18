@@ -1,0 +1,121 @@
+<div id="container-instructions">
+
+    <h1>Quiz-Main game</h1>
+
+    <hr />
+
+    <div class="instructions well">
+
+        <p id = "prehint">Please answer the following question based on the instructions that you read earlier. As a reminder, at the beginning of the game, you own a pile of <span id="initialfund"></span> gems.</p>
+
+        <ol type="1">
+
+            <li>Imagine, at the end of the game, 8 containers are randomly selected and shipped to your home. After all the containers are unpacked, 250 gems and 800 bombs are added to your gem pile. All bombs then denotate. How many gems are left in your pile?
+                <form>
+                    <input type="radio" class="answer" name="q1answer" id="q1a1"> 1450<br />
+                    <input type="radio" class="answer" name="q1answer" id="q1a2"> 1200<br />
+                    <input type="radio" class="answer" name="q1answer" id="q1a3"> 650<br />
+                    <input type="radio" class="answer" name="q1answer" id="q1a4"> 400<br />
+                </form>
+            </li>
+            <hr />
+<!--             <li>We will randomly choose 4 sets at the end of the session to determine your final bonus payment. Imagine 2 of the sets we choose each have a total loss of $2 and the other 2 sets that each have a total loss of $1, how much money would you lose from your starting $12 bonus payment?
+
+                <form>
+                    <input type="radio" class="answer" name="q1answer" id="q3a1"> $2.00<br />
+                    <input type="radio" class="answer" name="q1answer" id="q3a2"> $4.00<br />
+                    <input type="radio" class="answer" name="q1answer" id="q3a3"> $6.00<br />
+                    <input type="radio" class="answer" name="q1answer" id="q3a4"> $8.00<br />
+                </form>
+            </li>
+
+            <hr />
+
+            <li>In this last example, what would be your final bonus payment?
+
+                <form>
+                    <input type="radio" class="answer" name="q1answer" id="q4a1"> $4.00<br />
+                    <input type="radio" class="answer" name="q1answer" id="q4a2"> $6.00<br />
+                    <input type="radio" class="answer" name="q1answer" id="q4a3"> $8.00<br />
+                    <input type="radio" class="answer" name="q1answer" id="q4a4"> $10.00<br />
+                </form>
+            </li> -->
+
+        </ol>
+        <script type="text/javascript">
+            $("#initialfund").html(initialFundForLoss.toFixed(0));
+            $("body").unbind("keydown").focus().keydown(continue_handler);
+        </script>
+    </div>
+
+<hr />
+
+<div class="instructionsnav">
+        <div class="row" id="buttons">
+            <button type="button" id="instructButton" class="btn btn-primary btn-lg" onclick="return instruct_onclick()">
+                    Return to Instructions
+            </button>
+            <button type="button" id="submitButton" class="btn btn-primary btn-lg pull-right" onclick="return submit_onclick()">
+                    Submit Answer
+            </button>
+        </div>
+    </div>
+
+</div>
+
+
+<script>
+
+    $("body").unbind("keydown").focus().keydown(continue_handler);
+
+    function instruct_onclick() {
+
+        returnToInstructCallbackMain();
+
+        // psiTurk.doInstructions(
+        //     instructionLPages, // a list of pages you want to display in sequence
+        //     function() { currentview = new FullPractice(); } // what you want to do when you are done with instructions
+        // );
+
+    }
+
+    function submit_onclick() {
+
+        var radios = document.getElementsByClassName("answer");
+        var answers = 0;
+
+        for (var i = 0, len = radios.length; i < len; i++) {
+            if (radios[i].checked) {
+                answers ++;
+            }
+        }
+
+        if (answers == 1) {     // if number fo answers eqauls number of questions
+            check_answers()
+        } else {
+            alert('You did not answer all the questions. Please go back and answer any questions you missed.');
+        }
+    }
+
+    function check_answers() {
+        // check that the right answers where chosen 
+        if (!(document.getElementById('q1a3').checked)) {
+            incorrect5 = incorrect5 + 1;
+            alert('You have made an error, please check your answers.');    
+        } else {
+            var src = document.getElementById("buttons");
+            var submitButton = document.getElementById("submitButton");
+            var instructButton = document.getElementById("instructButton");
+            var nextButton = document.createElement("button");
+            nextButton.textContent = 'Correct! Press to continue.';
+            nextButton.setAttribute("id", "next");
+            nextButton.setAttribute("value", "submit");
+            nextButton.setAttribute("class", "btn btn-success btn-lg center-block continue");        
+            src.appendChild(nextButton);
+            src.removeChild(submitButton);
+            src.removeChild(instructButton);
+        };
+
+    }
+
+</script>

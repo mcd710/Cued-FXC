@@ -1,0 +1,53 @@
+<div id="container-instructions">
+
+    <h1>Instructions-PROTECTOR</h1>
+
+    <hr/>
+
+    <div class="instructions well">
+
+        <div class="row container-fluid">
+            
+            <p>
+                <font size=4>   
+                When you see these two symbols at the start of your turn, you will play the role of PROTECTOR. The symbols also tell you the value of each colored word on that turn. At the end of each turn you will see how many bombs are left in the container.
+                </font>
+                <br/><br/>
+            </p>
+
+            <table class='table table-bordered table-striped text-center'>
+              <tr>
+                <td style="padding:10px"><img src='{{ server_location }} static/images/cues/GL_story/Pun1.png' height="200"></td>
+                <td style="padding:10px"><img src='{{ server_location }} static/images/cues/GL_story/Pun2.png' height="200"></td> 
+              </tr>
+              <tr>
+                <td style="padding:10px"><p><font size=4>Remember, this image means that you are on a LOW-VALUE turn where each correct response will remove only <span id="lowValue"></span> bomb.</font></p></td>
+                <td style="padding:10px"><p><font size=4>Remember, this image means that you are on a HIGH-VALUE turn where each correct response will remove <span id="highValue"></span> bombs.</font></p></td> 
+              </tr>
+            </table>
+        </div>
+        <script type="text/javascript">
+            $('#lowValue').html(lowValue.toFixed(0));
+            $('#highValue').html(highValue.toFixed(0));
+            $("body").unbind("keydown").focus().keydown(continue_handler);
+        </script>
+
+    </div>
+
+<hr />
+
+<div class="instructionsnav">
+    <div class="row">
+        <div class="col-xs-2">
+        </div>
+        <div class="col-xs-8">
+            <button type="button" id="next" value="next" class="btn btn-success btn-lg center-block continue">
+                Continue
+            </button>
+        </div>
+        <div class="col-xs-2">
+        </div>
+    </div>
+</div>
+
+</div>

@@ -1,0 +1,59 @@
+<script>    
+     $("body").unbind("keydown").focus().keydown(continue_handler);
+</script>
+
+
+
+<div id="container-instructions">
+
+    <h1>Instructions-PROTECTOR</h1>
+
+    <hr />
+
+    <div class="instructions well">
+
+        <div class="row container-fluid">
+
+            <p>
+                <font size=4>
+                The other role you will play in this game is that of the PROTECTOR, where you will get to protect the gems at your home from being destroyed by bombs.
+                <br><br>
+                On each of these turns, you will work with a container filled with <b><span id="initialloss"></span> bombs</b>. 
+                <br><br>
+                <b>Each of these bombs has the power to destroy one of your gems. Any bombs that remain in the container at the end of that turn can destroy the equivalent number of gems.</b>
+                <br><br>
+                You will be able to remove bombs by providing correct responses to the colored words. However, the amount of bombs you remove with each correct response will depend on the value of colored words on that turn. 
+                <br/><br/>
+                When you are on a <b>LOW-VALUE</b> turn, each correct response on that turn removes only <span id="lowValue"></span> bomb. 
+                <br/>
+                When you are on a <b>HIGH-VALUE</b> turn, each correct response on that turn removes <span id="highValue"></span> bombs.
+                <br/><br/>
+                <b>NOTICE:</b> You will neither remove nor add any bombs when you give an incorrect response.
+                </font>
+            </p>
+        </div>
+        <script type="text/javascript">
+            $('#initialloss').html(initialLoss.toFixed(0));
+            $('#lowValue').html(lowValue.toFixed(0));
+            $('#highValue').html(highValue.toFixed(0));
+            $("body").unbind("keydown").focus().keydown(continue_handler);
+        </script>
+</div>
+
+<hr />
+
+<div class="instructionsnav">
+    <div class="row">
+        <div class="col-xs-2">
+        </div>
+        <div class="col-xs-8">
+            <button type="button" id="next" value="next" class="btn btn-success btn-lg center-block continue">
+                Continue
+            </button>
+        </div>
+        <div class="col-xs-2">
+        </div>
+    </div>
+</div>
+
+</div>
