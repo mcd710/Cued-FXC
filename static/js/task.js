@@ -15,123 +15,18 @@ var mycondition = condition;  // these two variables are passed by the psiturk s
 var mycounterbalance = counterbalance;  // they tell you which condition you have been assigned to
 // they are not used in the stroop code but may be useful to you
 // All pages to be loaded
-var pages = [
-"instructions/instruct-story1.html",
-"instructions/instruct-story2.html",
-"instructions/instruct-0.html", // qualtrics questionnaires container 
-"instructions/instruct-1.html",
-"instructions/instruct-2.html",
-"instructions/instruct-2Q.html",
-"instructions/instruct-3P.html",
-"instructions/instruct-3G1.html",
-"instructions/instruct-3G2.html",
-"instructions/instruct-3GB.html",
-"instructions/instruct-3GQ1.html",
-"instructions/instruct-3GQ2.html",
-"instructions/instruct-3L1.html",
-"instructions/instruct-3L2.html",
-"instructions/instruct-3LB.html",
-"instructions/instruct-3LQ1.html",
-"instructions/instruct-3LQ2.html",
-"instructions/instruct-3MQ.html",
-"instructions/instruct-3M2.html",
-"instructions/instruct-Main-Sample.html",
-"instructions/instruct-ready.html",
-"instructions/instruct-ready-space.html",
-"instructions/break-remind.html",
-"instructions/break.html",
-"instructions/break-protector.html",
-"instructions/break-collector.html",
-"instructions/break-small.html",
-"instructions/break-large.html",
-"stage.html",
-"postquestionnaire.html",
-"postquestionnaire_gain_low.html",
-"postquestionnaire_gain_high.html",
-"postquestionnaire_loss_low.html",
-"postquestionnaire_loss_high.html",
-];
-
-psiTurk.preloadPages(pages);
-
-var instruction1Pages = [
-//"instructions/instruct-0.html",
-"instructions/instruct-story1.html",
-"instructions/instruct-1.html",
-"instructions/instruct-ready.html",
-];
-
-var instruction2Pages = [
-"instructions/instruct-2.html",
-"instructions/instruct-2Q.html",
-"instructions/instruct-ready.html"
-];
-
-var instruction3Pages = [
-"instructions/instruct-3P.html",
-"instructions/instruct-ready.html",
-];
-
-var instructionLossPages = [
-"instructions/instruct-3L1.html",
-"instructions/instruct-3LB.html",
-"instructions/instruct-3LQ1.html",
-"instructions/instruct-3LQ2.html",
-"instructions/instruct-3L2.html",
-"instructions/instruct-ready.html"
-];
-
-var instructionGainPages = [
-"instructions/instruct-story2.html",
-"instructions/instruct-3G1.html",
-"instructions/instruct-3GB.html",
-"instructions/instruct-3GQ1.html",
-"instructions/instruct-3GQ2.html",
-"instructions/instruct-3G2.html",
-"instructions/instruct-ready.html"
-];
 
 
-var postPracticeBreak = [
-"instructions/instruct-Main-Sample.html",
-"instructions/instruct-3MQ.html",
-"instructions/instruct-3M2.html"
-]
+//variable for which instructions to call 
+taskVersion=ProtectorvCollector;
 
-
-var BreakCollectorPage = [
-"instructions/break-collector.html",
-"instructions/break-remind.html"
-];
-
-
-var BreakProtectorPage = [
-"instructions/break-protector.html",
-"instructions/break-remind.html"
-];
-
-
-var BreakSmallPage = [
-"instructions/break-small.html",
-"instructions/break-remind.html"
-];
-
-
-var BreakLargePage = [
-"instructions/break-large.html",
-"instructions/break-remind.html"
-];
-
-
-var BreakPage = [
-"instructions/break.html"
-];
-
+//Which instructions to load from the instructions.js file
+setInstructionPages(taskVersion)
 
 
 var htmlParams = {
 	title:'#title',
-	stim:'#stim',
+	stim:'#stim', // change to the value for the div that contains the stimuli
 	tally:'#query'
 };
 
@@ -202,21 +97,8 @@ var incorrect5 = 0;
 
 
 
-
-var cues = {
-	collector:
-		[['/static/images/cues/GL_story/Rew1.png','gain_low'],
-		 ['/static/images/cues/GL_story/Rew2.png','gain_high']],
-	protector:
-		[['/static/images/cues/GL_story/Pun1.png','loss_low'],
-		 ['/static/images/cues/GL_story/Pun2.png','loss_high']],
-	small:
-		[['/static/images/cues/GL_story/Rew1.png','gain_low'],
-		 ['/static/images/cues/GL_story/Pun1.png','loss_low']],
-	large:
-		[['/static/images/cues/GL_story/Rew2.png','gain_high'],
-		 ['/static/images/cues/GL_story/Pun2.png','loss_high']]
-};
+//set the cues
+setCues(taskVersion)
 
 
 var blockseq1 = _.shuffle(['collector','protector']);
