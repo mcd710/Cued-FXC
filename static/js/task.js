@@ -18,7 +18,7 @@ var mycounterbalance = counterbalance;  // they tell you which condition you hav
 
 
 //variable for which instructions to call 
-taskVersion=ProtectorvCollector;
+taskVersion="ProtectorvCollector";
 
 //Which instructions to load from the instructions.js file
 setInstructionPages(taskVersion)
