@@ -35,7 +35,7 @@ instructionsProtect= () => {
 	"instructions/break-collector.html",
 	"instructions/break-small.html",
 	"instructions/break-large.html",
-	"stage.html",
+	"stages/stage.html",
 	"postquestionnaire.html",
 	"postquestionnaire_gain_low.html",
 	"postquestionnaire_gain_high.html",
