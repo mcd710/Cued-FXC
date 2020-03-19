@@ -15,7 +15,7 @@ var mycondition = condition;  // these two variables are passed by the psiturk s
 var mycounterbalance = counterbalance;  // they tell you which condition you have been assigned to
 
 
-
+const garden = true;
 //set the appropriate instructions by calling a function from the instructions.js file
 const {pages, 
 	keyMappingInstructions,
@@ -26,6 +26,7 @@ const {pages,
 
 //preload your pages 
 psiTurk.preloadPages(pages);
+
 
 
 //set appropriate stimuli 
@@ -108,12 +109,12 @@ const cues = cuesProtect();
 const blockSequence = blocksProtect(mycondition); 
 
 
-var highValue = 10;
-var lowValue = 1;
-var values = {gain_low:lowValue,gain_high:highValue,loss_low:lowValue,loss_high:highValue};
-var heading = {gain_low:'Gem: ',gain_high:'Gem: ',loss_low:'Bomb: ',loss_high:'Bomb: '};
-var numSign = {gain_low:1,gain_high:1,loss_low:-1,loss_high:-1};
-var initialBonus = {gain_low:0,gain_high:0,loss_low:initialLoss,loss_high:initialLoss};
+// var highValue = 10;
+// var lowValue = 1;
+// var values = {gain_low:lowValue,gain_high:highValue,loss_low:lowValue,loss_high:highValue};
+// var heading = {gain_low:'Gem: ',gain_high:'Gem: ',loss_low:'Bomb: ',loss_high:'Bomb: '};
+// var numSign = {gain_low:1,gain_high:1,loss_low:-1,loss_high:-1};
+// var initialBonus = {gain_low:0,gain_high:0,loss_low:initialLoss,loss_high:initialLoss};
 //var breakForBlockType = {collector:BreakCollectorPage,protector:BreakProtectorPage,
 //	small:BreakSmallPage,large:BreakLargePage};
 

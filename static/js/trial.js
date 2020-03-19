@@ -37,7 +37,12 @@ function Trial(stimSet,timer,counter,timingParams,htmlTag,callbackParams,configP
 Trial.prototype.updateStim = function(stim)
 {
 	this.stim = stim;
-	this.stimResponse = stim.image; // changed from .word for stroop
+	if (garden){
+		this.stimResponse = stim.image; // changed from .word for stroop
+	}else{
+		this.stimResponse = stim.word; // changed from .word for stroop
+	}	
+
 	this.stimPath = stim.path;
 }
 
