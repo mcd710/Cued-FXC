@@ -37,7 +37,7 @@ function Trial(stimSet,timer,counter,timingParams,htmlTag,callbackParams,configP
 Trial.prototype.updateStim = function(stim)
 {
 	this.stim = stim;
-	this.stimResponse = stim.color;
+	this.stimResponse = stim.image; // changed from .word for stroop
 	this.stimPath = stim.path;
 }
 

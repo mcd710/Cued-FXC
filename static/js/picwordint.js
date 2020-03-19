@@ -5,11 +5,11 @@ console.log("inside picwordint")
 setGardenStim= ()=>{
 //word used as stimuli
 //last cell is for the neutral trials where there is no word displayed over the image
-const words = ["APPLE","LEMON","PEAR","PEACH", ""]
+const words = ["APPLE","PEAR","LEMON","PEACH", ""]
 
 
 //images used as stimuli
-const images = ["apple","lemon","pear","peach"]
+const images = ["apple","pear","lemon","peach"]
 
 
 //paths to the images
@@ -64,7 +64,7 @@ const possibleStimsInCongruent= [
     ];
 
 //what are individuals responding to- should be the image 
-const responses = images
+const responses = ["apple","lemon","pear","peach"]
 
 //The keys that participants are using to play "D":68, "F":70, "J":74, "K":75
 const responseKeyCodes = [68, 70, 74, 75];
