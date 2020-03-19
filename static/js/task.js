@@ -13,119 +13,26 @@ var psiTurk = new PsiTurk(uniqueId, adServerLoc, mode);
 
 var mycondition = condition;  // these two variables are passed by the psiturk server process
 var mycounterbalance = counterbalance;  // they tell you which condition you have been assigned to
-// they are not used in the stroop code but may be useful to you
-// All pages to be loaded
-var pages = [
-"instructions/ProtectorCollector/instruct-story1.html",
-"instructions/ProtectorCollector/instruct-story2.html",
-"instructions/ProtectorCollector/instruct-0.html",
-"instructions/ProtectorCollector/instruct-1.html",
-"instructions/ProtectorCollector/instruct-2.html",
-"instructions/ProtectorCollector/instruct-2Q.html",
-"instructions/ProtectorCollector/instruct-3P.html",
-"instructions/ProtectorCollector/instruct-3G1.html",
-"instructions/ProtectorCollector/instruct-3G2.html",
-"instructions/ProtectorCollector/instruct-3GB.html",
-"instructions/ProtectorCollector/instruct-3GQ1.html",
-"instructions/ProtectorCollector/instruct-3GQ2.html",
-"instructions/ProtectorCollector/instruct-3L1.html",
-"instructions/ProtectorCollector/instruct-3L2.html",
-"instructions/ProtectorCollector/instruct-3LB.html",
-"instructions/ProtectorCollector/instruct-3LQ1.html",
-"instructions/ProtectorCollector/instruct-3LQ2.html",
-"instructions/ProtectorCollector/instruct-3MQ.html",
-"instructions/ProtectorCollector/instruct-3M2.html",
-"instructions/ProtectorCollector/instruct-Main-Sample.html",
-"instructions/ProtectorCollector/instruct-ready.html",
-"instructions/ProtectorCollector/instruct-ready-space.html",
-"instructions/ProtectorCollector/break-remind.html",
-"instructions/ProtectorCollector/break.html",
-"instructions/ProtectorCollector/break-protector.html",
-"instructions/ProtectorCollector/break-collector.html",
-"instructions/ProtectorCollector/break-small.html",
-"instructions/ProtectorCollector/break-large.html",
-"stage.html",
-"postquestionnaire.html",
-"postquestionnaire_gain_low.html",
-"postquestionnaire_gain_high.html",
-"postquestionnaire_loss_low.html",
-"postquestionnaire_loss_high.html",
-];
+
+
+
+
+const {pages, 
+	instruction1Pages,
+	instruction2Pages,
+	instruction3Pages,
+	instructionLossPages,
+	instructionGainPages,
+	postPracticeBreak,
+	BreakCollectorPage,
+	BreakProtectorPage,
+	BreakSmallPage,
+	BreakLargePage,
+	BreakPage} = instructionsProtect();
 
 psiTurk.preloadPages(pages);
 
-var instruction1Pages = [
-"instructions/ProtectorCollector/instruct-0.html",
-"instructions/ProtectorCollector/instruct-story1.html",
-"instructions/ProtectorCollector/instruct-1.html",
-"instructions/ProtectorCollector/instruct-ready.html",
-];
 
-var instruction2Pages = [
-"instructions/ProtectorCollector/instruct-2.html",
-"instructions/ProtectorCollector/instruct-2Q.html",
-"instructions/ProtectorCollector/instruct-ready.html"
-];
-
-var instruction3Pages = [
-"instructions/ProtectorCollector/instruct-3P.html",
-"instructions/ProtectorCollector/instruct-ready.html",
-];
-
-var instructionLossPages = [
-"instructions/ProtectorCollector/instruct-3L1.html",
-"instructions/ProtectorCollector/instruct-3LB.html",
-"instructions/ProtectorCollector/instruct-3LQ1.html",
-"instructions/ProtectorCollector/instruct-3LQ2.html",
-"instructions/ProtectorCollector/instruct-3L2.html",
-"instructions/ProtectorCollector/instruct-ready.html"
-];
-
-var instructionGainPages = [
-"instructions/ProtectorCollector/instruct-story2.html",
-"instructions/ProtectorCollector/instruct-3G1.html",
-"instructions/ProtectorCollector/instruct-3GB.html",
-"instructions/ProtectorCollector/instruct-3GQ1.html",
-"instructions/ProtectorCollector/instruct-3GQ2.html",
-"instructions/ProtectorCollector/instruct-3G2.html",
-"instructions/ProtectorCollector/instruct-ready.html"
-];
-
-
-var postPracticeBreak = [
-"instructions/ProtectorCollector/instruct-Main-Sample.html",
-"instructions/ProtectorCollector/instruct-3MQ.html",
-"instructions/ProtectorCollector/instruct-3M2.html"
-]
-
-
-var BreakCollectorPage = [
-"instructions/ProtectorCollector/break-collector.html",
-"instructions/ProtectorCollector/break-remind.html"
-];
-
-
-var BreakProtectorPage = [
-"instructions/ProtectorCollector/break-protector.html",
-"instructions/ProtectorCollector/break-remind.html"
-];
-
-
-var BreakSmallPage = [
-"instructions/ProtectorCollector/break-small.html",
-"instructions/ProtectorCollector/break-remind.html"
-];
-
-
-var BreakLargePage = [
-"instructions/ProtectorCollector/break-large.html",
-"instructions/ProtectorCollector/break-remind.html"
-];
-
-
-var BreakPage = [
-"instructions/ProtectorCollector/break.html"
-];
 
 
 
@@ -224,20 +131,12 @@ var blockseq2 = _.shuffle(['small','large']);
 // var blockSequence = [];
 if(mycondition==1)
 {
-	//for(var i = 0;i<2;i++)
-	//{
-	//	blockSequence.push(blockseq1[i]);
-	//	blockSequence.push(blockseq2[i]);
-	//}
+	
 	var blockSequence = blockseq1.concat(blockseq2);
 }
 else
 {
-	//for(var i = 0;i<2;i++)
-	//{
-	//	blockSequence.push(blockseq2[i]);
-	//	blockSequence.push(blockseq1[i]);
-	//}
+	
 	var blockSequence = blockseq2.concat(blockseq1);
 }
 
