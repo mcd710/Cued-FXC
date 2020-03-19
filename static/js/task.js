@@ -15,9 +15,174 @@ var mycondition = condition;  // these two variables are passed by the psiturk s
 var mycounterbalance = counterbalance;  // they tell you which condition you have been assigned to
 // they are not used in the stroop code but may be useful to you
 // All pages to be loaded
+var pages = [
+"instructions/ProtectorCollector/instruct-story1.html",
+"instructions/ProtectorCollector/instruct-story2.html",
+"instructions/ProtectorCollector/instruct-0.html",
+"instructions/ProtectorCollector/instruct-1.html",
+"instructions/ProtectorCollector/instruct-2.html",
+"instructions/ProtectorCollector/instruct-2Q.html",
+"instructions/ProtectorCollector/instruct-3P.html",
+"instructions/ProtectorCollector/instruct-3G1.html",
+"instructions/ProtectorCollector/instruct-3G2.html",
+"instructions/ProtectorCollector/instruct-3GB.html",
+"instructions/ProtectorCollector/instruct-3GQ1.html",
+"instructions/ProtectorCollector/instruct-3GQ2.html",
+"instructions/ProtectorCollector/instruct-3L1.html",
+"instructions/ProtectorCollector/instruct-3L2.html",
+"instructions/ProtectorCollector/instruct-3LB.html",
+"instructions/ProtectorCollector/instruct-3LQ1.html",
+"instructions/ProtectorCollector/instruct-3LQ2.html",
+"instructions/ProtectorCollector/instruct-3MQ.html",
+"instructions/ProtectorCollector/instruct-3M2.html",
+"instructions/ProtectorCollector/instruct-Main-Sample.html",
+"instructions/ProtectorCollector/instruct-ready.html",
+"instructions/ProtectorCollector/instruct-ready-space.html",
+"instructions/ProtectorCollector/break-remind.html",
+"instructions/ProtectorCollector/break.html",
+"instructions/ProtectorCollector/break-protector.html",
+"instructions/ProtectorCollector/break-collector.html",
+"instructions/ProtectorCollector/break-small.html",
+"instructions/ProtectorCollector/break-large.html",
+"stage.html",
+"postquestionnaire.html",
+"postquestionnaire_gain_low.html",
+"postquestionnaire_gain_high.html",
+"postquestionnaire_loss_low.html",
+"postquestionnaire_loss_high.html",
+];
+
+psiTurk.preloadPages(pages);
+
+var instruction1Pages = [
+"instructions/ProtectorCollector/instruct-0.html",
+"instructions/ProtectorCollector/instruct-story1.html",
+"instructions/ProtectorCollector/instruct-1.html",
+"instructions/ProtectorCollector/instruct-ready.html",
+];
+
+var instruction2Pages = [
+"instructions/ProtectorCollector/instruct-2.html",
+"instructions/ProtectorCollector/instruct-2Q.html",
+"instructions/ProtectorCollector/instruct-ready.html"
+];
+
+var instruction3Pages = [
+"instructions/ProtectorCollector/instruct-3P.html",
+"instructions/ProtectorCollector/instruct-ready.html",
+];
+
+var instructionLossPages = [
+"instructions/ProtectorCollector/instruct-3L1.html",
+"instructions/ProtectorCollector/instruct-3LB.html",
+"instructions/ProtectorCollector/instruct-3LQ1.html",
+"instructions/ProtectorCollector/instruct-3LQ2.html",
+"instructions/ProtectorCollector/instruct-3L2.html",
+"instructions/ProtectorCollector/instruct-ready.html"
+];
+
+var instructionGainPages = [
+"instructions/ProtectorCollector/instruct-story2.html",
+"instructions/ProtectorCollector/instruct-3G1.html",
+"instructions/ProtectorCollector/instruct-3GB.html",
+"instructions/ProtectorCollector/instruct-3GQ1.html",
+"instructions/ProtectorCollector/instruct-3GQ2.html",
+"instructions/ProtectorCollector/instruct-3G2.html",
+"instructions/ProtectorCollector/instruct-ready.html"
+];
 
 
-psiTurk.preloadPages(pagesProtectorvCollector);
+var postPracticeBreak = [
+"instructions/ProtectorCollector/instruct-Main-Sample.html",
+"instructions/ProtectorCollector/instruct-3MQ.html",
+"instructions/ProtectorCollector/instruct-3M2.html"
+]
+
+
+var BreakCollectorPage = [
+"instructions/ProtectorCollector/break-collector.html",
+"instructions/ProtectorCollector/break-remind.html"
+];
+
+
+var BreakProtectorPage = [
+"instructions/ProtectorCollector/break-protector.html",
+"instructions/ProtectorCollector/break-remind.html"
+];
+
+
+var BreakSmallPage = [
+"instructions/ProtectorCollector/break-small.html",
+"instructions/ProtectorCollector/break-remind.html"
+];
+
+
+var BreakLargePage = [
+"instructions/ProtectorCollector/break-large.html",
+"instructions/ProtectorCollector/break-remind.html"
+];
+
+
+var BreakPage = [
+"instructions/ProtectorCollector/break.html"
+];
+
+
+
+var htmlParams = {
+	title:'#title',
+	stim:'#stim',
+	tally:'#query'
+};
+
+
+var intervalDurations = [6000,7000,8000,9000];
+var itiDurations = [1000,1500,2000];
+var isiDurations = [500,750];
+var test = false;
+
+
+if(test)
+{
+	var numColorPracticeTrials = 2;
+	var numStroopPracticeTrials = 2;
+
+	var numIntervalTrials = 30;
+	var numIntervalPractice = 2;
+	var numGainLossPractice = 2;
+	
+	var numBlock = 4;
+	var numIntervalPerBlock = 4;
+	var selectPerBlock = 1;
+	var initialFundForLoss = 600;
+}
+else
+{
+	var numColorPracticeTrials = 80;
+	var numStroopPracticeTrials = 60;
+
+	var numIntervalTrials = 30;
+	var numIntervalPractice = 4;
+	var numGainLossPractice = 4;
+	
+	var numBlock = 4;
+	var numIntervalPerBlock = 16;
+	var selectPerBlock = 2;
+	var initialFundForLoss = 1200;
+}
+
+
+var initialLoss = 300;
+var price = 0.01;
+
+
+var trialTimingParams = {
+	itiDuration:0,
+	feedbackDur:500,
+	thresholdRT:250,
+	deadline:2000
+};
+
 
 var intervalTimingParams = {
 	intervalDur:NaN,
@@ -35,6 +200,55 @@ var incorrect3 = 0;
 var incorrect4 = 0;
 var incorrect5 = 0;
 
+
+
+
+var cues = {
+	collector:
+		[['/static/images/cues/GL_story/Rew1.png','gain_low'],
+		 ['/static/images/cues/GL_story/Rew2.png','gain_high']],
+	protector:
+		[['/static/images/cues/GL_story/Pun1.png','loss_low'],
+		 ['/static/images/cues/GL_story/Pun2.png','loss_high']],
+	small:
+		[['/static/images/cues/GL_story/Rew1.png','gain_low'],
+		 ['/static/images/cues/GL_story/Pun1.png','loss_low']],
+	large:
+		[['/static/images/cues/GL_story/Rew2.png','gain_high'],
+		 ['/static/images/cues/GL_story/Pun2.png','loss_high']]
+};
+
+
+var blockseq1 = _.shuffle(['collector','protector']);
+var blockseq2 = _.shuffle(['small','large']);
+// var blockSequence = [];
+if(mycondition==1)
+{
+	//for(var i = 0;i<2;i++)
+	//{
+	//	blockSequence.push(blockseq1[i]);
+	//	blockSequence.push(blockseq2[i]);
+	//}
+	var blockSequence = blockseq1.concat(blockseq2);
+}
+else
+{
+	//for(var i = 0;i<2;i++)
+	//{
+	//	blockSequence.push(blockseq2[i]);
+	//	blockSequence.push(blockseq1[i]);
+	//}
+	var blockSequence = blockseq2.concat(blockseq1);
+}
+
+var highValue = 10;
+var lowValue = 1;
+var values = {gain_low:lowValue,gain_high:highValue,loss_low:lowValue,loss_high:highValue};
+var heading = {gain_low:'Gem: ',gain_high:'Gem: ',loss_low:'Bomb: ',loss_high:'Bomb: '};
+var numSign = {gain_low:1,gain_high:1,loss_low:-1,loss_high:-1};
+var initialBonus = {gain_low:0,gain_high:0,loss_low:initialLoss,loss_high:initialLoss};
+var breakForBlockType = {collector:BreakCollectorPage,protector:BreakProtectorPage,
+	small:BreakSmallPage,large:BreakLargePage};
 
 
 
@@ -504,7 +718,73 @@ var blockPart = function(){
 }
 
 
+var generateStimSet = function(set1,set2,numIntervalTrials){
+	var stims = [];
+	var selectedStim;
+	var numStimsCongruent = 0;
+	var numStimsInCongruent = 0;
+	var possibleStimsToBeFiltered;
 
+
+
+	var stimType = _.shuffle([0,1])[0];//0 for incongruent and 1 for congruent.
+	//console.log(stimType);
+
+
+	/**Set up the first trial in the set**/
+
+	if(stimType == 0)
+	{
+		selectedStim = _.shuffle(set1)[0];//Sample from incongruent stimuli
+		numStimsInCongruent++;
+	}
+	else
+	{
+		selectedStim = _.shuffle(set2)[0];//Sample from congruent stimuli
+		numStimsCongruent++;
+	}
+
+	stims.push(selectedStim);//Store in stims
+
+	for(var i = 0;i<numIntervalTrials-1;i++)
+	{
+		if(numStimsInCongruent>2*numStimsCongruent)
+		{
+			stimType = 1;
+		}
+		else if(numStimsCongruent>numStimsInCongruent)
+		{
+			stimType = 0;
+		}
+		else
+		{
+			stimType = _.shuffle([0,1])[0];
+		}
+		var subsetStims = [];
+		if(stimType==0)
+		{
+			possibleStimsToBeFiltered = set1;
+			numStimsInCongruent++;
+		}
+		else
+		{
+			possibleStimsToBeFiltered = set2;
+			numStimsCongruent++;
+		}
+		for(var j = 0;j<possibleStimsToBeFiltered.length;j++)
+		{
+			stimOption = possibleStimsToBeFiltered[j];
+			if(stimOption.word!=selectedStim.word && stimOption.color!=selectedStim.color)
+			{
+				subsetStims.push(stimOption);
+			}
+		}
+		selectedStim = _.shuffle(subsetStims)[0];
+		stims.push(selectedStim);
+	}
+
+	return stims;
+}
 
 
 
@@ -547,3 +827,266 @@ $(window).load( function(){
 );
 
 
+
+
+
+/*****************************************
+*             Questionnaire              *
+******************************************/
+
+
+var Questionnaire_Gain_Low = function() {
+
+	record_responses = function() {
+
+		psiTurk.recordTrialData({'phase':'Questionnaire_Gain_Low', 'status':'submit'});
+
+		$("input:radio:checked").each( function(i, val) {
+			psiTurk.recordUnstructuredData(this.name, this.value);		
+		});
+	};
+
+	// Load the questionnaire snippet 
+	psiTurk.showPage('postquestionnaire_gain_low.html');
+	psiTurk.recordTrialData({'phase':'Questionnaire_Gain_Low', 'status':'begin'});
+	
+	$("#next").click(function () {
+		var answers = $("input:radio:checked").length;
+		if(answers < 4)
+		{
+			alert("Please answer all the questions.");
+		}
+		else
+		{
+			record_responses();
+		
+		
+			currentview = new Questionnaire_Gain_High;
+		}
+
+	});
+};
+
+
+var Questionnaire_Gain_High = function() {
+
+	record_responses = function() {
+
+		psiTurk.recordTrialData({'phase':'Questionnaire_Gain_High', 'status':'submit'});
+		$("input:radio:checked").each( function(i, val) {
+			psiTurk.recordUnstructuredData(this.name, this.value);		
+		});
+	};
+
+	// Load the questionnaire snippet 
+	psiTurk.showPage('postquestionnaire_gain_high.html');
+	psiTurk.recordTrialData({'phase':'Questionnaire_Gain_High', 'status':'begin'});
+	
+	$("#next").click(function () {
+		var answers = $("input:radio:checked").length;
+		if(answers < 4)
+		{
+			alert("Please answer all the questions.");
+		}
+		else
+		{
+			record_responses();
+		
+		currentview = new Questionnaire_Loss_Low;}
+
+	});
+};
+
+
+var Questionnaire_Loss_Low = function() {
+
+	record_responses = function() {
+
+		psiTurk.recordTrialData({'phase':'Questionnaire_Loss_Low', 'status':'submit'});
+		$("input:radio:checked").each( function(i, val) {
+			psiTurk.recordUnstructuredData(this.name, this.value);		
+		});
+	};
+
+	// Load the questionnaire snippet 
+	psiTurk.showPage('postquestionnaire_loss_low.html');
+	psiTurk.recordTrialData({'phase':'Questionnaire_Loss_Low', 'status':'begin'});
+	
+	$("#next").click(function () {
+		var answers = $("input:radio:checked").length;
+		if(answers < 4)
+		{
+			alert("Please answer all the questions.");
+		}
+		else
+		{
+			record_responses();
+		
+		currentview = new Questionnaire_Loss_High;}
+
+	});
+};
+
+
+var Questionnaire_Loss_High = function() {
+
+	record_responses = function() {
+
+		psiTurk.recordTrialData({'phase':'Questionnaire_Loss_High', 'status':'submit'});
+		$("input:radio:checked").each( function(i, val) {
+			psiTurk.recordUnstructuredData(this.name, this.value);		
+		});
+	};
+
+	// Load the questionnaire snippet 
+
+	
+	// $("#next").click(function () {
+	// 	var answers = $("input:radio:checked").length;
+	// 	if(answers < 4)
+	// 	{
+	// 		alert("Please answer all the questions.");
+	// 	}
+	// 	else
+	// 	{
+	// 		record_responses();
+		
+	// 		currentview = new Questionnaire;
+	// 	}
+	// });
+
+	prompt_resubmit = function() {
+		document.body.innerHTML = error_message;
+		$("#resubmit").click(resubmit);
+	};
+
+	resubmit = function() {
+		document.body.innerHTML = "<h1>Trying to resubmit...</h1>";
+		reprompt = setTimeout(prompt_resubmit, 10000);
+		
+		psiTurk.saveData({
+			success: function() {
+				clearInterval(reprompt); 
+				//psiTurk.completeHIT();
+
+				psiTurk.computeBonus('compute_bonus', function(){
+                	 		psiTurk.completeHIT(); //Call compute_bonus function for automatic bonus calculation (By Jason)
+                 }); 
+
+            }, 
+            error: prompt_resubmit
+        });
+	};
+
+	psiTurk.showPage('postquestionnaire_loss_high.html');
+	psiTurk.recordTrialData({'phase':'Questionnaire_Loss_High', 'status':'begin'});
+	psiTurk.recordUnstructuredData('incorrectGQ1', incorrect1);
+	psiTurk.recordUnstructuredData('incorrectGQ2', incorrect2);
+	psiTurk.recordUnstructuredData('incorrectLQ1', incorrect3);
+	psiTurk.recordUnstructuredData('incorrectLQ2', incorrect4);
+	psiTurk.recordUnstructuredData('incorrectGQ3', incorrect5);
+	
+	$("#next").click(function () {
+		record_responses();
+		psiTurk.saveData({
+			success: function(){
+				psiTurk.computeBonus('compute_bonus',function(){
+				psiTurk.completeHIT();});
+            }, 
+            error: prompt_resubmit});
+	});
+};
+
+
+
+// var Questionnaire = function() {
+
+// 	var error_message = "<h1>Oops!</h1><p>Something went wrong submitting your HIT. This might happen if you lose your internet connection. Press the button to resubmit.</p><button id='resubmit'>Resubmit</button>";
+
+// 	record_responses = function() {
+
+// 		psiTurk.recordTrialData({'phase':'postquestionnaire', 'status':'submit'});
+
+// 		$('textarea').each( function(i, val) {
+// 			psiTurk.recordUnstructuredData(this.id, this.value);
+// 		});
+// 		$('select').each( function(i, val) {
+// 			psiTurk.recordUnstructuredData(this.id, this.value);		
+// 		});
+
+// 	};
+
+// 	prompt_resubmit = function() {
+// 		document.body.innerHTML = error_message;
+// 		$("#resubmit").click(resubmit);
+// 	};
+
+// 	resubmit = function() {
+// 		document.body.innerHTML = "<h1>Trying to resubmit...</h1>";
+// 		reprompt = setTimeout(prompt_resubmit, 10000);
+		
+// 		psiTurk.saveData({
+// 			success: function() {
+// 				clearInterval(reprompt); 
+// 				//psiTurk.completeHIT();
+
+// 				psiTurk.computeBonus('compute_bonus', function(){
+//                 	 		psiTurk.completeHIT(); //Call compute_bonus function for automatic bonus calculation (By Jason)
+//                  }); 
+
+//             }, 
+//             error: prompt_resubmit
+//         });
+// 	};
+
+// 	psiTurk.showPage('postquestionnaire.html');
+// 	psiTurk.recordTrialData({'phase':'postquestionnaire', 'status':'begin'});
+
+// 	psiTurk.recordUnstructuredData('incorrectGQ1', incorrect1);
+// 	psiTurk.recordUnstructuredData('incorrectGQ2', incorrect2);
+// 	psiTurk.recordUnstructuredData('incorrectLQ1', incorrect3);
+// 	psiTurk.recordUnstructuredData('incorrectLQ2', incorrect4);
+// 	psiTurk.recordUnstructuredData('incorrectGQ3', incorrect5);
+	
+// 	$("#next").click(function () {
+// 		record_responses();
+// 		psiTurk.saveData({
+// 			success: function(){
+// 				psiTurk.computeBonus('compute_bonus',function(){
+// 				psiTurk.completeHIT();});
+//             }, 
+//             error: prompt_resubmit});
+// 	});
+// };
+
+
+/*****************************************
+*            OTHER FUNCTIONS             *
+******************************************/
+
+// function equivalent to linspace in matlab - generates an array of n evenly spaced numbers between min and max (inclusive for both) 
+function linspace(min,max,nBins) {
+	var i;
+	ret = Array(nBins);
+	nBins--;
+	for (i = nBins; i >= 0; i--) {
+		ret[i] = (i*max+(nBins-i)*min)/nBins; 
+	}
+	return ret;
+}
+
+
+// function equivalent to randi in matlab - generates a random integer between min and max (inclusive for both) 
+function randi(min, max) {
+	return Math.floor(Math.random() * ((max + 1) - min)) + min;
+}
+
+
+// function equivalent to repmat in matlab - repeats a given array nReps times
+function repmat(array, nReps) {
+	var result = [];
+	while (nReps--) {
+		result = result.concat(array);
+	}
+	return result;
+}

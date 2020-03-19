@@ -1,4 +1,613 @@
-2020-03-18 17:28:33,466 Exception on /instructions/instruct-ready-space.html [GET]
+2020-03-19 09:03:28,934 Exception on /instructions/instruct-story1.html [GET]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 750, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: instructions/instruct-story1.html
+2020-03-19 09:03:28,939 Exception on /instructions/instruct-story2.html [GET]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 750, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: instructions/instruct-story2.html
+2020-03-19 09:03:28,944 Exception on /instructions/instruct-0.html [GET]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 750, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: instructions/instruct-0.html
+2020-03-19 09:03:28,949 Exception on /instructions/instruct-1.html [GET]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 750, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: instructions/instruct-1.html
+2020-03-19 09:03:28,956 Exception on /instructions/instruct-2.html [GET]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 750, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: instructions/instruct-2.html
+2020-03-19 09:03:28,962 Exception on /instructions/instruct-2Q.html [GET]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 750, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: instructions/instruct-2Q.html
+2020-03-19 09:03:28,968 Exception on /instructions/instruct-3P.html [GET]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 750, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: instructions/instruct-3P.html
+2020-03-19 09:03:28,973 Exception on /instructions/instruct-3G1.html [GET]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 750, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: instructions/instruct-3G1.html
+2020-03-19 09:03:28,980 Exception on /instructions/instruct-3G2.html [GET]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 750, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: instructions/instruct-3G2.html
+2020-03-19 09:03:28,985 Exception on /instructions/instruct-3GB.html [GET]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 750, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: instructions/instruct-3GB.html
+2020-03-19 09:03:28,991 Exception on /instructions/instruct-3GQ1.html [GET]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 750, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: instructions/instruct-3GQ1.html
+2020-03-19 09:03:28,996 Exception on /instructions/instruct-3GQ2.html [GET]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 750, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: instructions/instruct-3GQ2.html
+2020-03-19 09:03:29,003 Exception on /instructions/instruct-3L1.html [GET]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 750, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: instructions/instruct-3L1.html
+2020-03-19 09:03:29,007 Exception on /instructions/instruct-3L2.html [GET]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 750, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: instructions/instruct-3L2.html
+2020-03-19 09:03:29,012 Exception on /instructions/instruct-3LB.html [GET]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 750, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: instructions/instruct-3LB.html
+2020-03-19 09:03:29,018 Exception on /instructions/instruct-3LQ1.html [GET]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 750, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: instructions/instruct-3LQ1.html
+2020-03-19 09:03:29,023 Exception on /instructions/instruct-3LQ2.html [GET]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 750, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: instructions/instruct-3LQ2.html
+2020-03-19 09:03:29,028 Exception on /instructions/instruct-3MQ.html [GET]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 750, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: instructions/instruct-3MQ.html
+2020-03-19 09:03:29,034 Exception on /instructions/instruct-3M2.html [GET]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 750, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: instructions/instruct-3M2.html
+2020-03-19 09:03:29,039 Exception on /instructions/instruct-Main-Sample.html [GET]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 750, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: instructions/instruct-Main-Sample.html
+2020-03-19 09:03:29,044 Exception on /instructions/instruct-ready.html [GET]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 750, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: instructions/instruct-ready.html
+2020-03-19 09:03:29,050 Exception on /instructions/instruct-ready-space.html [GET]
 Traceback (most recent call last):
   File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
     response = self.full_dispatch_request()
@@ -27,7 +636,7 @@ Traceback (most recent call last):
   File "/Library/Python/2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
     raise TemplateNotFound(template)
 TemplateNotFound: instructions/instruct-ready-space.html
-2020-03-18 17:30:51,468 Exception on /instructions/instruct-ready-space.html [GET]
+2020-03-19 09:03:29,054 Exception on /instructions/break-remind.html [GET]
 Traceback (most recent call last):
   File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
     response = self.full_dispatch_request()
@@ -55,8 +664,8 @@ Traceback (most recent call last):
     return self._get_source_fast(environment, template)
   File "/Library/Python/2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
     raise TemplateNotFound(template)
-TemplateNotFound: instructions/instruct-ready-space.html
-2020-03-18 17:32:25,073 Exception on /instructions/instruct-ready-space.html [GET]
+TemplateNotFound: instructions/break-remind.html
+2020-03-19 09:03:29,058 Exception on /instructions/break.html [GET]
 Traceback (most recent call last):
   File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
     response = self.full_dispatch_request()
@@ -84,8 +693,8 @@ Traceback (most recent call last):
     return self._get_source_fast(environment, template)
   File "/Library/Python/2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
     raise TemplateNotFound(template)
-TemplateNotFound: instructions/instruct-ready-space.html
-2020-03-18 17:37:41,419 Exception on /instructions/instruct-ready-space.html [GET]
+TemplateNotFound: instructions/break.html
+2020-03-19 09:03:29,062 Exception on /instructions/break-protector.html [GET]
 Traceback (most recent call last):
   File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
     response = self.full_dispatch_request()
@@ -113,8 +722,8 @@ Traceback (most recent call last):
     return self._get_source_fast(environment, template)
   File "/Library/Python/2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
     raise TemplateNotFound(template)
-TemplateNotFound: instructions/instruct-ready-space.html
-2020-03-18 17:41:45,190 Exception on /instructions/instruct-ready-space.html [GET]
+TemplateNotFound: instructions/break-protector.html
+2020-03-19 09:03:29,067 Exception on /instructions/break-collector.html [GET]
 Traceback (most recent call last):
   File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
     response = self.full_dispatch_request()
@@ -142,67 +751,8 @@ Traceback (most recent call last):
     return self._get_source_fast(environment, template)
   File "/Library/Python/2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
     raise TemplateNotFound(template)
-TemplateNotFound: instructions/instruct-ready-space.html
-2020-03-18 17:41:54,651 DB error: Unique user not found.
-2020-03-18 17:41:54,651 Exception on /sync/debugTCZBTQ:debugGMJI5P [PUT]
-Traceback (most recent call last):
-  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 595, in update
-    db_session.commit()
-  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
-    return getattr(self.registry(), name)(*args, **kwargs)
-  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 1027, in commit
-    self.transaction.commit()
-  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 494, in commit
-    self._prepare_impl()
-  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 473, in _prepare_impl
-    self.session.flush()
-  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 2459, in flush
-    self._flush(objects)
-  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
-    transaction.rollback(_capture_exception=True)
-  File "/Library/Python/2.7/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
-    compat.reraise(exc_type, exc_value, exc_tb)
-  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 2557, in _flush
-    flush_context.execute()
-  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
-    rec.execute(self)
-  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
-    uow,
-  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/persistence.py", line 236, in save_obj
-    update,
-  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/persistence.py", line 996, in _emit_update_statements
-    statement, multiparams
-  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 988, in execute
-    return meth(self, multiparams, params)
-  File "/Library/Python/2.7/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
-    return connection._execute_clauseelement(self, multiparams, params)
-  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
-    distilled_params,
-  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
-    e, statement, parameters, cursor, context
-  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
-    util.raise_from_cause(sqlalchemy_exception, exc_info)
-  File "/Library/Python/2.7/site-packages/sqlalchemy/util/compat.py", line 399, in raise_from_cause
-    reraise(type(exception), exception, tb=exc_tb, cause=cause)
-  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
-    cursor, statement, parameters, context
-  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/default.py", line 550, in do_execute
-    cursor.execute(statement, parameters)
-OperationalError: (sqlite3.OperationalError) database is locked
-[SQL: UPDATE turkdemo SET datastring=? WHERE turkdemo.uniqueid = ?]
-[parameters: ('{"assignmentId": "debugGMJI5P", "workerId": "debugTCZBTQ", "questiondata": {}, "bonus": 0, "hitId": "debug6FDBNT", "counterbalance": 0, "useragent":  ... (1201 characters truncated) ... ctions/instruct-ready.html"}, "uniqueid": "debugTCZBTQ:debugGMJI5P", "dateTime": 1584567709636}], "currenttrial": 4, "condition": 0, "mode": "debug"}', u'debugTCZBTQ:debugGMJI5P')]
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-03-18 17:44:08,790 Exception on /instructions/instruct-ready-space.html [GET]
+TemplateNotFound: instructions/break-collector.html
+2020-03-19 09:03:29,074 Exception on /instructions/break-small.html [GET]
 Traceback (most recent call last):
   File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
     response = self.full_dispatch_request()
@@ -230,235 +780,58 @@ Traceback (most recent call last):
     return self._get_source_fast(environment, template)
   File "/Library/Python/2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
     raise TemplateNotFound(template)
-TemplateNotFound: instructions/instruct-ready-space.html
-[2020-03-18 20:00:57 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:4655)
-[2020-03-18 20:00:57 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:4656)
-[2020-03-18 20:00:57 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:4224)
-[2020-03-18 20:00:57 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:4659)
-[2020-03-18 20:00:57 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:4664)
-[2020-03-18 20:00:57 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:4665)
-[2020-03-18 20:00:57 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:4666)
-[2020-03-18 20:00:57 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:4668)
-[2020-03-18 20:00:57 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:4225)
-[2020-03-18 20:00:57 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:4669)
-[2020-03-18 20:00:57 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:4672)
-[2020-03-18 20:00:57 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:4226)
-[2020-03-18 20:00:57 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:4677)
-[2020-03-18 20:00:57 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:4227)
-[2020-03-18 20:00:57 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:4228)
-[2020-03-18 20:00:57 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:4229)
-[2020-03-18 20:00:57 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:4230)
-[2020-03-18 20:00:57 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:4231)
-[2020-03-18 20:00:57 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:4232)
-[2020-03-18 20:00:57 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:4233)
-[2020-03-18 20:00:57 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:4234)
-[2020-03-18 20:00:57 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:4235)
-[2020-03-18 20:00:57 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:4236)
-[2020-03-18 20:00:57 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:4237)
-[2020-03-18 20:00:57 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:4238)
-[2020-03-18 20:00:57 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:4239)
-[2020-03-18 20:00:57 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:4240)
-[2020-03-18 20:00:57 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:4241)
-[2020-03-18 20:00:57 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:4242)
-[2020-03-18 20:00:57 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:4243)
-[2020-03-18 20:00:57 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:4244)
-[2020-03-18 20:00:57 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:4245)
-[2020-03-18 20:00:57 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:4246)
-[2020-03-18 20:00:57 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:4247)
-[2020-03-18 20:00:57 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:4248)
-[2020-03-18 22:38:46 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:4657)
-[2020-03-18 22:38:46 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:4662)
-[2020-03-18 22:38:46 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:4663)
-[2020-03-18 22:38:46 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:4670)
-[2020-03-18 22:38:46 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:4673)
-[2020-03-18 22:38:46 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:4674)
-[2020-03-18 22:38:46 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:6400)
-[2020-03-18 22:38:46 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:4678)
-[2020-03-18 22:38:46 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:4679)
-[2020-03-18 22:38:46 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:4680)
-[2020-03-18 22:38:46 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:6401)
-[2020-03-18 22:38:46 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:6380)
-[2020-03-18 22:38:46 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:6402)
-[2020-03-18 22:38:46 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:6403)
-[2020-03-18 22:38:46 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:6404)
-[2020-03-18 22:38:46 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:6405)
-[2020-03-18 22:38:46 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:6406)
-[2020-03-18 22:38:46 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:6407)
-[2020-03-18 22:38:46 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:6408)
-[2020-03-18 22:38:46 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:6409)
-[2020-03-18 22:38:46 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:6410)
-[2020-03-18 22:38:46 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:6411)
-[2020-03-18 22:38:46 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:6412)
-[2020-03-18 22:38:46 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:6413)
-[2020-03-18 22:38:46 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:6414)
-[2020-03-18 22:38:46 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:6381)
-[2020-03-18 22:38:46 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:6384)
-[2020-03-18 22:38:46 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:6415)
-[2020-03-18 22:38:46 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:6385)
-[2020-03-18 22:38:46 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:6389)
-[2020-03-18 22:38:46 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:6387)
-[2020-03-18 22:38:46 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:6388)
-[2020-03-18 22:38:46 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:6392)
-[2020-03-18 22:38:46 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:6390)
-[2020-03-18 22:38:46 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:6391)
-[2020-03-18 22:38:46 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:6399)
-[2020-03-18 22:38:46 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:6393)
-[2020-03-18 22:38:46 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:6394)
-[2020-03-18 22:38:46 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:6395)
-[2020-03-18 22:38:46 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:6396)
-[2020-03-18 22:38:46 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:6397)
-[2020-03-18 22:38:46 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:6398)
-[2020-03-18 22:56:05 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8324)
-[2020-03-18 22:56:05 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8330)
-[2020-03-18 22:56:05 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8325)
-[2020-03-18 22:56:05 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8332)
-[2020-03-18 22:56:05 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8327)
-[2020-03-18 22:56:05 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8347)
-[2020-03-18 22:56:05 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8348)
-[2020-03-18 22:56:05 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8328)
-[2020-03-18 22:56:05 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8323)
-[2020-03-18 22:56:05 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8351)
-[2020-03-18 22:56:05 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8346)
-[2020-03-18 22:56:05 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8353)
-[2020-03-18 22:56:05 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8354)
-[2020-03-18 22:56:05 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8355)
-[2020-03-18 22:56:05 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8358)
-[2020-03-18 22:56:05 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:4658)
-[2020-03-18 22:56:05 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8349)
-[2020-03-18 22:56:05 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8350)
-[2020-03-18 22:56:05 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8352)
-[2020-03-18 22:56:05 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8356)
-[2020-03-18 22:56:05 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8357)
-[2020-03-18 22:56:05 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8359)
-[2020-03-18 22:56:05 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:4661)
-[2020-03-18 22:56:05 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:4667)
-[2020-03-18 22:56:05 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:4671)
-[2020-03-18 22:56:05 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:4675)
-[2020-03-18 22:56:05 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:4676)
-[2020-03-18 22:56:05 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:6382)
-[2020-03-18 22:56:05 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:6386)
-[2020-03-18 22:56:05 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8360)
-[2020-03-18 22:56:05 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8361)
-[2020-03-18 22:56:05 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8362)
-[2020-03-18 22:56:05 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8363)
-[2020-03-18 22:56:05 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8364)
-[2020-03-18 22:56:05 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8365)
-[2020-03-18 23:54:52 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8331)
-[2020-03-18 23:54:52 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8326)
-[2020-03-18 23:54:52 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8520)
-[2020-03-18 23:54:52 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8515)
-[2020-03-18 23:54:52 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8522)
-[2020-03-18 23:54:52 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8523)
-[2020-03-18 23:54:52 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8516)
-[2020-03-18 23:54:52 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8517)
-[2020-03-18 23:54:52 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8524)
-[2020-03-18 23:54:52 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8518)
-[2020-03-18 23:54:52 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8519)
-[2020-03-18 23:54:52 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8526)
-[2020-03-18 23:54:52 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8521)
-[2020-03-18 23:54:52 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8528)
-[2020-03-18 23:54:52 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8529)
-[2020-03-18 23:54:52 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8531)
-[2020-03-18 23:54:52 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8532)
-[2020-03-18 23:54:52 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8525)
-[2020-03-18 23:54:52 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8527)
-[2020-03-18 23:54:52 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8530)
-[2020-03-18 23:54:52 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8534)
-[2020-03-18 23:54:52 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8536)
-[2020-03-18 23:54:52 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8538)
-[2020-03-18 23:54:52 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8540)
-[2020-03-18 23:54:52 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8542)
-[2020-03-18 23:54:52 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8543)
-[2020-03-18 23:54:52 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8546)
-[2020-03-18 23:54:52 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8533)
-[2020-03-18 23:54:52 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8535)
-[2020-03-18 23:54:52 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8537)
-[2020-03-18 23:54:52 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8539)
-[2020-03-18 23:54:52 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8544)
-[2020-03-18 23:54:52 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8549)
-[2020-03-18 23:54:52 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8550)
-[2020-03-18 23:54:52 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8545)
-[2020-03-18 23:54:52 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8547)
-[2020-03-18 23:54:52 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8548)
-[2020-03-19 00:15:21 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8579)
-[2020-03-19 00:15:21 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8581)
-[2020-03-19 00:15:21 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8576)
-[2020-03-19 00:15:21 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8582)
-[2020-03-19 00:15:21 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8577)
-[2020-03-19 00:15:21 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8584)
-[2020-03-19 00:15:21 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8578)
-[2020-03-19 00:15:21 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8585)
-[2020-03-19 00:15:21 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8580)
-[2020-03-19 00:15:21 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8587)
-[2020-03-19 00:15:21 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8583)
-[2020-03-19 00:15:21 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8590)
-[2020-03-19 00:15:21 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8586)
-[2020-03-19 00:15:21 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8588)
-[2020-03-19 00:15:21 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8591)
-[2020-03-19 00:15:21 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8589)
-[2020-03-19 00:15:21 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8593)
-[2020-03-19 00:15:21 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8594)
-[2020-03-19 00:15:21 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8596)
-[2020-03-19 00:15:21 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8595)
-[2020-03-19 00:15:21 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8561)
-[2020-03-19 00:15:21 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8592)
-[2020-03-19 00:15:21 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8559)
-[2020-03-19 00:15:21 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8560)
-[2020-03-19 00:15:21 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8562)
-[2020-03-19 00:15:21 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8563)
-[2020-03-19 00:15:21 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8565)
-[2020-03-19 00:15:21 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8568)
-[2020-03-19 00:15:21 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8570)
-[2020-03-19 00:15:21 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8574)
-[2020-03-19 00:15:21 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8575)
-[2020-03-19 00:15:21 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8564)
-[2020-03-19 00:15:21 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8566)
-[2020-03-19 00:15:21 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8567)
-[2020-03-19 00:15:21 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8569)
-[2020-03-19 00:15:21 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8571)
-[2020-03-19 00:15:21 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8573)
-[2020-03-19 01:15:07 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8333)
-[2020-03-19 01:15:07 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8335)
-[2020-03-19 01:15:07 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8602)
-[2020-03-19 01:15:07 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8606)
-[2020-03-19 01:15:07 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8609)
-[2020-03-19 01:15:07 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8611)
-[2020-03-19 01:15:07 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8613)
-[2020-03-19 01:15:07 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8603)
-[2020-03-19 01:15:07 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8616)
-[2020-03-19 01:15:07 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8618)
-[2020-03-19 01:15:07 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8604)
-[2020-03-19 01:15:07 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8622)
-[2020-03-19 01:15:07 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8605)
-[2020-03-19 01:15:07 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8625)
-[2020-03-19 01:15:07 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8607)
-[2020-03-19 01:15:07 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8608)
-[2020-03-19 01:15:07 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8610)
-[2020-03-19 01:15:07 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8612)
-[2020-03-19 01:15:07 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8614)
-[2020-03-19 01:15:07 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8615)
-[2020-03-19 01:15:07 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8617)
-[2020-03-19 01:15:07 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8619)
-[2020-03-19 01:15:07 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8621)
-[2020-03-19 01:15:07 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8623)
-[2020-03-19 01:15:07 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8624)
-[2020-03-19 01:15:07 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8627)
-[2020-03-19 01:15:07 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8629)
-[2020-03-19 01:15:07 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8631)
-[2020-03-19 01:15:07 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8632)
-[2020-03-19 01:15:07 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8626)
-[2020-03-19 01:15:07 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8628)
-[2020-03-19 01:15:07 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8630)
-[2020-03-19 01:15:07 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8633)
-[2020-03-19 01:15:07 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8634)
-[2020-03-19 01:15:07 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8635)
-[2020-03-19 01:15:07 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8636)
-[2020-03-19 01:15:07 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8637)
-[2020-03-19 01:15:07 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8638)
-[2020-03-19 01:15:07 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8639)
-[2020-03-19 03:15:25 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8334)
-[2020-03-19 05:15:43 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8337)
-[2020-03-19 05:15:43 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8336)
-[2020-03-19 07:16:02 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8713)
-[2020-03-19 07:16:02 -0400] [4113] [CRITICAL] WORKER TIMEOUT (pid:8712)
-[2020-03-19 08:08:19 -0400] [4651] [CRITICAL] WORKER TIMEOUT (pid:8338)
+TemplateNotFound: instructions/break-small.html
+2020-03-19 09:03:29,079 Exception on /instructions/break-large.html [GET]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 750, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: instructions/break-large.html
+[2020-03-19 09:09:44 -0400] [10139] [CRITICAL] WORKER TIMEOUT (pid:10143)
+[2020-03-19 09:09:44 -0400] [10139] [CRITICAL] WORKER TIMEOUT (pid:10144)
+[2020-03-19 09:09:44 -0400] [10139] [CRITICAL] WORKER TIMEOUT (pid:10145)
+[2020-03-19 09:09:44 -0400] [10139] [CRITICAL] WORKER TIMEOUT (pid:10146)
+[2020-03-19 09:09:44 -0400] [10139] [CRITICAL] WORKER TIMEOUT (pid:10147)
+[2020-03-19 09:09:44 -0400] [10139] [CRITICAL] WORKER TIMEOUT (pid:10148)
+[2020-03-19 09:09:44 -0400] [10139] [CRITICAL] WORKER TIMEOUT (pid:10149)
+[2020-03-19 09:09:44 -0400] [10139] [CRITICAL] WORKER TIMEOUT (pid:10150)
+[2020-03-19 09:09:44 -0400] [10139] [CRITICAL] WORKER TIMEOUT (pid:10151)
+[2020-03-19 09:09:44 -0400] [10139] [CRITICAL] WORKER TIMEOUT (pid:10152)
+[2020-03-19 09:09:44 -0400] [10139] [CRITICAL] WORKER TIMEOUT (pid:10153)
+[2020-03-19 09:09:44 -0400] [10139] [CRITICAL] WORKER TIMEOUT (pid:10154)
+[2020-03-19 09:09:44 -0400] [10139] [CRITICAL] WORKER TIMEOUT (pid:10155)
+[2020-03-19 09:09:44 -0400] [10139] [CRITICAL] WORKER TIMEOUT (pid:10156)
+[2020-03-19 09:09:44 -0400] [10139] [CRITICAL] WORKER TIMEOUT (pid:10157)
+[2020-03-19 09:09:44 -0400] [10139] [CRITICAL] WORKER TIMEOUT (pid:10158)
+[2020-03-19 09:09:44 -0400] [10139] [CRITICAL] WORKER TIMEOUT (pid:10159)
+[2020-03-19 09:09:44 -0400] [10139] [CRITICAL] WORKER TIMEOUT (pid:10160)
+[2020-03-19 09:09:44 -0400] [10139] [CRITICAL] WORKER TIMEOUT (pid:10161)
+[2020-03-19 09:09:44 -0400] [10139] [CRITICAL] WORKER TIMEOUT (pid:10162)
+[2020-03-19 09:09:44 -0400] [10139] [CRITICAL] WORKER TIMEOUT (pid:10163)
+[2020-03-19 09:09:44 -0400] [10139] [CRITICAL] WORKER TIMEOUT (pid:10164)
+[2020-03-19 09:09:44 -0400] [10139] [CRITICAL] WORKER TIMEOUT (pid:10165)
+[2020-03-19 09:09:44 -0400] [10139] [CRITICAL] WORKER TIMEOUT (pid:10172)
+[2020-03-19 09:09:44 -0400] [10139] [CRITICAL] WORKER TIMEOUT (pid:10173)
