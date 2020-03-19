@@ -18,17 +18,11 @@ var mycounterbalance = counterbalance;  // they tell you which condition you hav
 
 //set the appropriate instructions by calling a function from the instructions.js file
 const {pages, 
-	instruction1Pages,
-	instruction2Pages,
-	instruction3Pages,
-	instructionLossPages,
-	instructionGainPages,
-	postPracticeBreak,
-	BreakCollectorPage,
-	BreakProtectorPage,
-	BreakSmallPage,
-	BreakLargePage,
-	BreakPage} = instructionsProtect();
+	keyMappingInstructions,
+	interferenceInstructions,
+	gainsIntervalInstructions,
+	startGameInstructions,
+	BreakPage} = instructionsGardenGains();
 
 //preload your pages 
 psiTurk.preloadPages(pages);
@@ -104,8 +98,8 @@ var values = {gain_low:lowValue,gain_high:highValue,loss_low:lowValue,loss_high:
 var heading = {gain_low:'Gem: ',gain_high:'Gem: ',loss_low:'Bomb: ',loss_high:'Bomb: '};
 var numSign = {gain_low:1,gain_high:1,loss_low:-1,loss_high:-1};
 var initialBonus = {gain_low:0,gain_high:0,loss_low:initialLoss,loss_high:initialLoss};
-var breakForBlockType = {collector:BreakCollectorPage,protector:BreakProtectorPage,
-	small:BreakSmallPage,large:BreakLargePage};
+//var breakForBlockType = {collector:BreakCollectorPage,protector:BreakProtectorPage,
+//	small:BreakSmallPage,large:BreakLargePage};
 
 
 /***Global variables tracked in the main task***/
@@ -416,7 +410,7 @@ var Baseline = function(endCallback){
 
 // what to start the experiment with 
 $(window).load( function(){
-		psiTurk.doInstructions(instruction1Pages,ColorMappingPractice);
+		psiTurk.doInstructions(keyMappingInstructions,ColorMappingPractice);
  	}
 );
 

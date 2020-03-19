@@ -1,3 +1,8 @@
+//file containing the instruction functions 
+
+
+
+
 instructionsProtect= () => {
 
 
@@ -123,4 +128,65 @@ const BreakPage = [
 
 }
 
+
+
+instructionsGardenGains = ()=>{
+	const pages = [
+	"gardenGainsInstructions/instruct-1F.html",
+	"gardenGainsInstructions/instruct-1Fb.html",
+	"gardenGainsInstructions/instruct-1Fc.html",
+	"gardenGainsInstructions/instruct-1Fd.html",
+	"gardenGainsInstructions/instruct-2F.html",
+	"gardenGainsInstructions/instruct-2QF.html",
+	"gardenGainsInstructions/instruct-3F.html",
+	"gardenGainsInstructions/instruct-3Fb.html",
+	"gardenGainsInstructions/instruct-3Q.html",
+	"gardenGainsInstructions/instruct-4F.html",
+	"gardenGainsInstructions/instruct-readyF.html",
+	"gardenGainsInstructions/breakF.html",
+	"srm/DASS.html",
+	"srm/GSE.html",
+	"srm/ADDI.html",
+	"srm/AMI.html",
+	"stage.html",
+	"postquestionnaire.html"
+	];
+
+	psiTurk.preloadPages(pages);
+
+	const keyMappingInstructions = [
+	"gardenGainsInstructions/instruct-1F.html",
+	"gardenGainsInstructions/instruct-1Fb.html",
+	"gardenGainsInstructions/instruct-1Fc.html",
+	"gardenGainsInstructions/instruct-1Fd.html",
+	"gardenGainsInstructions/instruct-readyF.html"
+	];
+	const interferenceInstructions = [
+	"gardenGainsInstructions/instruct-2F.html",
+	"gardenGainsInstructions/instruct-2QF.html",
+	"gardenGainsInstructions/instruct-readyF.html"
+	];
+	const gainsIntervalInstructions = [
+	"gardenGainsInstructions/instruct-3F.html",
+	"gardenGainsInstructions/instruct-3Fb.html",
+	"gardenGainsInstructions/instruct-3Q.html",
+	"gardenGainsInstructions/instruct-readyF.html"
+	];
+	const startGameInstructions = [
+	"gardenGainsInstructions/instruct-4F.html",
+	"gardenGainsInstructions/instruct-readyF.html"
+	];
+	const BreakPage = [
+	"gardenGainsInstructions/breakF.html"
+	];
+
+	return {pages,keyMappingInstructions,
+		interferenceInstructions,
+		gainsIntervalInstructions,
+		startGameInstructions,
+		BreakPage}
+
+
+
+}
 

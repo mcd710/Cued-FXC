@@ -1,0 +1,56 @@
+<div id="container-instructions">
+
+    <h1>Instructions</h1>
+
+
+    <div class="instructions well">
+        <div class="row">
+                <img style='float: left; padding-left: 20px;' class='' src='{{ server_location }}/static/images/FruitMappingVisual.png' height="300">
+
+                <p style='padding: 80px; padding-left: 440px;'>
+                    As a reminder: 
+
+                    <br />
+                        Left middle finger to press <strong>D</strong> to plant <img id="fruitD", style="height: 75px;width: 75px"></strong><br />
+
+                        Left index finger to press <strong>F</strong> to plant <img id="fruitF", style="height: 75px;width: 75px"></strong><br />
+
+                        Right index finger to press <strong>J</strong> to plant <img id="fruitJ", style="height: 75px;width: 75px"></strong><br />
+
+                        Right middle finger to press <strong>K</strong> to plant <img id="fruitK", style="height: 75px;width: 75px"></strong><br />
+                        <script type="text/javascript">
+                             console.log("inside readyF and responseFruit are" +responseFruit)
+                            console.log("inside readyF and responseFruitSCR are" +responseFruitSCR)
+                            document.getElementById("fruitD").src = responseFruitSCR[0];
+                            document.getElementById("fruitF").src = responseFruitSCR[1];
+                            document.getElementById("fruitJ").src = responseFruitSCR[2];
+                            document.getElementById("fruitK").src = responseFruitSCR[3];
+                        </script><br />
+                </p>
+
+        </div>
+
+        <br />
+
+        <p class="text-center">
+            <em>Please take a few moments, and when you are ready press the button to continue the experiment.</em>
+        </p>
+
+</div>
+
+
+<div class="instructionsnav">
+    <div class="row">
+        <div class="col-xs-2">
+        </div>
+        <div class="col-xs-8">
+            <button type="button" id="next" value="next" class="btn btn-success btn-lg center-block continue">
+                Press space to begin experiment
+            </button>
+        </div>
+        <div class="col-xs-2">
+        </div>
+    </div>
+</div>
+
+</div>
