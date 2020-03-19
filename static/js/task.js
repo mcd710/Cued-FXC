@@ -35,8 +35,6 @@ psiTurk.preloadPages(pages);
 
 
 
-
-
 var htmlParams = {
 	title:'#title',
 	stim:'#stim',
@@ -113,46 +111,46 @@ var breakForBlockType = {collector:BreakCollectorPage,protector:BreakProtectorPa
 
 
 
-var ColorMappingPractice = function(){
-	var configParams = {space:false,accFeedback:true,washout:true};
-	var stimSet = _.shuffle(repmat(possibleStimsNeutral,Math.ceil(numColorPracticeTrials/possibleStimsNeutral.length)));
+// var ColorMappingPractice = function(){
+// 	var configParams = {space:false,accFeedback:true,washout:true};
+// 	var stimSet = _.shuffle(repmat(possibleStimsNeutral,Math.ceil(numColorPracticeTrials/possibleStimsNeutral.length)));
 	
-	var writeRecord = function(Record){
+// 	var writeRecord = function(Record){
 
-	 	Record.phase = "ColorMappingPractice";
-	 	Record.sessionNum = NaN;
-	 	Record.blockNum = NaN;
-	 	Record.intervalNum = NaN;
-	 	Record.intervalType = NaN;
-	 	Record.intervalLength = NaN;
-	 	Record.moneyEarned = NaN;
-	 	psiTurk.recordTrialData(Record);
-	};
+// 	 	Record.phase = "ColorMappingPractice";
+// 	 	Record.sessionNum = NaN;
+// 	 	Record.blockNum = NaN;
+// 	 	Record.intervalNum = NaN;
+// 	 	Record.intervalType = NaN;
+// 	 	Record.intervalLength = NaN;
+// 	 	Record.moneyEarned = NaN;
+// 	 	psiTurk.recordTrialData(Record);
+// 	};
 
-	var nextAction = function(trial){
-		if(trial.counter[0] < 5){
-			trial.stimSet = [possibleStimsNeutral[randi(0,possibleStimsNeutral.length-1)]];
-			trial.initiation();
-			return;
-		}
-		//psiTurk.completeHIT();
-		psiTurk.doInstructions(instruction2Pages,StroopPractice);
-	}
+// 	var nextAction = function(trial){
+// 		if(trial.counter[0] < 5){
+// 			trial.stimSet = [possibleStimsNeutral[randi(0,possibleStimsNeutral.length-1)]];
+// 			trial.initiation();
+// 			return;
+// 		}
+// 		//psiTurk.completeHIT();
+// 		psiTurk.doInstructions(instruction2Pages,StroopPractice);
+// 	}
 
-	var callbacks = {
-		endOfSetCallback:nextAction,
-		tallyCallback:0,
-		recordStimCallback:recordStimStroop,
-		completeRecordCallback:writeRecord
-	};
+// 	var callbacks = {
+// 		endOfSetCallback:nextAction,
+// 		tallyCallback:0,
+// 		recordStimCallback:recordStimStroop,
+// 		completeRecordCallback:writeRecord
+// 	};
 	
-	trialTimingParams.itiDuration = 500;
+// 	trialTimingParams.itiDuration = 500;
 
-	var trial = new timedTrial(stimSet,[false],[0,0],trialTimingParams,'#stim',callbacks,configParams);
-	psiTurk.showPage("stage.html");
-	$("body").unbind("keydown").focus().keydown(trial.responseListener.bind(trial));
-	trial.initiation();
-}
+// 	var trial = new timedTrial(stimSet,[false],[0,0],trialTimingParams,'#stim',callbacks,configParams);
+// 	psiTurk.showPage("stage.html");
+// 	$("body").unbind("keydown").focus().keydown(trial.responseListener.bind(trial));
+// 	trial.initiation();
+// }
 
 
 

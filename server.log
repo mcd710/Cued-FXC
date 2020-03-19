@@ -4271,3 +4271,156 @@ Traceback (most recent call last):
   File "/Library/Python/2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
     raise TemplateNotFound(template)
 TemplateNotFound: instructions/instruct-ready-space.html
+2020-03-19 15:45:18,240 DB error: Unique user not found.
+2020-03-19 15:45:18,240 Exception on /sync/debugR05MJD:debugV8I0QC [PUT]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 595, in update
+    db_session.commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 1027, in commit
+    self.transaction.commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 498, in commit
+    t[1].commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1716, in commit
+    self._do_commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1747, in _do_commit
+    self.connection._commit_impl()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 763, in _commit_impl
+    self._handle_dbapi_exception(e, None, None, None, None)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/util/compat.py", line 399, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 761, in _commit_impl
+    self.engine.dialect.do_commit(self.connection)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/default.py", line 503, in do_commit
+    dbapi_connection.commit()
+OperationalError: (sqlite3.OperationalError) database is locked
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2020-03-19 15:50:40,406 Exception on /instructions/instruct-ready-space.html [GET]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 750, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: instructions/instruct-ready-space.html
+2020-03-19 15:50:50,649 Exception on /sync/debugUFYMGH:debugT10DC8 [PUT]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 595, in update
+    db_session.commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 1027, in commit
+    self.transaction.commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 494, in commit
+    self._prepare_impl()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 473, in _prepare_impl
+    self.session.flush()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 2459, in flush
+    self._flush(objects)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 2557, in _flush
+    flush_context.execute()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/persistence.py", line 236, in save_obj
+    update,
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/persistence.py", line 996, in _emit_update_statements
+    statement, multiparams
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/util/compat.py", line 399, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/default.py", line 550, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) database is locked
+[SQL: UPDATE turkdemo SET datastring=? WHERE turkdemo.uniqueid = ?]
+[parameters: ('{"assignmentId": "debugT10DC8", "workerId": "debugUFYMGH", "questiondata": {}, "bonus": 0, "hitId": "debug4CQZRG", "counterbalance": 0, "useragent":  ... (1201 characters truncated) ... ctions/instruct-ready.html"}, "uniqueid": "debugUFYMGH:debugT10DC8", "dateTime": 1584647445639}], "currenttrial": 4, "condition": 0, "mode": "debug"}', u'debugUFYMGH:debugT10DC8')]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2020-03-19 15:51:45,371 Exception on /instructions/instruct-ready-space.html [GET]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 750, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: instructions/instruct-ready-space.html
