@@ -148,7 +148,7 @@ instructionsGardenGains = ()=>{
 	"srm/GSE.html",
 	"srm/ADDI.html",
 	"srm/AMI.html",
-	"stage.html",
+	"stages/stageGarden.html",
 	"postquestionnaire.html"
 	];
 
