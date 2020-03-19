@@ -10,8 +10,10 @@ var setInstructionPages = function(instructionName){
 
 	switch (instructionSet){
 
-		case SPICEGains:
+		case "SPICEGains":
 		
+		console.log("iside SPICEGains")
+
 		var pagesGarden = [
 			"instructions/SPICEGains/instruct-0.html",
 			"instructions/SPICEGains/instruct-1F.html",
@@ -30,9 +32,10 @@ var setInstructionPages = function(instructionName){
 			"postquestionnaire.html"
 		];
 
+
 		psiTurk.preloadPages(pagesGarden);
 
-		var taskStage = "stages/stageGarden.html",;
+		var taskStage = "stages/stageGarden.html";
 
 		var instruction1PagesGarden = [
 		"instructions/instruct-1F.html",
@@ -60,10 +63,20 @@ var setInstructionPages = function(instructionName){
 		"instructions/breakF.html"
 		];
 
+
+		return taskStage
+		return instruction1PagesGarden
+		return instruction2PagesGarden
+		return instruction3PagesGarden
+		return instruction4PagesGarden
+		return BreakPageGarden
+
+
 		break;
 
-		case pagesProtectorvCollector
+		case "pagesProtectorvCollector":
 
+		console.log("iside pagesProtectorvCollector")
 		var pagesProtectorvCollector = [
 		"instructions/instruct-story1.html",
 		"instructions/instruct-story2.html",
@@ -101,6 +114,9 @@ var setInstructionPages = function(instructionName){
 		"postquestionnaire_loss_high.html",
 		];
 
+		psiTurk.preloadPages(pagesProtectorvCollector);
+
+		taskStage ="stages/stage.html";
 
 		var instruction1Pages = [
 		"instructions/instruct-0.html",
@@ -174,8 +190,22 @@ var setInstructionPages = function(instructionName){
 		var BreakPage = [
 		"instructions/break.html"
 		];
+		
+		return taskStage
+		return instruction1Pages
+		return instruction2Pages
+		return instruction3Pages
+		return instructionLossPages
+		return instructionGainPages
+		return postPracticeBreak
+		return BreakCollectorPage
+		return BreakProtectorPage
+		return BreakSmallPage
+		return BreakLargePage
+		return BreakPage
 
 		break;
+
 
 
 

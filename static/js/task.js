@@ -20,8 +20,10 @@ var mycounterbalance = counterbalance;  // they tell you which condition you hav
 //variable for which instructions to call 
 taskVersion="ProtectorvCollector";
 
+
+
 //Which instructions to load from the instructions.js file
-setInstructionPages(taskVersion)
+setInstructionPages(taskVersion);
 
 
 var htmlParams = {
@@ -31,10 +33,10 @@ var htmlParams = {
 };
 
 
-var intervalDurations = [6000,7000,8000,9000];
-var itiDurations = [1000,1500,2000];
-var isiDurations = [500,750];
-var test = false;
+var intervalDurations = [6000,7000,8000,9000]; // length of the inverval in miliseconds
+var itiDurations = [1000,1500,2000];  // length of the inverval in miliseconds
+var isiDurations = [500,750];  // length of the inverval in miliseconds
+var test = true;  // length of the inverval in miliseconds
 
 
 if(test)
@@ -129,8 +131,8 @@ var values = {gain_low:lowValue,gain_high:highValue,loss_low:lowValue,loss_high:
 var heading = {gain_low:'Gem: ',gain_high:'Gem: ',loss_low:'Bomb: ',loss_high:'Bomb: '};
 var numSign = {gain_low:1,gain_high:1,loss_low:-1,loss_high:-1};
 var initialBonus = {gain_low:0,gain_high:0,loss_low:initialLoss,loss_high:initialLoss};
-var breakForBlockType = {collector:BreakCollectorPage,protector:BreakProtectorPage,
-	small:BreakSmallPage,large:BreakLargePage};
+//var breakForBlockType = {collector:BreakCollectorPage,protector:BreakProtectorPage,
+	//small:BreakSmallPage,large:BreakLargePage};
 
 
 
