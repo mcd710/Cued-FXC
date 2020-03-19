@@ -3,7 +3,7 @@
 
 
 
-StroopPractice = ()=>(){
+StroopPractice = ()=>{
 
 	console.log('inside the StroopPractice')
 	var stimSet = possibleStimsCongruent.concat(possibleStimsInCongruent);
@@ -29,7 +29,7 @@ StroopPractice = ()=>(){
 			return;
 		}
 		//what to do next
-		psiTurk.doInstructions(instruction3Pages,intervalPractice);
+		psiTurk.doInstructions(instruction3Pages,intervalPracticeProtector);
 	};
 
 	var callbacks = {
