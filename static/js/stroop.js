@@ -1,6 +1,6 @@
 //This is the file for commonly-used parameters and functions for Stroop task
 
-
+console.log("inside stroop")
 var possibleStimsNeutral = [
 	{word:"XXXXX",  congruency:"neutral",    path:"/static/images/stimuli/XXXXX_RedInk.png",    color:'red'},
 	{word:"XXXXX",  congruency:"neutral",    path:"/static/images/stimuli/XXXXX_YellowInk.png", color:'yellow'},
@@ -30,6 +30,7 @@ var possibleStimsInCongruent = [
 	{word:"GREEN",  congruency:"incongruent",path:"/static/images/stimuli/Green_BlueInk.png",    color:'blue'}
 	];
 
+console.log("inside strop and possibleStimsNeutral is" + possibleStimsNeutral)
 
 var responses = ["red", "yellow", "green", "blue"];
 

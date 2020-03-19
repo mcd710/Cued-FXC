@@ -28,6 +28,21 @@ const {pages,
 psiTurk.preloadPages(pages);
 
 
+//set appropriate stimuli 
+const {
+	words,
+	images,
+	paths,
+	fontColors,
+	possibleStimsNeutral,
+	possibleStimsCongruent,
+	possibleStimsInCongruent,
+	responses,
+	responseKeyCodes,
+	spaceKey}= setGardenStim();
+
+
+psiTurk.preloadImages(paths);
 
 var htmlParams = {
 	title:'#title',
@@ -55,6 +70,7 @@ const{numColorPracticeTrials, 	//set the number of keymapping practice  trials
 	selectPerBlock, 			//how many intervals to select per block
 	initialFundForLoss} = setTrialNumByMode(test); // set the intial fund for loss
 
+console.log("possibleStimsNeutral is" + possibleStimsNeutral)
 
 var initialLoss = 300;
 var price = 0.01;
@@ -410,7 +426,7 @@ var Baseline = function(endCallback){
 
 // what to start the experiment with 
 $(window).load( function(){
-		psiTurk.doInstructions(keyMappingInstructions,ColorMappingPractice);
+		psiTurk.doInstructions(keyMappingInstructions,FruitMappingPractice);
  	}
 );
 
