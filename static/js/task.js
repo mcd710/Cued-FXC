@@ -16,7 +16,7 @@ var mycounterbalance = counterbalance;  // they tell you which condition you hav
 
 
 
-
+//set the appropriate instructions by calling a function from the instructions.js file
 const {pages, 
 	instruction1Pages,
 	instruction2Pages,
@@ -30,6 +30,7 @@ const {pages,
 	BreakLargePage,
 	BreakPage} = instructionsProtect();
 
+//preload your pages 
 psiTurk.preloadPages(pages);
 
 
@@ -46,37 +47,21 @@ var htmlParams = {
 var intervalDurations = [6000,7000,8000,9000];
 var itiDurations = [1000,1500,2000];
 var isiDurations = [500,750];
-var test = false;
+var test = true;
 
 
-if(test)
-{
-	var numColorPracticeTrials = 2;
-	var numStroopPracticeTrials = 2;
+//set the appropriate trial numbers and test versus real mode 
+//by calling a function from the trialNum.js file
 
-	var numIntervalTrials = 30;
-	var numIntervalPractice = 2;
-	var numGainLossPractice = 2;
-	
-	var numBlock = 4;
-	var numIntervalPerBlock = 4;
-	var selectPerBlock = 1;
-	var initialFundForLoss = 600;
-}
-else
-{
-	var numColorPracticeTrials = 80;
-	var numStroopPracticeTrials = 60;
-
-	var numIntervalTrials = 30;
-	var numIntervalPractice = 4;
-	var numGainLossPractice = 4;
-	
-	var numBlock = 4;
-	var numIntervalPerBlock = 16;
-	var selectPerBlock = 2;
-	var initialFundForLoss = 1200;
-}
+const{numColorPracticeTrials, 	//set the number of keymapping practice  trials
+	numStroopPracticeTrials, 	//set the number of interference practice trials
+	numIntervalTrials, 			//set the number of intervals 
+	numIntervalPractice, 		//set the number of intervals to practice
+	numGainLossPractice, 		//set the number of gains to practice
+	numBlock, 					//set the number of blocks 
+	numIntervalPerBlock,		//set the number of intervals per block
+	selectPerBlock, 			//how many intervals to select per block
+	initialFundForLoss} = setTrialNumByMode(test); // set the intial fund for loss
 
 
 var initialLoss = 300;
@@ -108,37 +93,14 @@ var incorrect4 = 0;
 var incorrect5 = 0;
 
 
+//set the appropriate cues by calling a function from the cues.js file
+const cues = cuesProtect(); 
+
+//set the appropriate blocks by calling a function from the blocks.js file
+const blockSequence = blocksProtect(mycondition); 
 
 
-var cues = {
-	collector:
-		[['/static/images/cues/GL_story/Rew1.png','gain_low'],
-		 ['/static/images/cues/GL_story/Rew2.png','gain_high']],
-	protector:
-		[['/static/images/cues/GL_story/Pun1.png','loss_low'],
-		 ['/static/images/cues/GL_story/Pun2.png','loss_high']],
-	small:
-		[['/static/images/cues/GL_story/Rew1.png','gain_low'],
-		 ['/static/images/cues/GL_story/Pun1.png','loss_low']],
-	large:
-		[['/static/images/cues/GL_story/Rew2.png','gain_high'],
-		 ['/static/images/cues/GL_story/Pun2.png','loss_high']]
-};
 
-
-var blockseq1 = _.shuffle(['collector','protector']);
-var blockseq2 = _.shuffle(['small','large']);
-// var blockSequence = [];
-if(mycondition==1)
-{
-	
-	var blockSequence = blockseq1.concat(blockseq2);
-}
-else
-{
-	
-	var blockSequence = blockseq2.concat(blockseq1);
-}
 
 var highValue = 10;
 var lowValue = 1;
