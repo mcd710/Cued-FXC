@@ -13,10 +13,10 @@ var images = ["apple","lemon","pear","peach"]
 
 //paths to the images
 var paths = [
-"url(/static/images/stimuli/apple_grey.png)",
-"url(/static/images/stimuli/pear_grey.png)",
-"url(/static/images/stimuli/lemon_grey.png)",
-"url(/static/images/stimuli/peach_grey.png)"]
+"/static/images/stimuli/apple_grey.png",
+"/static/images/stimuli/pear_grey.png",
+"/static/images/stimuli/lemon_grey.png",
+"/static/images/stimuli/peach_grey.png"]
 
 psiTurk.preloadImages(paths);
 
