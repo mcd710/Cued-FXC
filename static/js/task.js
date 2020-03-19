@@ -17,7 +17,7 @@ var mycounterbalance = counterbalance;  // they tell you which condition you hav
 // All pages to be loaded
 
 
-
+psiTurk.preloadPages(pagesProtectorvCollector);
 
 var intervalTimingParams = {
 	intervalDur:NaN,
