@@ -89,7 +89,7 @@ FruitMappingPractice = ()=>{
 	trialTimingParams.itiDuration = 500;
 
 	var trial = new timedTrial(stimSet,[false],[0,0],trialTimingParams,'#stim',callbacks,configParams);
-	psiTurk.showPage("stage.html");
+	psiTurk.showPage("stages/stageGarden.html");
 	$("body").unbind("keydown").focus().keydown(trial.responseListener.bind(trial));
 	trial.initiation();
 }
