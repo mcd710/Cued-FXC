@@ -79,7 +79,7 @@ FruitMappingPractice = ()=>{
 			return;
 		}
 		//what to do after the Color mapping practice
-		psiTurk.doInstructions(instruction2Pages,StroopPractice);
+		psiTurk.doInstructions(interferenceInstructions,FruitInterferencePractice);
 	}
 
 	var callbacks = {

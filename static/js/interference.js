@@ -1,6 +1,6 @@
 //file for the functions to call for interference practice
 
-
+console.log("inside interference.js file")
 
 
 StroopPractice = ()=>{
@@ -44,4 +44,57 @@ StroopPractice = ()=>{
 	var trial = new timedTrial(stimSet,[false],[0,0],trialTimingParams,'#stim',callbacks,configParams);
 	$("body").unbind("keydown").focus().keydown(trial.responseListener.bind(trial));
 	trial.initiation();
+}
+
+
+FruitInterferencePractice = ()=>{
+
+	console.log('inside the FruitInterferencePractice')
+	var stimSet = possibleStimsCongruent.concat(possibleStimsInCongruent);
+	var stimSet = _.shuffle(repmat(stimSet,Math.ceil(numStroopPracticeTrials/stimSet.length)));
+
+	var writeRecord = function(Record){
+
+	 	Record.phase = "FruitInterferencePractice";
+	 	Record.sessionNum = NaN;
+	 	Record.blockNum = NaN;
+	 	Record.intervalNum = NaN;
+	 	Record.intervalType = NaN;
+	 	Record.intervalLength = NaN;
+	 	Record.moneyEarned = NaN;
+	 	psiTurk.recordTrialData(Record);
+	};
+
+	var nextAction = function(trial){
+		if(trial.counter[0] < 5){
+			var tempset = possibleStimsCongruent.concat(possibleStimsInCongruent);
+			trial.stimSet = [tempset[randi(0,tempset.length-1)]];
+			trial.initiation();
+			return;
+		}
+		//what to do next
+		psiTurk.doInstructions(instruction3Pages,intervalPracticeProtector);
+	};
+
+	var callbacks = {
+		endOfSetCallback:nextAction,
+		tallyCallback:0,
+		recordStimCallback:recordStimPWI,
+		completeRecordCallback:writeRecord
+	};
+	var configParams = {space:false,accFeedback:true,washout:true};
+	trialTimingParams.itiDuration = 500;
+	psiTurk.showPage("stage.html");
+
+	showBoard = function(){
+	console.log("inside showBoard")
+	var element_stimuli = $("<img></img>").attr({src: "/static/images/Farmboard.png",id:'farmboard'});
+	addElement(element_stimuli,'#background',center=true);
+
+
+	var trial = new timedTrial(stimSet,[false],[0,0],trialTimingParams,'#m',callbacks,configParams);
+	showBoard()
+	$("body").unbind("keydown").focus().keydown(trial.responseListener.bind(trial));
+	trial.initiation();
+	}
 }
