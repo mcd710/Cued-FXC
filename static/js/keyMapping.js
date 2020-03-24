@@ -97,7 +97,6 @@ FruitMappingPractice = ()=>{
 	var element_stimuli = $("<img></img>").attr({src: "/static/images/Farmboard.png",id:'farmboard'});
 	addElement(element_stimuli,'#background',center=true);
 
-
 }
 
 
