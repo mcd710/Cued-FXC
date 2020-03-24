@@ -6262,3 +6262,5 @@ OperationalError: (sqlite3.OperationalError) database is locked
 [SQL: UPDATE turkdemo SET datastring=? WHERE turkdemo.uniqueid = ?]
 [parameters: ('{"assignmentId": "debugTWEZ2X", "workerId": "debugOK019H", "questiondata": {}, "bonus": 0, "hitId": "debugF234ZJ", "counterbalance": 0, "useragent":  ... (1832 characters truncated) ... tions/instruct-readyF.html"}, "uniqueid": "debugOK019H:debugTWEZ2X", "dateTime": 1585067849887}], "currenttrial": 6, "condition": 0, "mode": "debug"}', u'debugOK019H:debugTWEZ2X')]
 (Background on this error at: http://sqlalche.me/e/e3q8)
+2020-03-24 12:50:30,789 DB error: Unique user not found.
+2020-03-24 12:54:48,631 DB error: Unique user not found.

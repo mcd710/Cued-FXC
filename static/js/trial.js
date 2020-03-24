@@ -63,6 +63,8 @@ Trial.prototype.initializeRecordParams = function(){
 
 
 Trial.prototype.initiation = function(){
+	console.log("inside trial.initiation")
+	//console.log("stim is" + stim)
 	if(this.timer[0]){this.cleanAll();return;}
 	this.initializeRecordParams();
 	if(this.stimSet.length > 0)

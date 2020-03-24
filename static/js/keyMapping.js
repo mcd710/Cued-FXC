@@ -70,8 +70,10 @@ FruitMappingPractice = ()=>{
 	};
 
 	var nextAction = function(trial){
+		console.log("inside nextAction")
 		if(trial.counter[0] < 5){
 			trial.stimSet = [possibleStimsNeutral[randi(0,possibleStimsNeutral.length-1)]];
+			console.log("trial.stimSet is" + trial.stimSet)
 			trial.initiation();
 			return;
 		}

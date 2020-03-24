@@ -48,7 +48,7 @@ psiTurk.preloadImages(paths);
 
 var htmlParams = {
 	title:'#title',
-	stim:'#stimImg',
+	stim:'#stim', //stimImage
 	tally:'#query'
 };
 
