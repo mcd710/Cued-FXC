@@ -63,11 +63,9 @@ Interval.prototype.initiate = function(){
 	this.timer[0] = false;
 	this.counter[0] = 0;
 	this.counter[1] = 0;
-	var element_fixation = $("<img></img>").attr({src:"/static/images/fixation.png",id:'fixation'});
-	var element_title = $("<p></p>").attr({id:'hint'}).text("Prepare for next turn...");
-	element_title.css('font-size',30);
-	addElement(element_fixation,this.stimID);
-	addElement(element_title,this.titleID,false);
+	$(this.stimID).append($("<img></img>").attr({src:"/static/images/fixation.png",id:'fixation'}));
+	$(this.titleID).append($("<p></p>").attr({id:'hint'}).text("Prepare for next turn..."));
+	$('#hint').css('font-size',30);
 	this.startInterval();
 }
 
@@ -119,16 +117,14 @@ Interval.prototype.postITIAction = function(){
 	if(this.cued)
 	{
 		$("#fixation").remove();
-		var element_cue = $("<img></img>").attr({src:this.cuePath,id:'cueImg'});
-		addElement(element_cue,this.stimID);
+		$(this.stimID).append($("<img></img>").attr({src:this.cuePath,id:'cueImg'}));
 	}
 }
 
 
 Interval.prototype.postCueAction = function(){
 	$("#cueImg").remove();
-	var element_fixation = $("<img></img>").attr({src:"/static/images/fixation.png",id:'fixation'});
-	addElement(element_fixation,this.stimID);
+	$(this.stimID).append($("<img></img>").attr({src:"/static/images/fixation.png",id:'fixation'}));
 }
 
 

@@ -37,7 +37,12 @@ function Trial(stimSet,timer,counter,timingParams,htmlTag,callbackParams,configP
 Trial.prototype.updateStim = function(stim)
 {
 	this.stim = stim;
-	this.stimResponse = stim.color;
+	if (garden){
+		this.stimResponse = stim.image; // changed from .word for stroop
+	}else{
+		this.stimResponse = stim.word; // changed from .word for stroop
+	}	
+
 	this.stimPath = stim.path;
 }
 
@@ -80,8 +85,7 @@ Trial.prototype.initiation = function(){
 
 
 Trial.prototype.ITI = function(){
-	var element_fixation = $("<img></img>").attr({src:"/static/images/fixation.png",id:'fixation'});
-	addElement(element_fixation,this.htmlTag);
+	$(this.htmlTag).append($("<img></img>").attr({src:"/static/images/fixation.png",id:'fixation'}));
 	setTimeout(this.postITIAction.bind(this),this.itiDuration);
 }
 
@@ -102,8 +106,7 @@ Trial.prototype.postITIAction = function(){
 Trial.prototype.showBox = function(){
 	if(this.timer[0]){this.cleanAll(); return;}
 	this.cleanAll();
-	var element_box = $("<img></img>").attr({src:"/static/images/hidden.png",id:'box'});
-	addElement(element_box,this.htmlTag);
+	$(this.htmlTag).append($("<img></img>").attr({src:"/static/images/hidden.png",id:'box'}));
 	this.initon = new Date().getTime();
 	this.listening = true;
 	if(isNaN(this.tally) && this.isTally) this.tally(this.counter);
@@ -116,8 +119,7 @@ Trial.prototype.showStimuli = function(){
 	if(this.timer[0]) return;
 	this.cleanAll();
 	if(isNaN(this.tally) && this.isTally) this.tally(this.counter);
-	var element_stimuli = $("<img></img>").attr({src:this.stimPath,id:'stimuli'});
-	addElement(element_stimuli,this.htmlTag);
+	$(this.htmlTag).append($("<img></img>").attr({src:this.stimPath,id:'stimuli'}));
 	this.stimon = new Date().getTime();
 	this.listening = true;
 }
@@ -262,8 +264,7 @@ Trial.prototype.cleanAll = function(){
 Trial.prototype.showFeedback = function(){
 	//console.log(this.feedback);
 	var feedbackImg = feedbackImgs[this.feedback];
-	var element_feedback = $("<img></img>").attr({src:feedbackImg,id:'feedback'});
-	addElement(element_feedback,this.htmlTag);
+	$(this.htmlTag).append($("<img></img>").attr({src:feedbackImg,id:'feedback'}));
 	setTimeout(this.removeFeedback.bind(this),this.feedbackDur);
 }
 
