@@ -73,7 +73,7 @@ FruitInterferencePractice = ()=>{
 			return;
 		}
 		//what to do next
-		psiTurk.doInstructions(instruction3Pages,intervalPracticeProtector);
+		psiTurk.doInstructions(instruction3Pages,intervalPracticeGarden);
 	};
 
 	var callbacks = {

@@ -7018,3 +7018,114 @@ OperationalError: (sqlite3.OperationalError) database is locked
 [SQL: UPDATE turkdemo SET datastring=? WHERE turkdemo.uniqueid = ?]
 [parameters: ('{"status": "user data saved", "assignmentId": "debugBG2PDE", "workerId": "debugLS7CKT", "questiondata": {}, "bonus": 0, "hitId": "debug4Z4A9V", "coun ... (5758 characters truncated) ... ions/instruct-readyF.html"}, "uniqueid": "debugLS7CKT:debugBG2PDE", "dateTime": 1585084485229}], "currenttrial": 17, "condition": 0, "mode": "debug"}', u'debugLS7CKT:debugBG2PDE')]
 (Background on this error at: http://sqlalche.me/e/e3q8)
+2020-03-24 17:27:51,680 DB error: Unique user not found.
+2020-03-24 17:27:51,680 Exception on /sync/debugODKVSV:debug7FRJ7S [PUT]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 595, in update
+    db_session.commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 1027, in commit
+    self.transaction.commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 498, in commit
+    t[1].commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1716, in commit
+    self._do_commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1747, in _do_commit
+    self.connection._commit_impl()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 763, in _commit_impl
+    self._handle_dbapi_exception(e, None, None, None, None)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/util/compat.py", line 399, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 761, in _commit_impl
+    self.engine.dialect.do_commit(self.connection)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/default.py", line 503, in do_commit
+    dbapi_connection.commit()
+OperationalError: (sqlite3.OperationalError) database is locked
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2020-03-24 17:34:39,696 DB error: Unique user not found.
+2020-03-24 17:34:39,696 Exception on /sync/debugVT7MJ9:debugHHCZPS [PUT]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 595, in update
+    db_session.commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 1027, in commit
+    self.transaction.commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 498, in commit
+    t[1].commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1716, in commit
+    self._do_commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1747, in _do_commit
+    self.connection._commit_impl()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 763, in _commit_impl
+    self._handle_dbapi_exception(e, None, None, None, None)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/util/compat.py", line 399, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 761, in _commit_impl
+    self.engine.dialect.do_commit(self.connection)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/default.py", line 503, in do_commit
+    dbapi_connection.commit()
+OperationalError: (sqlite3.OperationalError) database is locked
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2020-03-24 17:36:00,419 DB error: Unique user not found.
+2020-03-24 17:36:00,419 Exception on /sync/debugVREVT4:debug8GZ5C4 [PUT]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 595, in update
+    db_session.commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 1027, in commit
+    self.transaction.commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 498, in commit
+    t[1].commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1716, in commit
+    self._do_commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1747, in _do_commit
+    self.connection._commit_impl()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 763, in _commit_impl
+    self._handle_dbapi_exception(e, None, None, None, None)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/util/compat.py", line 399, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 761, in _commit_impl
+    self.engine.dialect.do_commit(self.connection)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/default.py", line 503, in do_commit
+    dbapi_connection.commit()
+OperationalError: (sqlite3.OperationalError) database is locked
+(Background on this error at: http://sqlalche.me/e/e3q8)
