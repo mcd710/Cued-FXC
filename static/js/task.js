@@ -428,7 +428,7 @@ var Baseline = function(endCallback){
 
 // what to start the experiment with 
 $(window).load( function(){
-		psiTurk.doInstructions(interferenceInstructions,FruitInterferencePractice);
+		psiTurk.doInstructions(keyMappingInstructions,FruitMappingPractice);
  	}
 );
 

@@ -40,7 +40,7 @@ StroopPractice = ()=>{
 	};
 	var configParams = {space:false,accFeedback:true,washout:true};
 	trialTimingParams.itiDuration = 500;
-	psiTurk.showPage("stage.html");
+	psiTurk.showPage("stages/stage.html");
 	var trial = new timedTrial(stimSet,[false],[0,0],trialTimingParams,'#stim',callbacks,configParams);
 	$("body").unbind("keydown").focus().keydown(trial.responseListener.bind(trial));
 	trial.initiation();
@@ -84,17 +84,19 @@ FruitInterferencePractice = ()=>{
 	};
 	var configParams = {space:false,accFeedback:true,washout:true};
 	trialTimingParams.itiDuration = 500;
-	psiTurk.showPage("stage.html");
+	psiTurk.showPage("stages/stage.html");
 
 	showBoard = function(){
 	console.log("inside showBoard")
 	var element_stimuli = $("<img></img>").attr({src: "/static/images/Farmboard.png",id:'farmboard'});
 	addElement(element_stimuli,'#background',center=true);
+	}
 
 
 	var trial = new timedTrial(stimSet,[false],[0,0],trialTimingParams,'#m',callbacks,configParams);
+	console.log("inside little trial in fruit interference ")
 	showBoard()
 	$("body").unbind("keydown").focus().keydown(trial.responseListener.bind(trial));
 	trial.initiation();
-	}
+	
 }

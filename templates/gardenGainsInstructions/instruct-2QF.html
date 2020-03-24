@@ -63,14 +63,14 @@
 
 <script>
     document.getElementById("fruitT1").src = "/static/images/grape_apple_grey.png";
-    document.getElementById("fruitT2").src = "static/images/lemon_grape_grey.png";
+    document.getElementById("fruitT2").src = "/static/images/lemon_grape_grey.png";
     document.getElementById("fruitT3").src = "/static/images/pear_lemon_grey.png";
 
     function instruct_onclick() {
 
         psiTurk.doInstructions(
-            instruction2Pages, // a list of pages you want to display in sequence
-            function() { currentview = new StroopPractice(); } // what you want to do when you are done with instructions
+            interferenceInstructions, // a list of pages you want to display in sequence
+            function() { currentview = new FruitInterferencePractice(); } // what you want to do when you are done with instructions
         );
 
     }
