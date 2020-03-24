@@ -139,6 +139,12 @@ intervalPracticeGarden = ()=>{
 	var isiDurationSet = _.shuffle(repmat(isiDurations,Math.ceil(numIntervalPractice/isiDurations.length)));
 	var intervalNum = 0;
 
+	showBoard = function(){
+	console.log("inside showBoard")
+	var element_stimuli = $("<img></img>").attr({src: "/static/images/Farmboard.png",id:'farmboard'});
+	addElement(element_stimuli,'#background',center=true);
+	}
+
 	var Loop = function(){
 		intervalNum++;
 		if(intervalNum > numIntervalPractice & (qualified|intervalNum>6)) {
@@ -196,5 +202,6 @@ intervalPracticeGarden = ()=>{
 
 	}
 	psiTurk.showPage("stages/stage.html");
+	showBoard()
 	Loop();
 }
