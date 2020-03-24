@@ -38,7 +38,8 @@ function Trial(stimSet,timer,counter,timingParams,htmlTag,callbackParams,configP
 Trial.prototype.updateStim = function(stim)
 {	console.log("inside updateStim")
 	this.stim = stim;
-	this.stimResponse = stim.color;
+	//this.stimResponse = stim.color;
+	this.stimResponse = stim.image;
 	this.stimPath = stim.path;
 }
 

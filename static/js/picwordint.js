@@ -17,7 +17,11 @@ const paths = [
 "/static/images/stimuli/apple_grey.png",
 "/static/images/stimuli/pear_grey.png",
 "/static/images/stimuli/lemon_grey.png",
-"/static/images/stimuli/peach_grey.png"]
+"/static/images/stimuli/peach_grey.png",
+"/static/images/Farmboard.png",
+"/static/images/Farmboard.png",
+"/static/images/BackgroundFarm.png"
+]
 
 //color for the font 
 const fontColors = "red"

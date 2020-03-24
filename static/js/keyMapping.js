@@ -41,7 +41,8 @@ ColorMappingPractice = ()=>{
 	
 	trialTimingParams.itiDuration = 500;
 
-	var trial = new timedTrial(stimSet,[false],[0,0],trialTimingParams,'#stim',callbacks,configParams);
+	var trial = new timedTrial(stimSet,[false],[0,0],trialTimingParams,'#m',callbacks,configParams);
+	console.log("inside trial funtion")
 	psiTurk.showPage("stage.html");
 	$("body").unbind("keydown").focus().keydown(trial.responseListener.bind(trial));
 	trial.initiation();
@@ -90,9 +91,21 @@ FruitMappingPractice = ()=>{
 	
 	trialTimingParams.itiDuration = 500;
 
-	var trial = new timedTrial(stimSet,[false],[0,0],trialTimingParams,'#stim',callbacks,configParams);
+	// shows the board 
+	showBoard = function(){
+	console.log("inside showBoard")
+	var element_stimuli = $("<img></img>").attr({src: "/static/images/Farmboard.png",id:'farmboard'});
+	addElement(element_stimuli,'#background',center=true);
+
+
+}
+
+
+	var trial = new timedTrial(stimSet,[false],[0,0],trialTimingParams,'#m',callbacks,configParams);
 	//psiTurk.showPage("stages/stageGarden.html");
+	console.log("inside little trial ")
 	psiTurk.showPage("stages/stage.html");
+	showBoard()
 	$("body").unbind("keydown").focus().keydown(trial.responseListener.bind(trial));
 	trial.initiation();
 }
