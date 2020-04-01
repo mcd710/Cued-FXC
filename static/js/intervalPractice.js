@@ -148,7 +148,7 @@ intervalPracticeGarden = ()=>{
 	var Loop = function(){
 		intervalNum++;
 		if(intervalNum > numIntervalPractice & (qualified|intervalNum>6)) {
-			blockPart();
+			blockPartGarden(practiceNext);
 		}
 		else{
 			if(intervalNum > numIntervalPractice)

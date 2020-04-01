@@ -1,0 +1,130 @@
+
+
+
+
+
+practiceBlocksGarden = (practiceType,practiceNext)=>{
+
+
+		var configParams = {space:false,accFeedback:false,washout:false,tally:true};
+
+		/*** The cues are specified as [path,cueType] ***/
+		var intervalDurationSet = _.shuffle(repmat(intervalDurations,Math.ceil(numGainLossPractice/intervalDurations.length)));
+		var itiDurationSet = _.shuffle(repmat(itiDurations,Math.ceil(numGainLossPractice/itiDurations.length)));
+		var isiDurationSet = _.shuffle(repmat(isiDurations,Math.ceil(numGainLossPractice/isiDurations.length)));
+
+		switch(practiceType) {
+			case 'gain':
+		    	subCueSet = cues['gain'];
+		   
+		    break;
+		  	case 'loss':
+		    subCueSet = cues['loss'];
+
+		    break;
+		}
+
+
+		var cueSet = _.shuffle(repmat(subCueSet,Math.ceil(numGainLossPractice/subCueSet.length)));
+		var intervalID = 0;
+		var interval = 0;
+
+
+		var displayFeedback = function(tag,interval)
+		{
+			var counter = interval.getCounter();
+			var score = initialBonus[interval.cueType] + numSign[interval.cueType] * values[interval.cueType] * interval.counter[0];
+			if(numSign[interval.cueType]<0) score = Math.max(score,0);
+			$(tag).append($("<p></p>").attr({id:'intervalMsg'}).html(heading[interval.cueType] +
+				score.toFixed(0)));
+			$("#intervalMsg").css('margin-top','0px');
+		}
+
+		var cleanFeedback = function(){$("#intervalMsg").remove();}
+
+		var showScore = function(tag,cueType)
+		{
+			var showScoreInTag = function(counter){
+				$("#scoreCounter").remove();
+				var score = initialBonus[cueType] + numSign[cueType] * values[cueType] * counter[0];
+				if(numSign[cueType]<0) score = Math.max(score,0);
+				$(tag).append($("<p></p>").attr({id:'scoreCounter'}).text(heading[cueType] + score.toFixed(0)));
+				//$(tag).append($("<p></p>").attr({id:'scoreCounter'}).text(counter[0].toFixed(0)));
+				$("#scoreCounter").css('margin-top','0px');
+			};
+			return showScoreInTag;
+		}
+
+		var cleanTally = function(){
+			$('#scoreCounter').remove();
+		}
+
+
+
+		var Loop = function(){
+
+			intervalID++;
+			
+
+			var calculateBonus = function(Interval)
+			{
+				var bonus = 0;
+				return bonus;
+			};
+
+			intervalTimingParams.intervalDur = intervalDurationSet.shift();
+			intervalTimingParams.itiDuration = itiDurationSet.shift();
+			intervalTimingParams.isiDuration = isiDurationSet.shift();
+
+			var writeRecord = function(Record){
+				if(practiceType == 'gain')
+					Record.phase = "GainPractice";
+				else
+					Record.phase = "LossPractice";
+			 	
+			 	Record.sessionNum = NaN;
+			 	Record.blockNum = NaN;
+			 	Record.intervalNum = intervalID;
+			 	Record.intervalType = cue[1];
+			 	Record.intervalLength = intervalTimingParams.intervalDur;
+			 	psiTurk.recordTrialData(Record);
+			};
+
+			var callbacks = {
+				endCallback:Loop,
+				displayFeedback:displayFeedback,
+				cleanFeedback:cleanFeedback,
+				tallyCallback:showScore,
+				recordStimCallback:recordStimPWI,
+				writeRecord:writeRecord,
+				calculateBonus:calculateBonus,
+				cleanTally:cleanTally
+			};
+
+			var cue = cueSet.shift();
+			
+			if(intervalID > numGainLossPractice) 
+			{
+				console.log('practiceNext is '+practiceNext)
+				console.log('practiceType is' +practiceType)
+				blockPartGarden(practiceNext)
+				// if(practiceType == 1 && length(practices)>1)
+				// {
+				// 	returnToInstructCallback = function(){psiTurk.doInstructions(practiceInst[1],practices[1]);};
+				// 	psiTurk.doInstructions(practiceInst[1],practices[1]);
+				// }
+				// else psiTurk.doInstructions(postPracticeBreak,MainPartGarden);
+
+			}
+			else
+			{
+				var stimSet = generateStimSetImage(possibleStimsInCongruent,possibleStimsCongruent,numIntervalTrials);
+				interval = new Interval(intervalTimingParams,htmlParams,cue,trialTimingParams,configParams,stimSet,callbacks);
+				psiTurk.showPage("stages/stage.html");
+				showBoard()
+				interval.initiate();
+			}
+		}
+		Loop();
+
+}

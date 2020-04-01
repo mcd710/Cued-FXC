@@ -1,150 +1,4 @@
-/***********************************************
-*  		 	   v101 TSS PARADIGM  			   *
-************************************************/
-
-/*
- * Requires:
- *     psiturk.js
- *     utils.js
- */
-
-// Initalize psiturk object
-var psiTurk = new PsiTurk(uniqueId, adServerLoc, mode);
-
-var mycondition = condition;  // these two variables are passed by the psiturk server process
-var mycounterbalance = counterbalance;  // they tell you which condition you have been assigned to
-
-const garden = true;
-//set the appropriate instructions by calling a function from the instructions.js file
-const {pages, 
-	keyMappingInstructions,
-	interferenceInstructions,
-	intervalInstructions,
-	instructionGainPages,
-	instructionLossPages,
-	startGameInstructions,
-	BreakPage} = instructionsGardenGains();
-
-//preload your pages 
-psiTurk.preloadPages(pages);
-
-
-
-
-//set appropriate stimuli 
-const {
-	words,
-	images,
-	paths,
-	fontColors,
-	possibleStimsNeutral,
-	possibleStimsCongruent,
-	possibleStimsInCongruent,
-	responses,
-	responseKeyCodes,
-	spaceKey}= setGardenStim();
-
-
-psiTurk.preloadImages(paths);
-
-var htmlParams = {
-	title:'#title',
-	stim:'#m', //stimImage
-	tally:'#query',
-	board:'#background'
-};
-
-
-var intervalDurations = [6000,7000,8000,9000];
-var itiDurations = [1000,1500,2000];
-var isiDurations = [500,750];
-var test = true;
-
-
-//set the appropriate trial numbers and test versus real mode 
-//by calling a function from the trialNum.js file
-
-const{numColorPracticeTrials, 	//set the number of keymapping practice  trials
-	numStroopPracticeTrials, 	//set the number of interference practice trials
-	numIntervalTrials, 			//set the number of intervals 
-	numIntervalPractice, 		//set the number of intervals to practice
-	numGainLossPractice, 		//set the number of gains to practice
-	numBlock, 					//set the number of blocks 
-	numIntervalPerBlock,		//set the number of intervals per block
-	selectPerBlock, 			//how many intervals to select per block
-	initialFundForLoss} = setTrialNumByMode(test); // set the intial fund for loss
-
-console.log("possibleStimsNeutral is" + possibleStimsNeutral)
-
-var initialLoss = 300;
-var price = 0.01;
-
-
-var trialTimingParams = {
-	itiDuration:0,
-	feedbackDur:500,
-	thresholdRT:250,
-	deadline:2000
-};
-
-
-var intervalTimingParams = {
-	intervalDur:NaN,
-	itiDuration:NaN,
-	cueDuration:1500,
-	feedbackDur:1500,
-	isiDuration:NaN
-};
-
-
-var incorrect1 = 0;
-var incorrect2 = 0;
-var incorrect3 = 0;
-var incorrect4 = 0;
-var incorrect5 = 0;
-
-
-//set the appropriate cues by calling a function from the cues.js file
-const cues = cuesMoney(); 
-
-//set the appropriate blocks by calling a function from the blocks.js file
-const blockSequence = blocksGardenGain(mycondition); 
-
-var practiceNext = 'gain';
-var practiceType = 'gain';
-
-
-
-// set the order of practices to occur after interval practice 
-
-
-
-
- var highValue = .10;
- var lowValue = .01;
- var values = {gain_low:lowValue,gain_high:highValue,loss_low:lowValue,loss_high:highValue};
- var heading = {gain_low:'low: ',gain_high:'high: ',loss_low:'Bomb: ',loss_high:'Bomb: '};
- var numSign = {gain_low:1,gain_high:1,loss_low:-1,loss_high:-1};
- var initialBonus = {gain_low:0,gain_high:0,loss_low:initialLoss,loss_high:initialLoss};
-var breakForBlockType = {gain:BreakPage};
-
-
-/***Global variables tracked in the main task***/
-
-
-var blockID = 0;
-var sessionID = 0
-var returnToInstructCallback = 0;
-var returnToInstructCallbackMain =0;
-var returnToInstructCallbackBreak = 0;
-
-
-
-
-
-
-/***End of global variables***/
-var blockPart = function(){
+var blockPartProtector = function(){
 
 
 
@@ -269,9 +123,7 @@ var blockPart = function(){
 	}
 
 	var GainPractice = function(){
-		psiTurk.doInstructions(instructionGainPages,GainPractice);
 		returnToInstructCallback = function(){psiTurk.doInstructions(instructionGainPages,GainPractice);};
-		//psiTurk.doInstructions(instructionGainPages,GainPractice);
 		PracticeSession(1);
 	}
 
@@ -406,78 +258,79 @@ var blockPart = function(){
 }
 
 
-var Baseline = function(endCallback){
-	console.log("inside Baseline")
-	var stimSet = generateStimSet(possibleStimsCongruent,possibleStimsInCongruent,numBaselineTrial);
-	trialTimingParams.itiDuration = 500;
 
-	var writeRecord = function(Record){
+var blockPartGarden = function(practiceNext){
 
-	 	Record.phase = "Baseline";
-	 	Record.sessionNum = NaN;
-	 	Record.blockNum = NaN;
-	 	Record.intervalNum = NaN;
-	 	Record.intervalType = NaN;
-	 	Record.intervalLength = NaN;
-	 	Record.moneyEarned = NaN;
-	 	psiTurk.recordTrialData(Record);
-	};
+	// if (blockID== 0){var practiceCur=true}
 
-	var callbacks = {
-		endOfSetCallback:endCallback,
-		tallyCallback:0,
-		recordStimCallback:recordStimStroop,
-		completeRecordCallback:writeRecord
-	};
-	var configParams = {space:false,accFeedback:true,washout:false};
+	// if(practiceCur){
 
-	var trial = new timedTrial(stimSet,[false],[0,0],trialTimingParams,'#stim',callbacks,configParams);
-	psiTurk.showPage("stage.html");
-	$("body").unbind("keydown").focus().keydown(trial.responseListener.bind(trial));
-	trial.initiation();
-}
+	// }else{
+	// 	blockID++;
+	// 	var blockType = blockSequence.shift();
+	// 	var cueSubset = cues[blockType];
+	// }
+	
+	
+	//var blockType = blockSequence.shift();
+	//var cueSubset = cues[blockType];
 
+	if(blockID > numBlock) {sessionID++;blockID = 1;}
 
-
-// what to start the experiment with 
-$(window).load( function(){
-		//psiTurk.doInstructions(keyMappingInstructions,FruitMappingPractice);
-		psiTurk.doInstructions(intervalInstructions,intervalPracticeGarden);
- 	}
-);
-
-
-
-
-
-
-/*****************************************
-*            OTHER FUNCTIONS             *
-******************************************/
-
-// function equivalent to linspace in matlab - generates an array of n evenly spaced numbers between min and max (inclusive for both) 
-function linspace(min,max,nBins) {
-	var i;
-	ret = Array(nBins);
-	nBins--;
-	for (i = nBins; i >= 0; i--) {
-		ret[i] = (i*max+(nBins-i)*min)/nBins; 
+	var GainPractice = function(){
+		console.log("practiceType is" +practiceType)
+		console.log("practiceNext is" +practiceNext)
+		returnToInstructCallback = function(){psiTurk.doInstructions(instructionGainPages,GainPractice);};
+		practiceBlocksGarden(practiceType,practiceNext);
 	}
-	return ret;
-}
 
-
-// function equivalent to randi in matlab - generates a random integer between min and max (inclusive for both) 
-function randi(min, max) {
-	return Math.floor(Math.random() * ((max + 1) - min)) + min;
-}
-
-
-// function equivalent to repmat in matlab - repeats a given array nReps times
-function repmat(array, nReps) {
-	var result = [];
-	while (nReps--) {
-		result = result.concat(array);
+	var LossPractice = function(){
+		console.log("practiceType is" +practiceType)
+		console.log("practiceNext is" +practiceNext)
+		returnToInstructCallback = function(){psiTurk.doInstructions(instructionLossPages,LossPractice);};
+		practiceBlocksGarden(practiceType,practiceNext);
 	}
-	return result;
+
+
+		switch(practiceNext) {
+		  case 'gain':
+		    practiceNext = 'loss'
+		    practiceType = 'gain'
+		    psiTurk.doInstructions(instructionGainPages,GainPractice);
+
+		    break;
+		  case 'loss':
+		    practiceNext = 'mainStart'
+		    practiceType = 'loss'
+		    practiceCur = false
+		    psiTurk.doInstructions(instructionLossPages,LossPractice);
+
+		    break;
+		  case 'mainStart':
+		  	practiceNext = 'MainTask'
+		  	blockID++;
+			var blockType = blockSequence.shift();
+			var cueSubset = cues[blockType];
+		    psiTurk.doInstructions(startGameInstructions,MainPartGarden)
+		    
+		    break;
+		  case 'MainTask':
+		  	practiceNext = 'MainTask'
+		  	var blockType = blockSequence.shift();
+			var cueSubset = cues[blockType];
+		    MainPartGarden();
+		    
+		    break;
+
+		}
+		
+
+
+
+
+
+
 }
+
+
+

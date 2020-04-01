@@ -140,8 +140,15 @@ instructionsGardenGains = ()=>{
 	"gardenGainsInstructions/instruct-2QF.html",
 	"gardenGainsInstructions/instruct-3F.html",
 	"gardenGainsInstructions/instruct-3Fb.html",
+	"gardenGainsInstructions/instruct-3P.html",
 	"gardenGainsInstructions/instruct-3Q.html",
 	"gardenGainsInstructions/instruct-4F.html",
+	"instructions/instruct-3L1.html",
+	"instructions/instruct-3LB.html",
+	"instructions/instruct-3LQ1.html",
+	"instructions/instruct-3LQ2.html",
+	"instructions/instruct-3L2.html",
+	"instructions/instruct-ready.html",
 	"gardenGainsInstructions/instruct-readyF.html",
 	"gardenGainsInstructions/breakF.html",
 	"srm/DASS.html",
@@ -166,12 +173,27 @@ instructionsGardenGains = ()=>{
 	"gardenGainsInstructions/instruct-2QF.html",
 	"gardenGainsInstructions/instruct-readyF.html"
 	];
-	const gainsIntervalInstructions = [
+	const intervalInstructions = [
+	"gardenGainsInstructions/instruct-3P.html",
+	"gardenGainsInstructions/instruct-readyF.html"
+	];
+
+	const instructionGainPages = [
 	"gardenGainsInstructions/instruct-3F.html",
 	"gardenGainsInstructions/instruct-3Fb.html",
 	"gardenGainsInstructions/instruct-3Q.html",
 	"gardenGainsInstructions/instruct-readyF.html"
 	];
+
+	const instructionLossPages = [
+	"instructions/instruct-3L1.html",
+	"instructions/instruct-3LB.html",
+	"instructions/instruct-3LQ1.html",
+	"instructions/instruct-3LQ2.html",
+	"instructions/instruct-3L2.html",
+	"instructions/instruct-ready.html"
+	];
+
 	const startGameInstructions = [
 	"gardenGainsInstructions/instruct-4F.html",
 	"gardenGainsInstructions/instruct-readyF.html"
@@ -182,7 +204,9 @@ instructionsGardenGains = ()=>{
 
 	return {pages,keyMappingInstructions,
 		interferenceInstructions,
-		gainsIntervalInstructions,
+		intervalInstructions,
+		instructionGainPages,
+		instructionLossPages,
 		startGameInstructions,
 		BreakPage}
 

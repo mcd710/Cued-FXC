@@ -24,3 +24,21 @@ console.log("inside cuesProtect")
 
 }
 
+
+cuesMoney= ()=> {
+
+console.log("inside cuesMoney")
+	const cues = {
+	gain:
+		[['/static/images/cues/Reward/Rew1.png','gain_low'],
+		 ['/static/images/cues/Reward/Rew2.png','gain_high']],
+	loss:
+		[['/static/images/cues/rewardPunish/Pun1_small.png','loss_low'],
+		 ['/static/images/cues/rewardPunish/Pun2.png','loss_high']],
+	};
+
+	return cues
+
+
+}
+
