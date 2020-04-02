@@ -3,7 +3,7 @@
 
 
 
-var MainPartGarden = function(){
+var MainPartGarden = function(blockType,cueSubset){
 
 
 	var configParams = {space:false,accFeedback:false,washout:false,tally:true};

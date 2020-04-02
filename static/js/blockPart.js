@@ -311,14 +311,15 @@ var blockPartGarden = function(practiceNext){
 		  	blockID++;
 			var blockType = blockSequence.shift();
 			var cueSubset = cues[blockType];
-		    psiTurk.doInstructions(startGameInstructions,MainPartGarden)
+		    psiTurk.doInstructions(startGameInstructions,MainPartGarden(blockType,cueSubset))
 		    
 		    break;
 		  case 'MainTask':
+		  	blockID++;
 		  	practiceNext = 'MainTask'
 		  	var blockType = blockSequence.shift();
 			var cueSubset = cues[blockType];
-		    MainPartGarden();
+		   	MainPartGarden(blockType,cueSubset);
 		    
 		    break;
 
