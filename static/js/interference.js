@@ -29,7 +29,8 @@ StroopPractice = ()=>{
 			return;
 		}
 		//what to do next
-		psiTurk.doInstructions(instruction3Pages,intervalPracticeProtector);
+		//psiTurk.doInstructions(instruction3Pages,intervalPracticeProtector);
+		blockPartGarden(practiceNext);
 	};
 
 	var callbacks = {
@@ -47,7 +48,7 @@ StroopPractice = ()=>{
 }
 
 
-FruitInterferencePractice = ()=>{
+FruitInterferencePractice =(nextPractice) =>()=>{
 
 	console.log('inside the FruitInterferencePractice')
 	var stimSet = possibleStimsCongruent.concat(possibleStimsInCongruent);
@@ -73,7 +74,8 @@ FruitInterferencePractice = ()=>{
 			return;
 		}
 		//what to do next
-		psiTurk.doInstructions(intervalInstructions,intervalPracticeGarden);
+		//psiTurk.doInstructions(intervalInstructions,intervalPracticeGarden);
+		blockPartGarden(nextPractice);
 	};
 
 	var callbacks = {

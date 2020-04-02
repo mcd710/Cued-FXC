@@ -50,7 +50,7 @@ ColorMappingPractice = ()=>{
 
 
 
-FruitMappingPractice = ()=>{
+FruitMappingPractice =(nextPractice) =>()=>{
 
 	console.log('inside the FruitMappingPractice')
 	var configParams = {space:false,accFeedback:true,washout:true};
@@ -79,7 +79,8 @@ FruitMappingPractice = ()=>{
 			return;
 		}
 		//what to do after the Color mapping practice
-		psiTurk.doInstructions(interferenceInstructions,FruitInterferencePractice);
+		//psiTurk.doInstructions(interferenceInstructions,FruitInterferencePractice);
+		blockPartGarden(nextPractice);
 	}
 
 	var callbacks = {

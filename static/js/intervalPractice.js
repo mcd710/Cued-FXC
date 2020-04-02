@@ -101,7 +101,7 @@
 	Loop();
 }
 
-intervalPracticeGarden = ()=>{
+intervalPracticeGarden=(nextPractice) =>()=>{
 	/*** Step 1: Define how you want to display interval-end feedback ***/
 	console.log("inside the intervalPracticeGarden")
 
@@ -148,7 +148,7 @@ intervalPracticeGarden = ()=>{
 	var Loop = function(){
 		intervalNum++;
 		if(intervalNum > numIntervalPractice & (qualified|intervalNum>6)) {
-			blockPartGarden(practiceNext);
+			blockPartGarden(nextPractice);
 		}
 		else{
 			if(intervalNum > numIntervalPractice)

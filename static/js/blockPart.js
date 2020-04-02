@@ -259,71 +259,89 @@ var blockPartProtector = function(){
 
 
 
-var blockPartGarden = function(practiceNext){
+// var blockPartGarden = function(practiceNext){
 
-	// if (blockID== 0){var practiceCur=true}
+// 	// if (blockID== 0){var practiceCur=true}
 
-	// if(practiceCur){
+// 	// if(practiceCur){
 
-	// }else{
-	// 	blockID++;
-	// 	var blockType = blockSequence.shift();
-	// 	var cueSubset = cues[blockType];
-	// }
+// 	// }else{
+// 	// 	blockID++;
+// 	// 	var blockType = blockSequence.shift();
+// 	// 	var cueSubset = cues[blockType];
+// 	// }
 	
 	
-	//var blockType = blockSequence.shift();
-	//var cueSubset = cues[blockType];
+// 	if(blockID == numBlock) {
+// 		Questionnaire_Gain_Low();
+// 		return;
+// 	}
 
-	if(blockID > numBlock) {sessionID++;blockID = 1;}
+// 	if(blockID > numBlock) {sessionID++;blockID = 1;}
 
-	var GainPractice = function(){
-		console.log("practiceType is" +practiceType)
-		console.log("practiceNext is" +practiceNext)
-		returnToInstructCallback = function(){psiTurk.doInstructions(instructionGainPages,GainPractice);};
-		practiceBlocksGarden(practiceType,practiceNext);
-	}
+// 	var GainPractice = function(){
+// 		console.log("practiceType is" +practiceType)
+// 		console.log("practiceNext is" +practiceNext)
+// 		returnToInstructCallback = function(){psiTurk.doInstructions(instructionGainPages,GainPractice);};
+// 		practiceBlocksGarden(practiceType,practiceNext);
+// 	}
 
-	var LossPractice = function(){
-		console.log("practiceType is" +practiceType)
-		console.log("practiceNext is" +practiceNext)
-		returnToInstructCallback = function(){psiTurk.doInstructions(instructionLossPages,LossPractice);};
-		practiceBlocksGarden(practiceType,practiceNext);
-	}
+// 	var LossPractice = function(){
+// 		console.log("practiceType is" +practiceType)
+// 		console.log("practiceNext is" +practiceNext)
+// 		returnToInstructCallback = function(){psiTurk.doInstructions(instructionLossPages,LossPractice);};
+// 		practiceBlocksGarden(practiceType,practiceNext);
+// 	}
 
 
-		switch(practiceNext) {
-		  case 'gain':
-		    practiceNext = 'loss'
-		    practiceType = 'gain'
-		    psiTurk.doInstructions(instructionGainPages,GainPractice);
+// 		switch(practiceNext) {
 
-		    break;
-		  case 'loss':
-		    practiceNext = 'mainStart'
-		    practiceType = 'loss'
-		    practiceCur = false
-		    psiTurk.doInstructions(instructionLossPages,LossPractice);
+// 		  case 'keymapping':
+// 		    practiceNext = 'interference'
+// 		    psiTurk.doInstructions(keyMappingInstructions,FruitMappingPractice(practiceNext));
 
-		    break;
-		  case 'mainStart':
-		  	practiceNext = 'MainTask'
-		  	blockID++;
-			var blockType = blockSequence.shift();
-			var cueSubset = cues[blockType];
-		    psiTurk.doInstructions(startGameInstructions,MainPartGarden(blockType,cueSubset))
+// 		    break;
+// 		  case 'interference':
+// 		    practiceNext = 'interval'
+// 		    psiTurk.doInstructions(interferenceInstructions,FruitInterferencePractice(practiceNext));
+
+// 		    break;
+// 		  case 'interval':
+// 		    practiceNext = 'gain'
+// 		    psiTurk.doInstructions(intervalInstructions,intervalPracticeGarden(practiceNext));
+
+// 		    break;
+// 		  case 'gain':
+// 		    practiceNext = 'loss'
+// 		    practiceType = 'gain'
+// 		    psiTurk.doInstructions(instructionGainPages,GainPractice);
+
+// 		    break;
+// 		  case 'loss':
+// 		    practiceNext = 'mainStart'
+// 		    practiceType = 'loss'
+// 		    practiceCur = false
+// 		    psiTurk.doInstructions(instructionLossPages,LossPractice);
+
+// 		    break;
+// 		  case 'mainStart':
+// 		  	practiceNext = 'MainTask'
+// 		  	blockID++;
+// 			var blockType = blockSequence.shift();
+// 			var cueSubset = cues[blockType];
+// 		    psiTurk.doInstructions(startGameInstructions,MainPartGarden(blockType,cueSubset))
 		    
-		    break;
-		  case 'MainTask':
-		  	blockID++;
-		  	practiceNext = 'MainTask'
-		  	var blockType = blockSequence.shift();
-			var cueSubset = cues[blockType];
-		   	MainPartGarden(blockType,cueSubset);
+// 		    break;
+// 		  case 'MainTask':
+// 		  	blockID++;
+// 		  	practiceNext = 'MainTask'
+// 		  	var blockType = blockSequence.shift();
+// 			var cueSubset = cues[blockType];
+// 		   	MainPartGarden(blockType,cueSubset);
 		    
-		    break;
+// 		    break;
 
-		}
+// 		}
 		
 
 
@@ -331,7 +349,6 @@ var blockPartGarden = function(practiceNext){
 
 
 
-}
-
+// }
 
 
