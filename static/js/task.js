@@ -109,15 +109,13 @@ const cues = cuesMoney();
 
 //set the appropriate blocks by calling a function from the blocks.js file
 const blockSequence = blocksGardenGain(mycondition); 
-
-
- var highValue = .10;
- var lowValue = .01;
- var values = {gain_low:lowValue,gain_high:highValue,loss_low:lowValue,loss_high:highValue};
- var heading = {gain_low:'low: ',gain_high:'high: ',loss_low:'Bomb: ',loss_high:'Bomb: '};
- var numSign = {gain_low:1,gain_high:1,loss_low:-1,loss_high:-1};
- var initialBonus = {gain_low:0,gain_high:0,loss_low:initialLoss,loss_high:initialLoss};
-var breakForBlockType = {gain:BreakPage};
+const highValue = .10;
+const lowValue = .01;
+const values = {gain_low:lowValue,gain_high:highValue,loss_low:lowValue,loss_high:highValue};
+const heading = {gain_low:'low: ',gain_high:'high: ',loss_low:'Bomb: ',loss_high:'Bomb: '};
+const numSign = {gain_low:1,gain_high:1,loss_low:-1,loss_high:-1};
+const initialBonus = {gain_low:0,gain_high:0,loss_low:initialLoss,loss_high:initialLoss};
+const breakForBlockType = {gain:BreakPage};
 
 
 /***Global variables tracked in the main task***/
@@ -129,6 +127,7 @@ var returnToInstructCallback = 0;
 var returnToInstructCallbackMain =0;
 var returnToInstructCallbackBreak = 0;
 
+// handler function that controls the order of the task
 var blockPartGarden = function(practiceNext){
 	
 	
@@ -198,7 +197,7 @@ $(window).load( function(){
 		//psiTurk.doInstructions(keyMappingInstructions,FruitMappingPractice);
 		//psiTurk.doInstructions(intervalInstructions,intervalPracticeGarden);
 		//let practiceNext='keymapping'
-		blockPartGarden('keymapping')
+		blockPartGarden('interval')
  	}
 );
 
@@ -212,15 +211,11 @@ $(window).load( function(){
 ******************************************/
 
 GainPractice =(practiceType,nextPractice) =>()=>{
-		console.log("practiceType is" +practiceType)
-		console.log("practiceNext is" +practiceNext)
 		returnToInstructCallback = function(){psiTurk.doInstructions(instructionGainPages,GainPractice);};
-		practiceBlocksGarden(practiceType,practiceNext);
+		practiceBlocksGarden(practiceType,nextPractice);
 	}
 
-	var LossPractice = function(){
-		console.log("practiceType is" +practiceType)
-		console.log("practiceNext is" +practiceNext)
+LossPractice =(practiceType,nextPractice) =>()=>{
 		returnToInstructCallback = function(){psiTurk.doInstructions(instructionLossPages,LossPractice);};
 		practiceBlocksGarden(practiceType,practiceNext);
 	}
