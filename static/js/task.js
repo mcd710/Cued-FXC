@@ -159,13 +159,12 @@ var blockPartGarden = function(practiceNext){
 		    break;
 		  case 'gain':
 		    practiceNext = 'loss'
-		    psiTurk.doInstructions(instructionGainPages,GainPractice('gain','loss'));
+		    psiTurk.doInstructions(instructionGainPages,practiceBlocksGarden('gain','loss'));
 
 		    break;
 		  case 'loss':
 		    practiceNext = 'mainStart'
-		    practiceType = 'loss'
-		    psiTurk.doInstructions(instructionLossPages,LossPractice);
+		    psiTurk.doInstructions(instructionLossPages,practiceBlocksGarden('loss','mainStart'));
 
 		    break;
 		  case 'mainStart':

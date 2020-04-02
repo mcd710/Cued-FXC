@@ -2,9 +2,7 @@
 
 
 
-
-practiceBlocksGarden = (practiceType,practiceNext)=>{
-
+practiceBlocksGarden =(practiceType,nextPractice) =>()=>{
 
 		var configParams = {space:false,accFeedback:false,washout:false,tally:true};
 
@@ -105,9 +103,7 @@ practiceBlocksGarden = (practiceType,practiceNext)=>{
 			
 			if(intervalID > numGainLossPractice) 
 			{
-				console.log('practiceNext is '+practiceNext)
-				console.log('practiceType is' +practiceType)
-				blockPartGarden(practiceNext)
+				blockPartGarden(nextPractice)
 				// if(practiceType == 1 && length(practices)>1)
 				// {
 				// 	returnToInstructCallback = function(){psiTurk.doInstructions(practiceInst[1],practices[1]);};
