@@ -96,7 +96,6 @@ FruitInterferencePractice =(nextPractice) =>()=>{
 
 
 	var trial = new timedTrial(stimSet,[false],[0,0],trialTimingParams,'#m',callbacks,configParams);
-	console.log("inside little trial in fruit interference ")
 	showBoard()
 	$("body").unbind("keydown").focus().keydown(trial.responseListener.bind(trial));
 	trial.initiation();

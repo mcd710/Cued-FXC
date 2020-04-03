@@ -3,23 +3,24 @@
 
 
 
-var MainPartGarden = function(blockType,cueSubset){
 
+
+MainPartGarden =(blockType,cueSubset,nextPractice) =>()=>{
 
 	var configParams = {space:false,accFeedback:false,washout:false,tally:true};
-
-		var displayFeedback = function(tag,interval)
+		
+	var displayFeedback = function(tag,interval)
 	{
 		var counter = interval.getCounter();
 		var score = initialBonus[interval.cueType] + numSign[interval.cueType] * values[interval.cueType] * interval.counter[0];
 		if(numSign[interval.cueType]<0) score = Math.max(score,0);
 		$(tag).append($("<p></p>").attr({id:'intervalMsg'}).html(heading[interval.cueType] +
-			score.toFixed(0)));
+				score.toFixed(0)));
 		$("#intervalMsg").css('margin-top','0px');
 	}
 
 	var cleanFeedback = function(){$("#intervalMsg").remove();}
-
+	
 	var showScore = function(tag,cueType)
 	{
 		var showScoreInTag = function(counter){
@@ -33,27 +34,23 @@ var MainPartGarden = function(blockType,cueSubset){
 		return showScoreInTag;
 	}
 
+
 	var cleanTally = function(){
 		$('#scoreCounter').remove();
 	}
 
-		var intervalID = 0;
-		var itiDurationSet = _.shuffle(repmat(itiDurations,Math.ceil(numIntervalPerBlock/itiDurations.length)));
-		var isiDurationSet = _.shuffle(repmat(isiDurations,Math.ceil(numIntervalPerBlock/isiDurations.length)));
-
-		//Set up the sequence within the block.
-		var indexList = [];
-		var cueList = [];
-		var intervalDurationList = [];
+	var intervalID = 0;
+	var itiDurationSet = _.shuffle(repmat(itiDurations,Math.ceil(numIntervalPerBlock/itiDurations.length)));
+	var isiDurationSet = _.shuffle(repmat(isiDurations,Math.ceil(numIntervalPerBlock/isiDurations.length)));
 
 
 
+	//Set up the sequence within the block.
+	var indexList = [];
+	var cueList = [];
+	var intervalDurationList = [];
 
-
-
-
-
-		for(var m = 0; m < numIntervalPerBlock/(cueSubset.length * intervalDurations.length); m++)
+	for(var m = 0; m < numIntervalPerBlock/(cueSubset.length * intervalDurations.length); m++)
 		{
 			for(var j = 0; j < intervalDurations.length; j++)
 			{
@@ -146,7 +143,9 @@ var MainPartGarden = function(blockType,cueSubset){
 
 
 
-			if(intervalID > numIntervalPerBlock) blockPartGarden(practiceNext);
+			if(intervalID > numIntervalPerBlock) {
+				blockPartGarden(nextPractice);
+			}
 			else {
 				var stimSet = generateStimSetImage(possibleStimsInCongruent,possibleStimsCongruent,numIntervalTrials);
 				interval = new Interval(intervalTimingParams,htmlParams,cue,trialTimingParams,configParams,stimSet,callbacks);

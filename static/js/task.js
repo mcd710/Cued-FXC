@@ -172,7 +172,7 @@ var blockPartGarden = function(practiceNext){
 		  	blockID++;
 			var blockType = blockSequence.shift();
 			var cueSubset = cues[blockType];
-		    psiTurk.doInstructions(startGameInstructions,MainPartGarden)
+		    psiTurk.doInstructions(startGameInstructions,MainPartGarden(blockType,cueSubset,'MainTask'))
 		    
 		    break;
 		  case 'MainTask':
@@ -180,7 +180,7 @@ var blockPartGarden = function(practiceNext){
 		  	practiceNext = 'MainTask'
 		  	var blockType = blockSequence.shift();
 			var cueSubset = cues[blockType];
-		   	MainPartGarden(blockType,cueSubset);
+		   	MainPartGarden(blockType,cueSubset,'MainTask')
 		    
 		    break;
 
@@ -196,7 +196,7 @@ $(window).load( function(){
 		//psiTurk.doInstructions(keyMappingInstructions,FruitMappingPractice);
 		//psiTurk.doInstructions(intervalInstructions,intervalPracticeGarden);
 		//let practiceNext='keymapping'
-		blockPartGarden('interval')
+		blockPartGarden('MainTask')
  	}
 );
 
@@ -209,15 +209,12 @@ $(window).load( function(){
 *            OTHER FUNCTIONS             *
 ******************************************/
 
-GainPractice =(practiceType,nextPractice) =>()=>{
-		returnToInstructCallback = function(){psiTurk.doInstructions(instructionGainPages,GainPractice);};
-		practiceBlocksGarden(practiceType,nextPractice);
-	}
+showBoard = function(){
+	console.log("inside showBoard")
+	var element_stimuli = $("<img></img>").attr({src: "/static/images/Farmboard.png",id:'farmboard'});
+	addElement(element_stimuli,'#background',center=true);
 
-LossPractice =(practiceType,nextPractice) =>()=>{
-		returnToInstructCallback = function(){psiTurk.doInstructions(instructionLossPages,LossPractice);};
-		practiceBlocksGarden(practiceType,practiceNext);
-	}
+}
 
 
 

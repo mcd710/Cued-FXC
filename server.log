@@ -9901,3 +9901,359 @@ OperationalError: (sqlite3.OperationalError) database is locked
 [SQL: UPDATE turkdemo SET datastring=? WHERE turkdemo.uniqueid = ?]
 [parameters: ('{"assignmentId": "debugZYEDRG", "workerId": "debugNB94XP", "questiondata": {}, "bonus": 0, "hitId": "debugDW79DI", "counterbalance": 0, "useragent":  ... (1830 characters truncated) ... tions/instruct-readyF.html"}, "uniqueid": "debugNB94XP:debugZYEDRG", "dateTime": 1585863574041}], "currenttrial": 6, "condition": 0, "mode": "debug"}', u'debugNB94XP:debugZYEDRG')]
 (Background on this error at: http://sqlalche.me/e/e3q8)
+2020-04-02 18:27:21,363 DB error: Unique user not found.
+2020-04-02 18:27:21,363 Exception on /sync/debug0EX5YE:debug2Y039E [PUT]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 595, in update
+    db_session.commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 1027, in commit
+    self.transaction.commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 498, in commit
+    t[1].commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1716, in commit
+    self._do_commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1747, in _do_commit
+    self.connection._commit_impl()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 763, in _commit_impl
+    self._handle_dbapi_exception(e, None, None, None, None)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/util/compat.py", line 399, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 761, in _commit_impl
+    self.engine.dialect.do_commit(self.connection)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/default.py", line 503, in do_commit
+    dbapi_connection.commit()
+OperationalError: (sqlite3.OperationalError) database is locked
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2020-04-02 19:02:04,480 DB error: Unique user not found.
+2020-04-02 19:02:04,480 Exception on /sync/debugUSA7GW:debugT6Q4N6 [PUT]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 595, in update
+    db_session.commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 1027, in commit
+    self.transaction.commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 498, in commit
+    t[1].commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1716, in commit
+    self._do_commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1747, in _do_commit
+    self.connection._commit_impl()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 763, in _commit_impl
+    self._handle_dbapi_exception(e, None, None, None, None)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/util/compat.py", line 399, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 761, in _commit_impl
+    self.engine.dialect.do_commit(self.connection)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/default.py", line 503, in do_commit
+    dbapi_connection.commit()
+OperationalError: (sqlite3.OperationalError) database is locked
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2020-04-02 19:03:23,568 DB error: Unique user not found.
+2020-04-02 19:03:23,568 Exception on /sync/debugUSA7GW:debugT6Q4N6 [PUT]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 595, in update
+    db_session.commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 1027, in commit
+    self.transaction.commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 494, in commit
+    self._prepare_impl()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 473, in _prepare_impl
+    self.session.flush()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 2459, in flush
+    self._flush(objects)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 2557, in _flush
+    flush_context.execute()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/persistence.py", line 236, in save_obj
+    update,
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/persistence.py", line 996, in _emit_update_statements
+    statement, multiparams
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/util/compat.py", line 399, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/default.py", line 550, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) database is locked
+[SQL: UPDATE turkdemo SET datastring=? WHERE turkdemo.uniqueid = ?]
+[parameters: ('{"assignmentId": "debugT6Q4N6", "workerId": "debugUSA7GW", "questiondata": {}, "bonus": 0, "hitId": "debugTFNEZJ", "counterbalance": 0, "useragent":  ... (1725 characters truncated) ... tions/instruct-readyF.html"}, "uniqueid": "debugUSA7GW:debugT6Q4N6", "dateTime": 1585868598559}], "currenttrial": 6, "condition": 0, "mode": "debug"}', u'debugUSA7GW:debugT6Q4N6')]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2020-04-02 20:04:59 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:13696)
+[2020-04-02 20:04:59 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:13697)
+[2020-04-02 20:04:59 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:13701)
+[2020-04-02 20:04:59 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:13702)
+[2020-04-02 20:04:59 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:13705)
+[2020-04-02 20:04:59 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:13707)
+[2020-04-02 20:04:59 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:13708)
+[2020-04-02 20:04:59 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:13662)
+[2020-04-02 20:04:59 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:13663)
+[2020-04-02 20:04:59 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:13666)
+[2020-04-02 20:04:59 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:13667)
+[2020-04-02 20:04:59 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:13669)
+[2020-04-02 20:04:59 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:13672)
+[2020-04-02 20:04:59 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:13675)
+[2020-04-02 20:04:59 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:13677)
+[2020-04-02 20:04:59 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:13678)
+[2020-04-02 20:04:59 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:13680)
+[2020-04-02 20:04:59 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:13682)
+[2020-04-02 20:04:59 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:13683)
+[2020-04-02 20:04:59 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:13685)
+[2020-04-02 20:04:59 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:13686)
+[2020-04-02 20:04:59 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:13690)
+[2020-04-02 20:04:59 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:13691)
+[2020-04-02 20:04:59 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:13693)
+[2020-04-02 20:04:59 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:13694)
+[2020-04-02 22:05:24 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16386)
+[2020-04-02 22:05:24 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16388)
+[2020-04-02 22:05:24 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16389)
+[2020-04-02 22:05:24 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16391)
+[2020-04-02 22:05:24 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16393)
+[2020-04-02 22:05:24 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16394)
+[2020-04-02 22:05:24 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16396)
+[2020-04-02 22:05:24 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16397)
+[2020-04-02 22:05:24 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16398)
+[2020-04-02 22:05:24 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16401)
+[2020-04-02 22:05:24 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16351)
+[2020-04-02 22:05:24 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16352)
+[2020-04-02 22:05:24 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16353)
+[2020-04-02 22:05:24 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16354)
+[2020-04-02 22:05:24 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16355)
+[2020-04-02 22:05:24 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16356)
+[2020-04-02 22:05:24 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16357)
+[2020-04-02 22:05:24 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16360)
+[2020-04-02 22:05:24 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16369)
+[2020-04-02 22:05:24 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16371)
+[2020-04-02 22:05:24 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16374)
+[2020-04-02 22:05:24 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16376)
+[2020-04-02 22:05:24 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16377)
+[2020-04-02 22:05:24 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16380)
+[2020-04-02 22:05:24 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16383)
+[2020-04-03 00:05:42 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16408)
+[2020-04-03 00:05:42 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16409)
+[2020-04-03 00:05:42 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16410)
+[2020-04-03 00:05:42 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16411)
+[2020-04-03 00:05:42 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16412)
+[2020-04-03 00:05:42 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16413)
+[2020-04-03 00:05:42 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16415)
+[2020-04-03 00:05:42 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16419)
+[2020-04-03 00:05:42 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16425)
+[2020-04-03 00:05:42 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16427)
+[2020-04-03 00:05:42 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16429)
+[2020-04-03 00:05:42 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16431)
+[2020-04-03 00:05:42 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16434)
+[2020-04-03 00:05:42 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16436)
+[2020-04-03 00:05:42 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16437)
+[2020-04-03 00:05:42 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16439)
+[2020-04-03 00:05:42 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16441)
+[2020-04-03 00:05:42 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16442)
+[2020-04-03 00:05:42 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16445)
+[2020-04-03 00:05:42 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16446)
+[2020-04-03 00:05:42 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16449)
+[2020-04-03 00:05:42 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16453)
+[2020-04-03 00:05:42 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16455)
+[2020-04-03 00:05:42 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16456)
+[2020-04-03 00:05:42 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16457)
+[2020-04-03 00:30:08 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16516)
+[2020-04-03 00:30:08 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16520)
+[2020-04-03 00:30:08 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16524)
+[2020-04-03 00:30:08 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16525)
+[2020-04-03 00:30:08 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16526)
+[2020-04-03 00:30:08 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16529)
+[2020-04-03 00:30:08 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16473)
+[2020-04-03 00:30:08 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16474)
+[2020-04-03 00:30:08 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16475)
+[2020-04-03 00:30:08 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16476)
+[2020-04-03 00:30:08 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16477)
+[2020-04-03 00:30:08 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16478)
+[2020-04-03 00:30:08 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16480)
+[2020-04-03 00:30:08 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16483)
+[2020-04-03 00:30:08 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16491)
+[2020-04-03 00:30:08 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16492)
+[2020-04-03 00:30:08 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16493)
+[2020-04-03 00:30:08 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16497)
+[2020-04-03 00:30:08 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16498)
+[2020-04-03 00:30:08 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16499)
+[2020-04-03 00:30:08 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16502)
+[2020-04-03 00:30:08 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16503)
+[2020-04-03 00:30:08 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16507)
+[2020-04-03 00:30:08 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16509)
+[2020-04-03 00:30:08 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16511)
+[2020-04-03 02:30:23 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16570)
+[2020-04-03 02:30:23 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16584)
+[2020-04-03 02:30:23 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16590)
+[2020-04-03 02:30:23 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16592)
+[2020-04-03 07:15:07 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16571)
+[2020-04-03 08:03:22 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16687)
+[2020-04-03 08:03:22 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16569)
+[2020-04-03 08:03:22 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16572)
+[2020-04-03 08:03:22 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16574)
+[2020-04-03 08:03:22 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16575)
+[2020-04-03 08:03:22 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16576)
+[2020-04-03 08:03:22 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16577)
+[2020-04-03 08:03:22 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16578)
+[2020-04-03 08:03:22 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16579)
+[2020-04-03 08:03:22 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16580)
+[2020-04-03 08:03:22 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16582)
+[2020-04-03 08:03:22 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16583)
+[2020-04-03 08:03:22 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16585)
+[2020-04-03 08:03:22 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16591)
+[2020-04-03 08:03:22 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16594)
+[2020-04-03 08:03:22 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16596)
+[2020-04-03 08:03:22 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16598)
+[2020-04-03 08:03:22 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16599)
+[2020-04-03 08:03:22 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16602)
+[2020-04-03 08:03:22 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16605)
+[2020-04-03 08:03:22 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16607)
+[2020-04-03 08:03:22 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16614)
+[2020-04-03 08:03:22 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16616)
+[2020-04-03 08:03:22 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16617)
+[2020-04-03 08:03:22 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16618)
+[2020-04-03 09:24:20 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16700)
+[2020-04-03 09:24:20 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16693)
+[2020-04-03 09:24:20 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16696)
+[2020-04-03 09:24:20 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16698)
+[2020-04-03 09:24:20 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16699)
+[2020-04-03 09:24:20 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16697)
+[2020-04-03 09:24:20 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16704)
+[2020-04-03 09:24:20 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16709)
+[2020-04-03 09:24:20 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16710)
+[2020-04-03 09:24:20 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16711)
+[2020-04-03 09:24:20 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16714)
+[2020-04-03 09:24:20 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16717)
+[2020-04-03 09:24:20 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16718)
+[2020-04-03 09:24:20 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16719)
+[2020-04-03 09:24:20 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16721)
+[2020-04-03 09:24:20 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16724)
+[2020-04-03 09:24:20 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16725)
+[2020-04-03 09:24:20 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16701)
+[2020-04-03 09:43:25 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16768)
+[2020-04-03 09:43:26 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16770)
+[2020-04-03 09:43:26 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16772)
+[2020-04-03 09:43:26 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16774)
+[2020-04-03 09:43:26 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16775)
+[2020-04-03 09:43:26 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16779)
+[2020-04-03 09:43:26 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16781)
+[2020-04-03 09:43:26 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16782)
+[2020-04-03 09:43:26 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16783)
+[2020-04-03 09:43:26 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16784)
+[2020-04-03 09:43:26 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16727)
+[2020-04-03 09:43:26 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16730)
+[2020-04-03 09:43:26 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16731)
+[2020-04-03 09:43:26 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16733)
+[2020-04-03 09:43:26 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16737)
+[2020-04-03 09:43:26 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16740)
+[2020-04-03 09:43:26 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16743)
+[2020-04-03 09:43:26 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16753)
+[2020-04-03 09:43:26 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16754)
+[2020-04-03 09:43:26 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16755)
+[2020-04-03 09:43:26 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16756)
+[2020-04-03 09:43:26 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16757)
+[2020-04-03 09:43:26 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16759)
+[2020-04-03 09:43:26 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16764)
+[2020-04-03 09:43:26 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:16766)
+[2020-04-03 09:50:27 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17164)
+[2020-04-03 09:50:27 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17166)
+[2020-04-03 09:50:27 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17167)
+[2020-04-03 09:50:27 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17168)
+[2020-04-03 09:50:27 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17170)
+[2020-04-03 09:50:27 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17171)
+[2020-04-03 09:50:27 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17172)
+[2020-04-03 09:50:27 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17173)
+[2020-04-03 09:50:27 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17175)
+[2020-04-03 09:50:27 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17178)
+[2020-04-03 09:50:27 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17182)
+[2020-04-03 09:50:27 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17184)
+[2020-04-03 09:50:27 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17186)
+[2020-04-03 09:50:27 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17188)
+[2020-04-03 09:50:27 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17190)
+[2020-04-03 09:50:27 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17191)
+[2020-04-03 09:50:27 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17193)
+[2020-04-03 09:50:27 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17195)
+[2020-04-03 09:50:27 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17198)
+[2020-04-03 09:50:27 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17201)
+[2020-04-03 09:50:27 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17202)
+[2020-04-03 09:50:27 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17203)
+[2020-04-03 09:50:27 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17204)
+[2020-04-03 09:50:27 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17205)
+[2020-04-03 09:50:27 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17206)
+[2020-04-03 16:49:18 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17220)
+[2020-04-03 16:49:18 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17222)
+[2020-04-03 16:49:18 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17224)
+[2020-04-03 16:49:18 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17225)
+[2020-04-03 16:49:18 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17226)
+[2020-04-03 16:49:18 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17228)
+[2020-04-03 16:49:18 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17230)
+[2020-04-03 16:49:18 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17233)
+[2020-04-03 16:49:18 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17235)
+[2020-04-03 16:49:18 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17236)
+[2020-04-03 16:49:18 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17238)
+[2020-04-03 16:49:18 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17240)
+[2020-04-03 16:49:18 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17241)
+[2020-04-03 16:49:18 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17243)
+[2020-04-03 16:49:18 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17245)
+[2020-04-03 16:49:18 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17249)
+[2020-04-03 16:49:18 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17251)
+[2020-04-03 16:49:18 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17254)
+[2020-04-03 16:49:18 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17256)
+[2020-04-03 16:49:18 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17259)
+[2020-04-03 16:49:18 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17260)
+[2020-04-03 16:49:18 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17261)
+[2020-04-03 16:49:18 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17262)
+[2020-04-03 16:49:18 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17263)
+[2020-04-03 16:49:18 -0400] [11038] [CRITICAL] WORKER TIMEOUT (pid:17264)
