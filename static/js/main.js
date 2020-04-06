@@ -156,6 +156,7 @@ MainPartGarden =(blockType,cueSubset,nextPractice) =>()=>{
 		}
 
 		returnToInstructCallbackBreak = function(){psiTurk.doInstructions(breakForBlockType[blockType],Loop);};
-		psiTurk.doInstructions(breakForBlockType[blockType],Loop);
+		//psiTurk.doInstructions(breakForBlockType[blockType],Loop);
+		Loop();
 
 	}

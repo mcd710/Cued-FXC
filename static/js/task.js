@@ -74,14 +74,13 @@ const{numColorPracticeTrials, 	//set the number of keymapping practice  trials
 	selectPerBlock, 			//how many intervals to select per block
 	initialFundForLoss} = setTrialNumByMode(test); // set the intial fund for loss
 
-console.log("possibleStimsNeutral is" + possibleStimsNeutral)
 
-var initialLoss = 300;
-var price = 0.01;
+var initialLoss = 300; //the amount of loss 
+var price = 0.01; // set the prioce 
 
 
 var trialTimingParams = {
-	itiDuration:0,
+	itiDuration:0, 
 	feedbackDur:500,
 	thresholdRT:250,
 	deadline:2000
@@ -180,7 +179,8 @@ var blockPartGarden = function(practiceNext){
 		  	practiceNext = 'MainTask'
 		  	var blockType = blockSequence.shift();
 			var cueSubset = cues[blockType];
-		   	MainPartGarden(blockType,cueSubset,'MainTask')
+
+			psiTurk.doInstructions(breakForBlockType[blockType],MainPartGarden(blockType,cueSubset,'MainTask'));
 		    
 		    break;
 
@@ -193,10 +193,7 @@ var blockPartGarden = function(practiceNext){
 
 // what to start the experiment with 
 $(window).load( function(){
-		//psiTurk.doInstructions(keyMappingInstructions,FruitMappingPractice);
-		//psiTurk.doInstructions(intervalInstructions,intervalPracticeGarden);
-		//let practiceNext='keymapping'
-		blockPartGarden('MainTask')
+		blockPartGarden('mainStart')
  	}
 );
 
