@@ -1,3 +1,11 @@
+ <script>
+    var continue_handler = function(event){
+        if(event.keyCode == spaceKey)document.getElementById("next").click();
+    };
+    $("body").unbind("keydown").focus().keydown(continue_handler);
+</script>
+
+
 <div id="container-instructions">
 
     <h1>Instructions</h1>

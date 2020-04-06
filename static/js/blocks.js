@@ -2,24 +2,24 @@
 
 
 blocksGroups= (mycondition)=> {
-	console.log("inside blocksProtect")
+	console.log("inside blocksGroups")
 
-	var blockseq1 = _.shuffle(['Group','Individual']);
-	var blockseq2 = _.shuffle(['Group','Individual']);
+	var groupblockseq1= _.shuffle(['Group','Individual']);
+	var groupblockseq2 = _.shuffle(['Group','Individual']);
 
 	if(mycondition==1)
 	{
 		
-		const blockSequence = blockseq1.concat(blockseq2);
+		const groupblockSequence = groupblockseq1.concat(groupblockseq2);
 
-		return blockSequence
+		return groupblockSequence
 	}
 	else
 	{
 		
-		const blockSequence = blockseq2.concat(blockseq1);
+		const groupblockSequence = groupblockseq2.concat(groupblockseq1);
 
-		return blockSequence
+		return groupblockSequence
 	}
 
 
@@ -27,25 +27,212 @@ blocksGroups= (mycondition)=> {
 }
 
 
-blocksGardenGain= (mycondition)=> {
+blocksGain= (mycondition)=> {
 	console.log("inside blocksGardenGain")
 
 	var blockseq1 = _.shuffle(['gain','gain']);
 	var blockseq2 = _.shuffle(['gain','gain']);
 
+	const highValue = .10;
+	const lowValue = .01;
+	const values = {gain_low:lowValue,gain_high:highValue};
+	const heading = {gain_low:'+ $',gain_high:'+ $'};
+	const numSign = {gain_low:1,gain_high:1};
+	const initialBonus = {gain_low:0,gain_high:0};
+	const breakForBlockType = {gain:BreakPage};
+
+
 	if(mycondition==1)
 	{
 		
 		const blockSequence = blockseq1.concat(blockseq2);
+		
+		return {
+			blockSequence,
+			highValue,
+			lowValue,
+			values,
+			heading,
+			numSign,
+			initialBonus,
+			breakForBlockType
+		}
 
-		return blockSequence
 	}
 	else
 	{
 		
 		const blockSequence = blockseq2.concat(blockseq1);
 
-		return blockSequence
+		return {
+			blockSequence,
+			highValue,
+			lowValue,
+			values,
+			heading,
+			numSign,
+			initialBonus,
+			breakForBlockType
+		}
+	}
+
+
+
+}
+
+blocksLoss= (mycondition)=> {
+	console.log("inside blocksGardenGain")
+
+	var blockseq1 = _.shuffle(['loss','loss']);
+	var blockseq2 = _.shuffle(['loss','loss']);
+
+	const highValue = .10;
+	const lowValue = .01;
+	const values = {loss_low:lowValue,loss_high:highValue};
+	const heading = {loss_low:'- $',loss_high:'- $'};
+	const numSign = {loss_low:-1,loss_high:-1};
+	const initialBonus = {loss_low:initialLoss,loss_high:initialLoss};
+	const breakForBlockType = {loss:BreakPage};
+
+
+	if(mycondition==1)
+	{
+		
+		const blockSequence = blockseq1.concat(blockseq2);
+
+		return {
+			blockSequence,
+			highValue,
+			lowValue,
+			values,
+			heading,
+			numSign,
+			initialBonus,
+			breakForBlockType
+		}
+	}
+	else
+	{
+		
+		const blockSequence = blockseq2.concat(blockseq1);
+
+		return {
+			blockSequence,
+			highValue,
+			lowValue,
+			values,
+			heading,
+			numSign,
+			initialBonus,
+			breakForBlockType
+		}
+	}
+
+
+
+}
+
+
+
+blocksGainLoss= (mycondition)=> {
+	console.log("inside blocksGardenGain")
+
+	var blockseq1 = _.shuffle(['gain','loss']);
+	var blockseq2 = _.shuffle(['gain','loss']);
+
+	const highValue = .10;
+	const lowValue = .01;
+	const values = {gain_low:lowValue,gain_high:highValue,loss_low:lowValue,loss_high:highValue};
+	const heading = {gain_low:'+ $',gain_high:'+ $',loss_low:'- $',loss_high:'- $'};
+	const numSign = {gain_low:1,gain_high:1,loss_low:-1,loss_high:-1};
+	const initialBonus = {gain_low:0,gain_high:0,loss_low:initialLoss,loss_high:initialLoss};
+	const breakForBlockType = {gain:BreakPage, loss:BreakPage};
+
+
+	if(mycondition==1)
+	{
+		
+		const blockSequence = blockseq1.concat(blockseq2);
+
+		return {
+			blockSequence,
+			highValue,
+			lowValue,
+			values,
+			heading,
+			numSign,
+			initialBonus,
+			breakForBlockType
+		}
+	}
+	else
+	{
+		
+		const blockSequence = blockseq2.concat(blockseq1);
+
+		return {
+			blockSequence,
+			highValue,
+			lowValue,
+			values,
+			heading,
+			numSign,
+			initialBonus,
+			breakForBlockType
+		}
+	}
+
+
+
+}
+
+blocksCollectorProtector= (mycondition)=> {
+	
+	var blockseq1 = _.shuffle(['collector','protector']);
+	var blockseq2 = _.shuffle(['small','large']);
+
+	const highValue = 10;
+	const lowValue = 1;
+	const values = {gain_low:lowValue,gain_high:highValue,loss_low:lowValue,loss_high:highValue};
+	const heading = heading = {gain_low:'Gem: ',gain_high:'Gem: ',loss_low:'Bomb: ',loss_high:'Bomb: '};
+	const numSign = {gain_low:1,gain_high:1,loss_low:-1,loss_high:-1};
+	const initialBonus = {gain_low:0,gain_high:0,loss_low:initialLoss,loss_high:initialLoss};
+	var breakForBlockType = {collector:BreakCollectorPage,protector:BreakProtectorPage,
+	small:BreakSmallPage,large:BreakLargePage};
+
+
+
+	if(mycondition==1)
+	{
+		
+		const blockSequence = blockseq1.concat(blockseq2);
+
+		return {
+			blockSequence,
+			highValue,
+			lowValue,
+			values,
+			heading,
+			numSign,
+			initialBonus,
+			breakForBlockType
+		}
+	}
+	else
+	{
+		
+		const blockSequence = blockseq2.concat(blockseq1);
+
+		return {
+			blockSequence,
+			highValue,
+			lowValue,
+			values,
+			heading,
+			numSign,
+			initialBonus,
+			breakForBlockType
+		}
 	}
 
 

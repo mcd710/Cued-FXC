@@ -107,15 +107,19 @@ var incorrect5 = 0;
 const cues = cuesMoney(); 
 
 //set the appropriate blocks by calling a function from the blocks.js file
-const blockSequence = blocksGardenGain(mycondition); 
-const highValue = .10;
-const lowValue = .01;
-const values = {gain_low:lowValue,gain_high:highValue,loss_low:lowValue,loss_high:highValue};
-const heading = {gain_low:'low: ',gain_high:'high: ',loss_low:'Bomb: ',loss_high:'Bomb: '};
-const numSign = {gain_low:1,gain_high:1,loss_low:-1,loss_high:-1};
-const initialBonus = {gain_low:0,gain_high:0,loss_low:initialLoss,loss_high:initialLoss};
-const breakForBlockType = {gain:BreakPage};
+const {blockSequence, // order of blocks= all gain
+	highValue, // highvalue = .10
+	lowValue, // lowValue =.01
+	values,// values = lowValue & highValue
+	heading, // heading = '+ $'...whatever the bonus was example: "+ $0.60"
+	numSign, // numSign  = 1 
+	initialBonus, // initialBonus = 0 
+	breakForBlockType
+} = blocksGain(mycondition); 
 
+
+//Set the group vs individual of  blocks if SPICE
+const groupblockSequence= blocksGroups(mycondition)
 
 /***Global variables tracked in the main task***/
 
@@ -157,8 +161,8 @@ var blockPartGarden = function(practiceNext){
 
 		    break;
 		  case 'gain':
-		    practiceNext = 'loss'
-		    psiTurk.doInstructions(instructionGainPages,practiceBlocksGarden('gain','loss'));
+		    practiceNext = 'mainStart'
+		    psiTurk.doInstructions(instructionGainPages,practiceBlocksGarden('gain','mainStart'));
 
 		    break;
 		  case 'loss':
@@ -193,7 +197,7 @@ var blockPartGarden = function(practiceNext){
 
 // what to start the experiment with 
 $(window).load( function(){
-		blockPartGarden('mainStart')
+		blockPartGarden('keymapping')
  	}
 );
 
