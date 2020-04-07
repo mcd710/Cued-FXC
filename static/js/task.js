@@ -58,7 +58,7 @@ var htmlParams = {
 var intervalDurations = [6000,7000,8000,9000];
 var itiDurations = [1000,1500,2000];
 var isiDurations = [500,750];
-var test = true;
+var test = true; // tells you if you would like to run a short version for debugging
 
 
 //set the appropriate trial numbers and test versus real mode 
@@ -76,11 +76,11 @@ const{numColorPracticeTrials, 	//set the number of keymapping practice  trials
 
 
 var initialLoss = 300; //the amount of loss 
-var price = 0.01; // set the prioce 
+var price = 0.01; // set the price 
 
 
 var trialTimingParams = {
-	itiDuration:0, 
+	itiDuration:0,  
 	feedbackDur:500,
 	thresholdRT:250,
 	deadline:2000
@@ -125,7 +125,7 @@ const groupblockSequence= blocksGroups(mycondition)
 
 
 var blockID = 0;
-var sessionID = 0
+var sessionID = 0;
 var returnToInstructCallback = 0;
 var returnToInstructCallbackMain =0;
 var returnToInstructCallbackBreak = 0;
@@ -144,7 +144,7 @@ var blockPartGarden = function(practiceNext){
 
 		switch(practiceNext) {
 
-		  case 'keymapping':
+		  case 'keymapping': 
 		   	practiceNext = 'interference'
 		    psiTurk.doInstructions(keyMappingInstructions,FruitMappingPractice('interference'));
 
@@ -156,12 +156,13 @@ var blockPartGarden = function(practiceNext){
 		    break;
 		  case 'interval':
 		    practiceNext = 'gain'
-		    practiceType = 'gain'
+		    //practiceType = 'gain' // needed for the practice function 
+		    returnToInstructCallback = function(){psiTurk.doInstructions(instructionGainPages,GainPractice);};
 		    psiTurk.doInstructions(intervalInstructions,intervalPracticeGarden('gain'));
 
 		    break;
 		  case 'gain':
-		    practiceNext = 'mainStart'
+		    practiceNext = 'mainStart' 
 		    psiTurk.doInstructions(instructionGainPages,practiceBlocksGarden('gain','mainStart'));
 
 		    break;
@@ -197,7 +198,7 @@ var blockPartGarden = function(practiceNext){
 
 // what to start the experiment with 
 $(window).load( function(){
-		blockPartGarden('keymapping')
+		blockPartGarden('gain')
  	}
 );
 

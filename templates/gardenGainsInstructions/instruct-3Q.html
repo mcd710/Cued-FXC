@@ -56,8 +56,7 @@
     function instruct_onclick() {
 
         psiTurk.doInstructions(
-            instruction3Pages, // a list of pages you want to display in sequence
-            function() { currentview = new FullPractice(); } // what you want to do when you are done with instructions
+            instructionGainPages, practiceBlocksGarden('gain','mainStart') // what you want to do when you are done with instructions
         );
 
     }
