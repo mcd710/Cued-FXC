@@ -69,8 +69,7 @@
     function instruct_onclick() {
 
         psiTurk.doInstructions(
-            interferenceInstructions, // a list of pages you want to display in sequence
-            function() { currentview = new FruitInterferencePractice(); } // what you want to do when you are done with instructions
+           interferenceInstructions,FruitInterferencePractice('interval')
         );
 
     }

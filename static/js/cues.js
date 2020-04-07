@@ -1,6 +1,6 @@
 // Sets the cues depending on the task 
 
-
+//cues for collector protector cover story gems and bombs
 cuesProtect= ()=> {
 
 console.log("inside cuesProtect")
@@ -24,7 +24,7 @@ console.log("inside cuesProtect")
 
 }
 
-
+// money cues low and high
 cuesMoney= ()=> {
 
 console.log("inside cuesMoney")
