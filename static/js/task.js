@@ -50,7 +50,7 @@ psiTurk.preloadImages(paths);
 var htmlParams = {
 	title:'#title',
 	stim:'#m', //stimImage
-	tally:'#query',
+	tally:'#bm',
 	board:'#background'
 };
 
@@ -196,7 +196,7 @@ var blockPartGarden = function(practiceNext){
 
 // what to start the experiment with 
 $(window).load( function(){
-		blockPartGarden('keymapping')
+		blockPartGarden('MainTask')
  	}
 );
 
