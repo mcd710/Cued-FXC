@@ -11192,3 +11192,428 @@ OperationalError: (sqlite3.OperationalError) database is locked
 [SQL: UPDATE turkdemo SET datastring=? WHERE turkdemo.uniqueid = ?]
 [parameters: ('{"assignmentId": "debugWV50UG", "workerId": "debug24ISZB", "questiondata": {}, "bonus": 0, "hitId": "debug1OGMCZ", "counterbalance": 0, "useragent":  ... (681 characters truncated) ... nsInstructions/breakF.html"}, "uniqueid": "debug24ISZB:debugWV50UG", "dateTime": 1586294957662}], "currenttrial": 2, "condition": 0, "mode": "debug"}', u'debug24ISZB:debugWV50UG')]
 (Background on this error at: http://sqlalche.me/e/e3q8)
+2020-04-07 17:46:18,376 DB error: Unique user not found.
+2020-04-07 17:46:18,376 Exception on /sync/debugSDKGHX:debugQ9YK17 [PUT]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 595, in update
+    db_session.commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 1027, in commit
+    self.transaction.commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 498, in commit
+    t[1].commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1716, in commit
+    self._do_commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1747, in _do_commit
+    self.connection._commit_impl()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 763, in _commit_impl
+    self._handle_dbapi_exception(e, None, None, None, None)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/util/compat.py", line 399, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 761, in _commit_impl
+    self.engine.dialect.do_commit(self.connection)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/default.py", line 503, in do_commit
+    dbapi_connection.commit()
+OperationalError: (sqlite3.OperationalError) database is locked
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2020-04-07 18:51:20 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:40401)
+[2020-04-07 18:51:20 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:40403)
+[2020-04-07 18:51:20 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:40404)
+[2020-04-07 18:51:20 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:40405)
+[2020-04-07 18:51:20 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:40408)
+[2020-04-07 18:51:20 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:40409)
+[2020-04-07 18:51:20 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:40410)
+[2020-04-07 18:51:20 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:40411)
+[2020-04-07 18:51:20 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:40416)
+[2020-04-07 18:51:20 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:40418)
+[2020-04-07 18:51:20 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:40419)
+[2020-04-07 18:51:20 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:40420)
+[2020-04-07 18:51:20 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:40421)
+[2020-04-07 18:51:20 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:40422)
+[2020-04-07 18:51:20 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:40424)
+[2020-04-07 18:51:20 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:40425)
+[2020-04-07 18:51:20 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:40426)
+[2020-04-07 19:07:46 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41435)
+[2020-04-07 19:07:46 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41436)
+[2020-04-07 19:07:46 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41437)
+[2020-04-07 19:07:46 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41438)
+[2020-04-07 19:07:46 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:40402)
+[2020-04-07 19:07:46 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:40406)
+[2020-04-07 19:07:46 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41444)
+[2020-04-07 19:07:46 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:40412)
+[2020-04-07 19:07:46 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:40413)
+[2020-04-07 19:07:46 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:40414)
+[2020-04-07 19:07:46 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:40415)
+[2020-04-07 19:07:46 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41440)
+[2020-04-07 19:07:46 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:40417)
+[2020-04-07 19:07:46 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41442)
+[2020-04-07 19:07:46 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:40423)
+[2020-04-07 19:07:46 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41451)
+[2020-04-07 19:07:46 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41452)
+[2020-04-07 19:07:46 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41454)
+[2020-04-07 19:07:46 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41457)
+[2020-04-07 19:07:46 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41460)
+[2020-04-07 19:07:46 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41461)
+[2020-04-07 19:07:46 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41463)
+[2020-04-07 19:07:46 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41465)
+[2020-04-07 19:07:46 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41466)
+[2020-04-07 19:07:46 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41470)
+[2020-04-07 19:40:36 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41600)
+[2020-04-07 19:40:36 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41602)
+[2020-04-07 19:40:36 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41606)
+[2020-04-07 19:40:36 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41607)
+[2020-04-07 19:40:36 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41610)
+[2020-04-07 19:40:36 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41611)
+[2020-04-07 19:40:36 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41612)
+[2020-04-07 19:40:36 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41614)
+[2020-04-07 19:40:36 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41616)
+[2020-04-07 19:40:36 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41617)
+[2020-04-07 19:40:36 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41619)
+[2020-04-07 19:40:36 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41621)
+[2020-04-07 19:40:36 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41622)
+[2020-04-07 19:40:36 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41623)
+[2020-04-07 19:40:36 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41624)
+[2020-04-07 19:40:36 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41625)
+[2020-04-07 19:40:36 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41579)
+[2020-04-07 19:40:36 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41581)
+[2020-04-07 19:40:36 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41582)
+[2020-04-07 19:40:36 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41585)
+[2020-04-07 19:40:36 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41588)
+[2020-04-07 19:40:36 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41591)
+[2020-04-07 19:40:36 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41594)
+[2020-04-07 19:40:36 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41595)
+[2020-04-07 19:40:36 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41598)
+[2020-04-07 19:41:50 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41785)
+[2020-04-07 19:41:50 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41787)
+[2020-04-07 19:41:50 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41788)
+[2020-04-07 19:41:50 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41789)
+[2020-04-07 19:41:50 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41792)
+[2020-04-07 19:41:50 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41793)
+[2020-04-07 19:41:50 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41794)
+[2020-04-07 19:41:50 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41795)
+[2020-04-07 19:41:50 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41797)
+[2020-04-07 19:41:50 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41798)
+[2020-04-07 19:41:50 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41800)
+[2020-04-07 19:41:50 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41786)
+[2020-04-07 19:41:50 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41790)
+[2020-04-07 19:41:50 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41791)
+[2020-04-07 19:41:50 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41801)
+[2020-04-07 19:41:50 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41804)
+[2020-04-07 19:41:52 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41806)
+[2020-04-07 19:41:52 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41808)
+[2020-04-07 19:41:52 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41810)
+[2020-04-07 19:41:52 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41812)
+[2020-04-07 19:41:52 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41815)
+[2020-04-07 19:41:52 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41818)
+[2020-04-07 19:41:52 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41819)
+[2020-04-07 19:41:52 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41822)
+[2020-04-07 19:41:54 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41824)
+[2020-04-07 20:00:30 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41857)
+[2020-04-07 20:00:30 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41864)
+[2020-04-07 20:00:30 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41866)
+[2020-04-07 20:00:30 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41868)
+[2020-04-07 20:00:30 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41869)
+[2020-04-07 20:00:30 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41871)
+[2020-04-07 20:00:30 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41877)
+[2020-04-07 20:00:30 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41878)
+[2020-04-07 20:00:30 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41880)
+[2020-04-07 20:00:30 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41881)
+[2020-04-07 20:00:30 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41882)
+[2020-04-07 20:00:30 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41883)
+[2020-04-07 20:00:30 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41884)
+[2020-04-07 20:00:30 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41885)
+[2020-04-07 20:00:30 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41893)
+[2020-04-07 20:00:30 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41846)
+[2020-04-07 20:00:30 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41847)
+[2020-04-07 20:00:30 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41848)
+[2020-04-07 20:00:30 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41849)
+[2020-04-07 20:00:30 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41850)
+[2020-04-07 20:00:30 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41852)
+[2020-04-07 20:00:30 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41854)
+[2020-04-07 20:00:30 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41855)
+[2020-04-07 20:04:56 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41860)
+[2020-04-07 20:04:56 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41861)
+[2020-04-07 20:04:56 -0400] [40397] [CRITICAL] WORKER TIMEOUT (pid:41911)
+2020-04-08 15:40:05,008 DB error: Unique user not found.
+2020-04-08 15:40:05,008 Exception on /sync/debugPQYJ1X:debugV8SFXX [PUT]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 595, in update
+    db_session.commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 1027, in commit
+    self.transaction.commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 494, in commit
+    self._prepare_impl()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 473, in _prepare_impl
+    self.session.flush()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 2459, in flush
+    self._flush(objects)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 2557, in _flush
+    flush_context.execute()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/persistence.py", line 236, in save_obj
+    update,
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/persistence.py", line 996, in _emit_update_statements
+    statement, multiparams
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/util/compat.py", line 399, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/default.py", line 550, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) database is locked
+[SQL: UPDATE turkdemo SET datastring=? WHERE turkdemo.uniqueid = ?]
+[parameters: ('{"assignmentId": "debugV8SFXX", "workerId": "debugPQYJ1X", "questiondata": {}, "bonus": 0, "hitId": "debugRO61H2", "counterbalance": 0, "useragent":  ... (2116 characters truncated) ... nsInstructions/breakF.html"}, "uniqueid": "debugPQYJ1X:debugV8SFXX", "dateTime": 1586374799995}], "currenttrial": 2, "condition": 0, "mode": "debug"}', u'debugPQYJ1X:debugV8SFXX')]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2020-04-08 15:59:26,138 DB error: Unique user not found.
+[2020-04-08 17:15:29 -0400] [45985] [CRITICAL] WORKER TIMEOUT (pid:45995)
+[2020-04-08 17:15:29 -0400] [45985] [CRITICAL] WORKER TIMEOUT (pid:46003)
+2020-04-08 17:50:39,956 DB error: Unique user not found.
+2020-04-08 18:03:11,985 DB error: Unique user not found.
+2020-04-08 18:03:11,985 Exception on /sync/debug9Y6JGS:debug5LG3BJ [PUT]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 595, in update
+    db_session.commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 1027, in commit
+    self.transaction.commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 498, in commit
+    t[1].commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1716, in commit
+    self._do_commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1747, in _do_commit
+    self.connection._commit_impl()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 763, in _commit_impl
+    self._handle_dbapi_exception(e, None, None, None, None)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/util/compat.py", line 399, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 761, in _commit_impl
+    self.engine.dialect.do_commit(self.connection)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/default.py", line 503, in do_commit
+    dbapi_connection.commit()
+OperationalError: (sqlite3.OperationalError) database is locked
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2020-04-08 18:07:31,448 DB error: Unique user not found.
+2020-04-08 18:07:31,448 Exception on /sync/debugFFBDXD:debugLPS8IE [PUT]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 595, in update
+    db_session.commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 1027, in commit
+    self.transaction.commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 498, in commit
+    t[1].commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1716, in commit
+    self._do_commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1747, in _do_commit
+    self.connection._commit_impl()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 763, in _commit_impl
+    self._handle_dbapi_exception(e, None, None, None, None)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/util/compat.py", line 399, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 761, in _commit_impl
+    self.engine.dialect.do_commit(self.connection)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/default.py", line 503, in do_commit
+    dbapi_connection.commit()
+OperationalError: (sqlite3.OperationalError) database is locked
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2020-04-08 18:16:03,660 DB error: Unique user not found.
+2020-04-08 18:16:03,661 Exception on /sync/debugURHTBX:debugUEVA18 [PUT]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 595, in update
+    db_session.commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 1027, in commit
+    self.transaction.commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 498, in commit
+    t[1].commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1716, in commit
+    self._do_commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1747, in _do_commit
+    self.connection._commit_impl()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 763, in _commit_impl
+    self._handle_dbapi_exception(e, None, None, None, None)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/util/compat.py", line 399, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 761, in _commit_impl
+    self.engine.dialect.do_commit(self.connection)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/default.py", line 503, in do_commit
+    dbapi_connection.commit()
+OperationalError: (sqlite3.OperationalError) database is locked
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2020-04-08 18:22:39,772 DB error: Unique user not found.
+2020-04-08 18:22:39,773 Exception on /sync/debugI6BBPL:debug5KR57N [PUT]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 595, in update
+    db_session.commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 1027, in commit
+    self.transaction.commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 494, in commit
+    self._prepare_impl()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 473, in _prepare_impl
+    self.session.flush()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 2459, in flush
+    self._flush(objects)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 2557, in _flush
+    flush_context.execute()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/persistence.py", line 236, in save_obj
+    update,
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/persistence.py", line 996, in _emit_update_statements
+    statement, multiparams
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/util/compat.py", line 399, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/default.py", line 550, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) database is locked
+[SQL: UPDATE turkdemo SET datastring=? WHERE turkdemo.uniqueid = ?]
+[parameters: ('{"assignmentId": "debug5KR57N", "workerId": "debugI6BBPL", "questiondata": {}, "bonus": 0, "hitId": "debug9XNKO8", "counterbalance": 0, "useragent":  ... (681 characters truncated) ... nsInstructions/breakF.html"}, "uniqueid": "debugI6BBPL:debug5KR57N", "dateTime": 1586384554763}], "currenttrial": 2, "condition": 0, "mode": "debug"}', u'debugI6BBPL:debug5KR57N')]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2020-04-08 18:28:03,533 DB error: Unique user not found.
+2020-04-08 18:28:03,532 Exception on /sync/debugH33UG9:debugH74JVU [PUT]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 595, in update
+    db_session.commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 1027, in commit
+    self.transaction.commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 498, in commit
+    t[1].commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1716, in commit
+    self._do_commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1747, in _do_commit
+    self.connection._commit_impl()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 763, in _commit_impl
+    self._handle_dbapi_exception(e, None, None, None, None)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/util/compat.py", line 399, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 761, in _commit_impl
+    self.engine.dialect.do_commit(self.connection)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/default.py", line 503, in do_commit
+    dbapi_connection.commit()
+OperationalError: (sqlite3.OperationalError) database is locked
+(Background on this error at: http://sqlalche.me/e/e3q8)

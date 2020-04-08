@@ -24,14 +24,21 @@
 		            if (q_message_array[0] == 'QualtricsEOS') {
 		                psiTurk.recordTrialData({'phase':'postquestionnaire', 'status':'back_from_qualtrics'});
 		                psiTurk.recordUnstructuredData('qualtrics_response_id', q_message_array[2]);
-		                psiTurk.recordUnstructuredData('group', q_message_array[2]);
 		                console.log(q_message_array);
 		            }
 		        }
 		    }
 		    // display the 'continue' button, which takes them to the next page
 		    $('#next').show();
+
 		})
+		
+		function next_onclick() {
+
+        	blockPartGarden('keymapping')
+            
+
+    	}
 
 
         </script>
@@ -46,8 +53,8 @@
             <div class="col-xs-2">
             </div>
             <div class="col-xs-8">
-                <button type="button" id="next" value="next" class="btn btn-primary btn-lg center-block continue" visibility = "hidden" onclick="return next_onclick()">>
-                    Press space to continue <span class="glyphicon glyphicon-arrow-right"></span>
+                <button type="button" id="next" value="next" class="btn btn-primary btn-lg center-block continue" visibility = "hidden" onclick="return next_onclick()" >
+                    Click to continue <span class="glyphicon glyphicon-arrow-right"></span>
                 </button>
             </div>
             <div class="col-xs-2">
@@ -56,14 +63,3 @@
     </div>
 
 </div>
-
-<script>
-	function next_onclick() {
-		blockPartGarden('keymapping');
-       
-
-    }
-
-
-</script>
-

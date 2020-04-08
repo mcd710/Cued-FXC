@@ -35,7 +35,7 @@ practiceBlocksGarden =(practiceType,nextPractice) =>()=>{
 			if(numSign[interval.cueType]<0) score = Math.max(score,0);
 			$(tag).append($("<p></p>").attr({id:'intervalMsg'}).html(heading[interval.cueType] +
 				score.toFixed(2)));
-			$("#intervalMsg").css('margin-top','0px');
+			$("#intervalMsg").css({'margin-top':'0px','border':'dashed', 'background': 'white','font-size':"25px" });
 		}
 
 		var cleanFeedback = function(){$("#intervalMsg").remove();}
@@ -46,9 +46,10 @@ practiceBlocksGarden =(practiceType,nextPractice) =>()=>{
 				$("#scoreCounter").remove();
 				var score = initialBonus[cueType] + numSign[cueType] * values[cueType] * counter[0];
 				if(numSign[cueType]<0) score = Math.max(score,0);
-				$(tag).append($("<p></p>").attr({id:'scoreCounter'}).text(heading[cueType] + score.toFixed(2)));
+				$(tag).append($("<p></p>").attr({id:'scoreCounter'}).text(tallyHeading[cueType] + score.toFixed(2)));
 				//$(tag).append($("<p></p>").attr({id:'scoreCounter'}).text(counter[0].toFixed(0)));
-				$("#scoreCounter").css('margin-top','0px');
+				$("#scoreCounter").css({'margin-top':'0px', 'border':'dashed', 'background': 'white', 'font-size':"25px"});
+
 			};
 			return showScoreInTag;
 		}
@@ -63,10 +64,7 @@ practiceBlocksGarden =(practiceType,nextPractice) =>()=>{
 
 			intervalID++;
 			
-			if tracker== true{
-
-
-			}
+			
 			var calculateBonus = function(Interval)
 			{
 				var bonus = 0;

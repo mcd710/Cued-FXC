@@ -14,9 +14,11 @@ var psiTurk = new PsiTurk(uniqueId, adServerLoc, mode);
 var mycondition = condition;  // these two variables are passed by the psiturk server process
 var mycounterbalance = counterbalance;  // they tell you which condition you have been assigned to
 
-const garden = true;
+//document.body.style.backgroundImage = "url('/static/images/BackgroundFarm.png')";
+
 //set the appropriate instructions by calling a function from the instructions.js file
 const {pages, 
+	questionnaireStart,
 	keyMappingInstructions,
 	interferenceInstructions,
 	intervalInstructions,
@@ -28,7 +30,8 @@ const {pages,
 //preload your pages 
 psiTurk.preloadPages(pages);
 
-
+//set whether you are in garden enviorment or not
+var garden = true
 
 
 //set appropriate stimuli 
@@ -48,10 +51,10 @@ const {
 psiTurk.preloadImages(paths);
 
 var htmlParams = {
-	title:'#title',
-	stim:'#m', //stimImage
-	tally:'#bm',
-	board:'#background'
+	title:'#title', // where to display the
+	stim:'#m', // where to display the image
+	tally:'#bm', // where to display the counter
+	board:'#background' // for the garden task where to display the board
 };
 
 
@@ -111,7 +114,8 @@ const {blockSequence, // order of blocks= all gain
 	highValue, // highvalue = .10
 	lowValue, // lowValue =.01
 	values,// values = lowValue & highValue
-	heading, // heading = '+ $'...whatever the bonus was example: "+ $0.60"
+	heading, // heading = '+ $'...whatever the bonus was example: "You gained + $0.60"
+	tallyHeading, // what to display on the tally while they are working
 	numSign, // numSign  = 1 
 	initialBonus, // initialBonus = 0 
 	breakForBlockType
@@ -132,8 +136,11 @@ var returnToInstructCallbackBreak = 0;
 
 // handler function that controls the order of the task
 var blockPartGarden = function(practiceNext){
-	
-	
+
+	// call function to set background
+	gardenWorld()
+
+	// what to do at the end of the task
 	if(blockID == numBlock) {
 		Questionnaire_Gain_Low();
 		return;
@@ -143,6 +150,12 @@ var blockPartGarden = function(practiceNext){
 
 
 		switch(practiceNext) {
+
+		case 'questionnaires': 
+		   	practiceNext = 'keymapping'
+		    psiTurk.doInstructions(questionnaireStart);
+
+		    break;
 
 		  case 'keymapping': 
 		   	practiceNext = 'interference'
@@ -216,7 +229,13 @@ showBoard = function(){
 
 }
 
-
+gardenWorld = function () {
+	if(garden){
+		document.body.style.backgroundImage = "url('/static/images/BackgroundFarm.png')";
+		document.body.style.backgroundSize = "cover"
+		document.body.style.backgroundRepeat= 'no-repeat'
+	}
+}
 
 
 // function equivalent to linspace in matlab - generates an array of n evenly spaced numbers between min and max (inclusive for both) 

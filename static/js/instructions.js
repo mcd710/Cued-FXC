@@ -132,6 +132,7 @@ const BreakPage = [
 
 instructionsGardenGains = ()=>{
 	const pages = [
+	"gardenGainsInstructions/instruct-0.html",
 	"gardenGainsInstructions/instruct-1F.html",
 	"gardenGainsInstructions/instruct-1Fb.html",
 	"gardenGainsInstructions/instruct-1Fc.html",
@@ -160,6 +161,10 @@ instructionsGardenGains = ()=>{
 	];
 
 	psiTurk.preloadPages(pages);
+
+	const questionnaireStart = [
+	"gardenGainsInstructions/instruct-0.html",
+	];
 
 	const keyMappingInstructions = [
 	"gardenGainsInstructions/instruct-1F.html",
@@ -202,7 +207,8 @@ instructionsGardenGains = ()=>{
 	"gardenGainsInstructions/breakF.html"
 	];
 
-	return {pages,keyMappingInstructions,
+	return {pages,questionnaireStart,
+		keyMappingInstructions,
 		interferenceInstructions,
 		intervalInstructions,
 		instructionGainPages,

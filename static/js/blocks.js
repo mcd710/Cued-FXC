@@ -36,7 +36,8 @@ blocksGain= (mycondition)=> {
 	const highValue = .10;
 	const lowValue = .01;
 	const values = {gain_low:lowValue,gain_high:highValue};
-	const heading = {gain_low:'+ $',gain_high:'+ $'};
+	const heading = {gain_low:'You gained + $',gain_high:'You gained + $'};
+	const tallyHeading = {gain_low:'+ $',gain_high:'+ $'};
 	const numSign = {gain_low:1,gain_high:1};
 	const initialBonus = {gain_low:0,gain_high:0};
 	const breakForBlockType = {gain:BreakPage};
@@ -53,6 +54,7 @@ blocksGain= (mycondition)=> {
 			lowValue,
 			values,
 			heading,
+			tallyHeading,
 			numSign,
 			initialBonus,
 			breakForBlockType
@@ -70,6 +72,7 @@ blocksGain= (mycondition)=> {
 			lowValue,
 			values,
 			heading,
+			tallyHeading,
 			numSign,
 			initialBonus,
 			breakForBlockType
