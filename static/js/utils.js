@@ -41,3 +41,32 @@ function addElement(element,position,center=true)
     "transform":"translate(-50%, -50%)"});
   $(position).append(element);
 }
+
+
+
+// function equivalent to linspace in matlab - generates an array of n evenly spaced numbers between min and max (inclusive for both) 
+function linspace(min,max,nBins) {
+  var i;
+  ret = Array(nBins);
+  nBins--;
+  for (i = nBins; i >= 0; i--) {
+    ret[i] = (i*max+(nBins-i)*min)/nBins; 
+  }
+  return ret;
+}
+
+
+// function equivalent to randi in matlab - generates a random integer between min and max (inclusive for both) 
+function randi(min, max) {
+  return Math.floor(Math.random() * ((max + 1) - min)) + min;
+}
+
+
+// function equivalent to repmat in matlab - repeats a given array nReps times
+function repmat(array, nReps) {
+  var result = [];
+  while (nReps--) {
+    result = result.concat(array);
+  }
+  return result;
+}
