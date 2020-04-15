@@ -16,6 +16,19 @@ var mycounterbalance = counterbalance;  // they tell you which condition you hav
 
 //document.body.style.backgroundImage = "url('/static/images/BackgroundFarm.png')";
 
+function getUrlVars() {
+	var vars = {};
+	var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+	    vars[key] = value;
+	});
+	return vars;
+}
+
+
+const testGroup = getUrlVars()["group"];
+
+console.log("inside task and group is" + testGroup)
+
 //set the appropriate instructions by calling a function from the instructions.js file
 const {pages, 
 	questionnaireStart,
@@ -209,7 +222,7 @@ var blockPartGarden = function(practiceNext){
 
 // what to start the experiment with 
 $(window).load( function(){
-		blockPartGarden('MainTask')
+		blockPartGarden('keymapping')
  	}
 );
 

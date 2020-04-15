@@ -108,12 +108,23 @@
 							        including complete instructions and an informed consent agreement.
 							    </p>
 							    <script type="text/javascript">
+
+							    	function getUrlVars() {
+	    								var vars = {};
+									    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+									        vars[key] = value;
+									    });
+									    return vars;
+									}
+
+
+									const testGroup = getUrlVars()["group"];
 							    	
-									var testGroup = "{{group}}"
+									
 									console.log("testgroup is "+ testGroup)
 
 									function openwindow() {
-							    		popup = window.open('{{ server_location }}/exp?hitId={{ hitid }}&assignmentId={{ assignmentid }}&workerId={{ workerid }}&group={{ group }}','Popup','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=no,width='+1024+',height='+768+'');
+							    		popup = window.open(`{{ server_location }}/exp?hitId={{ hitid }}&assignmentId={{ assignmentid }}&workerId={{ workerid }}&group=${testGroup}`,'Popup','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=no,width='+1024+',height='+768+'');
 							  		}
 							    </script>
 							    <div class="alert alert-warning">
