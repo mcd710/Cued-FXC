@@ -42,3 +42,22 @@ console.log("inside cuesMoney")
 
 }
 
+
+// money cues low and high
+cuesMoneyGroup= ()=> {
+
+console.log("inside cuesMoney")
+	const cues = {
+	Personal_Gain:
+		[['/static/images/cues/Reward/Rew1.png','gain_low'],
+		 ['/static/images/cues/Reward/Rew2.png','gain_high']],
+	Group_Gain:
+		[['/static/images/cues/Reward/Rew1.png','gain_low'],
+		 ['/static/images/cues/Reward/Rew2.png','gain_high']],
+	};
+
+	return cues
+
+
+}
+

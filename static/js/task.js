@@ -120,7 +120,7 @@ var incorrect5 = 0;
 
 
 //set the appropriate cues by calling a function from the cues.js file
-const cues = cuesMoney(); 
+const cues = cuesMoneyGroup(); 
 
 //set the appropriate blocks by calling a function from the blocks.js file
 const {blockSequence, // order of blocks= all gain
@@ -132,7 +132,7 @@ const {blockSequence, // order of blocks= all gain
 	numSign, // numSign  = 1 
 	initialBonus, // initialBonus = 0 
 	breakForBlockType
-} = blocksGain(mycondition); 
+} = blocksGroups(mycondition); 
 
 
 //Set the group vs individual of  blocks if SPICE
@@ -222,7 +222,7 @@ var blockPartGarden = function(practiceNext){
 
 // what to start the experiment with 
 $(window).load( function(){
-		blockPartGarden('keymapping')
+		blockPartGarden('MainTask')
  	}
 );
 

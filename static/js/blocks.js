@@ -4,22 +4,51 @@
 blocksGroups= (mycondition)=> {
 	console.log("inside blocksGroups")
 
-	var groupblockseq1= _.shuffle(['Group','Individual']);
-	var groupblockseq2 = _.shuffle(['Group','Individual']);
+	var groupblockseq1= _.shuffle(['Group_Gain','Personal_Gain']);
+	var groupblockseq2 = _.shuffle(['Group_Gain','Personal_Gain']);
+
+	const highValue = .10;
+	const lowValue = .01;
+	const values = {gain_low:lowValue,gain_high:highValue};
+	const heading = {Personal_Gain:'You gained + $',Group_Gain: testGroup + ' gained + $'};
+	const tallyHeading = {Personal_Gain:'You gained + $',Group_Gain: testGroup + ' gained + $'};
+	const numSign = {gain_low:1,gain_high:1};
+	const initialBonus = {gain_low:0,gain_high:0};
+	const breakForBlockType = {Personal_Gain:BreakPage,Group_Gain:BreakPage};
 
 	if(mycondition==1)
 	{
 		
-		const groupblockSequence = groupblockseq1.concat(groupblockseq2);
+		const blockSequence = groupblockseq1.concat(groupblockseq2);
 
-		return groupblockSequence
+		return {
+			blockSequence,
+			highValue,
+			lowValue,
+			values,
+			heading,
+			tallyHeading,
+			numSign,
+			initialBonus,
+			breakForBlockType
+		}
 	}
 	else
 	{
 		
-		const groupblockSequence = groupblockseq2.concat(groupblockseq1);
+		const blockSequence = groupblockseq2.concat(groupblockseq1);
 
-		return groupblockSequence
+		return {
+			blockSequence,
+			highValue,
+			lowValue,
+			values,
+			heading,
+			tallyHeading,
+			numSign,
+			initialBonus,
+			breakForBlockType
+		}
 	}
 
 
