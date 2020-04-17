@@ -14,18 +14,17 @@ var psiTurk = new PsiTurk(uniqueId, adServerLoc, mode);
 var mycondition = condition;  // these two variables are passed by the psiturk server process
 var mycounterbalance = counterbalance;  // they tell you which condition you have been assigned to
 
-//document.body.style.backgroundImage = "url('/static/images/BackgroundFarm.png')";
-
-function getUrlVars() {
-	var vars = {};
-	var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-	    vars[key] = value;
-	});
-	return vars;
-}
-
 
 const testGroup = getUrlVars()["group"];
+
+
+const gardenImageAll= "url('/static/images/BackgroundFarm.png')"
+
+const gardenImagePersonal = "url('/static/images/BackgroundFarm.png')"
+
+const gardenImageGroup = "url('/static/images/BackgroundFarm.png')"
+
+
 
 console.log("inside task and group is" + testGroup)
 
@@ -151,7 +150,7 @@ var returnToInstructCallbackBreak = 0;
 var blockPartGarden = function(practiceNext){
 
 	// call function to set background
-	gardenWorld()
+	gardenWorld(gardenImageAll)
 
 	// what to do at the end of the task
 	if(blockID == numBlock) {
@@ -242,10 +241,18 @@ showBoard = function(){
 
 }
 
-gardenWorld = function () {
+gardenWorld = function (gardenImage) {
 	if(garden){
-		document.body.style.backgroundImage = "url('/static/images/BackgroundFarm.png')";
+		document.body.style.backgroundImage = gardenImage ;
 		document.body.style.backgroundSize = "cover"
 		document.body.style.backgroundRepeat= 'no-repeat'
 	}
+}
+
+function getUrlVars() {
+	var vars = {};
+	var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+	    vars[key] = value;
+	});
+	return vars;
 }
