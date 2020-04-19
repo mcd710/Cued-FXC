@@ -82,6 +82,8 @@ def compute_bonus():
                filter(Participant.uniqueid == uniqueId).\
                one()
         user_data = loads(user.datastring) # load datastring from JSON
+        workerId = user.workerid
+
         bonus = 0
 
         for record in user_data['data']: # for line in data file
@@ -91,7 +93,7 @@ def compute_bonus():
         user.bonus = bonus
         db_session.add(user)
         db_session.commit()
-        resp = {"bonusComputed": "success"}
+         resp = {"workerId":workerId,"bonusComputed": "success","bonus":bonus}
         return jsonify(**resp)
     except:
         abort(404)  # again, bad to display HTML, but...
