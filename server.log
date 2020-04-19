@@ -11620,3 +11620,62 @@ OperationalError: (sqlite3.OperationalError) database is locked
 [2020-04-09 13:07:55 -0400] [50923] [CRITICAL] WORKER TIMEOUT (pid:50944)
 [2020-04-09 13:22:40 -0400] [50923] [CRITICAL] WORKER TIMEOUT (pid:50932)
 [2020-04-09 15:25:56 -0400] [52817] [CRITICAL] WORKER TIMEOUT (pid:52821)
+2020-04-19 16:08:20,400 DB error: Unique user not found.
+2020-04-19 16:08:20,400 Exception on /sync/R_2aktOeCnlQ3ndQe:debugUOBRZ5 [PUT]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Library/Python/2.7/site-packages/psiturk/experiment.py", line 595, in update
+    db_session.commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 1027, in commit
+    self.transaction.commit()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 494, in commit
+    self._prepare_impl()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 473, in _prepare_impl
+    self.session.flush()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 2459, in flush
+    self._flush(objects)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 2557, in _flush
+    flush_context.execute()
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/persistence.py", line 236, in save_obj
+    update,
+  File "/Library/Python/2.7/site-packages/sqlalchemy/orm/persistence.py", line 996, in _emit_update_statements
+    statement, multiparams
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/util/compat.py", line 399, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/Library/Python/2.7/site-packages/sqlalchemy/engine/default.py", line 550, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) database is locked
+[SQL: UPDATE turkdemo SET datastring=? WHERE turkdemo.uniqueid = ?]
+[parameters: ('{"assignmentId": "debugUOBRZ5", "workerId": "R_2aktOeCnlQ3ndQe", "questiondata": {}, "bonus": 0, "hitId": "debugEYM2WG", "counterbalance": 0, "userag ... (797 characters truncated) ... structions/breakF.html"}, "uniqueid": "R_2aktOeCnlQ3ndQe:debugUOBRZ5", "dateTime": 1587326895392}], "currenttrial": 2, "condition": 0, "mode": "lab"}', u'R_2aktOeCnlQ3ndQe:debugUOBRZ5')]
+(Background on this error at: http://sqlalche.me/e/e3q8)

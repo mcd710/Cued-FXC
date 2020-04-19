@@ -17,12 +17,14 @@ var mycounterbalance = counterbalance;  // they tell you which condition you hav
 
 const testGroup = getUrlVars()["group"];
 
+var groupImage= _.shuffle(["url('/static/images/BackgroundFarmB.png')","url('/static/images/BackgroundFarmD.png')"]);
+
 
 const gardenImageAll= "url('/static/images/BackgroundFarm.png')"
 
-const gardenImagePersonal = "url('/static/images/BackgroundFarm.png')"
+const gardenImagePersonal = groupImage[0];
 
-const gardenImageGroup = "url('/static/images/BackgroundFarm.png')"
+const gardenImageGroup = groupImage[1];
 
 
 
@@ -199,6 +201,12 @@ var blockPartGarden = function(practiceNext){
 		  	blockID++;
 			var blockType = blockSequence.shift();
 			var cueSubset = cues[blockType];
+			if (blockType=="Group_Gain"){
+				gardenWorld(gardenImageGroup)
+			}else{
+				gardenWorld(gardenImagePersonal)
+			}
+			
 		    psiTurk.doInstructions(startGameInstructions,MainPartGarden(blockType,cueSubset,'MainTask'))
 		    
 		    break;
@@ -207,6 +215,11 @@ var blockPartGarden = function(practiceNext){
 		  	practiceNext = 'MainTask'
 		  	var blockType = blockSequence.shift();
 			var cueSubset = cues[blockType];
+			if (blockType=="Group_Gain"){
+				gardenWorld(gardenImageGroup)
+			}else{
+				gardenWorld(gardenImagePersonal)
+			}
 
 			psiTurk.doInstructions(breakForBlockType[blockType],MainPartGarden(blockType,cueSubset,'MainTask'));
 		    
