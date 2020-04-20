@@ -154,7 +154,7 @@ var blockPartGarden = function(practiceNext){
 	// call function to set background
 	gardenWorld(gardenImageAll)
 
-	blockID= 3;
+
 
 	// what to do at the end of the task
 	if(blockID == numBlock) {
@@ -213,6 +213,7 @@ var blockPartGarden = function(practiceNext){
 		    
 		    break;
 		  case 'MainTask':
+		  	blockID= 2;
 		  	blockID++;
 		  	practiceNext = 'MainTask'
 		  	var blockType = blockSequence.shift();
