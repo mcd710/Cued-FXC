@@ -155,7 +155,6 @@ var blockPartGarden = function(practiceNext){
 	gardenWorld(gardenImageAll)
 
 
-
 	// what to do at the end of the task
 	if(blockID == numBlock) {
 		endRedirectSPICE();
@@ -213,7 +212,6 @@ var blockPartGarden = function(practiceNext){
 		    
 		    break;
 		  case 'MainTask':
-		  	blockID= 2;
 		  	blockID++;
 		  	practiceNext = 'MainTask'
 		  	var blockType = blockSequence.shift();
