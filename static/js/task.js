@@ -26,8 +26,6 @@ const gardenImagePersonal = groupImage[0];
 
 const gardenImageGroup = groupImage[1];
 
-const redirect_link= 'https://brown.co1.qualtrics.com/jfe/form/SV_0jihwS1Y1bTbjaR'
-
 
 
 console.log("inside task and group is" + testGroup)
