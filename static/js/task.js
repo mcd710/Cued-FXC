@@ -26,7 +26,7 @@ const gardenImagePersonal = groupImage[0];
 
 const gardenImageGroup = groupImage[1];
 
-
+const redirect_link = 'https://brown.co1.qualtrics.com/jfe/form/SV_0jihwS1Y1bTbjaR'
 
 console.log("inside task and group is" + testGroup)
 
@@ -156,7 +156,7 @@ var blockPartGarden = function(practiceNext){
 
 	// what to do at the end of the task
 	if(blockID == numBlock) {
-		Questionnaire_Gain_Low();
+		endRedirectSPICE();
 		return;
 	}
 
