@@ -17,6 +17,7 @@ var endRedirectSPICE = function() {
 				//location.replace(redirect_link+'?WorkerID='+response['workerId']+'&group='+response['group']+'&Bonus='+response['bonus'].toFixed(2));
 			});
             }, 
-            error: prompt_resubmit});
+           // error: prompt_resubmit
+        });
 	});
 };
