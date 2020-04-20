@@ -12155,3 +12155,4 @@ OperationalError: (sqlite3.OperationalError) database is locked
 [SQL: UPDATE turkdemo SET datastring=? WHERE turkdemo.uniqueid = ?]
 [parameters: ('{"status": "user data saved", "assignmentId": "debugUOBRZ5", "workerId": "R_WiBdW4K7iO4fVgB", "questiondata": {}, "bonus": 0, "hitId": "debugEYM2WG", ... (33037 characters truncated) ... null, "response": null}, "uniqueid": "R_WiBdW4K7iO4fVgB:debugUOBRZ5", "dateTime": 1587397439003}], "currenttrial": 83, "condition": 0, "mode": "lab"}', u'R_WiBdW4K7iO4fVgB:debugUOBRZ5')]
 (Background on this error at: http://sqlalche.me/e/e3q8)
+[2020-04-20 11:55:15 -0400] [67104] [CRITICAL] WORKER TIMEOUT (pid:67130)
