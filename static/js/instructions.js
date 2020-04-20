@@ -157,7 +157,8 @@ instructionsGardenGains = ()=>{
 	"srm/ADDI.html",
 	"srm/AMI.html",
 	"stages/stage.html",
-	"postquestionnaire.html"
+	"postquestionnaire.html",
+	"postTask.html"
 	];
 
 	psiTurk.preloadPages(pages);
