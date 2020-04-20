@@ -13,7 +13,7 @@ var endRedirectSPICE = function() {
 			success: function(){
 				psiTurk.computeBonus('compute_bonus',function(response){
 				psiTurk.completeHIT();
-				location.replace(redirect_link);
+				location.replace(redirect_link+'?WorkerID='+response['workerId']);
 				//location.replace(redirect_link+'?WorkerID='+response['workerId']+'&group='+response['group']+'&Bonus='+response['bonus'].toFixed(2));
 			});
             }, 
