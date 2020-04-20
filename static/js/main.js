@@ -120,8 +120,10 @@ MainPartGarden =(blockType,cueSubset,nextPractice) =>()=>{
 			var writeRecord = function(Record){
 
 			 	Record.phase = "MainBlock";
+			 	Record.groupID = testGroup;
 			 	Record.sessionNum = sessionID;
 			 	Record.blockNum = blockID;
+			 	Record.groupType = blockType;
 			 	Record.intervalNum = intervalID;
 			 	Record.intervalType = cue[1];
 			 	Record.intervalLength = intervalTimingParams.intervalDur;

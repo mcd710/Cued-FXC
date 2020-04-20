@@ -11,11 +11,11 @@ var endRedirectSPICE = function() {
 	$("#next").click(function () {
 		psiTurk.saveData({
 			success: function(){
-				psiTurk.computeBonus('compute_bonus',function(response){
-				psiTurk.completeHIT();
-				location.replace(redirect_link+
-							'?WorkerID='+response['workerId']+
-							'&Bonus='+response['bonus'].toFixed(2));
+				psiTurk.computeBonus('compute_bonus',
+					function(response){
+						//psiTurk.completeHIT();
+						location.replace(redirect_link+
+									'?WorkerID='+response['workerId']+'&bonus='+response['bonus']+'&Group='+response['group']);
 
 			});
             }, 

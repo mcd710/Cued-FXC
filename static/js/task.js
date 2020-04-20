@@ -17,6 +17,7 @@ var mycounterbalance = counterbalance;  // they tell you which condition you hav
 
 const testGroup = getUrlVars()["group"];
 
+
 var groupImage= _.shuffle(["url('/static/images/BackgroundFarmB.png')","url('/static/images/BackgroundFarmD.png')"]);
 
 
@@ -154,7 +155,7 @@ var blockPartGarden = function(practiceNext){
 	// call function to set background
 	gardenWorld(gardenImageAll)
 	
-	blockID=4
+	
 
 	// what to do at the end of the task
 	if(blockID == numBlock) {
