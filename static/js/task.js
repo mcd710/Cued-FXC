@@ -154,6 +154,8 @@ var blockPartGarden = function(practiceNext){
 	// call function to set background
 	gardenWorld(gardenImageAll)
 
+	blockID= 3;
+
 	// what to do at the end of the task
 	if(blockID == numBlock) {
 		endRedirectSPICE();
