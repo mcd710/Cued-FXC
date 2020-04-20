@@ -158,7 +158,7 @@ var blockPartGarden = function(practiceNext){
 
 	// what to do at the end of the task
 	if(blockID == numBlock) {
-		endRedirectSPICE();
+		Questionnaire_Gain_Low();
 		return;
 	}
 
