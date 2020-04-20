@@ -83,18 +83,23 @@ def compute_bonus():
                one()
         user_data = loads(user.datastring) # load datastring from JSON
         workerId = user.workerid
-        bonus = 0
+        gbonus = 0
+        pbonus = 0
         testGroupOut= 0
 
         for record in user_data['data']: # for line in data file
             trial = record['trialdata']
             if trial['phase']=='MainBlock':
-                bonus += trial['moneyEarned']
                 testGroupOut= trial['groupID']
-        user.bonus = bonus
+                if trial['groupType']=='Group_Gain':
+                    gbonus += trial['moneyEarned']
+                if trial['groupType']=='Personal_Gain':
+                    pbonus += trial['moneyEarned']
+        user.pbonus = pbonus
+        user.gbonus = gbonus
         db_session.add(user)
         db_session.commit()
-        resp = {"workerId":workerId,"bonusComputed": "success","bonus":bonus, "group":testGroupOut}
+        resp = {"workerId":workerId,"bonusComputed": "success","gb":gbonus, "pb":pbonus,"group":testGroupOut}
         return jsonify(**resp)
     except:
         abort(404)  # again, bad to display HTML, but...

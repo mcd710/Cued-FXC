@@ -15,8 +15,10 @@ var mycondition = condition;  // these two variables are passed by the psiturk s
 var mycounterbalance = counterbalance;  // they tell you which condition you have been assigned to
 
 
-const testGroup = getUrlVars()["group"];
-
+const tempTestgroup = getUrlVars()["group"];
+const testGroup= decodeURIComponent(tempTestgroup)
+console.log(tempTestgroup)
+console.log(testGroup)
 
 var groupImage= _.shuffle(["url('/static/images/BackgroundFarmB.png')","url('/static/images/BackgroundFarmD.png')"]);
 

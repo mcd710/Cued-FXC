@@ -11,7 +11,7 @@ blocksGroups= (mycondition)=> {
 	const lowValue = .01;
 	const values = {gain_low:lowValue,gain_high:highValue};
 	const heading = {Personal_Gain:'You gained + $',Group_Gain: testGroup + ' gained + $'};
-	const tallyHeading = {Personal_Gain:'You gained + $',Group_Gain: testGroup + ' gained + $'};
+	const tallyHeading = {Personal_Gain:'You: + $',Group_Gain: testGroup + ': + $'};
 	const numSign = {gain_low:1,gain_high:1};
 	const initialBonus = {gain_low:0,gain_high:0};
 	const breakForBlockType = {Personal_Gain:BreakPage,Group_Gain:BreakPage};
