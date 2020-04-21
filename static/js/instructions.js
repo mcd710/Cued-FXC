@@ -144,6 +144,7 @@ instructionsGardenGains = ()=>{
 	"gardenGainsInstructions/instruct-3P.html",
 	"gardenGainsInstructions/instruct-3Q.html",
 	"gardenGainsInstructions/instruct-4F.html",
+	"gardenGainsInstructions/instruct-Group.html",
 	"instructions/instruct-3L1.html",
 	"instructions/instruct-3LB.html",
 	"instructions/instruct-3LQ1.html",
@@ -191,6 +192,11 @@ instructionsGardenGains = ()=>{
 	"gardenGainsInstructions/instruct-readyF.html"
 	];
 
+	const instructionGroupPages = [
+	"gardenGainsInstructions/instruct-Group.html",
+	"gardenGainsInstructions/instruct-readyF.html"
+	];
+
 	const instructionLossPages = [
 	"instructions/instruct-3L1.html",
 	"instructions/instruct-3LB.html",
@@ -213,6 +219,7 @@ instructionsGardenGains = ()=>{
 		interferenceInstructions,
 		intervalInstructions,
 		instructionGainPages,
+		instructionGroupPages,
 		instructionLossPages,
 		startGameInstructions,
 		BreakPage}

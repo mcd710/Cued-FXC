@@ -1,0 +1,54 @@
+<div id="container-instructions">
+
+    <h1>Instructions</h1>
+
+
+    <div class="instructions well">
+
+        <div class="row container-fluid">
+            
+            <p>    
+                You will continue doing the same task. Remember, you should respond only to the <strong>PICTURE</strong> of the fruit and <strong>NOT</strong> based on the label.
+                <br><br>
+                <p id= insertGroup>
+                <p id="insertPersonalColor">
+                <img id="personalGarden"> <br/><br/>
+                <p id="insertGroupColor">
+                <img id="groupGarden">
+
+
+
+            </p>
+        </div>
+
+</div>
+<script type="text/javascript">
+
+    var GroupText=  "In the game you will either be earning money for yourself or for " + testGroup +"." 
+    var PerColor = "When you are working for yourself the garden fence will be " + "purple" + " and will look like this:"
+    var GroupColor = "When you are working for " + testGroup + " the garden fence will be " + "yellow" + " and will look like this:"
+    document.getElementById("insertGroup").innerHTML = GroupText;
+    document.getElementById("insertPersonalColor").innerHTML = PerColor;
+     document.getElementById("insertGroupColor").innerHTML = GroupColor;
+
+
+    document.getElementById("personalGarden").src = gardenImagePersonal;
+    document.getElementById("groupGarden").src = gardenImageGroup;
+
+</script>
+
+<div class="instructionsnav">
+    <div class="row">
+        <div class="col-xs-2">
+        </div>
+        <div class="col-xs-8">
+            <button type="button" id="next" value="next" class="btn btn-success btn-lg center-block continue">
+                Continue
+            </button>
+        </div>
+        <div class="col-xs-2">
+        </div>
+    </div>
+</div>
+
+</div>

@@ -41,6 +41,7 @@ const {pages,
 	intervalInstructions,
 	instructionGainPages,
 	instructionLossPages,
+	instructionGroupPages,
 	startGameInstructions,
 	BreakPage} = instructionsGardenGains();
 
@@ -192,8 +193,13 @@ var blockPartGarden = function(practiceNext){
 
 		    break;
 		  case 'gain':
+		    practiceNext = 'group' 
+		    psiTurk.doInstructions(instructionGainPages,practiceBlocksGarden('gain','group'));
+
+		    break;
+		   case 'group':
 		    practiceNext = 'mainStart' 
-		    psiTurk.doInstructions(instructionGainPages,practiceBlocksGarden('gain','mainStart'));
+		    psiTurk.doInstructions(instructionGroupPages,practiceBlocksGarden('gain','mainStart'));
 
 		    break;
 		  case 'loss':
@@ -239,7 +245,7 @@ var blockPartGarden = function(practiceNext){
 
 // what to start the experiment with 
 $(window).load( function(){
-		blockPartGarden('MainTask')
+		blockPartGarden('group')
  	}
 );
 
