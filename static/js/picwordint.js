@@ -19,7 +19,6 @@ const paths = [
 "/static/images/stimuli/lemon_grey.png",
 "/static/images/stimuli/peach_grey.png",
 "/static/images/Farmboard.png",
-"/static/images/Farmboard.png",
 "/static/images/BackgroundFarm.png",
 '/static/images/BackgroundFarmB.png',
 '/static/images/BackgroundFarmD.png'

@@ -20,14 +20,24 @@ const testGroup= decodeURIComponent(tempTestgroup)
 console.log(tempTestgroup)
 console.log(testGroup)
 
-var groupImage= _.shuffle(['/static/images/BackgroundFarmB.png','/static/images/BackgroundFarmD.png']);
+var groupImage= _.shuffle([
+	{path:'/static/images/BackgroundFarmD.png',color:"PURPLE"},
+	{path:'/static/images/BackgroundFarmC.png', color:"YELLOW"}]);
 
 
 const gardenImageAll= '/static/images/BackgroundFarm.png'
 
-const gardenImagePersonal = groupImage[0];
 
-const gardenImageGroup = groupImage[1];
+
+const gardenImagePersonal = groupImage[0].path;
+
+console.log("gardenImagePersonal is" +gardenImagePersonal)
+const gardenColorPersonal = groupImage[0].color;
+console.log("gardenColorPersonal is" +gardenColorPersonal)
+
+const gardenImageGroup = groupImage[1].path;
+const gardenColorGroup = groupImage[1].color;
+console.log("gardenColorGroup is" +gardenColorGroup)
 
 
 
