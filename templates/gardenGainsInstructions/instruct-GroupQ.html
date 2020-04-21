@@ -1,3 +1,10 @@
+<script>
+    var continue_handler = function(event){
+        if(event.keyCode == spaceKey)document.getElementById("next").click();
+    };
+    $("body").unbind("keydown").focus().keydown(continue_handler);
+</script>
+
 <div id="container-instructions">
 
     <h1>Instructions</h1>
@@ -57,7 +64,17 @@
 
     function instruct_onclick() {
 
-       blockPartGarden("mainStart");
+      console.log("ready")
+      psiTurk.doInstructions(
+            instructionGroupPages, blockPartGarden() // what you want to do when you are done with instructions
+        );
+
+    }
+
+    function correct_onclick() {
+
+      console.log("here")
+       blockPartGarden("mainStart") // what you want to do when you are done with instructions
 
     }
 
@@ -91,7 +108,8 @@
             nextButton.textContent = 'Correct! Press to continue.';
             nextButton.setAttribute("id", "next");
             nextButton.setAttribute("value", "submit");
-            nextButton.setAttribute("class", "btn btn-success btn-lg center-block continue");        
+            nextButton.setAttribute("class", "btn btn-success btn-lg center-block continue");   
+            nextButton.setAttribute("onclick", "return correct_onclick()");        
             src.appendChild(nextButton);
             src.removeChild(submitButton);
             src.removeChild(instructButton);
