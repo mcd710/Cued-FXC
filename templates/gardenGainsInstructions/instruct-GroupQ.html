@@ -22,7 +22,7 @@
             <li>When the garden fence looks like the above image, who are you working for in the garden?
                 <form>
                     <input type="radio" class="answer" name="q1answer" id="q1a1"> Myself<br />
-                    <input type="radio" class="answer" name="q1answer" id="q1a2"> testGroup<br />
+                    <input type="radio" class="answer" name="q1answer" id="q1a2">  <br />
                     <input type="radio" class="answer" name="q1answer" id="q1a3"> RedCross<br />
                 </form>
             </li>
@@ -33,7 +33,7 @@
 
             <li>When the garden fence looks like the above image, who are you working for in the garden?
                 <form>
-                    <input type="radio" class="answer" name="q1answer" id="q2a1"> testGroup<br />
+                    <input type="radio" class="answer" name="q1answer" id="q2a1">a  <br />
                     <input type="radio" class="answer" name="q1answer" id="q2a2"> Doctors Without Borders<br />
                     <input type="radio" class="answer" name="q1answer" id="q2a3"> Myself<br />
                 </form>
@@ -59,6 +59,12 @@
 
 
 <script>
+    console.log("testGroup is" + testGroup)
+     document.getElementById('q1a2').nextSibling.textContent =' '+ testGroup;
+
+    document.getElementById('q2a1').nextSibling.textContent = ' '+ testGroup;
+
+    
     document.getElementById("gardenPersonal").src = gardenImagePersonal;
     document.getElementById("gardenGroups").src = gardenImageGroup;
 

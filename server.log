@@ -13159,3 +13159,4 @@ OperationalError: (sqlite3.OperationalError) database is locked
 [parameters: ('{"status": "user data saved", "assignmentId": "debugUOBRZ5", "workerId": "R_2Pkext4PuT8DvnR", "questiondata": {}, "bonus": 0, "hitId": "debugEYM2WG", ... (9728 characters truncated) ... /instruct-GroupQ.html"}, "uniqueid": "R_2Pkext4PuT8DvnR:debugUOBRZ5", "dateTime": 1587485758123}], "currenttrial": 28, "condition": 0, "mode": "lab"}', u'R_2Pkext4PuT8DvnR:debugUOBRZ5')]
 (Background on this error at: http://sqlalche.me/e/e3q8)
 2020-04-21 12:26:51,048 DB error: Unique user not found.
+2020-04-21 15:06:01,250 DB error: Unique user not found.
