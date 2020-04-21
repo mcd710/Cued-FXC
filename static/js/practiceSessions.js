@@ -41,7 +41,7 @@ practiceBlocksGarden =(practiceType,nextPractice) =>()=>{
 			var counter = interval.getCounter();
 			var score = initialBonus[interval.cueType] + numSign[interval.cueType] * values[interval.cueType] * interval.counter[0];
 			if(numSign[interval.cueType]<0) score = Math.max(score,0);
-			$(tag).append($("<p></p>").attr({id:'intervalMsg'}).html(heading[interval.cueType] +
+			$(tag).append($("<p></p>").attr({id:'intervalMsg'}).html("+ $"+
 				score.toFixed(2)));
 			$("#intervalMsg").css({'margin-top':'0px','border':'dashed', 'background': 'white','font-size':"25px" });
 		}
@@ -54,7 +54,7 @@ practiceBlocksGarden =(practiceType,nextPractice) =>()=>{
 				$("#scoreCounter").remove();
 				var score = initialBonus[cueType] + numSign[cueType] * values[cueType] * counter[0];
 				if(numSign[cueType]<0) score = Math.max(score,0);
-				$(tag).append($("<p></p>").attr({id:'scoreCounter'}).text(tallyHeading[cueType] + score.toFixed(2)));
+				$(tag).append($("<p></p>").attr({id:'scoreCounter'}).text("+ $" +score.toFixed(2)));
 				//$(tag).append($("<p></p>").attr({id:'scoreCounter'}).text(counter[0].toFixed(0)));
 				$("#scoreCounter").css({'margin-top':'0px', 'border':'dashed', 'background': 'white', 'font-size':"25px"});
 

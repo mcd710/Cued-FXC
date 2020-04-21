@@ -214,11 +214,6 @@ var blockPartGarden = function(practiceNext){
 		    psiTurk.doInstructions(instructionGroupPages,blockPartGarden());
 
 		    break;
-		  case 'loss':
-		    practiceNext = 'mainStart'
-		    psiTurk.doInstructions(instructionLossPages,practiceBlocksGarden('loss','mainStart'));
-
-		    break;
 		  case 'mainStart':
 		  	practiceNext = 'MainTask'
 		  	blockID++;
@@ -257,7 +252,7 @@ var blockPartGarden = function(practiceNext){
 
 // what to start the experiment with 
 $(window).load( function(){
-		blockPartGarden('group')
+		blockPartGarden('keymapping')
  	}
 );
 
