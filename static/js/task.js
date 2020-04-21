@@ -20,14 +20,16 @@ const testGroup= decodeURIComponent(tempTestgroup)
 console.log(tempTestgroup)
 console.log(testGroup)
 
-var groupImage= _.shuffle(["url('/static/images/BackgroundFarmB.png')","url('/static/images/BackgroundFarmD.png')"]);
+var groupImage= _.shuffle(['/static/images/BackgroundFarmB.png','/static/images/BackgroundFarmD.png']);
 
 
-const gardenImageAll= "url('/static/images/BackgroundFarm.png')"
+const gardenImageAll= '/static/images/BackgroundFarm.png'
 
 const gardenImagePersonal = groupImage[0];
 
 const gardenImageGroup = groupImage[1];
+
+
 
 const redirect_link = 'https://brown.co1.qualtrics.com/jfe/form/SV_0jihwS1Y1bTbjaR'
 
@@ -267,7 +269,7 @@ showBoard = function(){
 
 gardenWorld = function (gardenImage) {
 	if(garden){
-		document.body.style.backgroundImage = gardenImage ;
+		document.body.style.backgroundImage = "url('"+ gardenImage+ "')" ;
 		document.body.style.backgroundSize = "cover"
 		document.body.style.backgroundRepeat= 'no-repeat'
 	}
