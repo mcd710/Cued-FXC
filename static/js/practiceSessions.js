@@ -13,7 +13,15 @@ practiceBlocksGarden =(practiceType,nextPractice) =>()=>{
 
 		switch(practiceType) {
 			case 'gain':
-		    	subCueSet = cues['gain'];
+		    	subCueSet = cues['Personal_Gain'];
+		   
+		    break;
+		    case 'Personal_Gain':
+		    	subCueSet = cues['Personal_Gain'];
+		   
+		    break;
+		     case 'Group_Gain':
+		    	subCueSet = cues['Group_Gain'];
 		   
 		    break;
 		  	case 'loss':

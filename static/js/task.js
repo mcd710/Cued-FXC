@@ -211,7 +211,7 @@ var blockPartGarden = function(practiceNext){
 		    break;
 		   case 'group':
 		    practiceNext = 'mainStart' 
-		    psiTurk.doInstructions(instructionGroupPages,practiceBlocksGarden('gain','mainStart'));
+		    psiTurk.doInstructions(instructionGroupPages);
 
 		    break;
 		  case 'loss':
@@ -257,7 +257,7 @@ var blockPartGarden = function(practiceNext){
 
 // what to start the experiment with 
 $(window).load( function(){
-		blockPartGarden('group')
+		blockPartGarden('keymapping')
  	}
 );
 

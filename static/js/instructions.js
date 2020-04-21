@@ -145,6 +145,7 @@ instructionsGardenGains = ()=>{
 	"gardenGainsInstructions/instruct-3Q.html",
 	"gardenGainsInstructions/instruct-4F.html",
 	"gardenGainsInstructions/instruct-Group.html",
+	"gardenGainsInstructions/instruct-GroupQ.html",
 	"instructions/instruct-3L1.html",
 	"instructions/instruct-3LB.html",
 	"instructions/instruct-3LQ1.html",
@@ -194,7 +195,7 @@ instructionsGardenGains = ()=>{
 
 	const instructionGroupPages = [
 	"gardenGainsInstructions/instruct-Group.html",
-	"gardenGainsInstructions/instruct-readyF.html"
+	"gardenGainsInstructions/instruct-GroupQ.html",
 	];
 
 	const instructionLossPages = [
