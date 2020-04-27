@@ -166,6 +166,7 @@ var returnToInstructCallbackBreak = 0;
 
 // handler function that controls the order of the task
 var blockPartGarden = function(practiceNext){
+	openFullscreen();
 
 	// call function to set background
 	gardenWorld(gardenImageAll)
