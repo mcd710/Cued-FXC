@@ -5,18 +5,18 @@ console.log("inside picwordint")
 setGardenStim= ()=>{
 //word used as stimuli
 //last cell is for the neutral trials where there is no word displayed over the image
-const words = ["APPLE","PEAR","LEMON","PEACH", ""]
+const words = ["APPLE","LEMON","PEAR","PEACH", ""]
 
 
 //images used as stimuli
-const images = ["apple","pear","lemon","peach"]
+const images = ["apple","lemon","pear","peach"]
 
 
 //paths to the images
 const paths = [
 "/static/images/stimuli/apple_grey.png",
-"/static/images/stimuli/pear_grey.png",
 "/static/images/stimuli/lemon_grey.png",
+"/static/images/stimuli/pear_grey.png",
 "/static/images/stimuli/peach_grey.png",
 "/static/images/Farmboard.png",
 "/static/images/BackgroundFarm.png",
