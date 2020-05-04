@@ -43,7 +43,7 @@ practiceBlocksGarden =(practiceType,nextPractice) =>()=>{
 			if(numSign[interval.cueType]<0) score = Math.max(score,0);
 			$(tag).append($("<p></p>").attr({id:'intervalMsg'}).html("+ $"+
 				score.toFixed(2)));
-			$("#intervalMsg").css({'margin-top':'0px','border':'dashed', 'background': 'white','font-size':"25px" });
+			$("#intervalMsg").css({'margin-top':'0px','border':'dashed', 'background': 'white','font-size':"25px"});
 		}
 
 		var cleanFeedback = function(){$("#intervalMsg").remove();}
