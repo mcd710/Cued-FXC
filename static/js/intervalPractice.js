@@ -111,7 +111,7 @@ intervalPracticeGarden=(nextPractice) =>()=>{
 	{
 		var counter = interval.getCounter();
 		$(tag).append($("<p></p>").attr({id:'intervalMsg'}).text('Correct: ' + interval.counter[0]));
-		$("#intervalMsg").css('margin-top','0px');
+		$("#intervalMsg").css({'margin-top':'0px', 'border':'dashed', 'background': 'white', 'font-size':"25px"});
 	}
 	/*** Step 2: Define how you want to clean up interval-end feedback ***/
 	var cleanFeedback = function()
@@ -124,7 +124,7 @@ intervalPracticeGarden=(nextPractice) =>()=>{
 		var showScoreInTag = function(counter){
 			$("#scoreCounter").remove();	
 			$(tag).append($("<p></p>").attr({id:'scoreCounter'}).text(counter[0]));
-			$("#scoreCounter").css('margin-top','0px');
+			$("#scoreCounter").css({'margin-top':'0px', 'border':'dashed', 'background': 'white', 'font-size':"25px"});
 		};
 		return showScoreInTag;
 	}
