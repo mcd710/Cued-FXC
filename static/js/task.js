@@ -20,7 +20,7 @@ const testGroup= decodeURIComponent(tempTestgroup)
 const sonid = getUrlVars()["soid"];
 console.log(tempTestgroup)
 console.log(testGroup)
-console.log(soid)
+console.log(sonid)
 
 var groupImage= _.shuffle([
 	{path:'/static/images/BackgroundFarmD.png',color:"PURPLE"},
