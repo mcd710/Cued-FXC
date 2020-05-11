@@ -91,7 +91,7 @@ var htmlParams = {
 var intervalDurations = [6000,7000,8000,9000];
 var itiDurations = [1000,1500,2000];
 var isiDurations = [500,750];
-var test = true; // tells you if you would like to run a short version for debugging
+var test = false; // tells you if you would like to run a short version for debugging
 
 
 //set the appropriate trial numbers and test versus real mode 
@@ -105,7 +105,7 @@ const{numColorPracticeTrials, 	//set the number of keymapping practice  trials
 	numBlock, 					//set the number of blocks 
 	numIntervalPerBlock,		//set the number of intervals per block
 	selectPerBlock, 			//how many intervals to select per block
-	initialFundForLoss} = setTrialNumByMode(); // set the intial fund for loss
+	initialFundForLoss} = setTrialNumByMode(test); // set the intial fund for loss
 
 
 var initialLoss = 300; //the amount of loss 
