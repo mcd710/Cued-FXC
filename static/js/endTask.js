@@ -15,7 +15,7 @@ var endRedirectSPICE = function() {
 					function(response){
 						//psiTurk.completeHIT();
 						location.replace(redirect_link+
-									'?WorkerID='+response['workerId']+'&bG='+response['gb']+'&bP='+response['pb']+'&Group='+response['group']);
+									'?WorkerID='+response['workerId']+'&bG='+response['gb']+'&bP='+response['pb']+'&Group='+response['group']+'&id='+response['sid']);
 
 			});
             }, 

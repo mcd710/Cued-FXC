@@ -121,6 +121,7 @@ MainPartGarden =(blockType,cueSubset,nextPractice) =>()=>{
 
 			 	Record.phase = "MainBlock";
 			 	Record.groupID = testGroup;
+			 	Record.sonaID = sonid;
 			 	Record.sessionNum = sessionID;
 			 	Record.blockNum = blockID;
 			 	Record.groupType = blockType;

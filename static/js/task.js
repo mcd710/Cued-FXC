@@ -105,7 +105,7 @@ const{numColorPracticeTrials, 	//set the number of keymapping practice  trials
 	numBlock, 					//set the number of blocks 
 	numIntervalPerBlock,		//set the number of intervals per block
 	selectPerBlock, 			//how many intervals to select per block
-	initialFundForLoss} = setTrialNumByMode(test); // set the intial fund for loss
+	initialFundForLoss} = setTrialNumByMode(); // set the intial fund for loss
 
 
 var initialLoss = 300; //the amount of loss 
