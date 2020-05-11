@@ -17,8 +17,10 @@ var mycounterbalance = counterbalance;  // they tell you which condition you hav
 
 const tempTestgroup = getUrlVars()["group"];
 const testGroup= decodeURIComponent(tempTestgroup)
+const soid = getUrlVars()["soid"];
 console.log(tempTestgroup)
 console.log(testGroup)
+console.log(soid)
 
 var groupImage= _.shuffle([
 	{path:'/static/images/BackgroundFarmD.png',color:"PURPLE"},

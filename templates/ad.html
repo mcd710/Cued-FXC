@@ -122,6 +122,7 @@
 							    	const sonid= getUrlVars()["id"];
 									
 									console.log("testgroup is "+ testGroup)
+									console.log("sonid is "+ sonid)
 
 									function openwindow() {
 							    		popup = window.open(`{{ server_location }}/exp?hitId={{ hitid }}&assignmentId={{ assignmentid }}&workerId={{ workerid }}&group=${testGroup}&soid=${sonid}`,'Popup','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=no,width='+1024+',height='+768+'');
