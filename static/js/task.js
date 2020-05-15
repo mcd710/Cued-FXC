@@ -57,7 +57,7 @@ const {pages,
 	instructionLossPages,
 	instructionGroupPages,
 	startGameInstructions,
-	BreakPage} = instructionsGardenGains();
+	BreakPage} = instructionsGardenGainsPoints();
 
 //preload your pages 
 psiTurk.preloadPages(pages);
