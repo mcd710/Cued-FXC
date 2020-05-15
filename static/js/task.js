@@ -111,7 +111,7 @@ const{numColorPracticeTrials, 	//set the number of keymapping practice  trials
 
 
 var initialLoss = 300; //the amount of loss 
-var price = 0.01; // set the price 
+var price = 0.01; // set the price  for each item so 10 points= .01 cent *10 = 10 cents
 
 
 var trialTimingParams = {
