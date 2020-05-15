@@ -231,7 +231,7 @@ instructionsGardenGains = ()=>{
 
 instructionsGardenGainsPoints = ()=>{
 	const pages = [
-	"gardenGainsInstructions/instruct-0.html",
+	"gardenGainsInstructions/instruct-qualtrics.html",
 	"gardenGainsInstructions/instruct-Welcome.html",
 	"gardenGainsInstructions/instruct-KeyMapping1.html",
 	"gardenGainsInstructions/instruct-KeyMapping2.html",
@@ -242,21 +242,19 @@ instructionsGardenGainsPoints = ()=>{
 	"gardenGainsInstructions/instruct-GainPoints1.html",
 	"gardenGainsInstructions/instruct-GainPoints2.html",
 	"gardenGainsInstructions/instruct-GainPointsQuiz.html",
-	"gardenGainsInstructions/instruct-4F.html",
 	"gardenGainsInstructions/instruct-Group.html",
 	"gardenGainsInstructions/instruct-GroupQ.html",
-	"instructions/instruct-ready.html",
+	"gardenGainsInstructions/instruct-PaymentStart.html",
 	"gardenGainsInstructions/instruct-readyF.html",
 	"gardenGainsInstructions/breakF.html",
 	"stages/stage.html",
-	"postquestionnaire.html",
 	"postTask.html"
 	];
 
 	psiTurk.preloadPages(pages);
 
 	const questionnaireStart = [
-	"gardenGainsInstructions/instruct-0.html",
+	"gardenGainsInstructions/instruct-qualtrics.html",
 	];
 
 	const keyMappingInstructions = [
@@ -288,17 +286,9 @@ instructionsGardenGainsPoints = ()=>{
 	"gardenGainsInstructions/instruct-GroupQ.html",
 	];
 
-	const instructionLossPages = [
-	"instructions/instruct-3L1.html",
-	"instructions/instruct-3LB.html",
-	"instructions/instruct-3LQ1.html",
-	"instructions/instruct-3LQ2.html",
-	"instructions/instruct-3L2.html",
-	"instructions/instruct-ready.html"
-	];
-
+	
 	const startGameInstructions = [
-	"gardenGainsInstructions/instruct-4F.html",
+	"gardenGainsInstructions/instruct-PaymentStart.html",
 	"gardenGainsInstructions/instruct-readyF.html"
 	];
 	const BreakPage = [
