@@ -54,7 +54,6 @@ const {pages,
 	interferenceInstructions,
 	intervalInstructions,
 	instructionGainPages,
-	instructionLossPages,
 	instructionGroupPages,
 	startGameInstructions,
 	BreakPage} = instructionsGardenGainsPoints();

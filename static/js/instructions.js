@@ -301,7 +301,6 @@ instructionsGardenGainsPoints = ()=>{
 		intervalInstructions,
 		instructionGainPages,
 		instructionGroupPages,
-		instructionLossPages,
 		startGameInstructions,
 		BreakPage}
 
