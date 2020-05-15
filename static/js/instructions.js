@@ -232,31 +232,22 @@ instructionsGardenGains = ()=>{
 instructionsGardenGainsPoints = ()=>{
 	const pages = [
 	"gardenGainsInstructions/instruct-0.html",
-	"gardenGainsInstructions/instruct-1F.html",
-	"gardenGainsInstructions/instruct-1Fb.html",
-	"gardenGainsInstructions/instruct-1Fc.html",
-	"gardenGainsInstructions/instruct-1Fd.html",
-	"gardenGainsInstructions/instruct-2F.html",
-	"gardenGainsInstructions/instruct-2QF.html",
-	"gardenGainsInstructions/instruct-3F.html",
-	"gardenGainsInstructions/instruct-3Fb.html",
-	"gardenGainsInstructions/instruct-3P.html",
-	"gardenGainsInstructions/instruct-3Q.html",
+	"gardenGainsInstructions/instruct-Welcome.html",
+	"gardenGainsInstructions/instruct-KeyMapping1.html",
+	"gardenGainsInstructions/instruct-KeyMapping2.html",
+	"gardenGainsInstructions/instruct-KeyMapping3.html",
+	"gardenGainsInstructions/instruct-interference.html",
+	"gardenGainsInstructions/instruct-interferenceQ.html",
+	"gardenGainsInstructions/instruct-interval.html",
+	"gardenGainsInstructions/instruct-GainPoints1.html",
+	"gardenGainsInstructions/instruct-GainPoints2.html",
+	"gardenGainsInstructions/instruct-GainPointsQuiz.html",
 	"gardenGainsInstructions/instruct-4F.html",
 	"gardenGainsInstructions/instruct-Group.html",
 	"gardenGainsInstructions/instruct-GroupQ.html",
-	"instructions/instruct-3L1.html",
-	"instructions/instruct-3LB.html",
-	"instructions/instruct-3LQ1.html",
-	"instructions/instruct-3LQ2.html",
-	"instructions/instruct-3L2.html",
 	"instructions/instruct-ready.html",
 	"gardenGainsInstructions/instruct-readyF.html",
 	"gardenGainsInstructions/breakF.html",
-	"srm/DASS.html",
-	"srm/GSE.html",
-	"srm/ADDI.html",
-	"srm/AMI.html",
 	"stages/stage.html",
 	"postquestionnaire.html",
 	"postTask.html"
@@ -269,26 +260,26 @@ instructionsGardenGainsPoints = ()=>{
 	];
 
 	const keyMappingInstructions = [
-	"gardenGainsInstructions/instruct-1F.html",
-	"gardenGainsInstructions/instruct-1Fb.html",
-	"gardenGainsInstructions/instruct-1Fc.html",
-	"gardenGainsInstructions/instruct-1Fd.html",
+	"gardenGainsInstructions/instruct-Welcome.html",
+	"gardenGainsInstructions/instruct-KeyMapping1.html",
+	"gardenGainsInstructions/instruct-KeyMapping2.html",
+	"gardenGainsInstructions/instruct-KeyMapping3.html",
 	"gardenGainsInstructions/instruct-readyF.html"
 	];
 	const interferenceInstructions = [
-	"gardenGainsInstructions/instruct-2F.html",
-	"gardenGainsInstructions/instruct-2QF.html",
+	"gardenGainsInstructions/instruct-interference.html",
+	"gardenGainsInstructions/instruct-interferenceQ.html",
 	"gardenGainsInstructions/instruct-readyF.html"
 	];
 	const intervalInstructions = [
-	"gardenGainsInstructions/instruct-3P.html",
+	"gardenGainsInstructions/instruct-interval.html",
 	"gardenGainsInstructions/instruct-readyF.html"
 	];
 
 	const instructionGainPages = [
-	"gardenGainsInstructions/instruct-3F.html",
-	"gardenGainsInstructions/instruct-3Fb.html",
-	"gardenGainsInstructions/instruct-3Q.html",
+	"gardenGainsInstructions/instruct-GainPoints1.html",
+	"gardenGainsInstructions/instruct-GainPoints2.html",
+	"gardenGainsInstructions/instruct-GainPointsQuiz.html",
 	"gardenGainsInstructions/instruct-readyF.html"
 	];
 
