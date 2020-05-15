@@ -241,7 +241,7 @@ instructionsGardenGainsPoints = ()=>{
 	"gardenGainsInstructions/instruct-interval.html",
 	"gardenGainsInstructions/instruct-GainPoints1.html",
 	"gardenGainsInstructions/instruct-GainPoints2.html",
-	"gardenGainsInstructions/instruct-GainPointsQuiz.html",
+	"gardenGainsInstructions/instruct-GainPointsQ.html",
 	"gardenGainsInstructions/instruct-Group.html",
 	"gardenGainsInstructions/instruct-GroupQ.html",
 	"gardenGainsInstructions/instruct-PaymentStart.html",
