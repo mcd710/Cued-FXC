@@ -277,7 +277,7 @@ instructionsGardenGainsPoints = ()=>{
 	const instructionGainPages = [
 	"gardenGainsInstructions/instruct-GainPoints1.html",
 	"gardenGainsInstructions/instruct-GainPoints2.html",
-	"gardenGainsInstructions/instruct-GainPointsQuiz.html",
+	"gardenGainsInstructions/instruct-GainPointsQ.html",
 	"gardenGainsInstructions/instruct-readyF.html"
 	];
 
