@@ -229,3 +229,102 @@ instructionsGardenGains = ()=>{
 
 }
 
+instructionsGardenGainsPoints = ()=>{
+	const pages = [
+	"gardenGainsInstructions/instruct-0.html",
+	"gardenGainsInstructions/instruct-1F.html",
+	"gardenGainsInstructions/instruct-1Fb.html",
+	"gardenGainsInstructions/instruct-1Fc.html",
+	"gardenGainsInstructions/instruct-1Fd.html",
+	"gardenGainsInstructions/instruct-2F.html",
+	"gardenGainsInstructions/instruct-2QF.html",
+	"gardenGainsInstructions/instruct-3F.html",
+	"gardenGainsInstructions/instruct-3Fb.html",
+	"gardenGainsInstructions/instruct-3P.html",
+	"gardenGainsInstructions/instruct-3Q.html",
+	"gardenGainsInstructions/instruct-4F.html",
+	"gardenGainsInstructions/instruct-Group.html",
+	"gardenGainsInstructions/instruct-GroupQ.html",
+	"instructions/instruct-3L1.html",
+	"instructions/instruct-3LB.html",
+	"instructions/instruct-3LQ1.html",
+	"instructions/instruct-3LQ2.html",
+	"instructions/instruct-3L2.html",
+	"instructions/instruct-ready.html",
+	"gardenGainsInstructions/instruct-readyF.html",
+	"gardenGainsInstructions/breakF.html",
+	"srm/DASS.html",
+	"srm/GSE.html",
+	"srm/ADDI.html",
+	"srm/AMI.html",
+	"stages/stage.html",
+	"postquestionnaire.html",
+	"postTask.html"
+	];
+
+	psiTurk.preloadPages(pages);
+
+	const questionnaireStart = [
+	"gardenGainsInstructions/instruct-0.html",
+	];
+
+	const keyMappingInstructions = [
+	"gardenGainsInstructions/instruct-1F.html",
+	"gardenGainsInstructions/instruct-1Fb.html",
+	"gardenGainsInstructions/instruct-1Fc.html",
+	"gardenGainsInstructions/instruct-1Fd.html",
+	"gardenGainsInstructions/instruct-readyF.html"
+	];
+	const interferenceInstructions = [
+	"gardenGainsInstructions/instruct-2F.html",
+	"gardenGainsInstructions/instruct-2QF.html",
+	"gardenGainsInstructions/instruct-readyF.html"
+	];
+	const intervalInstructions = [
+	"gardenGainsInstructions/instruct-3P.html",
+	"gardenGainsInstructions/instruct-readyF.html"
+	];
+
+	const instructionGainPages = [
+	"gardenGainsInstructions/instruct-3F.html",
+	"gardenGainsInstructions/instruct-3Fb.html",
+	"gardenGainsInstructions/instruct-3Q.html",
+	"gardenGainsInstructions/instruct-readyF.html"
+	];
+
+	const instructionGroupPages = [
+	"gardenGainsInstructions/instruct-Group.html",
+	"gardenGainsInstructions/instruct-GroupQ.html",
+	];
+
+	const instructionLossPages = [
+	"instructions/instruct-3L1.html",
+	"instructions/instruct-3LB.html",
+	"instructions/instruct-3LQ1.html",
+	"instructions/instruct-3LQ2.html",
+	"instructions/instruct-3L2.html",
+	"instructions/instruct-ready.html"
+	];
+
+	const startGameInstructions = [
+	"gardenGainsInstructions/instruct-4F.html",
+	"gardenGainsInstructions/instruct-readyF.html"
+	];
+	const BreakPage = [
+	"gardenGainsInstructions/breakF.html"
+	];
+
+	return {pages,questionnaireStart,
+		keyMappingInstructions,
+		interferenceInstructions,
+		intervalInstructions,
+		instructionGainPages,
+		instructionGroupPages,
+		instructionLossPages,
+		startGameInstructions,
+		BreakPage}
+
+
+
+}
+

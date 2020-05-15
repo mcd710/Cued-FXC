@@ -19,16 +19,24 @@
               </tr>
             </table>
 
-            <p>    
-                In the LEFT image, you can earn a <b>low reward ($0.01)</b> for each seed you plat, indicated by the empty money bag.
+            <p id= lowValueInstructions>  
                 <br><br>
-                In the RIGHT image, you can earn a <b>high reward ($0.10)</b> for each seed you plant, indicated by the green money bag.
+              <p id= highValueInstructions> 
                 <br><br>
             </p>
         </div>
 
 </div>
+<script type="text/javascript">
+    var lowValueText= "In the LEFT image, you can earn a low reward ("+ lowValue +" fruits) for each seed you plant, indicated by the empty money bag." 
+    var highValueText = "In the RIGHT image, you can earn a high reward (" + highValue + " fruits) for each seed you plant, indicated by the empty money bag."
+    
 
+    document.getElementById("lowValueInstructions").innerHTML = lowValueText;
+    document.getElementById("highValueInstructions").innerHTML = highValueText;
+     
+
+</script>
 
 <div class="instructionsnav">
     <div class="row">
