@@ -150,11 +150,8 @@ const {blockSequence, // order of blocks= all gain
 	numSign, // numSign  = 1 
 	initialBonus, // initialBonus = 0 
 	breakForBlockType
-} = blocksGroups(mycondition); 
+} = blocksGroupsPoints(mycondition); 
 
-
-//Set the group vs individual of  blocks if SPICE
-const groupblockSequence= blocksGroupsPoints(mycondition)
 
 /***Global variables tracked in the main task***/
 
