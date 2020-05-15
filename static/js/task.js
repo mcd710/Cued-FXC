@@ -143,8 +143,8 @@ const cues = cuesMoneyGroup();
 
 //set the appropriate blocks by calling a function from the blocks.js file
 const {blockSequence, // order of blocks= all gain
-	highValue, // highvalue = .10
-	lowValue, // lowValue =.01
+	highValue, // highvalue = 100 pts
+	lowValue, // lowValue = 10 pts
 	values,// values = lowValue & highValue
 	heading, // heading = '+ $'...whatever the bonus was example: "You gained + $0.60"
 	tallyHeading, // what to display on the tally while they are working
@@ -155,7 +155,7 @@ const {blockSequence, // order of blocks= all gain
 
 
 //Set the group vs individual of  blocks if SPICE
-const groupblockSequence= blocksGroups(mycondition)
+const groupblockSequence= blocksGroupsPoints(mycondition)
 
 /***Global variables tracked in the main task***/
 
