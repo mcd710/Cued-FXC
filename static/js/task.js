@@ -224,7 +224,7 @@ var blockPartGarden = function(practiceNext){
 				gardenWorld(gardenImagePersonal)
 			}
 			
-		    psiTurk.doInstructions(startGameInstructions,MainPartGarden(blockType,cueSubset,'MainTask'))
+		    psiTurk.doInstructions(startGameInstructions,MainPartGardenGroupPoints(blockType,cueSubset,'MainTask'))
 		    
 		    break;
 		  case 'MainTask':
@@ -238,7 +238,7 @@ var blockPartGarden = function(practiceNext){
 				gardenWorld(gardenImagePersonal)
 			}
 
-			psiTurk.doInstructions(breakForBlockType[blockType],MainPartGarden(blockType,cueSubset,'MainTask'));
+			psiTurk.doInstructions(breakForBlockType[blockType],MainPartGardenGroupPoints(blockType,cueSubset,'MainTask'));
 		    
 		    break;
 
