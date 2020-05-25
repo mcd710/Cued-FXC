@@ -63,7 +63,7 @@ blocksGroupsPoints= (mycondition)=> {
 	var groupblockseq2 = _.shuffle(['Group_Gain','Personal_Gain']);
 
 	const highValue = 100;
-	const lowValue = 10;
+	const lowValue = 1;
 	const values = {gain_low:lowValue,gain_high:highValue};
 	const heading = {Personal_Gain:'You gained + ',Group_Gain: testGroup + ' gained + '};
 	const tallyHeading = {Personal_Gain:'You: + ',Group_Gain: testGroup + ': + '};
