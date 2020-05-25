@@ -105,6 +105,7 @@
     function check_answers() {
         // check that the right answers where chosen 
         if (!(document.getElementById('q1a2').checked && document.getElementById('q2a3').checked)) {
+            incorrect3 = incorrect3 + 1;
             alert('You have made an error, please check your answers.');    
         } else {
             var src = document.getElementById("buttons");
