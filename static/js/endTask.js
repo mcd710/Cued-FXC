@@ -7,6 +7,12 @@ var endRedirectSPICE = function() {
 
 	// Load the questionnaire snippet 
 	psiTurk.showPage('postTask.html');
+
+	psiTurk.recordUnstructuredData('incorrect1', incorrect1);
+ 	psiTurk.recordUnstructuredData('incorrect2', incorrect2);
+ 	psiTurk.recordUnstructuredData('incorrect3', incorrect3);
+  	psiTurk.recordUnstructuredData('incorrect4', incorrect4);
+ 	psiTurk.recordUnstructuredData('incorrect5', incorrect5);
 	
 	$("#next").click(function () {
 		psiTurk.saveData({
