@@ -14,7 +14,7 @@ blocksGroups= (mycondition)=> {
 	const tallyHeading = {Personal_Gain:'You: + $',Group_Gain: testGroup + ': + $'};
 	const numSign = {gain_low:1,gain_high:1};
 	const initialBonus = {gain_low:0,gain_high:0};
-	const breakForBlockType = {Personal_Gain:BreakPage,Group_Gain:BreakPage};
+	const breakForBlockType = {Personal_Gain:BreakPagePersonal,Group_Gain:BreakPageGroup};
 
 	if(mycondition==1)
 	{
@@ -69,7 +69,7 @@ blocksGroupsPoints= (mycondition)=> {
 	const tallyHeading = {Personal_Gain:'You: + ',Group_Gain: testGroup + ': + '};
 	const numSign = {gain_low:1,gain_high:1};
 	const initialBonus = {gain_low:0,gain_high:0};
-	const breakForBlockType = {Personal_Gain:BreakPage,Group_Gain:BreakPage};
+	const breakForBlockType = {Personal_Gain:BreakPagePersonal,Group_Gain:BreakPageGroup};
 
 	if(mycondition==1)
 	{

@@ -247,6 +247,8 @@ instructionsGardenGainsPoints = ()=>{
 	"gardenGainsInstructions/instruct-PaymentStart.html",
 	"gardenGainsInstructions/instruct-readyF.html",
 	"gardenGainsInstructions/breakF.html",
+	"gardenGainsInstructions/breakPersonal.html",
+	"gardenGainsInstructions/breakGroup.html",
 	"stages/stage.html",
 	"postTask.html"
 	];
@@ -291,8 +293,12 @@ instructionsGardenGainsPoints = ()=>{
 	"gardenGainsInstructions/instruct-PaymentStart.html",
 	"gardenGainsInstructions/instruct-readyF.html"
 	];
-	const BreakPage = [
-	"gardenGainsInstructions/breakF.html"
+	const BreakPagePersonal = [
+	"gardenGainsInstructions/breakGroup.html"
+	];
+
+	const BreakPageGroup = [
+	"gardenGainsInstructions/breakGroup.html"
 	];
 
 	return {pages,questionnaireStart,
@@ -302,7 +308,8 @@ instructionsGardenGainsPoints = ()=>{
 		instructionGainPages,
 		instructionGroupPages,
 		startGameInstructions,
-		BreakPage}
+		BreakPagePersonal,
+		BreakPageGroup}
 
 
 

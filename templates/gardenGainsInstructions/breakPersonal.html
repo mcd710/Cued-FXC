@@ -1,0 +1,70 @@
+
+ <script>
+    var continue_handler = function(event){
+        if(event.keyCode == spaceKey)document.getElementById("next").click();
+    };
+    $("body").unbind("keydown").focus().keydown(continue_handler);
+</script>
+
+<div id="container-instructions">
+
+    <h1>Instructions</h1>
+
+
+    <div class="instructions well">
+       <p id= insertGroup>
+
+        <p>
+        As a reminder: 
+
+                    <br />
+                        Left middle finger to press <strong>D</strong> to plant <img id="fruitD", style="height: 75px;width: 75px"></strong><br />
+
+                        Left index finger to press <strong>F</strong> to plant <img id="fruitF", style="height: 75px;width: 75px"></strong><br />
+
+                        Right index finger to press <strong>J</strong> to plant <img id="fruitJ", style="height: 75px;width: 75px"></strong><br />
+
+                        Right middle finger to press <strong>K</strong> to plant <img id="fruitK", style="height: 75px;width: 75px"></strong><br />
+                        <script type="text/javascript">
+                            document.getElementById("fruitD").src = paths[0];
+                            document.getElementById("fruitF").src = paths[1];
+                            document.getElementById("fruitJ").src = paths[2];
+                            document.getElementById("fruitK").src = paths[3];
+                        </script><br />
+                </p>
+            
+        </p>
+
+        <p>
+            Please take a few moments, and when you are ready press the button to continue the experiment.
+        </p>
+        <script type="text/javascript">
+            $("body").unbind("keydown").focus().keydown(continue_handler);
+        </script>
+
+</div>
+<script type="text/javascript">
+    var person= "you"
+     var testGroupBold=person.bold()
+    var GroupText= "Take a short break! This next round you will play for " + testGroupBold +"." 
+    
+    document.getElementById("insertGroup").innerHTML = GroupText;
+
+
+</script>
+
+<div class="instructionsnav">
+<div class="row">
+        <div class="col-xs-2">
+         </div>
+         <div class="col-xs-8">
+            <button type="button" id="next" value="next" class="btn btn-success btn-lg center-block continue">
+                When you are ready press space to continue experiment
+            </button>
+         </div>
+         <div class="col-xs-2">
+        </div>
+    </div>
+</div>
+
+</div>
