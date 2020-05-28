@@ -14,9 +14,9 @@
             <li>What key would you press if you saw <img id="fruitT1", style="height: 75px;width: 75px"></strong><br />
                 <form>
                     <input type="radio" class="answer" name="q1answer" id="q1a1"> D for apple<br />
-                    <input type="radio" class="answer" name="q1answer" id="q1a2"> F for peach<br />
+                    <input type="radio" class="answer" name="q1answer" id="q1a2"> F for lemon<br />
                     <input type="radio" class="answer" name="q1answer" id="q1a3"> J for pear<br />
-                    <input type="radio" class="answer" name="q1answer" id="q1a4"> K for lemon<br />
+                    <input type="radio" class="answer" name="q1answer" id="q1a4"> K for peach<br />
                 </form>
             </li>
 
@@ -25,9 +25,9 @@
             <li>What key would you press if you saw <img id="fruitT2", style="height: 75px;width: 75px"></strong><br />
                 <form>
                     <input type="radio" class="answer" name="q1answer" id="q2a1"> D for apple<br />
-                    <input type="radio" class="answer" name="q1answer" id="q2a2"> F for peach<br />
+                    <input type="radio" class="answer" name="q1answer" id="q2a2"> F for lemon<br />
                     <input type="radio" class="answer" name="q1answer" id="q2a3"> J for pear<br />
-                    <input type="radio" class="answer" name="q1answer" id="q2a4"> K for lemon<br />
+                    <input type="radio" class="answer" name="q1answer" id="q2a4"> K for peach<br />
                 </form>
             </li>
 
@@ -36,9 +36,9 @@
             <li>What key would you press if you saw <img id="fruitT3", style="height: 75px;width: 75px"></strong><br />
                 <form>
                     <input type="radio" class="answer" name="q1answer" id="q3a1"> D for apple<br />
-                    <input type="radio" class="answer" name="q1answer" id="q3a2"> F for peach<br />
+                    <input type="radio" class="answer" name="q1answer" id="q3a2"> F for lemon<br />
                     <input type="radio" class="answer" name="q1answer" id="q3a3"> J for pear<br />
-                    <input type="radio" class="answer" name="q1answer" id="q3a4"> K for lemon<br />
+                    <input type="radio" class="answer" name="q1answer" id="q3a4"> K for peach<br />
                 </form>
             </li>
         </ol>
@@ -96,7 +96,7 @@
 
     function check_answers() {
         // check that the right answers where chosen 
-        if (!(document.getElementById('q1a2').checked && document.getElementById('q2a4').checked && document.getElementById('q3a3').checked )) {
+        if (!(document.getElementById('q1a4').checked && document.getElementById('q2a2').checked && document.getElementById('q3a3').checked )) {
             incorrect1 = incorrect1 + 1;
             alert('You have made an error, please check your answer.');    
         } else {
