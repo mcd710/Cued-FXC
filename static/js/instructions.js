@@ -294,7 +294,7 @@ instructionsGardenGainsPoints = ()=>{
 	"gardenGainsInstructions/instruct-readyF.html"
 	];
 	const BreakPagePersonal = [
-	"gardenGainsInstructions/breakGroup.html"
+	"gardenGainsInstructions/breakPersonal.html"
 	];
 
 	const BreakPageGroup = [
