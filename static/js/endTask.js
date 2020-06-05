@@ -7,6 +7,7 @@ var endRedirectSPICE = function() {
 
 	// Load the questionnaire snippet 
 	psiTurk.showPage('postTask.html');
+	psiTurk.recordUnstructuredData('EndTask', 1);
 
 	psiTurk.recordUnstructuredData('incorrect1', incorrect1);
  	psiTurk.recordUnstructuredData('incorrect2', incorrect2);
@@ -19,7 +20,7 @@ var endRedirectSPICE = function() {
 			success: function(){
 				psiTurk.computeBonus('compute_bonus',
 					function(response){
-						//psiTurk.completeHIT();
+						psiTurk.completeHIT();
 						location.replace(redirect_link+
 									'?WorkerID='+response['workerId']+'&bG='+response['gb']+'&bP='+response['pb']+'&Group='+response['group']+'&id='+response['sid']);
 
