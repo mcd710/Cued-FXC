@@ -93,7 +93,7 @@ var htmlParams = {
 var intervalDurations = [6000,7000,8000,9000];
 var itiDurations = [1000,1500,2000];
 var isiDurations = [500,750];
-var test = false; // tells you if you would like to run a short version for debugging
+var test = true; // tells you if you would like to run a short version for debugging
 
 
 //set the appropriate trial numbers and test versus real mode 
@@ -252,7 +252,7 @@ var blockPartGarden = function(practiceNext){
 
 // what to start the experiment with 
 $(window).load( function(){
-		blockPartGarden('keymapping')
+		blockPartGarden('MainTask')
  	}
 );
 
