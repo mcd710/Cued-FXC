@@ -288,7 +288,7 @@ MainPartGardenGroupPoints =(blockType,cueSubset,nextPractice) =>()=>{
 
 			 	Record.phase = "MainBlock";
 			 	Record.groupID = testGroup;
-			 	Record.sonaID = sonid;
+			 	Record.PLATFORM = PLATFORM;
 			 	Record.sessionNum = sessionID;
 			 	Record.blockNum = blockID;
 			 	Record.groupType = blockType;
