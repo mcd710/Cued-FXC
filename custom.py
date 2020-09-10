@@ -87,9 +87,7 @@ def compute_bonus():
         pbonus = 0
         testGroupOut= 0
         PLATFORM=0
-        order=0
-        #assignmentId=user.assignmentid
-       # order=user.condition
+        assignmentId=user.assignmentid
 
         for record in user_data['data']: # for line in data file
             trial = record['trialdata']
@@ -106,7 +104,7 @@ def compute_bonus():
         user.PLATFORM= PLATFORM
         db_session.add(user)
         db_session.commit()
-        resp = {"workerId":workerId,"bonusComputed": "success","gb":gbonus, "pb":pbonus,"group":testGroupOut,"PLATFORM":PLATFORM,}
+        resp = {"workerId":workerId,"bonusComputed": "success","gb":gbonus, "pb":pbonus,"group":testGroupOut,"PLATFORM":PLATFORM,"assignmentId":assignmentId}
         return jsonify(**resp)
     except:
         abort(404)  # again, bad to display HTML, but...
