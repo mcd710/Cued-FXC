@@ -22,9 +22,16 @@ console.log(tempTestgroup)
 console.log(testGroup)
 console.log(PLATFORM)
 
-var groupImage= _.shuffle([
+
+if(mycondition==1)
+	{var groupImage=[
 	{path:'/static/images/BackgroundFarmD.png',color:"PURPLE"},
-	{path:'/static/images/BackgroundFarmC.png', color:"YELLOW"}]);
+	{path:'/static/images/BackgroundFarmC.png', color:"YELLOW"}];
+}else{
+	var groupImage= [
+	{path:'/static/images/BackgroundFarmC.png',color:"YELLOW"},
+	{path:'/static/images/BackgroundFarmD.png', color:"PURPLE"}];
+}
 
 
 const gardenImageAll= '/static/images/BackgroundFarm.png'

@@ -101,7 +101,7 @@ def compute_bonus():
         user.gbonus = gbonus
         db_session.add(user)
         db_session.commit()
-        resp = {"workerId":workerId,"bonusComputed": "success","gb":gbonus, "pb":pbonus,"group":testGroupOut,"PLATFORM":PLATFORM,"assignmentId":assignmentId}
+        resp = {"workerId":workerId,"bonusComputed": "success","gb":gbonus, "pb":pbonus,"group":testGroupOut,"PLATFORM":PLATFORM,"assignmentId":assignmentId,"order":mycondition}
         return jsonify(**resp)
     except:
         abort(404)  # again, bad to display HTML, but...
