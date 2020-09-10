@@ -87,6 +87,7 @@ def compute_bonus():
         pbonus = 0
         testGroupOut= 0
         PLATFORM=0
+        order=0
         #assignmentId=user.assignmentid
        # order=user.condition
 
