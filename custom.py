@@ -86,19 +86,22 @@ def compute_bonus():
         gbonus = 0
         pbonus = 0
         testGroupOut= 0
-        sidOut=0
+        PLATFORM=0
+        assignmentId=user.assignmentid
+        order=user
 
         for record in user_data['data']: # for line in data file
             trial = record['trialdata']
             if trial['phase']=='MainBlock':
                 testGroupOut= trial['groupID']
-                sidOut= trial['sonaID']
+                PLATFORM= trial['PLATFORM']
                 if trial['groupType']=='Group_Gain':
                     gbonus += trial['moneyEarned']
                 if trial['groupType']=='Personal_Gain':
                     pbonus += trial['moneyEarned']
         user.pbonus = pbonus
         user.gbonus = gbonus
+        user.PLATFORM= PLATFORM
         db_session.add(user)
         db_session.commit()
         resp = {"workerId":workerId,"bonusComputed": "success","gb":gbonus, "pb":pbonus,"group":testGroupOut,"PLATFORM":PLATFORM,"assignmentId":assignmentId,"order":mycondition}
