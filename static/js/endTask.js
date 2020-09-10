@@ -22,7 +22,7 @@ var endRedirectSPICE = function() {
 					function(response){
 						psiTurk.completeHIT();
 						location.replace(redirect_link+
-									'?WorkerID='+response['workerId']+'&bG='+response['gb']+'&bP='+response['pb']+'&Group='+response['group']+'&id='+response['sid']);
+									'?workerId='+response['workerId']+'&bG='+response['gb']+'&bP='+response['pb']+'&Group='+response['group']+'&PLATFORM='+response['PLATFORM']+'&assignmentId='+response['assignmentId']);
 
 			});
             }, 
