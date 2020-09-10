@@ -83,12 +83,14 @@ def compute_bonus():
                one()
         user_data = loads(user.datastring) # load datastring from JSON
         workerId = user.workerid
+        print(workerId)
         gbonus = 0
         pbonus = 0
         testGroupOut= 0
         PLATFORM=0
         assignmentId=user.assignmentid
-        order=user
+        order=0
+        print(user.assignmentid)
 
         for record in user_data['data']: # for line in data file
             trial = record['trialdata']
@@ -99,6 +101,8 @@ def compute_bonus():
                     gbonus += trial['moneyEarned']
                 if trial['groupType']=='Personal_Gain':
                     pbonus += trial['moneyEarned']
+        print(PLATFORM)
+        print(workerId)
         user.pbonus = pbonus
         user.gbonus = gbonus
         user.PLATFORM= PLATFORM
