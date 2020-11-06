@@ -178,7 +178,7 @@ var blockPartGarden = function(practiceNext){
 		    break;
 		  case 'interval':
 		    practiceNext = 'gain'
-		    psiTurk.doInstructions(intervalInstructions,intervalPracticeGarden('gain'));
+		    psiTurk.doInstructions(intervalInstructions,intervalPracticeGardenStroop('gain'));
 
 		    break;
 		  case 'gain':
@@ -224,7 +224,7 @@ var blockPartGarden = function(practiceNext){
 
 // what to start the experiment with 
 $(window).load( function(){
-		blockPartGarden('keymapping')
+		blockPartGarden('interval')
  	}
 );
 

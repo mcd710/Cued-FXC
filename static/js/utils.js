@@ -1,5 +1,11 @@
 
 
+continue_handler =(event)=>{
+  if(event.keyCode == spaceKey)document.getElementById("next").click();
+}
+
+
+
 /* View in fullscreen */
 function openFullscreen() {
     console.log("inside openFullscreen")
