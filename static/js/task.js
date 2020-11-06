@@ -177,18 +177,18 @@ var blockPartGarden = function(practiceNext){
 
 		    break;
 		  case 'interval':
-		    practiceNext = 'gain'
-		    psiTurk.doInstructions(intervalInstructions,intervalPracticeGardenStroop('gain'));
+		    practiceNext = 'performance'
+		    psiTurk.doInstructions(intervalInstructions,intervalPracticeGardenStroop('performance'));
 
 		    break;
-		  case 'gain':
-		    practiceNext = 'group' 
-		    psiTurk.doInstructions(instructionGainPages,practiceBlocksGardenPoints('gain','group'));
+		  case 'performance':
+		    practiceNext = 'random' 
+		    psiTurk.doInstructions(instructionGainPages,practiceBlocksGardenPointsStroop('performance','random'));
 
-		    break;
-		   case 'group':
-		    practiceNext = 'mainStart' 
-		    psiTurk.doInstructions(instructionGroupPages,blockPartGarden());
+			break;
+		 case 'random':
+		    practiceNext = 'random' 
+		    psiTurk.doInstructions(instructionGainPages,practiceBlocksGardenPointsStroop('random','mainStart'));
 
 		    break;
 		  case 'mainStart':
@@ -205,11 +205,6 @@ var blockPartGarden = function(practiceNext){
 		  	practiceNext = 'MainTask'
 		  	var blockType = blockSequence.shift();
 			var cueSubset = cues[blockType];
-			if (blockType=="Group_Gain"){
-				gardenWorld(gardenImageGroup)
-			}else{
-				gardenWorld(gardenImagePersonal)
-			}
 
 			psiTurk.doInstructions(breakForBlockType[blockType],MainPartGardenGroupPoints(blockType,cueSubset,'MainTask'));
 		    
@@ -224,7 +219,7 @@ var blockPartGarden = function(practiceNext){
 
 // what to start the experiment with 
 $(window).load( function(){
-		blockPartGarden('interval')
+		blockPartGarden('performance')
  	}
 );
 
