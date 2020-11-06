@@ -355,6 +355,7 @@ blocksEfficacyReward= (mycondition)=> {
 			lowValue,
 			values,
 			heading,
+			tallyHeading,
 			numSign,
 			initialBonus,
 			breakForBlockType
@@ -371,6 +372,7 @@ blocksEfficacyReward= (mycondition)=> {
 			lowValue,
 			values,
 			heading,
+			tallyHeading,
 			numSign,
 			initialBonus,
 			breakForBlockType

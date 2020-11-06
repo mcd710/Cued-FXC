@@ -208,7 +208,7 @@ var blockPartGarden = function(practiceNext){
 			var blockType = blockSequence.shift();
 			var cueSubset = cues[blockType];
 			
-		    psiTurk.doInstructions(startGameInstructions,MainPartGardenGroupPoints(blockType,cueSubset,'MainTask'))
+		    psiTurk.doInstructions(startGameInstructions,MainPartGardenGroupPointsStroopFXC(blockType,cueSubset,'MainTask'))
 		    
 		    break;
 		  case 'MainTask':
@@ -217,7 +217,7 @@ var blockPartGarden = function(practiceNext){
 		  	var blockType = blockSequence.shift();
 			var cueSubset = cues[blockType];
 
-			psiTurk.doInstructions(breakForBlockType[blockType],MainPartGardenGroupPoints(blockType,cueSubset,'MainTask'));
+			psiTurk.doInstructions(breakForBlockType[blockType],MainPartGardenGroupPointsStroopFXC(blockType,cueSubset,'MainTask'));
 		    
 		    break;
 
@@ -230,7 +230,7 @@ var blockPartGarden = function(practiceNext){
 
 // what to start the experiment with 
 $(window).load( function(){
-		blockPartGarden('performance')
+		blockPartGarden('mainStart')
  	}
 );
 
