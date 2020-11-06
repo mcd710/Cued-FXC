@@ -3,7 +3,7 @@
 console.log("inside interference.js file")
 
 
-StroopPractice = ()=>{
+StroopPractice =(nextPractice) =>()=>{
 
 	console.log('inside the StroopPractice')
 	var stimSet = possibleStimsCongruent.concat(possibleStimsInCongruent);
@@ -30,7 +30,7 @@ StroopPractice = ()=>{
 		}
 		//what to do next
 		//psiTurk.doInstructions(instruction3Pages,intervalPracticeProtector);
-		blockPartGarden(practiceNext);
+		blockPartGarden(nextPractice);
 	};
 
 	var callbacks = {
@@ -42,7 +42,8 @@ StroopPractice = ()=>{
 	var configParams = {space:false,accFeedback:true,washout:true};
 	trialTimingParams.itiDuration = 500;
 	psiTurk.showPage("stages/stage.html");
-	var trial = new timedTrial(stimSet,[false],[0,0],trialTimingParams,'#stim',callbacks,configParams);
+	var trial = new timedTrial(stimSet,[false],[0,0],trialTimingParams,'#m',callbacks,configParams);
+	showBoard()
 	$("body").unbind("keydown").focus().keydown(trial.responseListener.bind(trial));
 	trial.initiation();
 }

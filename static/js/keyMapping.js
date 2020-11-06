@@ -3,7 +3,7 @@
 
 
 
-ColorMappingPractice = ()=>{
+ColorMappingPractice = (nextPractice)=>()=>{
 
 	console.log('inside the ColorMappingPractice')
 	var configParams = {space:false,accFeedback:true,washout:true};
@@ -29,7 +29,7 @@ ColorMappingPractice = ()=>{
 			return;
 		}
 		//what to do after the Color mapping practice
-		psiTurk.doInstructions(instruction2Pages,StroopPractice);
+		blockPartGarden(nextPractice);
 	}
 
 	var callbacks = {
@@ -42,8 +42,8 @@ ColorMappingPractice = ()=>{
 	trialTimingParams.itiDuration = 500;
 
 	var trial = new timedTrial(stimSet,[false],[0,0],trialTimingParams,'#m',callbacks,configParams);
-	console.log("inside trial funtion")
-	psiTurk.showPage("stage.html");
+	psiTurk.showPage("stages/stage.html");
+	showBoard()
 	$("body").unbind("keydown").focus().keydown(trial.responseListener.bind(trial));
 	trial.initiation();
 }

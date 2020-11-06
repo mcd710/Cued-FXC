@@ -38,9 +38,9 @@ function Trial(stimSet,timer,counter,timingParams,htmlTag,callbackParams,configP
 Trial.prototype.updateStim = function(stim)
 {	console.log("inside updateStim")
 	this.stim = stim;
-	this.stimResponse = stim.image;
+	this.stimResponse = stim.color;
 	this.stimWord = stim.word;
-	this.stimFontColor = stim.fontColor
+	//this.stimFontColor = stim.fontColor
 	this.stimPath = stim.path;
 }
 
@@ -124,10 +124,10 @@ Trial.prototype.showStimuli = function(){
 	this.cleanAll();
 	if(isNaN(this.tally) && this.isTally) this.tally(this.counter);
 	var element_stimuli = $("<img></img>").attr({src:this.stimPath,id:'stimuli'});
-	var element_word = $("<p></p>").attr({id:'stimuli'}).text(this.stimWord);
-	element_word.css({'font-size':70, 'color': this.stimFontColor, 'fontWeight': 600,'webkitTextStrokeWidth':"medium", 'webkitTextStrokeColor':"black"});
+	//var element_word = $("<p></p>").attr({id:'stimuli'}).text(this.stimWord);
+	//element_word.css({'font-size':70, 'color': this.stimFontColor, 'fontWeight': 600,'webkitTextStrokeWidth':"medium", 'webkitTextStrokeColor':"black"});
 	addElement(element_stimuli,this.htmlTag);
-	addElement(element_word,this.htmlTag);
+	//addElement(element_word,this.htmlTag);
 	this.stimon = new Date().getTime();
 	this.listening = true;
 }

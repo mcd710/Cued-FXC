@@ -82,5 +82,5 @@ cuesEfficacy= ()=> {
 	
 		return cues
 	
-	
+}
 

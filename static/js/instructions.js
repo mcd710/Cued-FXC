@@ -104,7 +104,7 @@ const BreakProtectorPage = [
 
 const BreakSmallPage = [
 "instructions/break-small.html",
-"instructions/break-remind.html"
+
 ];
 
 
@@ -322,6 +322,7 @@ instructionsEfficacyGardenPoints = ()=>{
 	"gardenLFXCInstructions/instruct-qualtrics.html",
 	"gardenLFXCInstructions/instruct-Welcome.html",
 	"gardenLFXCInstructions/instruct-KeyMapping1.html",
+	"gardenLFXCInstructions/instruct-KeyMappingStroop1.html",
 	"gardenLFXCInstructions/instruct-KeyMapping2.html",
 	"gardenLFXCInstructions/instruct-KeyMapping3.html",
 	"gardenLFXCInstructions/instruct-interference.html",
@@ -343,8 +344,12 @@ instructionsEfficacyGardenPoints = ()=>{
 
 
 	"gardenLFXCInstructions/instruct-PaymentStartCoins.html",
-	"gardenLFXCInstructions/instruct-readyF.html",
-	"gardenLFXCInstructions/breakF.html",
+	"gardenLFXCInstructions/instruct-ready.html",
+	"gardenLFXCInstructions/break-random.html",
+	"gardenLFXCInstructions/break-performance.html",
+	"gardenLFXCInstructions/break-large.html",
+	"gardenLFXCInstructions/break-small.html",
+	"gardenLFXCInstructions/break.html",
 	"stages/stage.html",
 	"postTask.html"
 	];
@@ -357,24 +362,24 @@ instructionsEfficacyGardenPoints = ()=>{
 
 	const keyMappingInstructions = [
 	"gardenLFXCInstructions/instruct-Welcome.html",
-	"gardenLFXCInstructions/instruct-KeyMapping1.html",
-	"gardenLFXCInstructions/instruct-KeyMapping2.html",
-	"gardenLFXCInstructions/instruct-KeyMapping3.html",
-	"gardenLFXCInstructions/instruct-readyF.html"
+	"gardenLFXCInstructions/instruct-KeyMappingStroop1.html",
+	//"gardenLFXCInstructions/instruct-KeyMapping2.html",
+	//"gardenLFXCInstructions/instruct-KeyMapping3.html",
+	"gardenLFXCInstructions/instruct-ready.html"
 	];
 	const interferenceInstructions = [
 	"gardenLFXCInstructions/instruct-interference.html",
 	"gardenLFXCInstructions/instruct-interferenceQ.html",
-	"gardenLFXCInstructions/instruct-readyF.html"
+	"gardenLFXCInstructions/instruct-ready.html"
 	];
 	const intervalInstructions = [
 	"gardenLFXCInstructions/instruct-interval.html",
-	"gardenLFXCInstructions/instruct-readyF.html"
+	"gardenLFXCInstructions/instruct-ready.html"
 	];
 
 	const instructionGainPages = [
 	"gardenLFXCInstructions/instruct-GainCoins0.html",
-	"gardenLFXCInstructions/instruct-readyF.html"
+	"gardenLFXCInstructions/instruct-ready.html"
 	];
 
 	const instructionEfficacyHighPages = [
@@ -382,7 +387,7 @@ instructionsEfficacyGardenPoints = ()=>{
 	"gardenLFXCInstructions/instruct-efficacyHigh1.html",
 	"gardenLFXCInstructions/instruct-efficacyHigh2.html",
 	"gardenLFXCInstructions/instruct-efficacyHighQ.html",
-	"gardenLFXCInstructions/instruct-readyF.html"
+	"gardenLFXCInstructions/instruct-ready.html"
 	];
 
 	const instructionEfficacyLowPages = [
@@ -390,19 +395,40 @@ instructionsEfficacyGardenPoints = ()=>{
 	"gardenLFXCInstructions/instruct-efficacyLow2.html",
 	"gardenLFXCInstructions/instruct-efficacyLow3.html",
 	"gardenLFXCInstructions/instruct-efficacyLowQ.html",
-	"gardenLFXCInstructions/instruct-readyF.html"
+	"gardenLFXCInstructions/instruct-ready.html"
 	];
 
 	
 	const startGameInstructions = [
 	"gardenLFXCInstructions/instruct-PaymentStartCoins.html",
-	"gardenLFXCInstructions/instruct-readyF.html"
+	"gardenLFXCInstructions/instruct-ready.html"
 	];
 
 
 	const BreakPage = [
 	"gardenLFXCInstructions/breakF.html"
 	];
+
+
+	const BreakRandomPage = [
+		"gardenLFXCInstructions/break-random.html"
+		
+		];
+		
+		
+		const BreakPerformancePage = [
+		"gardenLFXCInstructions/break-performance.html"
+		];
+		
+		
+		const BreakSmallPage = [
+		"gardenLFXCInstructions/break-small.html"
+		];
+		
+		
+		const BreakLargePage = [
+		"gardenLFXCInstructions/break-large.html"
+		];
 
 	return {pages,questionnaireStart,
 		keyMappingInstructions,
@@ -412,7 +438,12 @@ instructionsEfficacyGardenPoints = ()=>{
 		instructionEfficacyHighPages,
 		instructionEfficacyLowPages,
 		startGameInstructions,
-		BreakPage}
+		BreakPage,
+		BreakLargePage,
+		BreakSmallPage,
+		BreakRandomPage,
+		BreakPerformancePage
+	}
 
 
 

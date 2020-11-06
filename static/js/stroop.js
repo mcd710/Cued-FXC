@@ -1,6 +1,35 @@
 //This is the file for commonly-used parameters and functions for Stroop task
-
+setStroopStim= ()=>{
 console.log("inside stroop")
+
+const paths=["/static/images/stimuli/XXXXX_RedInk.png",
+"/static/images/stimuli/XXXXX_YellowInk.png",
+"/static/images/stimuli/XXXXX_GreenInk.png",
+"/static/images/stimuli/XXXXX_BlueInk.png", 
+
+"/static/images/stimuli/Red_RedInk.png", 
+"/static/images/stimuli/Yellow_YellowInk.png",
+"/static/images/stimuli/Green_GreenInk.png",
+"/static/images/stimuli/Blue_BlueInk.png",  
+
+"/static/images/stimuli/Yellow_RedInk.png",
+"/static/images/stimuli/Green_RedInk.png", 
+"/static/images/stimuli/Blue_RedInk.png",     
+
+"/static/images/stimuli/Red_YellowInk.png", 
+"/static/images/stimuli/Green_YellowInk.png",
+"/static/images/stimuli/Blue_YellowInk.png",
+
+"/static/images/stimuli/Red_GreenInk.png", 
+"/static/images/stimuli/Yellow_GreenInk.png", 
+"/static/images/stimuli/Blue_GreenInk.png", 
+
+"/static/images/stimuli/Red_BlueInk.png", 
+"/static/images/stimuli/Yellow_BlueInk.png",
+"/static/images/stimuli/Green_BlueInk.png", 
+
+]
+
 var possibleStimsNeutral = [
 	{word:"XXXXX",  congruency:"neutral",    path:"/static/images/stimuli/XXXXX_RedInk.png",    color:'red'},
 	{word:"XXXXX",  congruency:"neutral",    path:"/static/images/stimuli/XXXXX_YellowInk.png", color:'yellow'},
@@ -37,6 +66,17 @@ var responses = ["red", "yellow", "green", "blue"];
 var responseKeyCodes = [68, 70, 74, 75];
 
 var spaceKey = 32;
+
+return{paths,
+	possibleStimsNeutral,
+	possibleStimsCongruent,
+	possibleStimsInCongruent,
+	responses,
+	responseKeyCodes,
+	spaceKey}
+}
+
+
 
 var recordStimStroop = function(stimuli){
 	var newRecord = {};

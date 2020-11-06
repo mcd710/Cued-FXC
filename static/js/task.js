@@ -26,8 +26,7 @@ const redirect_link = 'https://brown.co1.qualtrics.com/jfe/form/SV_2t2eNYfABWJwf
 
 
 //set the appropriate instructions by calling a function from the instructions.js file
-const {pages, 
-	questionnaireStart,
+const {pages,questionnaireStart,
 	keyMappingInstructions,
 	interferenceInstructions,
 	intervalInstructions,
@@ -35,8 +34,11 @@ const {pages,
 	instructionEfficacyHighPages,
 	instructionEfficacyLowPages,
 	startGameInstructions,
-	BreakPagePersonal,
-	BreakPageGroup} = instructionsEfficacyGardenPoints();
+	BreakPage,
+	BreakLargePage,
+	BreakSmallPage,
+	BreakRandomPage,
+	BreakPerformancePage} = instructionsEfficacyGardenPoints();
 
 //preload your pages 
 psiTurk.preloadPages(pages);
@@ -46,17 +48,13 @@ var garden = true
 
 
 //set appropriate stimuli 
-const {
-	words,
-	images,
-	paths,
-	fontColors,
+const {paths,
 	possibleStimsNeutral,
 	possibleStimsCongruent,
 	possibleStimsInCongruent,
 	responses,
 	responseKeyCodes,
-	spaceKey}= setGardenStim();
+	spaceKey}= setStroopStim();
 
 
 psiTurk.preloadImages(paths);
@@ -72,7 +70,7 @@ var htmlParams = {
 var intervalDurations = [6000,7000,8000,9000];
 var itiDurations = [1000,1500,2000];
 var isiDurations = [500,750];
-var test = false; // tells you if you would like to run a short version for debugging
+var test = true; // tells you if you would like to run a short version for debugging
 
 
 //set the appropriate trial numbers and test versus real mode 
@@ -130,7 +128,7 @@ const {blockSequence, // order of blocks= all gain
 	numSign, // numSign  = 1 
 	initialBonus, // initialBonus = 0 
 	breakForBlockType
-} = blocksGroupsPoints(mycondition); 
+} = blocksEfficacyReward(mycondition); 
 
 
 /***Global variables tracked in the main task***/
@@ -170,12 +168,12 @@ var blockPartGarden = function(practiceNext){
 
 		  case 'keymapping': 
 		   	practiceNext = 'interference'
-		    psiTurk.doInstructions(keyMappingInstructions,FruitMappingPractice('interference'));
+		    psiTurk.doInstructions(keyMappingInstructions,ColorMappingPractice('interference'));
 
 		    break;
 		  case 'interference':
 		    practiceNext = 'interval'
-		    psiTurk.doInstructions(interferenceInstructions,FruitInterferencePractice('interval'));
+		    psiTurk.doInstructions(interferenceInstructions,StroopPractice('interval'));
 
 		    break;
 		  case 'interval':
@@ -198,11 +196,6 @@ var blockPartGarden = function(practiceNext){
 		  	blockID++;
 			var blockType = blockSequence.shift();
 			var cueSubset = cues[blockType];
-			if (blockType=="Group_Gain"){
-				gardenWorld(gardenImageGroup)
-			}else{
-				gardenWorld(gardenImagePersonal)
-			}
 			
 		    psiTurk.doInstructions(startGameInstructions,MainPartGardenGroupPoints(blockType,cueSubset,'MainTask'))
 		    
@@ -231,7 +224,7 @@ var blockPartGarden = function(practiceNext){
 
 // what to start the experiment with 
 $(window).load( function(){
-		blockPartGarden('gain')
+		blockPartGarden('keymapping')
  	}
 );
 

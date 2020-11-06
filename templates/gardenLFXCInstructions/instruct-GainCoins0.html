@@ -1,0 +1,54 @@
+<div id="container-instructions">
+
+    <h1>Instructions</h1>
+
+
+    <div class="instructions well">
+
+        <div class="row container-fluid">
+            
+            <p>    
+                
+                In the remainder of the game, you will have the opportunity to earn coins. 
+                <br/><br/>
+                After each turn you collect fruit from the trees. 
+                <br/><br/>
+                The fruit you collect is worth coins.
+            </p>
+                <p id= rewardAmountInstructions>   
+            <p>
+                You will see how many coins you earned at the end of each turn.
+            </p>
+                This next section will be a short practice where your coins will not count and you can make sure you understand the game. After practice, the coins will count towards your bonus.
+        </div>
+
+</div>
+<script type="text/javascript">
+    var coinPricetext= 10 + " coins are worth "
+    var moneyText= .50 +" cents" 
+    var rewardAmountText= coinPricetext + moneyText
+    
+    
+
+    document.getElementById("rewardAmountInstructions").innerHTML = rewardAmountText;
+
+     
+
+</script>
+
+
+<div class="instructionsnav">
+    <div class="row">
+        <div class="col-xs-2">
+        </div>
+        <div class="col-xs-8">
+            <button type="button" id="next" value="next" class="btn btn-success btn-lg center-block continue">
+                Continue
+            </button>
+        </div>
+        <div class="col-xs-2">
+        </div>
+    </div>
+</div>
+
+</div>
