@@ -14,45 +14,16 @@ var psiTurk = new PsiTurk(uniqueId, adServerLoc, mode);
 var mycondition = condition;  // these two variables are passed by the psiturk server process
 var mycounterbalance = counterbalance;  // they tell you which condition you have been assigned to
 
+var avgRewardWindow=[];
+var avgRewardWindowLength=10;
 
-const tempTestgroup = getUrlVars()["group"];
-const testGroup= decodeURIComponent(tempTestgroup)
 const PLATFORM = getUrlVars()["PLATFORM"];
-console.log(tempTestgroup)
-console.log(testGroup)
 console.log(PLATFORM)
-
-
-if(mycondition==1)
-	{var groupImage=[
-	{path:'/static/images/BackgroundFarmD.png',color:"PURPLE"},
-	{path:'/static/images/BackgroundFarmC.png', color:"YELLOW"}];
-}else{
-	var groupImage= [
-	{path:'/static/images/BackgroundFarmC.png',color:"YELLOW"},
-	{path:'/static/images/BackgroundFarmD.png', color:"PURPLE"}];
-}
-
 
 const gardenImageAll= '/static/images/BackgroundFarm.png'
 
-
-
-const gardenImagePersonal = groupImage[0].path;
-
-console.log("gardenImagePersonal is" +gardenImagePersonal)
-const gardenColorPersonal = groupImage[0].color;
-console.log("gardenColorPersonal is" +gardenColorPersonal)
-
-const gardenImageGroup = groupImage[1].path;
-const gardenColorGroup = groupImage[1].color;
-console.log("gardenColorGroup is" +gardenColorGroup)
-
-
-
 const redirect_link = 'https://brown.co1.qualtrics.com/jfe/form/SV_2t2eNYfABWJwfwF'
 
-console.log("inside task and group is" + testGroup)
 
 //set the appropriate instructions by calling a function from the instructions.js file
 const {pages, 
@@ -61,10 +32,11 @@ const {pages,
 	interferenceInstructions,
 	intervalInstructions,
 	instructionGainPages,
-	instructionGroupPages,
+	instructionEfficacyHighPages,
+	instructionEfficacyLowPages,
 	startGameInstructions,
 	BreakPagePersonal,
-	BreakPageGroup} = instructionsGardenGainsPoints();
+	BreakPageGroup} = instructionsEfficacyGardenPoints();
 
 //preload your pages 
 psiTurk.preloadPages(pages);
@@ -146,7 +118,7 @@ var incorrect5 = 0;
 
 
 //set the appropriate cues by calling a function from the cues.js file
-const cues = cuesMoneyGroup(); 
+const cues = cuesEfficacy(); 
 
 //set the appropriate blocks by calling a function from the blocks.js file
 const {blockSequence, // order of blocks= all gain

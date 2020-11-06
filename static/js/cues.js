@@ -61,3 +61,26 @@ console.log("inside cuesMoney")
 
 }
 
+
+cuesEfficacy= ()=> {
+
+	console.log("inside cuesProtect")
+		const cues = {
+		random:
+			[['/static/images/cues/RewardEfficacy/low_reward_low_efficacy.png','random_low'],
+			['/static/images/cues/RewardEfficacy/high_reward_low_efficacy.png','random_high']],
+		performance:
+			[['/static/images/cues/RewardEfficacy/low_reward_high_efficacy.png','performance_low'],
+			['/static/images/cues/RewardEfficacy/high_reward_high_efficacy.png','performance_high']],
+		small:
+			[['/static/images/cues/RewardEfficacy/low_reward_low_efficacy.png','random_low'],
+			['/static/images/cues/RewardEfficacy/low_reward_high_efficacy.png','performance_low']],
+		large:
+			[['/static/images/cues/RewardEfficacy/high_reward_low_efficacy.png','random_high'],
+			['/static/images/cues/RewardEfficacy/high_reward_high_efficacy.png','performance_high']]
+		};
+	
+		return cues
+	
+	
+

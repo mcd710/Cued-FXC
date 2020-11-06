@@ -315,3 +315,107 @@ instructionsGardenGainsPoints = ()=>{
 
 }
 
+
+
+instructionsEfficacyGardenPoints = ()=>{
+	const pages = [
+	"gardenLFXCInstructions/instruct-qualtrics.html",
+	"gardenLFXCInstructions/instruct-Welcome.html",
+	"gardenLFXCInstructions/instruct-KeyMapping1.html",
+	"gardenLFXCInstructions/instruct-KeyMapping2.html",
+	"gardenLFXCInstructions/instruct-KeyMapping3.html",
+	"gardenLFXCInstructions/instruct-interference.html",
+	"gardenLFXCInstructions/instruct-interferenceQ.html",
+	"gardenLFXCInstructions/instruct-interval.html",
+
+	"gardenLFXCInstructions/instruct-GainCoins0.html",
+
+
+	"gardenLFXCInstructions/instruct-efficacyIntro.html",
+	"gardenLFXCInstructions/instruct-efficacyHigh1.html",
+	"gardenLFXCInstructions/instruct-efficacyHigh2.html",
+	"gardenLFXCInstructions/instruct-efficacyHighQ.html",
+
+	"gardenLFXCInstructions/instruct-efficacyLow1.html",
+	"gardenLFXCInstructions/instruct-efficacyLow2.html",
+	"gardenLFXCInstructions/instruct-efficacyLow3.html",
+	"gardenLFXCInstructions/instruct-efficacyLowQ.html",
+
+
+	"gardenLFXCInstructions/instruct-PaymentStartCoins.html",
+	"gardenLFXCInstructions/instruct-readyF.html",
+	"gardenLFXCInstructions/breakF.html",
+	"stages/stage.html",
+	"postTask.html"
+	];
+
+	psiTurk.preloadPages(pages);
+
+	const questionnaireStart = [
+	"gardenLFXCInstructions/instruct-qualtrics.html",
+	];
+
+	const keyMappingInstructions = [
+	"gardenLFXCInstructions/instruct-Welcome.html",
+	"gardenLFXCInstructions/instruct-KeyMapping1.html",
+	"gardenLFXCInstructions/instruct-KeyMapping2.html",
+	"gardenLFXCInstructions/instruct-KeyMapping3.html",
+	"gardenLFXCInstructions/instruct-readyF.html"
+	];
+	const interferenceInstructions = [
+	"gardenLFXCInstructions/instruct-interference.html",
+	"gardenLFXCInstructions/instruct-interferenceQ.html",
+	"gardenLFXCInstructions/instruct-readyF.html"
+	];
+	const intervalInstructions = [
+	"gardenLFXCInstructions/instruct-interval.html",
+	"gardenLFXCInstructions/instruct-readyF.html"
+	];
+
+	const instructionGainPages = [
+	"gardenLFXCInstructions/instruct-GainCoins0.html",
+	"gardenLFXCInstructions/instruct-readyF.html"
+	];
+
+	const instructionEfficacyHighPages = [
+	"gardenLFXCInstructions/instruct-efficacyIntro.html",
+	"gardenLFXCInstructions/instruct-efficacyHigh1.html",
+	"gardenLFXCInstructions/instruct-efficacyHigh2.html",
+	"gardenLFXCInstructions/instruct-efficacyHighQ.html",
+	"gardenLFXCInstructions/instruct-readyF.html"
+	];
+
+	const instructionEfficacyLowPages = [
+	"gardenLFXCInstructions/instruct-efficacyLow1.html",
+	"gardenLFXCInstructions/instruct-efficacyLow2.html",
+	"gardenLFXCInstructions/instruct-efficacyLow3.html",
+	"gardenLFXCInstructions/instruct-efficacyLowQ.html",
+	"gardenLFXCInstructions/instruct-readyF.html"
+	];
+
+	
+	const startGameInstructions = [
+	"gardenLFXCInstructions/instruct-PaymentStartCoins.html",
+	"gardenLFXCInstructions/instruct-readyF.html"
+	];
+
+
+	const BreakPage = [
+	"gardenLFXCInstructions/breakF.html"
+	];
+
+	return {pages,questionnaireStart,
+		keyMappingInstructions,
+		interferenceInstructions,
+		intervalInstructions,
+		instructionGainPages,
+		instructionEfficacyHighPages,
+		instructionEfficacyLowPages,
+		startGameInstructions,
+		BreakPage}
+
+
+
+}
+
+
