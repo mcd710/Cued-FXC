@@ -130,7 +130,8 @@ const {blockSequence, // order of blocks= all gain
 	breakForBlockType
 } = blocksEfficacyReward(mycondition); 
 
-
+var practiceavgRewardWindow=[];
+var practiceavgRewardWindowLength=avgRewardWindowLength;
 /***Global variables tracked in the main task***/
 
 
@@ -193,7 +194,17 @@ var blockPartGarden = function(practiceNext){
 		    break;
 		  case 'mainStart':
 		  	practiceNext = 'MainTask'
-		  	blockID++;
+			blockID++;
+			if (practiceavgRewardWindow.length!=avgRewardWindowLength){
+				dif=avgRewardWindowLength-practiceavgRewardWindow.length
+				addition=[]
+				for (z=0; z< dif; z++){
+					randAddition=practiceavgRewardWindow[Math.floor(Math.random()*practiceavgRewardWindow.length)]
+					addition.push(randAddition)
+				}
+				practiceavgRewardWindow=practiceavgRewardWindow.concat(addition)
+			}
+			avgRewardWindow=avgRewardWindow.concat(practiceavgRewardWindow)
 			var blockType = blockSequence.shift();
 			var cueSubset = cues[blockType];
 			

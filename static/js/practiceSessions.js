@@ -297,11 +297,35 @@ practiceBlocksGardenPointsStroop =(practiceType,nextPractice) =>()=>{
 	var displayFeedback = function(tag,interval)
 	{
 		var counter = interval.getCounter();
-		var score = initialBonus[interval.cueType] + numSign[interval.cueType] * values[interval.cueType] * interval.counter[0];
-		if(numSign[interval.cueType]<0) score = Math.max(score,0);
-		$(tag).append($("<p></p>").attr({id:'intervalMsg'}).html("+ "+
-			score.toFixed(0)));//0
-		$("#intervalMsg").css({'margin-top':'0px','border':'dashed', 'background': 'white','font-size':"25px"});
+		if (interval.cued==true){
+			if (interval.cueType == 'performance_low'||interval.cueType == 'performance_high'){
+				var score = initialBonus[interval.cueType] + numSign[interval.cueType] * values[interval.cueType] * interval.counter[0];
+				if (practiceavgRewardWindow.length==practiceavgRewardWindowLength){
+						practiceavgRewardWindow.shift();
+						var pintervalRewRate=((interval.counter[0])/(interval.intervalDur))
+						practiceavgRewardWindow.push(pintervalRewRate)
+					}else{
+						var pintervalRewRate=((interval.counter[0])/(interval.intervalDur))
+						practiceavgRewardWindow.push(pintervalRewRate)
+					}
+
+			}else if (interval.cueType == 'random_low'||interval.cueType == 'random_high'){
+				//var windowMean= mean(...practiceavgRewardWindow)
+				var practicerandomWindom = practiceavgRewardWindow[Math.floor(Math.random()*practiceavgRewardWindow.length)];
+				var practicewindowReward= Math.round(interval.intervalDur*practicerandomWindom)
+				var score = initialBonus[interval.cueType] + numSign[interval.cueType] * values[interval.cueType] * practicewindowReward
+
+			}else{
+				var score = initialBonus["performance_low"] + numSign["performance_low"] * values["performance_low"] * interval.counter[0];
+
+			}
+			
+			if(numSign[interval.cueType]<0) score = Math.max(score,0);
+			$(tag).append($("<p></p>").attr({id:'intervalMsg'}).html("+ "+
+					score.toFixed(0))); //0
+			$("#intervalMsg").css({'margin-top':'0px','border':'dashed', 'background': 'white','font-size':"25px" });
+
+		}
 	}
 
 	var cleanFeedback = function(){$("#intervalMsg").remove();}
