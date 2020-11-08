@@ -50,6 +50,7 @@ var garden = true
 //set appropriate stimuli 
 const {paths,
 	possibleStimsNeutral,
+	possibleStimsAutomatic,
 	possibleStimsCongruent,
 	possibleStimsInCongruent,
 	responses,
@@ -93,7 +94,7 @@ var price = 0.001; // set the price  for each item so 10 points= .01 cent *10 = 
 
 var trialTimingParams = {
 	itiDuration:0,  
-	feedbackDur:500,
+	feedbackDur:1000,
 	thresholdRT:250,
 	deadline:2000
 };
@@ -141,6 +142,8 @@ var returnToInstructCallback = 0;
 var returnToInstructCallbackMain =0;
 var returnToInstructCallbackBreak = 0;
 
+const efficacyProbability= 0.8; 
+
 // handler function that controls the order of the task
 var blockPartGarden = function(practiceNext){
 	openFullscreen();
@@ -165,7 +168,11 @@ var blockPartGarden = function(practiceNext){
 		   	practiceNext = 'keymapping'
 		    psiTurk.doInstructions(questionnaireStart);
 
-		    break;
+			break;
+		case 'automaticity': 
+			practiceNext = 'keymapping'
+		 	psiTurk.doInstructions(keyMappingInstructions,WordAutomaticityPractice('keymapping'));
+		 	break;
 
 		  case 'keymapping': 
 		   	practiceNext = 'interference'
@@ -230,7 +237,7 @@ var blockPartGarden = function(practiceNext){
 
 // what to start the experiment with 
 $(window).load( function(){
-		blockPartGarden('mainStart')
+		blockPartGarden('automaticity')
  	}
 );
 

@@ -337,27 +337,38 @@ MainPartGardenGroupPoints =(blockType,cueSubset,nextPractice) =>()=>{
 		var displayFeedback = function(tag,interval)
 		{
 			var counter = interval.getCounter();
-			if (interval.cued==true){
-				if (interval.cueType == 'performance_low'||interval.cueType == 'performance_high'){
-					var score = initialBonus[interval.cueType] + numSign[interval.cueType] * values[interval.cueType] * interval.counter[0];
-					if (avgRewardWindow.length==avgRewardWindowLength){
-							avgRewardWindow.shift();
-							//var intervalRewRate=((interval.counter[0])/(interval.intervalDur-((interval.isiDuration)*(interval.counter[0]+interval.counter[1]))))
-							var intervalRewRate=((interval.counter[0])/(interval.intervalDur))
-	
-							avgRewardWindow.push(intervalRewRate)
-						}else{
-							//var intervalRewRate=((interval.counter[0])/(interval.intervalDur-((interval.isiDuration)*(interval.counter[0]+interval.counter[1]))))
-							var intervalRewRate=((interval.counter[0])/(interval.intervalDur))
-							avgRewardWindow.push(intervalRewRate)
-						}
-	
-				}else{
-					//var windowMean= mean(...avgRewardWindow)
-					var randomWindom = avgRewardWindow[Math.floor(Math.random()*avgRewardWindow.length)];
-					var windowReward= Math.round(interval.intervalDur*randomWindom)
-					var score = initialBonus[interval.cueType] + numSign[interval.cueType] * values[interval.cueType] * windowReward;
-	
+			var prob= (randi(0,100))/100
+			if (interval.cued==true){ // if it is instructed
+				if (interval.cueType == 'performance_low'||interval.cueType == 'performance_high'){ //if this is a performance interval 
+					if (prob>= 1-efficacyProbability){ // if the random probability falls within the majority ex if .8 and it is anything = or greater than .2 score based on performance
+						var score = initialBonus[interval.cueType] + numSign[interval.cueType] * values[interval.cueType] * interval.counter[0];
+						if (avgRewardWindow.length==avgRewardWindowLength){
+								avgRewardWindow.shift();
+								//var intervalRewRate=((interval.counter[0])/(interval.intervalDur-((interval.isiDuration)*(interval.counter[0]+interval.counter[1]))))
+								var intervalRewRate=((interval.counter[0])/(interval.intervalDur))
+		
+								avgRewardWindow.push(intervalRewRate)
+							}else{ 
+								//var intervalRewRate=((interval.counter[0])/(interval.intervalDur-((interval.isiDuration)*(interval.counter[0]+interval.counter[1]))))
+								var intervalRewRate=((interval.counter[0])/(interval.intervalDur))
+								avgRewardWindow.push(intervalRewRate)
+							}
+
+					}else{// otherwise score based on random
+						var randomWindom = avgRewardWindow[Math.floor(Math.random()*avgRewardWindow.length)];
+						var windowReward= Math.round(interval.intervalDur*randomWindom)
+						var score = initialBonus[interval.cueType] + numSign[interval.cueType] * values[interval.cueType] * windowReward;
+					}
+				}else{ //this is a random interval
+					if (prob>= 1-efficacyProbability){ // common would be based on random selection
+						//var windowMean= mean(...avgRewardWindow)
+						var randomWindom = avgRewardWindow[Math.floor(Math.random()*avgRewardWindow.length)];
+						var windowReward= Math.round(interval.intervalDur*randomWindom)
+						var score = initialBonus[interval.cueType] + numSign[interval.cueType] * values[interval.cueType] * windowReward;
+					}else{ // otherwise based on performance
+						var score = initialBonus[interval.cueType] + numSign[interval.cueType] * values[interval.cueType] * interval.counter[0];
+					}
+
 				}
 				if(numSign[interval.cueType]<0) score = Math.max(score,0);
 				$(tag).append($("<p></p>").attr({id:'intervalMsg'}).html(heading[interval.cueType] +

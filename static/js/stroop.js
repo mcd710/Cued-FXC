@@ -37,6 +37,14 @@ var possibleStimsNeutral = [
 	{word:"XXXXX",  congruency:"neutral",    path:"/static/images/stimuli/XXXXX_BlueInk.png",   color:'blue'}
 	];
 
+	var possibleStimsAutomatic = [
+		{word:"RED",    congruency:"Automatic",  path:"/static/images/stimuli/Red_BlackInk.png",       color:'red'},
+		{word:"YELLOW", congruency:"Automatic",  path:"/static/images/stimuli/Yellow_BlackInk.png", color:'yellow'},
+		{word:"GREEN",  congruency:"Automatic",  path:"/static/images/stimuli/Green_BlackInk.png",   color:'green'},
+		{word:"BLUE",   congruency:"Automatic",  path:"/static/images/stimuli/Blue_BlackInk.png",     color:'blue'}
+		];
+
+
 var possibleStimsCongruent = [
 	{word:"RED",    congruency:"congruent",  path:"/static/images/stimuli/Red_RedInk.png",       color:'red'},
 	{word:"YELLOW", congruency:"congruent",  path:"/static/images/stimuli/Yellow_YellowInk.png", color:'yellow'},
@@ -69,6 +77,7 @@ var spaceKey = 32;
 
 return{paths,
 	possibleStimsNeutral,
+	possibleStimsAutomatic,
 	possibleStimsCongruent,
 	possibleStimsInCongruent,
 	responses,
