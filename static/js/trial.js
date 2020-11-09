@@ -10,7 +10,7 @@ feedbackImgs = [
 
 
 function Trial(stimSet,timer,counter,timingParams,htmlTag,callbackParams,configParams){
-	console.log("inside the Trial function")
+	//console.log("inside the Trial function")
 
 	this.stimSet = stimSet;
 	this.timer = timer;
@@ -36,7 +36,7 @@ function Trial(stimSet,timer,counter,timingParams,htmlTag,callbackParams,configP
 
 
 Trial.prototype.updateStim = function(stim)
-{	console.log("inside updateStim")
+{	//console.log("inside updateStim")
 	this.stim = stim;
 	this.stimResponse = stim.color;
 	this.stimWord = stim.word;
@@ -48,7 +48,7 @@ Trial.prototype.updateStim = function(stim)
 
 
 Trial.prototype.initializeRecordParams = function(){
-	console.log("inside initializeRecordParams")
+	//console.log("inside initializeRecordParams")
 	this.stimon = NaN;
 	this.initon = NaN;
 	this.response = NaN;
@@ -65,7 +65,7 @@ Trial.prototype.initializeRecordParams = function(){
 
 
 Trial.prototype.initiation = function(){
-	console.log("inside trial.initiation")
+	//console.log("inside trial.initiation")
 	//console.log("stim is" + stim)
 	if(this.timer[0]){this.cleanAll();return;}
 	this.initializeRecordParams();
@@ -86,7 +86,7 @@ Trial.prototype.initiation = function(){
 
 
 Trial.prototype.ITI = function(){
-	console.log("inside ITI")
+	//console.log("inside ITI")
 	var element_fixation = $("<img></img>").attr({src:"/static/images/fixation.png",id:'fixation'});
 	addElement(element_fixation,this.htmlTag);
 	setTimeout(this.postITIAction.bind(this),this.itiDuration);

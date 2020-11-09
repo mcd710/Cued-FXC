@@ -39,8 +39,8 @@ function closeFullscreen() {
 /*Add element to the position and specify if we want to centralize the element*/
 function addElement(element,position,center=true)
 {
-  console.log("inside addElement")
-  console.log("position is" + position)
+ // console.log("inside addElement")
+ // console.log("position is" + position)
   //element.css({"grid-row":"2","grid-column":"2"})
   if(center) element.css({"position": "absolute",
     "left":"50%","top":"50%",

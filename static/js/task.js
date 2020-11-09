@@ -251,7 +251,7 @@ $(window).load( function(){
 ******************************************/
 
 showBoard = function(){
-	console.log("inside showBoard")
+	//console.log("inside showBoard")
 	var element_stimuli = $("<img></img>").attr({src: "/static/images/Farmboard.png",id:'farmboard'});
 	addElement(element_stimuli,'#background',center=true);
 

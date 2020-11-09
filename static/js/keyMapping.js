@@ -5,7 +5,7 @@
 
 ColorMappingPractice = (nextPractice)=>()=>{
 
-	console.log('inside the ColorMappingPractice')
+	//console.log('inside the ColorMappingPractice')
 	var configParams = {space:false,accFeedback:true,washout:true};
 	console.log("possibleStimsNeutral is" + possibleStimsNeutral)
 	var stimSet = _.shuffle(repmat(possibleStimsNeutral,Math.ceil(numColorPracticeTrials/possibleStimsNeutral.length)));

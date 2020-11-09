@@ -338,10 +338,12 @@ MainPartGardenGroupPoints =(blockType,cueSubset,nextPractice) =>()=>{
 		{
 			var counter = interval.getCounter();
 			var prob= (randi(0,100))/100
+			console.log("interval.cueType is" + interval.cueType)
 			console.log("prob is "+ prob)
 			if (interval.cued==true){ // if it is instructed
 				if (interval.cueType == 'performance_low'||interval.cueType == 'performance_high'){ //if this is a performance interval 
 					if (prob>= 1-efficacyProbability){ // if the random probability falls within the majority ex if .8 and it is anything = or greater than .2 score based on performance
+						console.log("prob is "+ prob +"and is greater than"+ 1-efficacyProbability)
 						var score = initialBonus[interval.cueType] + numSign[interval.cueType] * values[interval.cueType] * interval.counter[0];
 						if (avgRewardWindow.length==avgRewardWindowLength){
 								avgRewardWindow.shift();
@@ -356,6 +358,7 @@ MainPartGardenGroupPoints =(blockType,cueSubset,nextPractice) =>()=>{
 							}
 						var FeedbackHeading= 'Performance: + '
 					}else{// otherwise score based on random
+						console.log("prob is "+ prob +"and is less than"+ 1-efficacyProbability)
 						var randomWindom = avgRewardWindow[Math.floor(Math.random()*avgRewardWindow.length)];
 						var windowReward= Math.round(interval.intervalDur*randomWindom)
 						var score = initialBonus[interval.cueType] + numSign[interval.cueType] * values[interval.cueType] * windowReward;
@@ -364,11 +367,13 @@ MainPartGardenGroupPoints =(blockType,cueSubset,nextPractice) =>()=>{
 				}else{ //this is a random interval
 					if (prob>= 1-efficacyProbability){ // common would be based on random selection
 						//var windowMean= mean(...avgRewardWindow)
+						console.log("prob is "+ prob +"and is greater than"+ 1-efficacyProbability)
 						var randomWindom = avgRewardWindow[Math.floor(Math.random()*avgRewardWindow.length)];
 						var windowReward= Math.round(interval.intervalDur*randomWindom)
 						var score = initialBonus[interval.cueType] + numSign[interval.cueType] * values[interval.cueType] * windowReward;
 						var FeedbackHeading= 'Random: + '
 					}else{ // otherwise based on performance
+						console.log("prob is "+ prob +"and is less than"+ 1-efficacyProbability)
 						var FeedbackHeading= 'Performance: + '
 						var score = initialBonus[interval.cueType] + numSign[interval.cueType] * values[interval.cueType] * interval.counter[0];
 					}
@@ -482,9 +487,11 @@ MainPartGardenGroupPoints =(blockType,cueSubset,nextPractice) =>()=>{
 				};
 	
 				var writeRecord = function(Record){
+					console.log("mycondition is "+ mycondition)
 					console.log("intervalScore is "+ intervalScore)
 					 Record.phase = "MainBlock";
 					 Record.PLATFORM = PLATFORM;
+					 Record.order = mycondition;
 					 Record.sessionNum = sessionID;
 					 Record.blockNum = blockID;
 					 Record.groupType = blockType;
