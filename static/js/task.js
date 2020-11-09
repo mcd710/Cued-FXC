@@ -35,10 +35,10 @@ const {pages,questionnaireStart,
 	instructionEfficacyLowPages,
 	startGameInstructions,
 	BreakPage,
-	BreakLargePage,
-	BreakSmallPage,
-	BreakRandomPage,
-	BreakPerformancePage} = instructionsEfficacyGardenPoints();
+	BreakRandomHighPage,
+	BreakPerformanceHighPage,
+	BreakRandomLowPage,
+	BreakPerformanceLowPage} = instructionsEfficacyGardenPoints();
 
 //preload your pages 
 psiTurk.preloadPages(pages);
@@ -237,7 +237,7 @@ var blockPartGarden = function(practiceNext){
 
 // what to start the experiment with 
 $(window).load( function(){
-		blockPartGarden('automaticity')
+		blockPartGarden('mainStart')
  	}
 );
 

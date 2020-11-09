@@ -333,11 +333,12 @@ MainPartGardenGroupPoints =(blockType,cueSubset,nextPractice) =>()=>{
 	MainPartGardenGroupPointsStroopFXC =(blockType,cueSubset,nextPractice) =>()=>{
 
 		var configParams = {space:false,accFeedback:false,washout:false,tally:true};
-			
+		var intervalScore=NaN;
 		var displayFeedback = function(tag,interval)
 		{
 			var counter = interval.getCounter();
 			var prob= (randi(0,100))/100
+			console.log("prob is "+ prob)
 			if (interval.cued==true){ // if it is instructed
 				if (interval.cueType == 'performance_low'||interval.cueType == 'performance_high'){ //if this is a performance interval 
 					if (prob>= 1-efficacyProbability){ // if the random probability falls within the majority ex if .8 and it is anything = or greater than .2 score based on performance
@@ -353,11 +354,12 @@ MainPartGardenGroupPoints =(blockType,cueSubset,nextPractice) =>()=>{
 								var intervalRewRate=((interval.counter[0])/(interval.intervalDur))
 								avgRewardWindow.push(intervalRewRate)
 							}
-
+						var FeedbackHeading= 'Performance: + '
 					}else{// otherwise score based on random
 						var randomWindom = avgRewardWindow[Math.floor(Math.random()*avgRewardWindow.length)];
 						var windowReward= Math.round(interval.intervalDur*randomWindom)
 						var score = initialBonus[interval.cueType] + numSign[interval.cueType] * values[interval.cueType] * windowReward;
+						var FeedbackHeading= 'Random: + '
 					}
 				}else{ //this is a random interval
 					if (prob>= 1-efficacyProbability){ // common would be based on random selection
@@ -365,18 +367,20 @@ MainPartGardenGroupPoints =(blockType,cueSubset,nextPractice) =>()=>{
 						var randomWindom = avgRewardWindow[Math.floor(Math.random()*avgRewardWindow.length)];
 						var windowReward= Math.round(interval.intervalDur*randomWindom)
 						var score = initialBonus[interval.cueType] + numSign[interval.cueType] * values[interval.cueType] * windowReward;
+						var FeedbackHeading= 'Random: + '
 					}else{ // otherwise based on performance
+						var FeedbackHeading= 'Performance: + '
 						var score = initialBonus[interval.cueType] + numSign[interval.cueType] * values[interval.cueType] * interval.counter[0];
 					}
 
 				}
 				if(numSign[interval.cueType]<0) score = Math.max(score,0);
-				$(tag).append($("<p></p>").attr({id:'intervalMsg'}).html(heading[interval.cueType] +
+				$(tag).append($("<p></p>").attr({id:'intervalMsg'}).html(FeedbackHeading +
 						score.toFixed(0))); //0
 				$("#intervalMsg").css({'margin-top':'0px','border':'dashed', 'background': 'white','font-size':"25px" });
 	
 			}
-			
+		intervalScore=score	;
 		}
 	
 		var cleanFeedback = function(){$("#intervalMsg").remove();}
@@ -478,7 +482,7 @@ MainPartGardenGroupPoints =(blockType,cueSubset,nextPractice) =>()=>{
 				};
 	
 				var writeRecord = function(Record){
-	
+					console.log("intervalScore is "+ intervalScore)
 					 Record.phase = "MainBlock";
 					 Record.PLATFORM = PLATFORM;
 					 Record.sessionNum = sessionID;
@@ -487,6 +491,7 @@ MainPartGardenGroupPoints =(blockType,cueSubset,nextPractice) =>()=>{
 					 Record.intervalNum = intervalID;
 					 Record.intervalType = cue[1];
 					 Record.intervalLength = intervalTimingParams.intervalDur;
+					 Record.intervalScorePoints = intervalScore;
 					 psiTurk.recordTrialData(Record);
 				};
 	

@@ -329,8 +329,8 @@ blocksCollectorProtector= (mycondition)=> {
 
 blocksEfficacyReward= (mycondition)=> {
 	
-	var blockseq1 = _.shuffle(['random','performance']);
-	var blockseq2 = _.shuffle(['small','large']);
+	var blockseq1 = _.shuffle(['randomHigh','performanceLow']);
+	var blockseq2 = _.shuffle(['randomLow','performanceHigh']);
 
 	const highValue = 10;
 	const lowValue = 1;
@@ -339,9 +339,8 @@ blocksEfficacyReward= (mycondition)=> {
 	const tallyHeading = {random_low:'Performance: + ',random_high: 'Performance: + ',performance_low:'Performance: + ', performance_high:'Performance: + '};
 	const numSign = {random_low:1,random_high:1,performance_low:1,performance_high:1};
 	const initialBonus = {random_low:0,random_high:0,performance_low:0,performance_high:0};
-	var breakForBlockType = {random:BreakRandomPage,performance:BreakPerformancePage,
-	small:BreakSmallPage,large:BreakLargePage};
-
+	var breakForBlockType = {randomLow:BreakRandomLowPage,performanceLow:BreakPerformanceLowPage,
+	randomHigh:BreakRandomHighPage,performanceHigh:BreakPerformanceHighPage};
 
 
 	if(mycondition==1)

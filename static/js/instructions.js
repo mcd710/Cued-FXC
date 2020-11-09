@@ -410,23 +410,23 @@ instructionsEfficacyGardenPoints = ()=>{
 	];
 
 
-	const BreakRandomPage = [
+	const BreakRandomHighPage = [
 		"gardenLFXCInstructions/break-random.html"
 		
 		];
 		
 		
-		const BreakPerformancePage = [
+		const BreakPerformanceHighPage = [
 		"gardenLFXCInstructions/break-performance.html"
 		];
 		
 		
-		const BreakSmallPage = [
+		const BreakRandomLowPage = [
 		"gardenLFXCInstructions/break-small.html"
 		];
 		
 		
-		const BreakLargePage = [
+		const BreakPerformanceLowPage = [
 		"gardenLFXCInstructions/break-large.html"
 		];
 
@@ -439,10 +439,10 @@ instructionsEfficacyGardenPoints = ()=>{
 		instructionEfficacyLowPages,
 		startGameInstructions,
 		BreakPage,
-		BreakLargePage,
-		BreakSmallPage,
-		BreakRandomPage,
-		BreakPerformancePage
+		BreakRandomHighPage,
+		BreakPerformanceHighPage,
+		BreakRandomLowPage,
+		BreakPerformanceLowPage
 	}
 
 
