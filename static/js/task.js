@@ -94,7 +94,7 @@ var price = 0.001; // set the price  for each item so 10 points= .01 cent *10 = 
 
 var trialTimingParams = {
 	itiDuration:0,  
-	feedbackDur:1000,
+	feedbackDur:2000,
 	thresholdRT:250,
 	deadline:2000
 };
@@ -237,7 +237,7 @@ var blockPartGarden = function(practiceNext){
 
 // what to start the experiment with 
 $(window).load( function(){
-		blockPartGarden('mainStart')
+		blockPartGarden('interval')
  	}
 );
 

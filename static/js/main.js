@@ -382,7 +382,9 @@ MainPartGardenGroupPoints =(blockType,cueSubset,nextPractice) =>()=>{
 				if(numSign[interval.cueType]<0) score = Math.max(score,0);
 				$(tag).append($("<p></p>").attr({id:'intervalMsg'}).html(FeedbackHeading +
 						score.toFixed(0))); //0
-				$("#intervalMsg").css({'margin-top':'0px','border':'dashed', 'background': 'white','font-size':"25px" });
+				$("#intervalMsg").css({"position": "absolute",
+				"left":"50%","top":"50%",
+				"transform":"translate(-50%, -50%)","font-size":"30px"});
 	
 			}
 		intervalScore=score	;

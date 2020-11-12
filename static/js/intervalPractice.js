@@ -210,7 +210,9 @@ intervalPracticeGardenStroop=(nextPractice) =>()=>{
 	{
 		var counter = interval.getCounter();
 		$(tag).append($("<p></p>").attr({id:'intervalMsg'}).text('Correct: ' + interval.counter[0]));
-		$("#intervalMsg").css({'margin-top':'0px', 'border':'dashed', 'background': 'white', 'font-size':"25px"});
+		$("#intervalMsg").css({"position": "absolute",
+		"left":"50%","top":"50%",
+		"transform":"translate(-50%, -50%)","font-size":"30px"});
 	}
 	/*** Step 2: Define how you want to clean up interval-end feedback ***/
 	var cleanFeedback = function()

@@ -329,8 +329,8 @@ blocksCollectorProtector= (mycondition)=> {
 
 blocksEfficacyReward= (mycondition)=> {
 	
-	var blockseq1 = _.shuffle(['randomHigh','performanceLow']);
-	var blockseq2 = _.shuffle(['randomLow','performanceHigh']);
+	var blockseq1 =['performanceLow','randomHigh'];
+	var blockseq2 = ['performanceHigh','randomLow'];
 
 	const highValue = 10;
 	const lowValue = 1;
