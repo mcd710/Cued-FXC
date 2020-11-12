@@ -275,11 +275,11 @@ practiceBlocksGardenPointsStroop =(practiceType,nextPractice) =>()=>{
 	   
 		break;
 		case 'random':
-			subCueSet = cues['random'];
+			subCueSet = cues['randomLow'];
 	   
 		break;
 		 case 'performance':
-			subCueSet = cues['performance'];
+			subCueSet = cues['performanceLow'];
 	   
 		break;
 		  case 'loss':
@@ -325,7 +325,7 @@ practiceBlocksGardenPointsStroop =(practiceType,nextPractice) =>()=>{
 					score.toFixed(0))); //0
 			$("#intervalMsg").css({"position": "absolute",
 			"left":"50%","top":"50%",
-			"transform":"translate(-50%, -50%)","font-size":"30px"});
+			"transform":"translate(-50%, -50%)","font-size":"40px"});
 
 		}
 	}

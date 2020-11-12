@@ -212,7 +212,7 @@ intervalPracticeGardenStroop=(nextPractice) =>()=>{
 		$(tag).append($("<p></p>").attr({id:'intervalMsg'}).text('Correct: ' + interval.counter[0]));
 		$("#intervalMsg").css({"position": "absolute",
 		"left":"50%","top":"50%",
-		"transform":"translate(-50%, -50%)","font-size":"30px"});
+		"transform":"translate(-50%, -50%)","font-size":"40px"});
 	}
 	/*** Step 2: Define how you want to clean up interval-end feedback ***/
 	var cleanFeedback = function()

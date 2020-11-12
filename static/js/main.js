@@ -333,11 +333,15 @@ MainPartGardenGroupPoints =(blockType,cueSubset,nextPractice) =>()=>{
 	MainPartGardenGroupPointsStroopFXC =(blockType,cueSubset,nextPractice) =>()=>{
 
 		var configParams = {space:false,accFeedback:false,washout:false,tally:true};
+		console.log("at the start of mainGarden")
 		var intervalScore=NaN;
+		var intervalProbability=NaN;
+		var scoreDetermined=NaN;
 		var displayFeedback = function(tag,interval)
 		{
 			var counter = interval.getCounter();
 			var prob= (randi(0,100))/100
+			intervalProbability=prob
 			console.log("interval.cueType is" + interval.cueType)
 			console.log("prob is "+ prob)
 			if (interval.cued==true){ // if it is instructed
@@ -357,12 +361,14 @@ MainPartGardenGroupPoints =(blockType,cueSubset,nextPractice) =>()=>{
 								avgRewardWindow.push(intervalRewRate)
 							}
 						var FeedbackHeading= 'Performance: + '
+						scoreDetermined="Performance"
 					}else{// otherwise score based on random
 						console.log("prob is "+ prob +"and is less than"+ 1-efficacyProbability)
 						var randomWindom = avgRewardWindow[Math.floor(Math.random()*avgRewardWindow.length)];
 						var windowReward= Math.round(interval.intervalDur*randomWindom)
 						var score = initialBonus[interval.cueType] + numSign[interval.cueType] * values[interval.cueType] * windowReward;
 						var FeedbackHeading= 'Random: + '
+						scoreDetermined="Random"
 					}
 				}else{ //this is a random interval
 					if (prob>= 1-efficacyProbability){ // common would be based on random selection
@@ -372,9 +378,11 @@ MainPartGardenGroupPoints =(blockType,cueSubset,nextPractice) =>()=>{
 						var windowReward= Math.round(interval.intervalDur*randomWindom)
 						var score = initialBonus[interval.cueType] + numSign[interval.cueType] * values[interval.cueType] * windowReward;
 						var FeedbackHeading= 'Random: + '
+						scoreDetermined="Random"
 					}else{ // otherwise based on performance
 						console.log("prob is "+ prob +"and is less than"+ 1-efficacyProbability)
 						var FeedbackHeading= 'Performance: + '
+						scoreDetermined="Performance"
 						var score = initialBonus[interval.cueType] + numSign[interval.cueType] * values[interval.cueType] * interval.counter[0];
 					}
 
@@ -384,7 +392,7 @@ MainPartGardenGroupPoints =(blockType,cueSubset,nextPractice) =>()=>{
 						score.toFixed(0))); //0
 				$("#intervalMsg").css({"position": "absolute",
 				"left":"50%","top":"50%",
-				"transform":"translate(-50%, -50%)","font-size":"30px"});
+				"transform":"translate(-50%, -50%)","font-size":"40px"});
 	
 			}
 		intervalScore=score	;
@@ -489,8 +497,11 @@ MainPartGardenGroupPoints =(blockType,cueSubset,nextPractice) =>()=>{
 				};
 	
 				var writeRecord = function(Record){
+					console.log("inside the record")
 					console.log("mycondition is "+ mycondition)
+					console.log("intervalProbability is "+ intervalProbability)
 					console.log("intervalScore is "+ intervalScore)
+					console.log("scoreDetermined is "+ scoreDetermined)
 					 Record.phase = "MainBlock";
 					 Record.PLATFORM = PLATFORM;
 					 Record.order = mycondition;
@@ -501,6 +512,8 @@ MainPartGardenGroupPoints =(blockType,cueSubset,nextPractice) =>()=>{
 					 Record.intervalType = cue[1];
 					 Record.intervalLength = intervalTimingParams.intervalDur;
 					 Record.intervalScorePoints = intervalScore;
+					 Record.intervalProbability=intervalProbability;
+					 Record.scoreDetermined=scoreDetermined;
 					 psiTurk.recordTrialData(Record);
 				};
 	
@@ -523,6 +536,13 @@ MainPartGardenGroupPoints =(blockType,cueSubset,nextPractice) =>()=>{
 					blockPartGarden(nextPractice);
 				}
 				else {
+					console.log("at the start of the interval")
+				
+					console.log("mycondition is "+ mycondition)
+					console.log("intervalProbability is "+ intervalProbability)
+					console.log("intervalScore is "+ intervalScore)
+					console.log("scoreDetermined is "+ scoreDetermined)
+
 					var stimSet = generateStimSet(possibleStimsInCongruent,possibleStimsCongruent,numIntervalTrials);
 					interval = new Interval(intervalTimingParams,htmlParams,cue,trialTimingParams,configParams,stimSet,callbacks);
 					psiTurk.showPage("stages/stage.html");
