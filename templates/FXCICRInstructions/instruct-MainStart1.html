@@ -1,0 +1,42 @@
+<div id="container-instructions">
+
+    <h1>Instructions</h1>
+
+    <hr />
+
+    <div class="instructions well">
+
+        <div class="row container-fluid">
+            <p> 
+                <font size=4>
+                    Now you are ready to start the real game! From now on, all of your coins will count towards your bonus. 
+                <br/><br/>
+                At the end of the experiment, your coins will be converted to money, where <span id="coinValue"></span> coins is worth <span id="moneyRate"></span>.
+            </font>
+                <br/><br/>
+            </p>
+
+        </div>
+        <script type="text/javascript">
+            $('#coinValue').html('2000');
+            $('#moneyRate').html('$1');
+            $("body").unbind("keydown").focus().keydown(continue_handler);
+        </script>
+    </div>
+<hr />
+
+<div class="instructionsnav">
+    <div class="row">
+        <div class="col-xs-2">
+        </div>
+        <div class="col-xs-8">
+            <button type="button" id="next" value="next" class="btn btn-success btn-lg center-block continue">
+                Continue
+            </button>
+        </div>
+        <div class="col-xs-2">
+        </div>
+    </div>
+</div>
+
+</div>

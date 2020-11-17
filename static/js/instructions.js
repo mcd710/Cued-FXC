@@ -450,3 +450,183 @@ instructionsEfficacyGardenPoints = ()=>{
 }
 
 
+
+
+instructionsFXCICR = ()=>{
+	const pages = [
+	
+	"FXCICRInstructions/instruct-Welcome.html",
+	"FXCICRInstructions/instruct-Automaticity1.html",
+	"FXCICRInstructions/instruct-Automaticity2.html",
+	"FXCICRInstructions/instruct-AutomaticityReady.html",
+
+	"FXCICRInstructions/instruct-KeyMapping1.html",
+	"FXCICRInstructions/instruct-KeyMapping2.html",
+	"FXCICRInstructions/instruct-KeyMappingReady.html",
+
+	
+		
+
+	"FXCICRInstructions/instruct-interference1.html",
+	"FXCICRInstructions/instruct-interference2.html",
+	"FXCICRInstructions/instruct-interference3.html",
+	"FXCICRInstructions/instruct-interferenceQ.html",
+
+	"FXCICRInstructions/instruct-interval1.html",
+
+	"FXCICRInstructions/instruct-efficacyHigh1.html",
+	"FXCICRInstructions/instruct-efficacyHigh2.html",
+	//"FXCICRInstructions/instruct-efficacyHighQ.html",
+
+	"FXCICRInstructions/instruct-efficacyLow1.html",
+	"FXCICRInstructions/instruct-efficacyLow2.html",
+	//"FXCICRInstructions/instruct-efficacyLowQ.html",
+
+	"FXCICRInstructions/instruct-EfficacyAll1.html",
+	"FXCICRInstructions/instruct-EfficacyAll2.html",
+	"FXCICRInstructions/instruct-EfficacyAll3.html",
+	//"FXCICRInstructions/instruct-efficacyAllQ.html",
+
+	"FXCICRInstructions/instruct-MainStart1.html",
+	"FXCICRInstructions/instruct-MainStart2.html",
+
+	"FXCICRInstructions/instruct-break-LowEfficacyHighReward.html",
+	"FXCICRInstructions/instruct-break-HighEfficacyHighReward.html",
+
+	"FXCICRInstructions/instruct-break-LowEfficacyLowReward.html",
+	"FXCICRInstructions/instruct-break-HighEfficacyLowReward.html",
+
+	"FXCICRInstructions/instruct-ready.html",
+
+	"stages/stage.html",
+	"postTask.html"
+	];
+
+	psiTurk.preloadPages(pages);
+
+	const questionnaireStart = [
+	"gardenLFXCInstructions/instruct-qualtrics.html",
+	];
+
+	const AutomaticityInstructions = [
+	"FXCICRInstructions/instruct-Welcome.html",
+	"FXCICRInstructions/instruct-Automaticity1.html",
+	"FXCICRInstructions/instruct-Automaticity2.html",
+	"FXCICRInstructions/instruct-AutomaticityReady.html"
+	];
+
+
+	const keyMappingInstructions = [
+	"FXCICRInstructions/instruct-KeyMapping1.html",
+	"FXCICRInstructions/instruct-KeyMapping2.html",
+	"FXCICRInstructions/instruct-KeyMappingReady.html"
+	];
+
+	const interferenceInstructions = [
+	"FXCICRInstructions/instruct-interference1.html",
+	"FXCICRInstructions/instruct-interference2.html",
+	"FXCICRInstructions/instruct-interference3.html",
+	"FXCICRInstructions/instruct-interferenceQ.html",
+	"FXCICRInstructions/instruct-ready.html"
+	];
+
+
+	const intervalInstructions = [
+	"FXCICRInstructions/instruct-interval1.html",
+	"FXCICRInstructions/instruct-ready.html"
+	];
+
+	const instructionEfficacyHighPages = [	
+	"FXCICRInstructions/instruct-efficacyHigh1.html",
+	"FXCICRInstructions/instruct-efficacyHigh2.html",
+	//"FXCICRInstructions/instruct-efficacyHighQ.html",
+	"FXCICRInstructions/instruct-ready.html"
+	];
+
+	const instructionEfficacyLowPages = [
+	"FXCICRInstructions/instruct-efficacyLow1.html",
+	"FXCICRInstructions/instruct-efficacyLow2.html",
+	//"FXCICRInstructions/instruct-efficacyLowQ.html",
+	"FXCICRInstructions/instruct-ready.html"
+	];
+
+	const instructionEfficacyALLPages = [
+		"FXCICRInstructions/instruct-EfficacyAll1.html",
+		"FXCICRInstructions/instruct-EfficacyAll2.html",
+		"FXCICRInstructions/instruct-EfficacyAll3.html",
+		//"FXCICRInstructions/instruct-efficacyAllQ.html",
+		"FXCICRInstructions/instruct-ready.html"
+		];
+	
+		
+		
+			const startGameInstructionsOrder1 = [
+				"FXCICRInstructions/instruct-MainStart1.html",
+				"FXCICRInstructions/instruct-MainStart2.html",
+				"FXCICRInstructions/instruct-break-HighEfficacyLowReward.html",
+				"FXCICRInstructions/instruct-ready.html"
+			];
+			//return startGameInstructionsOrder
+	
+			const startGameInstructionsOrder0 = [
+				"FXCICRInstructions/instruct-MainStart1.html",
+				"FXCICRInstructions/instruct-MainStart2.html",
+				"FXCICRInstructions/instruct-break-HighEfficacyHighReward.html",
+				"FXCICRInstructions/instruct-ready.html"
+			];
+			//return startGameInstructionsOrder
+
+		
+	
+
+
+	
+
+
+	const BreakRandomHighPage = [
+		"FXCICRInstructions/instruct-break-LowEfficacyHighReward.html",
+		"FXCICRInstructions/instruct-ready.html"
+		
+		];
+		
+		
+		const BreakPerformanceHighPage = [
+			"FXCICRInstructions/instruct-break-HighEfficacyHighReward.html",
+			"FXCICRInstructions/instruct-ready.html"
+		];
+		
+		
+		const BreakRandomLowPage = [
+		"FXCICRInstructions/instruct-break-LowEfficacyLowReward.html",
+		"FXCICRInstructions/instruct-ready.html"
+		];
+		
+		
+		const BreakPerformanceLowPage = [
+		"FXCICRInstructions/instruct-break-HighEfficacyLowReward.html",
+		"FXCICRInstructions/instruct-ready.html"
+		];
+
+	return {pages,questionnaireStart,
+		AutomaticityInstructions,
+		keyMappingInstructions,
+		interferenceInstructions,
+		intervalInstructions,
+		instructionEfficacyHighPages,
+		instructionEfficacyLowPages,
+		instructionEfficacyALLPages,
+		startGameInstructionsOrder1,
+		startGameInstructionsOrder0,
+		BreakRandomHighPage,
+		BreakPerformanceHighPage,
+		BreakRandomLowPage,
+		BreakPerformanceLowPage
+	}
+
+
+
+}
+
+
+
+

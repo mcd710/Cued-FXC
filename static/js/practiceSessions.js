@@ -282,6 +282,18 @@ practiceBlocksGardenPointsStroop =(practiceType,nextPractice) =>()=>{
 			subCueSet = cues['performanceLow'];
 	   
 		break;
+		case 'randomPractice':
+			subCueSet = cues['randomPractice'];
+	   
+		break;
+		case 'performancePractice':
+			subCueSet = cues['performancePractice'];
+	   
+		break;
+		case 'practiceAll':
+			subCueSet = cues['practiceAll'];
+	   
+		break;
 		  case 'loss':
 		subCueSet = cues['loss'];
 

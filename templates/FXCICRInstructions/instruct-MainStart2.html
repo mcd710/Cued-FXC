@@ -1,0 +1,46 @@
+<div id="container-instructions">
+
+	<h1>Instructions</h1>
+
+	<hr />
+
+	<div class="instructions well">
+
+        <p>
+            <font size=4>
+                You will do four blocks of the task. 
+                <br/><br/>
+                In each block you will always see one of the pictures below before each interval. 
+                <br/><br/>
+                This picture will tell you how many coins the color words are worth and whether you can get coins mostly based on <strong>PERFORMANCE</strong>, or mostly by <strong>RANDOM</strong> chance.           </font>
+                <br/><br/>
+            <img id="FullReward", style="height: 400px">
+
+        </p>
+
+        <script type="text/javascript">
+            document.getElementById("FullReward").src = '{{ server_location }} static/images/cues/StoryEfficacyReward/FullBreakdown.png'
+
+            $("body").unbind("keydown").focus().keydown(continue_handler);
+        </script>
+
+    </div>
+
+    <hr />
+
+
+    <div class="instructionsnav">
+        <div class="row">
+            <div class="col-xs-2">
+            </div>
+            <div class="col-xs-8">
+                <button type="button" id="next" value="next" class="btn btn-primary btn-lg center-block continue">
+                    Continue <span class="glyphicon glyphicon-arrow-right"></span>
+                </button>
+            </div>
+            <div class="col-xs-2">
+            </div>
+        </div>
+    </div>
+
+</div>

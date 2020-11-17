@@ -27,18 +27,19 @@ const redirect_link = 'https://brown.co1.qualtrics.com/jfe/form/SV_2t2eNYfABWJwf
 
 //set the appropriate instructions by calling a function from the instructions.js file
 const {pages,questionnaireStart,
+	AutomaticityInstructions,
 	keyMappingInstructions,
 	interferenceInstructions,
 	intervalInstructions,
-	instructionGainPages,
 	instructionEfficacyHighPages,
 	instructionEfficacyLowPages,
-	startGameInstructions,
-	BreakPage,
+	instructionEfficacyALLPages,
+	startGameInstructionsOrder1,
+	startGameInstructionsOrder0,
 	BreakRandomHighPage,
 	BreakPerformanceHighPage,
 	BreakRandomLowPage,
-	BreakPerformanceLowPage} = instructionsEfficacyGardenPoints();
+	BreakPerformanceLowPage} = instructionsFXCICR();
 
 //preload your pages 
 psiTurk.preloadPages(pages);
@@ -89,8 +90,8 @@ const{numColorPracticeTrials, 	//set the number of keymapping practice  trials
 
 
 var initialLoss = 300; //the amount of loss 
-var price = 0.001; // set the price  for each item so 10 points= .01 cent *10 = 10 cents
-
+var price = 0.01; // set the price  for each item so 10 points= .01 cent *10 = 10 cents
+var conversion= 1;
 
 var trialTimingParams = {
 	itiDuration:0,  
@@ -171,7 +172,7 @@ var blockPartGarden = function(practiceNext){
 			break;
 		case 'automaticity': 
 			practiceNext = 'keymapping'
-		 	psiTurk.doInstructions(keyMappingInstructions,WordAutomaticityPractice('keymapping'));
+		 	psiTurk.doInstructions(AutomaticityInstructions,WordAutomaticityPractice('keymapping'));
 		 	break;
 
 		  case 'keymapping': 
@@ -185,20 +186,25 @@ var blockPartGarden = function(practiceNext){
 
 		    break;
 		  case 'interval':
-		    practiceNext = 'performance'
-		    psiTurk.doInstructions(intervalInstructions,intervalPracticeGardenStroop('performance'));
+		    practiceNext = 'performancePractice'
+		    psiTurk.doInstructions(intervalInstructions,intervalPracticeGardenStroop('performancePractice'));
 
 		    break;
-		  case 'performance':
-		    practiceNext = 'random' 
-		    psiTurk.doInstructions(instructionGainPages,practiceBlocksGardenPointsStroop('performance','random'));
+		  case 'performancePractice':
+		    practiceNext = 'randomPractice' 
+		    psiTurk.doInstructions(instructionEfficacyHighPages,practiceBlocksGardenPointsStroop('performancePractice','randomPractice'));
 
 			break;
-		 case 'random':
-		    practiceNext = 'random' 
-		    psiTurk.doInstructions(instructionGainPages,practiceBlocksGardenPointsStroop('random','mainStart'));
+		 case 'randomPractice':
+		    practiceNext = 'practiceAll' 
+		    psiTurk.doInstructions(instructionEfficacyLowPages,practiceBlocksGardenPointsStroop('randomPractice','practiceAll'));
 
-		    break;
+			break;
+		case 'practiceAll':
+			practiceNext = 'mainStart' 
+			psiTurk.doInstructions(instructionEfficacyALLPages,practiceBlocksGardenPointsStroop('practiceAll','mainStart'));
+	
+			break;
 		  case 'mainStart':
 		  	practiceNext = 'MainTask'
 			blockID++;
@@ -214,8 +220,12 @@ var blockPartGarden = function(practiceNext){
 			avgRewardWindow=avgRewardWindow.concat(practiceavgRewardWindow)
 			var blockType = blockSequence.shift();
 			var cueSubset = cues[blockType];
-			
-		    psiTurk.doInstructions(startGameInstructions,MainPartGardenGroupPointsStroopFXC(blockType,cueSubset,'MainTask'))
+			if (mycondition==1){
+				psiTurk.doInstructions(startGameInstructionsOrder1,MainPartGardenGroupPointsStroopFXC(blockType,cueSubset,'MainTask'))
+
+			}else{
+				psiTurk.doInstructions(startGameInstructionsOrder0,MainPartGardenGroupPointsStroopFXC(blockType,cueSubset,'MainTask'))
+			}
 		    
 		    break;
 		  case 'MainTask':
@@ -237,7 +247,7 @@ var blockPartGarden = function(practiceNext){
 
 // what to start the experiment with 
 $(window).load( function(){
-		blockPartGarden('mainStart')
+		blockPartGarden('practiceAll')
  	}
 );
 
