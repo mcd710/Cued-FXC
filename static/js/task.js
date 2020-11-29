@@ -22,7 +22,7 @@ console.log(PLATFORM)
 
 const gardenImageAll= '/static/images/BackgroundFarm.png'
 
-const redirect_link = 'https://brown.co1.qualtrics.com/jfe/form/SV_2t2eNYfABWJwfwF'
+const redirect_link = 'https://brown.co1.qualtrics.com/jfe/form/SV_0vvotfBWkUiy5V3'
 
 
 //set the appropriate instructions by calling a function from the instructions.js file
