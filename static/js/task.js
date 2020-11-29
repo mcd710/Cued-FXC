@@ -156,7 +156,7 @@ var blockPartGarden = function(practiceNext){
 
 	// what to do at the end of the task
 	if(blockID == numBlock) {
-		endRedirectSPICE();
+		endRedirectFXCICR();
 		return;
 	}
 
@@ -247,7 +247,7 @@ var blockPartGarden = function(practiceNext){
 
 // what to start the experiment with 
 $(window).load( function(){
-		blockPartGarden('performancePractice')
+		blockPartGarden('MainTask')
  	}
 );
 
