@@ -476,16 +476,16 @@ instructionsFXCICR = ()=>{
 
 	"FXCICRInstructions/instruct-efficacyHigh1.html",
 	"FXCICRInstructions/instruct-efficacyHigh2.html",
-	//"FXCICRInstructions/instruct-efficacyHighQ.html",
+	"FXCICRInstructions/instruct-efficacyHighQ.html",
 
 	"FXCICRInstructions/instruct-efficacyLow1.html",
 	"FXCICRInstructions/instruct-efficacyLow2.html",
-	//"FXCICRInstructions/instruct-efficacyLowQ.html",
+	"FXCICRInstructions/instruct-efficacyLowQ.html",
 
 	"FXCICRInstructions/instruct-EfficacyAll1.html",
 	"FXCICRInstructions/instruct-EfficacyAll2.html",
 	"FXCICRInstructions/instruct-EfficacyAll3.html",
-	//"FXCICRInstructions/instruct-efficacyAllQ.html",
+	"FXCICRInstructions/instruct-EfficacyAllQ.html",
 
 	"FXCICRInstructions/instruct-MainStart1.html",
 	"FXCICRInstructions/instruct-MainStart2.html",
@@ -539,14 +539,14 @@ instructionsFXCICR = ()=>{
 	const instructionEfficacyHighPages = [	
 	"FXCICRInstructions/instruct-efficacyHigh1.html",
 	"FXCICRInstructions/instruct-efficacyHigh2.html",
-	//"FXCICRInstructions/instruct-efficacyHighQ.html",
+	"FXCICRInstructions/instruct-efficacyHighQ.html",
 	"FXCICRInstructions/instruct-ready.html"
 	];
 
 	const instructionEfficacyLowPages = [
 	"FXCICRInstructions/instruct-efficacyLow1.html",
 	"FXCICRInstructions/instruct-efficacyLow2.html",
-	//"FXCICRInstructions/instruct-efficacyLowQ.html",
+	"FXCICRInstructions/instruct-efficacyLowQ.html",
 	"FXCICRInstructions/instruct-ready.html"
 	];
 
@@ -554,7 +554,7 @@ instructionsFXCICR = ()=>{
 		"FXCICRInstructions/instruct-EfficacyAll1.html",
 		"FXCICRInstructions/instruct-EfficacyAll2.html",
 		"FXCICRInstructions/instruct-EfficacyAll3.html",
-		//"FXCICRInstructions/instruct-efficacyAllQ.html",
+		"FXCICRInstructions/instruct-EfficacyAllQ.html",
 		"FXCICRInstructions/instruct-ready.html"
 		];
 	
