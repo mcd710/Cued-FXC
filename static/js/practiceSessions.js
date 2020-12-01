@@ -320,13 +320,13 @@ practiceBlocksGardenPointsStroop =(practiceType,nextPractice) =>()=>{
 						var pintervalRewRate=((interval.counter[0])/(interval.intervalDur))
 						practiceavgRewardWindow.push(pintervalRewRate)
 					}
-
+					var FeedbackHeading= 'Performance: + '
 			}else if (interval.cueType == 'random_low'||interval.cueType == 'random_high'){
 				//var windowMean= mean(...practiceavgRewardWindow)
 				var practicerandomWindom = practiceavgRewardWindow[Math.floor(Math.random()*practiceavgRewardWindow.length)];
 				var practicewindowReward= Math.round(interval.intervalDur*practicerandomWindom)
 				var score = initialBonus[interval.cueType] + numSign[interval.cueType] * values[interval.cueType] * practicewindowReward
-
+				var FeedbackHeading= 'Random: + '
 			}else{
 				var score = initialBonus["performance_low"] + numSign["performance_low"] * values["performance_low"] * interval.counter[0];
 
@@ -350,7 +350,7 @@ practiceBlocksGardenPointsStroop =(practiceType,nextPractice) =>()=>{
 			$("#scoreCounter").remove();
 			var score = initialBonus[cueType] + numSign[cueType] * values[cueType] * counter[0];
 			if(numSign[cueType]<0) score = Math.max(score,0);
-			$(tag).append($("<p></p>").attr({id:'scoreCounter'}).text("+ " +score.toFixed(0)));//0
+			$(tag).append($("<p></p>").attr({id:'scoreCounter'}).text(FeedbackHeading +score.toFixed(0)));//0
 			//$(tag).append($("<p></p>").attr({id:'scoreCounter'}).text(counter[0].toFixed(0)));
 			$("#scoreCounter").css({'margin-top':'0px', 'border':'dashed', 'background': 'white', 'font-size':"25px"});
 
