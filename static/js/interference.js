@@ -41,6 +41,8 @@ StroopPractice =(nextPractice) =>()=>{
 	};
 	var configParams = {space:false,accFeedback:true,washout:true};
 	trialTimingParams.itiDuration = 500;
+	trialTimingParams.feedbackDur = 750;
+	
 	psiTurk.showPage("stages/stage.html");
 	var trial = new timedTrial(stimSet,[false],[0,0],trialTimingParams,'#m',callbacks,configParams);
 	showBoard()
