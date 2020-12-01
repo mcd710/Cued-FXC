@@ -65,12 +65,11 @@
     $("body").unbind("keydown").focus().keydown(continue_handler);
     function instruct_onclick() {
 
-        psiTurk.doInstructions(
-            instruction2Pages, // a list of pages you want to display in sequence
-            function() { currentview = new FruitInterferencePractice(); } // what you want to do when you are done with instructions
-        );
+psiTurk.doInstructions(
+    interferenceInstructions,StroopPractice('interval')
+);
 
-    }
+}
 
     function submit_onclick() {
 
