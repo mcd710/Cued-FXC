@@ -333,7 +333,7 @@ practiceBlocksGardenPointsStroop =(practiceType,nextPractice) =>()=>{
 			}
 			
 			if(numSign[interval.cueType]<0) score = Math.max(score,0);
-			$(tag).append($("<p></p>").attr({id:'intervalMsg'}).html("+ "+
+			$(tag).append($("<p></p>").attr({id:'intervalMsg'}).html(FeedbackHeading+
 					score.toFixed(0))); //0
 			$("#intervalMsg").css({"position": "absolute",
 			"left":"50%","top":"50%",
@@ -345,12 +345,16 @@ practiceBlocksGardenPointsStroop =(practiceType,nextPractice) =>()=>{
 	var cleanFeedback = function(){$("#intervalMsg").remove();}
 
 	var showScore = function(tag,cueType)
-	{
+	{ if (practiceType=="randomPractice" || practiceType=="performancePractice"||practiceType=="practiceAll"){
+		var tallyheadpractice="Performance: +"
+	}else{
+		var tallyheadpractice="Correct: +"
+	}
 		var showScoreInTag = function(counter){
 			$("#scoreCounter").remove();
 			var score = initialBonus[cueType] + numSign[cueType] * values[cueType] * counter[0];
 			if(numSign[cueType]<0) score = Math.max(score,0);
-			$(tag).append($("<p></p>").attr({id:'scoreCounter'}).text(FeedbackHeading +score.toFixed(0)));//0
+			$(tag).append($("<p></p>").attr({id:'scoreCounter'}).text( tallyheadpractice+score.toFixed(0)));//0
 			//$(tag).append($("<p></p>").attr({id:'scoreCounter'}).text(counter[0].toFixed(0)));
 			$("#scoreCounter").css({'margin-top':'0px', 'border':'dashed', 'background': 'white', 'font-size':"25px"});
 
