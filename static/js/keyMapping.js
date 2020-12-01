@@ -40,6 +40,7 @@ ColorMappingPractice = (nextPractice)=>()=>{
 	};
 	
 	trialTimingParams.itiDuration = 500;
+	trialTimingParams.feedbackDur = 750;
 
 	var trial = new timedTrial(stimSet,[false],[0,0],trialTimingParams,'#m',callbacks,configParams);
 	psiTurk.showPage("stages/stage.html");
