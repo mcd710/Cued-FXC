@@ -14,7 +14,7 @@ results = cur.fetchall()
 
 
 
-statuses = [3,4,5,7]
+statuses = [3,2,6]
 exclude = []
 data = []
 
