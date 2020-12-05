@@ -47,5 +47,5 @@ data = [record['trialdata'] for part in data for record in part]
 if len(data) > 0:
 	data_frame = pd.DataFrame(data)
 	data_frame = data_frame.loc[data_frame['phase'] == 'MainBlock',]
-	data_frame.drop(['action','indexOf','status','template','templates','viewTime'],axis=1,inplace=True)
+	data_frame.drop(['action','indexOf','template','templates','viewTime'],axis=1,inplace=True)
 	data_frame.to_csv(d1 + '/trialdata_' + sys.argv[2] + '_'+d1+'.csv',index=False)
