@@ -104,8 +104,8 @@ var trialTimingParams = {
 var intervalTimingParams = {
 	intervalDur:NaN,
 	itiDuration:NaN,
-	cueDuration:1500,
-	feedbackDur:1500,
+	cueDuration:750,
+	feedbackDur:1750,
 	isiDuration:NaN
 };
 
