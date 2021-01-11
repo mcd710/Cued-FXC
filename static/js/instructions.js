@@ -464,8 +464,10 @@ instructionsFXCICR = ()=>{
 	"FXCICRInstructions/instruct-KeyMapping2.html",
 	"FXCICRInstructions/instruct-KeyMappingReady.html",
 
-	
-		
+
+	"FXCICRInstructions/instruct-AutomaticityTest1.html",
+
+	"FXCICRInstructions/instruct-KeyMappingTest1.html",	
 
 	"FXCICRInstructions/instruct-interference1.html",
 	"FXCICRInstructions/instruct-interference2.html",
@@ -521,6 +523,18 @@ instructionsFXCICR = ()=>{
 	"FXCICRInstructions/instruct-KeyMapping2.html",
 	"FXCICRInstructions/instruct-KeyMappingReady.html"
 	];
+	const automaticityTestInstructions = [
+	"FXCICRInstructions/instruct-AutomaticityTest1.html",
+	"FXCICRInstructions/instruct-AutomaticityReady.html"
+	];
+	
+
+	const keyMappingTestInstructions = [
+		"FXCICRInstructions/instruct-KeyMappingTest1.html",
+		"FXCICRInstructions/instruct-KeyMappingReady.html"
+	
+	];
+	
 
 	const interferenceInstructions = [
 	"FXCICRInstructions/instruct-interference1.html",
@@ -610,6 +624,8 @@ instructionsFXCICR = ()=>{
 	return {pages,questionnaireStart,
 		AutomaticityInstructions,
 		keyMappingInstructions,
+		automaticityTestInstructions,
+		keyMappingTestInstructions,
 		interferenceInstructions,
 		intervalInstructions,
 		instructionEfficacyHighPages,

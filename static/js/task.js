@@ -29,6 +29,8 @@ const redirect_link = 'https://brown.co1.qualtrics.com/jfe/form/SV_0vvotfBWkUiy5
 const {pages,questionnaireStart,
 	AutomaticityInstructions,
 	keyMappingInstructions,
+	automaticityTestInstructions,
+	keyMappingTestInstructions,
 	interferenceInstructions,
 	intervalInstructions,
 	instructionEfficacyHighPages,
@@ -72,7 +74,7 @@ var htmlParams = {
 var intervalDurations = [6000,7000,8000,9000];
 var itiDurations = [1000,1500,2000];
 var isiDurations = [500,750];
-var test = false; // tells you if you would like to run a short version for debugging
+var test = true; // tells you if you would like to run a short version for debugging
 
 
 //set the appropriate trial numbers and test versus real mode 
@@ -80,6 +82,8 @@ var test = false; // tells you if you would like to run a short version for debu
 
 const{numColorPracticeTrials, 	//set the number of keymapping practice  trials
 	numStroopPracticeTrials, 	//set the number of interference practice trials
+	numautomaticityTest,			// set number of automaticity test trials with no feedback
+	numcolorTest, 					// set the number of key mapping with no feedback
 	numIntervalTrials, 			//set the number of intervals 
 	numIntervalPractice, 		//set the number of intervals to practice
 	numGainLossPractice, 		//set the number of gains to practice
@@ -168,18 +172,27 @@ var blockPartGarden = function(practiceNext){
 		case 'questionnaires': 
 		   	practiceNext = 'keymapping'
 		    psiTurk.doInstructions(questionnaireStart);
-
 			break;
 		case 'automaticity': 
 			practiceNext = 'keymapping'
 		 	psiTurk.doInstructions(AutomaticityInstructions,WordAutomaticityPractice('keymapping'));
 		 	break;
 
-		  case 'keymapping': 
-		   	practiceNext = 'interference'
-		    psiTurk.doInstructions(keyMappingInstructions,ColorMappingPractice('interference'));
+		case 'keymapping': 
+		   	practiceNext = 'automaticityTest'
+		    psiTurk.doInstructions(keyMappingInstructions,ColorMappingPractice('automaticityTest'));
 
-		    break;
+			break;
+		case 'automaticityTest': 
+			practiceNext = 'keymappingTest'
+		 	psiTurk.doInstructions(automaticityTestInstructions,WordAutomaticityTest('keymappingTest'));
+		 	break;
+
+		case 'keymappingTest': 
+			practiceNext = 'interference'
+			psiTurk.doInstructions(keyMappingTestInstructions,ColorMappingTest('interference'));
+
+			 break;
 		  case 'interference':
 		    practiceNext = 'interval'
 		    psiTurk.doInstructions(interferenceInstructions,StroopPractice('interval'));

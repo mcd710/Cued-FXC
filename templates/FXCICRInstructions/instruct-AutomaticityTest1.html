@@ -1,0 +1,47 @@
+<div id="container-instructions">
+
+	<h1>Instructions</h1>
+
+	<hr />
+
+	<div class="instructions well">
+
+        <p>
+            <font size=4>
+            Now we will make sure you remember what you just learned
+            <br><br>
+            For each color you should press the key that corresponds to that color word.
+            <br><br>
+            Now after each response, you will NOT be told whether you were correct or incorrect.
+            <br><br>
+            </font>
+            <img id="AutomaticityMapping", style="height: 100px; width: 500px;">
+
+        </p>
+
+        <script type="text/javascript">
+            document.getElementById("AutomaticityMapping").src = '{{ server_location }} static/images/cues/StoryEfficacyReward/AutomaticityMapping.png'
+
+            $("body").unbind("keydown").focus().keydown(continue_handler);
+        </script>
+
+    </div>
+
+    <hr />
+
+
+    <div class="instructionsnav">
+        <div class="row">
+            <div class="col-xs-2">
+            </div>
+            <div class="col-xs-8">
+                <button type="button" id="next" value="next" class="btn btn-primary btn-lg center-block continue">
+                    Continue <span class="glyphicon glyphicon-arrow-right"></span>
+                </button>
+            </div>
+            <div class="col-xs-2">
+            </div>
+        </div>
+    </div>
+
+</div>
