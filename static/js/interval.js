@@ -58,7 +58,8 @@ function Interval(timingParams,htmlParams,cueParams,
 
 }
 
-Interval.prototype.initiate = function(){
+Interval.prototype.initiate =
+ function(){
 	this.cleanAll();
 	this.timer[0] = false;
 	this.counter[0] = 0;
@@ -107,7 +108,7 @@ Interval.prototype.endByCount = function(){
 
 Interval.prototype.cleanAll = function(){
 	$("#fixation,#cueImg,#hint").remove();
-	this.cleanTally();
+	//this.cleanTally();
 }
 
 
@@ -185,6 +186,7 @@ Interval.prototype.intervalFeedback = function(){
 
 Interval.prototype.postFeedbackAction = function(){
 	this.cleanFeedback();
+	this.cleanTally(); // new testing leaving up 
 	this.moneyEarned = this.calculateBonus(this);
 	if(!(this.trial==null)) var record = this.trial.recordResponse(0);
 	else var record = {};

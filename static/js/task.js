@@ -260,7 +260,7 @@ var blockPartGarden = function(practiceNext){
 
 // what to start the experiment with 
 $(window).load( function(){
-		blockPartGarden('automaticity')
+		blockPartGarden('interval')
  	}
 );
 
