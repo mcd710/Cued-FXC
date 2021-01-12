@@ -546,7 +546,7 @@ MainPartGardenGroupPoints =(blockType,cueSubset,nextPractice) =>()=>{
 					console.log("scoreDetermined is "+ scoreDetermined)
 					 Record.phase = "MainBlock";
 					 Record.PLATFORM = PLATFORM;
-					 Record.order = mycondition;
+					 Record.order = game;
 					 Record.sessionNum = sessionID;
 					 Record.blockNum = blockID;
 					 Record.blockType = blockType;

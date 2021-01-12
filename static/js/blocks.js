@@ -381,3 +381,58 @@ blocksEfficacyReward= (mycondition)=> {
 
 
 }
+
+blocksEfficacyRewardMDD= (game)=> {
+	
+	var blockseq1 =['performanceLow','randomHigh'];
+	var blockseq2 = ['performanceHigh','randomLow'];
+
+	const highValue = 10;
+	const lowValue = 1;
+	const values = {random_low:lowValue,random_high:highValue,performance_low:lowValue,performance_high:highValue};
+	const heading = {random_low:'Random: + ',random_high: 'Random: + ',performance_low:'Random: + ', performance_high:'Random: + '};
+	const tallyHeading = {random_low:'Performance: + ',random_high: 'Performance: + ',performance_low:'Performance: + ', performance_high:'Performance: + '};
+	const numSign = {random_low:1,random_high:1,performance_low:1,performance_high:1};
+	const initialBonus = {random_low:0,random_high:0,performance_low:0,performance_high:0};
+	var breakForBlockType = {randomLow:BreakRandomLowPage,performanceLow:BreakPerformanceLowPage,
+	randomHigh:BreakRandomHighPage,performanceHigh:BreakPerformanceHighPage};
+
+
+	if(game==1)
+	{
+		
+		const blockSequence = blockseq1.concat(blockseq2);
+
+		return {
+			blockSequence,
+			highValue,
+			lowValue,
+			values,
+			heading,
+			tallyHeading,
+			numSign,
+			initialBonus,
+			breakForBlockType
+		}
+	}
+	else
+	{
+		
+		const blockSequence = blockseq2.concat(blockseq1);
+
+		return {
+			blockSequence,
+			highValue,
+			lowValue,
+			values,
+			heading,
+			tallyHeading,
+			numSign,
+			initialBonus,
+			breakForBlockType
+		}
+	}
+
+
+
+}

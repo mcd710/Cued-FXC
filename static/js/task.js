@@ -20,9 +20,14 @@ var avgRewardWindowLength=10;
 const PLATFORM = getUrlVars()["PLATFORM"];
 console.log(PLATFORM)
 
+const game = getUrlVars()["game"];
+console.log(game)
+
 const gardenImageAll= '/static/images/BackgroundFarm.png'
 
 const redirect_link = 'https://brown.co1.qualtrics.com/jfe/form/SV_0vvotfBWkUiy5V3'
+
+var finalBonus =NaN
 
 
 //set the appropriate instructions by calling a function from the instructions.js file
@@ -134,7 +139,7 @@ const {blockSequence, // order of blocks= all gain
 	numSign, // numSign  = 1 
 	initialBonus, // initialBonus = 0 
 	breakForBlockType
-} = blocksEfficacyReward(mycondition); 
+} = blocksEfficacyRewardMDD(game); 
 
 var practiceavgRewardWindow=[];
 var practiceavgRewardWindowLength=avgRewardWindowLength;
@@ -160,7 +165,7 @@ var blockPartGarden = function(practiceNext){
 
 	// what to do at the end of the task
 	if(blockID == numBlock) {
-		endRedirectFXCICR();
+		endRedirectFXCICRPrinceton();
 		return;
 	}
 
@@ -233,7 +238,7 @@ var blockPartGarden = function(practiceNext){
 			avgRewardWindow=avgRewardWindow.concat(practiceavgRewardWindow)
 			var blockType = blockSequence.shift();
 			var cueSubset = cues[blockType];
-			if (mycondition==1){
+			if (game==1){
 				psiTurk.doInstructions(startGameInstructionsOrder1,MainPartGardenGroupPointsStroopFXC(blockType,cueSubset,'MainTask'))
 
 			}else{
@@ -260,7 +265,7 @@ var blockPartGarden = function(practiceNext){
 
 // what to start the experiment with 
 $(window).load( function(){
-		blockPartGarden('interval')
+		blockPartGarden('automaticity')
  	}
 );
 

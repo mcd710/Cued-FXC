@@ -117,7 +117,7 @@
 									    return vars;
 									}
 
-
+									const game= getUrlVars()["game"];
 									const testGroup = getUrlVars()["group"];
 							    	const PLATFORM= getUrlVars()["PLATFORM"];
 									
@@ -125,7 +125,7 @@
 									console.log("PLATFORM is "+ PLATFORM)
 
 									function openwindow() {
-							    		popup = window.open(`{{ server_location }}/exp?hitId={{ hitid }}&assignmentId={{ assignmentid }}&workerId={{ workerid }}&group=${testGroup}&PLATFORM=${PLATFORM}`,'Popup','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=no,width='+1024+',height='+768+'');
+							    		popup = window.open(`{{ server_location }}/exp?hitId={{ hitid }}&assignmentId={{ assignmentid }}&workerId={{ workerid }}&group=${testGroup}&PLATFORM=${PLATFORM}&game=${game}`,'Popup','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=no,width='+1024+',height='+768+'');
 							  		}
 							    </script>
 							    <div class="alert alert-warning">

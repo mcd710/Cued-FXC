@@ -501,7 +501,8 @@ instructionsFXCICR = ()=>{
 	"FXCICRInstructions/instruct-ready.html",
 
 	"stages/stage.html",
-	"postTask.html"
+	"postTask.html",
+	"bonusDisplay.html"
 	];
 
 	psiTurk.preloadPages(pages);
