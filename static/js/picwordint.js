@@ -56,7 +56,7 @@ const possibleStimsInCongruent= [
 
  	//always show the image in images[1] and corresponding paths[1] but with other words on top
 	{word:words[0], image:images[1], congruency:"incongruent", path:paths[1],fontColor:fontColors},
-	{word:words[2], image:images[1], congruency:"congruent", path:paths[1],fontColor:fontColors},
+	{word:words[2], image:images[1], congruency:"incongruent", path:paths[1],fontColor:fontColors},
 	{word:words[3], image:images[1], congruency:"incongruent", path:paths[1],fontColor:fontColors},
  	
  	//always show the image in images[2] and corresponding paths[2] but with other words on top
