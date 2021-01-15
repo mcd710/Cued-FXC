@@ -467,7 +467,7 @@ instructionsFXCICR = ()=>{
 
 	"FXCICRInstructions/instruct-AutomaticityTest1.html",
 
-	"FXCICRInstructions/instruct-KeyMappingTest1.html",	
+	"FXCICRInstructions/instruct-KeyMappingTest.html",	
 
 	"FXCICRInstructions/instruct-interference1.html",
 	"FXCICRInstructions/instruct-interference2.html",
@@ -531,7 +531,7 @@ instructionsFXCICR = ()=>{
 	
 
 	const keyMappingTestInstructions = [
-		"FXCICRInstructions/instruct-KeyMappingTest1.html",
+		"FXCICRInstructions/instruct-KeyMappingTest.html",
 		"FXCICRInstructions/instruct-KeyMappingReady.html"
 	
 	];
