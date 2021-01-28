@@ -20,12 +20,12 @@ var avgRewardWindowLength=10;
 const PLATFORM = getUrlVars()["PLATFORM"];
 console.log(PLATFORM)
 
-const game = getUrlVars()["game"];
-console.log(game)
-
+//const game = getUrlVars()["game"];
+//console.log(game)
+//
 const gardenImageAll= '/static/images/BackgroundFarm.png'
 
-const redirect_link = 'https://brown.co1.qualtrics.com/jfe/form/SV_0vvotfBWkUiy5V3'
+const redirect_link = 'https://brown.co1.qualtrics.com/jfe/form/SV_2adEDYknu3WchEO'
 
 var finalBonus =NaN
 
@@ -139,7 +139,7 @@ const {blockSequence, // order of blocks= all gain
 	numSign, // numSign  = 1 
 	initialBonus, // initialBonus = 0 
 	breakForBlockType
-} = blocksEfficacyRewardMDD(game); 
+} = blocksEfficacyRewardMDDOnline(game); 
 
 var practiceavgRewardWindow=[];
 var practiceavgRewardWindowLength=avgRewardWindowLength;
@@ -165,7 +165,7 @@ var blockPartGarden = function(practiceNext){
 
 	// what to do at the end of the task
 	if(blockID == numBlock) {
-		endRedirectFXCICRPrinceton();
+		endRedirectFXCICR();
 		return;
 	}
 
