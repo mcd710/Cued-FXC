@@ -139,7 +139,7 @@ const {blockSequence, // order of blocks= all gain
 	numSign, // numSign  = 1 
 	initialBonus, // initialBonus = 0 
 	breakForBlockType
-} = blocksEfficacyRewardMDDOnline(game); 
+} = blocksEfficacyRewardMDDOnline(mycondition); 
 
 var practiceavgRewardWindow=[];
 var practiceavgRewardWindowLength=avgRewardWindowLength;
