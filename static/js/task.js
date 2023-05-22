@@ -174,24 +174,17 @@ var blockPartGarden = function(practiceNext){
 
 		switch(practiceNext) {
 
-		case 'questionnaires': 
-		   	practiceNext = 'keymapping'
-		    psiTurk.doInstructions(questionnaireStart);
-			break;
-		case 'automaticity': 
-			practiceNext = 'keymapping'
-		 	psiTurk.doInstructions(AutomaticityInstructions,WordAutomaticityPractice('keymapping'));
-		 	break;
+		case 'Untimedkeymapping': 
+			practiceNext = 'timedKeymapping'
+			psiTurk.doInstructions(keyMappingInstructions,ColorMappingPractice('keymappingTest'));
 
-		case 'keymapping': 
-		   	practiceNext = 'automaticityTest'
-		    psiTurk.doInstructions(keyMappingInstructions,ColorMappingPractice('automaticityTest'));
+		break;
+
+		case 'timedKeymapping': 
+		   	practiceNext = 'keymappingTest'
+		    psiTurk.doInstructions(keyMappingInstructions,ColorMappingPractice('keymappingTest'));
 
 			break;
-		case 'automaticityTest': 
-			practiceNext = 'keymappingTest'
-		 	psiTurk.doInstructions(automaticityTestInstructions,WordAutomaticityTest('keymappingTest'));
-		 	break;
 
 		case 'keymappingTest': 
 			practiceNext = 'interference'
