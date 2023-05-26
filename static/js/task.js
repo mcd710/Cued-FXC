@@ -177,7 +177,7 @@ var blockPartGarden = function(practiceNext){
 
 		case 'Untimedkeymapping': 
 			practiceNext = 'timedKeymapping'
-			psiTurk.doInstructions(keyMappingInstructions,ColorMappingPractice('keymappingTest'));
+			psiTurk.doInstructions(keyMappingInstructions,unTimedColorMappingPractice('keymappingTest'));
 
 		break;
 

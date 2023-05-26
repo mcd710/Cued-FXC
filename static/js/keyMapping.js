@@ -3,6 +3,52 @@
 
 
 
+
+unTimedColorMappingPractice = (nextPractice)=>()=>{
+
+	var configParams = {space:false,accFeedback:true,washout:true};
+	var stimSet = _.shuffle(repmat(possibleStimsNeutral,Math.ceil(numColorPracticeTrials/possibleStimsNeutral.length)));
+	
+	var writeRecord = function(Record){
+
+	 	Record.phase = "unTimedColorMappingPractice";
+	 	Record.sessionNum = NaN;
+	 	Record.blockNum = NaN;
+	 	Record.intervalNum = NaN;
+	 	Record.intervalType = NaN;
+	 	Record.intervalLength = NaN;
+	 	Record.moneyEarned = NaN;
+	 	psiTurk.recordTrialData(Record);
+	};
+
+	var nextAction = function(trial){
+		if(trial.stimSet.length > 0){
+			trial.stimSet = [possibleStimsNeutral[randi(0,possibleStimsNeutral.length-1)]];
+			trial.initiation();
+			return;
+		}
+		//what to do after the Color mapping practice
+		blockPartGarden(nextPractice);
+	}
+
+	var callbacks = {
+		endOfSetCallback:nextAction,
+		tallyCallback:0,
+		recordStimCallback:recordStimStroop,
+		completeRecordCallback:writeRecord
+	};
+	
+	trialTimingParams.itiDuration = 500;
+	trialTimingParams.feedbackDur = 750;
+
+	var trial = new Trial(stimSet,[false],[0,0],trialTimingParams,'#m',callbacks,configParams);
+	psiTurk.showPage("stages/stage.html");
+	showBoard()
+	$("body").unbind("keydown").focus().keydown(trial.responseListener.bind(trial));
+	trial.initiation();
+}
+
+
 ColorMappingPractice = (nextPractice)=>()=>{
 
 	//console.log('inside the ColorMappingPractice')
