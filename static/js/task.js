@@ -14,8 +14,8 @@ var psiTurk = new PsiTurk(uniqueId, adServerLoc, mode);
 var mycondition = condition;  // these two variables are passed by the psiturk server process
 var mycounterbalance = counterbalance;  // they tell you which condition you have been assigned to
 
-var avgRewardWindow=[];
-var avgRewardWindowLength=10;
+var avgRewardWindow=[]; // array to store the past 10 reward rates from high efficacy intervals
+var avgRewardWindowLength=10; /// how long to let the array get 
 
 const PLATFORM = getUrlVars()["PLATFORM"];
 console.log(PLATFORM)
@@ -25,6 +25,7 @@ console.log(PLATFORM)
 //
 const gardenImageAll= '/static/images/BackgroundFarm.png'
 
+// where to go at the end of the task
 const redirect_link = 'https://brown.co1.qualtrics.com/jfe/form/SV_2adEDYknu3WchEO'
 
 var finalBonus =NaN
@@ -69,16 +70,16 @@ const {paths,
 psiTurk.preloadImages(paths);
 
 var htmlParams = {
-	title:'#title', // where to display the
+	title:'#title', // where to display the title
 	stim:'#m', // where to display the image
 	tally:'#bm', // where to display the counter
 	board:'#background' // for the garden task where to display the board
 };
 
 
-var intervalDurations = [6000,7000,8000,9000];
-var itiDurations = [1000,1500,2000];
-var isiDurations = [500,750];
+var intervalDurations = [6000,7000,8000,9000]; /// how long the intervals should be 
+var itiDurations = [1000,1500,2000];  /// how long the itis  should be 
+var isiDurations = [500,750]; /// how long the isis  should be 
 var test = false; // tells you if you would like to run a short version for debugging
 
 

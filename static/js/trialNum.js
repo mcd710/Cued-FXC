@@ -42,8 +42,8 @@ setTrialNumByMode= (mode)=>{
 		const numIntervalPractice = 4;
 		const numGainLossPractice = 4;
 		
-		const numBlock = 4;
-		const numIntervalPerBlock = 16;
+		const numBlock = 8;
+		const numIntervalPerBlock = 25;
 		const selectPerBlock = 2;
 		const initialFundForLoss = 1200;
 
