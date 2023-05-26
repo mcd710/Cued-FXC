@@ -511,23 +511,25 @@ instructionsFXCICR = ()=>{
 	"gardenLFXCInstructions/instruct-qualtrics.html",
 	];
 
-	const AutomaticityInstructions = [
-	"FXCICRInstructions/instruct-Welcome.html",
-	"FXCICRInstructions/instruct-Automaticity1.html",
-	"FXCICRInstructions/instruct-Automaticity2.html",
-	"FXCICRInstructions/instruct-AutomaticityReady.html"
-	];
-
+	const UntimedkeyMappingInstructions = [
+		"FXCICRInstructions/instruct-Welcome.html",
+		"FXCICRInstructions/instruct-Automaticity1.html",
+		"FXCICRInstructions/instruct-Automaticity2.html",
+		"FXCICRInstructions/instruct-AutomaticityReady.html"
+		];
+	
+		const UntimedKeyMappingPrompt = [
+			
+			"FXCICRInstructions/instruct-UntimedAutomaticity.html"
+			];
+		
 
 	const keyMappingInstructions = [
 	"FXCICRInstructions/instruct-KeyMapping1.html",
 	"FXCICRInstructions/instruct-KeyMapping2.html",
 	"FXCICRInstructions/instruct-KeyMappingReady.html"
 	];
-	const automaticityTestInstructions = [
-	"FXCICRInstructions/instruct-AutomaticityTest1.html",
-	"FXCICRInstructions/instruct-AutomaticityReady.html"
-	];
+	
 	
 
 	const keyMappingTestInstructions = [
