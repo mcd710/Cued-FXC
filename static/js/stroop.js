@@ -71,7 +71,9 @@ console.log("inside strop and possibleStimsNeutral is" + possibleStimsNeutral)
 
 var responses = ["red", "yellow", "green", "blue"];
 
-var responseKeyCodes = [68, 70, 74, 75];
+//var responseKeyCodes = [68, 70, 74, 75];
+var responseKeyCodes = [83, 68, 75, 76]; //s,d,k,l
+
 
 var spaceKey = 32;
 
