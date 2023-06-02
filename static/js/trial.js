@@ -126,7 +126,7 @@ Trial.prototype.showStimuli = function(){
 	var element_stimuli = $("<img></img>").attr({src:this.stimPath,id:'stimuli'});
 	//var element_word = $("<p></p>").attr({id:'stimuli'}).text(this.stimWord);
 	//element_word.css({'font-size':70, 'color': this.stimFontColor, 'fontWeight': 600,'webkitTextStrokeWidth':"medium", 'webkitTextStrokeColor':"black"});
-	addElement(element_stimuli,this.htmlTag);
+	addElement(element_stimuli,this.htmlTag,true);
 	//addElement(element_word,this.htmlTag);
 	this.stimon = new Date().getTime();
 	this.listening = true;
