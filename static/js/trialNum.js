@@ -39,7 +39,7 @@ setTrialNumByMode= (mode)=>{
 		const numcolorTest =16;
 
 		const numIntervalTrials = 30;
-		const numIntervalPractice = 4;
+		const numIntervalPractice = 2;
 		const numGainLossPractice = 4;
 		
 		const numBlock = 8;
