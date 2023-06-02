@@ -37,7 +37,7 @@ function closeFullscreen() {
 }
 
 /*Add element to the position and specify if we want to centralize the element*/
-function addElement(element,position,center=false)
+function addElement(element,position,center=true)
 {
 
   if(center) {
