@@ -32,10 +32,10 @@ var finalBonus =NaN
 
 
 //set the appropriate instructions by calling a function from the instructions.js file
-const {pages,questionnaireStart,
-	AutomaticityInstructions,
-	keyMappingInstructions,
-	automaticityTestInstructions,
+const {pages,
+	keyMappingUntimedInstructions,
+	KeyMappingForwardPrompt,
+	keyMappingTimedInstructions,
 	keyMappingTestInstructions,
 	interferenceInstructions,
 	intervalInstructions,
@@ -176,14 +176,18 @@ var blockPartGarden = function(practiceNext){
 		switch(practiceNext) {
 
 		case 'Untimedkeymapping': 
-			practiceNext = 'timedKeymapping'
-			psiTurk.doInstructions(keyMappingInstructions,unTimedColorMappingPractice('keymappingTest'));
+			practiceNext = 'keyMappingForward'
+			psiTurk.doInstructions(keyMappingUntimedInstructions,unTimedColorMappingPractice('keyMappingForward'));
 
 		break;
+		case 'keyMappingForward': 
+			practiceNext = 'timedKeymapping'
+			psiTurk.doInstructions(KeyMappingForwardPrompt,blockPartGarden("timedKeymapping"));
+			break;
 
 		case 'timedKeymapping': 
 		   	practiceNext = 'keymappingTest'
-		    psiTurk.doInstructions(keyMappingInstructions,ColorMappingPractice('keymappingTest'));
+		    psiTurk.doInstructions(keyMappingTimedInstructions,ColorMappingPractice('keymappingTest'));
 
 			break;
 

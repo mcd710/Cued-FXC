@@ -1,0 +1,52 @@
+<div id="container-instructions">
+
+   <h1>Instructions</h1>
+
+   <hr />
+
+   <div class="instructions well">
+
+       <p>
+           Now you will do the exact same thing but this time it will be <strong>timed</strong> and you will have many more trials.
+           <br></br>
+           If you would like to do more untimed pratice hit the Return to Untimed. You will see the instructions again and have the oppertunity to do more untimed practice.
+           <br></br>
+           If you would like to continue to the timed practice hit Continue. 
+       </p>
+
+       
+   </div>
+
+<hr />
+
+<div class="instructionsnav">
+   <div class="row" id="buttons">
+       <button type="button" id="instructButton" class="btn btn-primary btn-lg" onclick="return instruct_onclick()">
+                   Return to Untimed
+           </button>
+           <button type="button" id="submitButton" class="btn btn-primary btn-lg pull-right" onclick="return submit_onclick()">
+                   Continue
+           </button>
+   </div>
+</div>
+
+</div>
+
+
+<script>
+   $("body").unbind("keydown").focus().keydown(continue_handler);
+   function instruct_onclick() {
+
+psiTurk.doInstructions(
+   UntimedAutomaticityInstructions,UnTimedWordAutomaticityPractice('automaticityForward')
+);
+
+}
+
+   function submit_onclick() {
+
+       blockPartGarden("automaticity")
+   }
+
+
+</script>

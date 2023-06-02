@@ -1,0 +1,77 @@
+<div id="container-instructions">
+
+	<h1>Instructions</h1>
+
+	<hr />
+
+	<div class="instructions well">
+
+        <p>
+            <font size=4>
+                Let's practice! 
+                <br><br>
+                When you see a word on the screen press the button for that color.
+                <br><br>
+                Now you need to respond while the word is on the screen, which will only be 2 seconds.
+                <br><br>
+                After each response, you will be given feedback about your performance. Do your best to pay attention to the task. If you accidentally hold down a key, you will get a brief time out.
+
+            </font>
+                         <table class='table table-bordered table-striped text-center'>
+                <tr>
+                    <td style="padding:10px"><p><font size=5>RED</font></p></td>
+                    <td style="padding:10px"><p><font size=5>YELLOW</font></p></td>
+                    <td style="padding:10px"><p><font size=5>GREE</font></p></td>
+                    <td style="padding:10px"><p><font size=5>BLUE</font></p></td>
+                  </tr>
+                
+                 <tr>
+                   <td style="padding:10px"><img id="RedS" height="200"></td>
+                   <td style="padding:10px"><img id="YellowD" height="200"></td> 
+                   <td style="padding:10px"><img id="GreenK" height="200"></td> 
+                   <td style="padding:10px"><img id="BlueL" height="200"></td> 
+                 </tr>
+                 <tr>
+                    <td style="padding:10px"><p><font size=5> S</font></p></td>
+                    <td style="padding:10px"><p><font size=5> D </font></p></td>
+                    <td style="padding:10px"><p><font size=5> K</font></p></td>
+                    <td style="padding:10px"><p><font size=5> L</font></p></td>
+                  </tr>
+              
+               
+            </table>
+
+
+        </p>
+
+        <script type="text/javascript">
+            console.log("inside instruction 1FB and paths are" +images)
+                    console.log("inside instruction 1FB  and paths are" +paths)
+                    document.getElementById("RedS").src = paths[0];
+                    document.getElementById("YellowD").src = paths[1];
+                    document.getElementById("GreenK").src = paths[2];
+                    document.getElementById("BlueL").src = paths[3];
+
+            $("body").unbind("keydown").focus().keydown(continue_handler);
+        </script>
+
+    </div>
+
+    <hr />
+
+
+    <div class="instructionsnav">
+        <div class="row">
+            <div class="col-xs-2">
+            </div>
+            <div class="col-xs-8">
+                <button type="button" id="next" value="next" class="btn btn-primary btn-lg center-block continue">
+                    Continue <span class="glyphicon glyphicon-arrow-right"></span>
+                </button>
+            </div>
+            <div class="col-xs-2">
+            </div>
+        </div>
+    </div>
+
+</div>
