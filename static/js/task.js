@@ -187,11 +187,12 @@ var blockPartGarden = function(practiceNext){
 			psiTurk.doInstructions(keyMappingUntimedInstructions,unTimedColorMappingPractice('keyMappingForward'));
 
 		break;
+
 		case 'keyMappingForward': 
 		gardenImage=gardenImageAll
 
 			practiceNext = 'timedKeymapping'
-			psiTurk.doInstructions(KeyMappingForwardPrompt,blockPartGarden("timedKeymapping"));
+			psiTurk.doInstructions(KeyMappingForwardPrompt,blockPartGarden());
 			break;
 
 		case 'timedKeymapping': 
