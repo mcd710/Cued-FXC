@@ -22,7 +22,7 @@ StroopPractice =(nextPractice) =>()=>{
 	};
 
 	var nextAction = function(trial){
-		if(trial.counter[0] < 5){
+		if(trial.stimSet.length > 0){
 			var tempset = possibleStimsCongruent.concat(possibleStimsInCongruent);
 			trial.stimSet = [tempset[randi(0,tempset.length-1)]];
 			trial.initiation();
