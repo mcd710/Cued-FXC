@@ -182,52 +182,72 @@ var blockPartGarden = function(practiceNext){
 		switch(practiceNext) {
 
 		case 'Untimedkeymapping': 
+		gardenImage=gardenImageAll
+
 			practiceNext = 'keyMappingForward'
 			psiTurk.doInstructions(keyMappingUntimedInstructions,unTimedColorMappingPractice('keyMappingForward'));
 
 		break;
 		case 'keyMappingForward': 
+		gardenImage=gardenImageAll
+
 			practiceNext = 'timedKeymapping'
 			psiTurk.doInstructions(KeyMappingForwardPrompt,blockPartGarden("timedKeymapping"));
 			break;
 
 		case 'timedKeymapping': 
+		gardenImage=gardenImageAll
+
 		   	practiceNext = 'keymappingTest'
 		    psiTurk.doInstructions(keyMappingTimedInstructions,ColorMappingPractice('keymappingTest'));
 
 			break;
 
 		case 'keymappingTest': 
+		gardenImage=gardenImageAll
+
 			practiceNext = 'interference'
 			psiTurk.doInstructions(keyMappingTestInstructions,ColorMappingTest('interference'));
 
 			 break;
 		  case 'interference':
+			gardenImage=gardenImageAll
+
 		    practiceNext = 'interval'
 		    psiTurk.doInstructions(interferenceInstructions,StroopPractice('interval'));
 
 		    break;
 		  case 'interval':
+			gardenImage=gardenImageAll
+
 		    practiceNext = 'performancePractice'
 		    psiTurk.doInstructions(intervalInstructions,intervalPracticeGardenStroop('performancePractice'));
 
 		    break;
 		  case 'performancePractice':
+			gardenImage=gardenImageAll
+
 		    practiceNext = 'randomPractice' 
 		    psiTurk.doInstructions(instructionEfficacyHighPages,practiceBlocksGardenPointsStroop('performancePractice','randomPractice'));
 
 			break;
 		 case 'randomPractice':
+			gardenImage=gardenImageAll
+
 		    practiceNext = 'practiceAll' 
 		    psiTurk.doInstructions(instructionEfficacyLowPages,practiceBlocksGardenPointsStroop('randomPractice','practiceAll'));
 
 			break;
 		case 'practiceAll':
+			gardenImage=gardenImageAll
+
 			practiceNext = 'mainStart' 
 			psiTurk.doInstructions(instructionEfficacyALLPages,practiceBlocksGardenPointsStroop('practiceAll','mainStart'));
 	
 			break;
 		  case 'mainStart':
+			gardenImage=gardenImageAll
+
 		  	practiceNext = 'MainTask'
 			blockID++;
 			if (practiceavgRewardWindow.length!=avgRewardWindowLength){
@@ -256,6 +276,8 @@ var blockPartGarden = function(practiceNext){
 		    
 		    break;
 		  case 'MainTask':
+			gardenImage=gardenImageAll
+
 		  	blockID++;
 		  	practiceNext = 'MainTask'
 		  	var blockType = blockSequence.shift();
