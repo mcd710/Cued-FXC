@@ -74,7 +74,7 @@ ColorMappingPractice = (nextPractice)=>()=>{
 	};
 
 	var nextAction = function(trial){
-		if(trial.counter[0] < 5){
+		if(trial.stimSet.length > 0){
 			trial.stimSet = [possibleStimsNeutral[randi(0,possibleStimsNeutral.length-1)]];
 			trial.initiation();
 			return;
