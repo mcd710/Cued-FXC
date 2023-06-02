@@ -34,8 +34,7 @@ setTrialNumByMode= (mode)=>{
 	{
 		console.log("inside realmode")
 		const numColorPracticeTrials = 32;
-		const numStroopPracticeTrials = 60;
-		const numautomaticityTest =16;
+		const numStroopPracticeTrials = 48;
 		const numcolorTest =16;
 
 		const numIntervalTrials = 30;
@@ -50,7 +49,6 @@ setTrialNumByMode= (mode)=>{
 		return{
 		numColorPracticeTrials,
 		numStroopPracticeTrials,
-		numautomaticityTest,
 		numcolorTest,
 		numIntervalTrials, 
 		numIntervalPractice,
