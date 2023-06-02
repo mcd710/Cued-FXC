@@ -208,7 +208,7 @@ intervalPracticeGardenStroop=(nextPractice) =>()=>{
 	var Loop = function(){
 		intervalNum++;
 		console.log('interval number ' + intervalNum)
-		if(intervalNum > numIntervalPractice & (qualified|intervalNum>6)) {
+		if(intervalNum > numIntervalPractice & (qualified|intervalNum>numIntervalPractice)) {
 			blockPartGarden(nextPractice);
 		}
 		else{

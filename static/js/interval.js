@@ -108,7 +108,7 @@ Interval.prototype.endByCount = function(){
 
 Interval.prototype.cleanAll = function(){
 	$("#fixation,#cueImg,#hint").remove();
-	//this.cleanTally();
+	this.cleanTally();
 }
 
 
