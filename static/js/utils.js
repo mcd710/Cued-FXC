@@ -37,16 +37,53 @@ function closeFullscreen() {
 }
 
 /*Add element to the position and specify if we want to centralize the element*/
-function addElement(element,position,center=true)
+function addElement(element,position,center=false)
 {
- // console.log("inside addElement")
- // console.log("position is" + position)
-  //element.css({"grid-row":"2","grid-column":"2"})
-  if(center) element.css({"position": "absolute",
-    "left":"50%","top":"50%",
+
+  if(center) {
+   if (position == '#t'){
+     element.css({"position": "absolute",
+    "left":"50%","top":"25%",
     "transform":"translate(-50%, -50%)"});
+    }else if( position == '#bm'){
+      element.css({"position": "absolute",
+      "left":"50%",
+      "transform":"translate(-50%, -50%)"});
+
+    }else{
+        element.css({"position": "absolute",
+    "left":"50%","top":"55%",
+    "transform":"translate(-50%, -50%)"});
+
+    }
+}
+
   $(position).append(element);
 }
+
+
+
+function addElementByGrid(element,rowStart,rowEnd,colStart,colEnd,border=false)
+{
+  //element.css({"grid-row":"2","grid-column":"2"})
+  if(border==true){
+    element.css({'grid-row-start':rowStart.toFixed(0),
+      'grid-row-end':rowEnd.toFixed(0),
+      'grid-column-start':colStart.toFixed(0),
+      'grid-column-end':colEnd.toFixed(0),
+      'text-align':'center',
+      'border': 'dashed',
+      'border-color': 'black'});
+  }else{
+    element.css({'grid-row-start':rowStart.toFixed(0),
+    'grid-row-end':rowEnd.toFixed(0),
+    'grid-column-start':colStart.toFixed(0),
+    'grid-column-end':colEnd.toFixed(0),
+    'text-align':'center'});
+  }
+  $("#experiment").append(element);
+}
+
 
 
 

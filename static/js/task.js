@@ -23,6 +23,9 @@ console.log(PLATFORM)
 const game = getUrlVars()["game"];
 console.log(game)
 
+var isTrialbased = false; 
+
+
 const gardenImageAll= '/static/images/BackgroundFarm.png'
 
 // where to go at the end of the task
@@ -88,7 +91,8 @@ var test = false; // tells you if you would like to run a short version for debu
 //set the appropriate trial numbers and test versus real mode 
 //by calling a function from the trialNum.js file
 
-const{numColorPracticeTrials, 	//set the number of keymapping practice  trials
+const{numUntimedColorPracticeTrials, // number of untimed practice trials
+	numColorPracticeTrials, 	//set the number of keymapping practice  trials
 	numStroopPracticeTrials, 	//set the number of interference practice trials
 	numautomaticityTest,			// set number of automaticity test trials with no feedback
 	numcolorTest, 					// set the number of key mapping with no feedback
@@ -283,10 +287,13 @@ $(window).load( function(){
 *            OTHER FUNCTIONS             *
 ******************************************/
 
-showBoard = function(){
+showBoard = function(rowstart,rowend,columnstart,columnend){
 	//console.log("inside showBoard")
-	var element_stimuli = $("<img></img>").attr({src: "/static/images/Farmboard.png",id:'farmboard'});
-	addElement(element_stimuli,'#background',center=true);
+	var element_stimul1 = $("<p></p>").attr({id:'farmboard'});
+	element_stimul1.css({ "height": "100%", "width": "100%","border":"solid #674a3d 32px", "background-color":"white"});
+	addElementByGrid(element_stimul1, rowstart,rowend,columnstart,columnend, border=false);
+	//var element_stimuli2 = $("<img></img>").attr({src: "/static/images/Farmboardvertical.png",id:'farmboardright'});
+	//addElementByGrid(element_stimuli2, 3,9,2,4, border=true);
 
 }
 

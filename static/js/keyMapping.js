@@ -7,7 +7,7 @@
 unTimedColorMappingPractice = (nextPractice)=>()=>{
 
 	var configParams = {space:false,accFeedback:true,washout:true};
-	var stimSet = _.shuffle(repmat(possibleStimsNeutral,Math.ceil(numColorPracticeTrials/possibleStimsNeutral.length)));
+	var stimSet = _.shuffle(repmat(possibleStimsNeutral,Math.ceil(numUntimedColorPracticeTrials/possibleStimsNeutral.length)));
 	
 	var writeRecord = function(Record){
 
@@ -43,8 +43,13 @@ unTimedColorMappingPractice = (nextPractice)=>()=>{
 
 	var trial = new Trial(stimSet,[false],[0,0],trialTimingParams,'#m',callbacks,configParams);
 	psiTurk.showPage("stages/stage.html");
-	showBoard()
-	$("body").unbind("keydown").focus().keydown(trial.responseListener.bind(trial));
+	var experiment = document.getElementById('experiment');
+	experiment.style.backgroundImage = "url('"+ gardenImage+ "')" ;
+	experiment.style.backgroundSize = "cover"
+	experiment.style.backgroundRepeat= 'no-repeat'
+	if(garden){
+		showBoard(3,10,2,10);
+	}	$("body").unbind("keydown").focus().keydown(trial.responseListener.bind(trial));
 	trial.initiation();
 }
 
@@ -90,8 +95,13 @@ ColorMappingPractice = (nextPractice)=>()=>{
 
 	var trial = new timedTrial(stimSet,[false],[0,0],trialTimingParams,'#m',callbacks,configParams);
 	psiTurk.showPage("stages/stage.html");
-	showBoard()
-	$("body").unbind("keydown").focus().keydown(trial.responseListener.bind(trial));
+	var experiment = document.getElementById('experiment');
+	experiment.style.backgroundImage = "url('"+ gardenImage+ "')" ;
+	experiment.style.backgroundSize = "cover"
+	experiment.style.backgroundRepeat= 'no-repeat'
+	if(garden){
+		showBoard(3,10,2,10);
+	}	$("body").unbind("keydown").focus().keydown(trial.responseListener.bind(trial));
 	trial.initiation();
 }
 
@@ -138,60 +148,16 @@ ColorMappingTest = (nextPractice)=>()=>{
 
 	var trial = new Trial(stimSet,[false],[0,0],trialTimingParams,'#m',callbacks,configParams);
 	psiTurk.showPage("stages/stage.html");
-	showBoard()
-	$("body").unbind("keydown").focus().keydown(trial.responseListener.bind(trial));
-	trial.initiation();
-}
-
-
-
-FruitMappingPractice =(nextPractice) =>()=>{
-
-	console.log('inside the FruitMappingPractice')
-	var configParams = {space:false,accFeedback:true,washout:true};
-	console.log("possibleStimsNeutral is" + possibleStimsNeutral)
-
-	var stimSet = _.shuffle(repmat(possibleStimsNeutral,Math.ceil(numColorPracticeTrials/possibleStimsNeutral.length)));
-	
-	var writeRecord = function(Record){
-
-	 	Record.phase = "FruitMappingPractice";
-	 	Record.sessionNum = NaN;
-	 	Record.blockNum = NaN;
-	 	Record.intervalNum = NaN;
-	 	Record.intervalType = NaN;
-	 	Record.intervalLength = NaN;
-	 	Record.moneyEarned = NaN;
-	 	psiTurk.recordTrialData(Record);
-	};
-
-	var nextAction = function(trial){
-		console.log("inside nextAction")
-		if(trial.counter[0] < 5){
-			trial.stimSet = [possibleStimsNeutral[randi(0,possibleStimsNeutral.length-1)]];
-			console.log("trial.stimSet is" + trial.stimSet)
-			trial.initiation();
-			return;
-		}
-		//what to do after done
-		blockPartGarden(nextPractice);
+	var experiment = document.getElementById('experiment');
+	experiment.style.backgroundImage = "url('"+ gardenImage+ "')" ;
+	experiment.style.backgroundSize = "cover"
+	experiment.style.backgroundRepeat= 'no-repeat'
+	if(garden){
+		showBoard(3,10,2,10);
 	}
-
-	var callbacks = {
-		endOfSetCallback:nextAction,
-		tallyCallback:0,
-		recordStimCallback:recordStimPWI,
-		completeRecordCallback:writeRecord
-	};
-	
-	trialTimingParams.itiDuration = 500;
-
-
-
-
-	var trial = new timedTrial(stimSet,[false],[0,0],trialTimingParams,'#m',callbacks,configParams);
-	psiTurk.showPage("stages/stage.html");
-	showBoard()
 	$("body").unbind("keydown").focus().keydown(trial.responseListener.bind(trial));
 	trial.initiation();
 }
+
+
+

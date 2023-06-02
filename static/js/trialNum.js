@@ -3,6 +3,8 @@ setTrialNumByMode= (mode)=>{
 	if(test)
 	{
 		console.log("inside testmode")
+		const numUntimedColorPracticeTrials = 8;
+
 		const numColorPracticeTrials = 2;
 		const numStroopPracticeTrials = 2;
 		const numautomaticityTest =16;
@@ -18,6 +20,7 @@ setTrialNumByMode= (mode)=>{
 		const initialFundForLoss = 600;
 		
 		return{
+			numUntimedColorPracticeTrials,
 		numColorPracticeTrials,
 		numStroopPracticeTrials,
 		numautomaticityTest,
@@ -33,6 +36,7 @@ setTrialNumByMode= (mode)=>{
 	else
 	{
 		console.log("inside realmode")
+		const numUntimedColorPracticeTrials = 8;
 		const numColorPracticeTrials = 32;
 		const numStroopPracticeTrials = 48;
 		const numcolorTest =16;
@@ -47,6 +51,7 @@ setTrialNumByMode= (mode)=>{
 		const initialFundForLoss = 1200;
 
 		return{
+			numUntimedColorPracticeTrials,
 		numColorPracticeTrials,
 		numStroopPracticeTrials,
 		numcolorTest,

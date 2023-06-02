@@ -45,8 +45,13 @@ StroopPractice =(nextPractice) =>()=>{
 	
 	psiTurk.showPage("stages/stage.html");
 	var trial = new timedTrial(stimSet,[false],[0,0],trialTimingParams,'#m',callbacks,configParams);
-	showBoard()
-	$("body").unbind("keydown").focus().keydown(trial.responseListener.bind(trial));
+	var experiment = document.getElementById('experiment');
+	experiment.style.backgroundImage = "url('"+ gardenImage+ "')" ;
+	experiment.style.backgroundSize = "cover"
+	experiment.style.backgroundRepeat= 'no-repeat'
+	if(garden){
+		showBoard(3,10,2,10);
+	}	$("body").unbind("keydown").focus().keydown(trial.responseListener.bind(trial));
 	trial.initiation();
 }
 
