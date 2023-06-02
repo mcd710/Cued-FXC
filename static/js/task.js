@@ -20,9 +20,9 @@ var avgRewardWindowLength=10; /// how long to let the array get
 const PLATFORM = getUrlVars()["PLATFORM"];
 console.log(PLATFORM)
 
-//const game = getUrlVars()["game"];
-//console.log(game)
-//
+const game = getUrlVars()["game"];
+console.log(game)
+
 const gardenImageAll= '/static/images/BackgroundFarm.png'
 
 // where to go at the end of the task
@@ -43,7 +43,9 @@ const {pages,
 	instructionEfficacyLowPages,
 	instructionEfficacyALLPages,
 	startGameInstructionsOrder1,
-	startGameInstructionsOrder0,
+	startGameInstructionsOrder2,
+	startGameInstructionsOrder3,
+	startGameInstructionsOrder4,
 	BreakRandomHighPage,
 	BreakPerformanceHighPage,
 	BreakRandomLowPage,
@@ -140,7 +142,7 @@ const {blockSequence, // order of blocks= all gain
 	numSign, // numSign  = 1 
 	initialBonus, // initialBonus = 0 
 	breakForBlockType
-} = blocksEfficacyRewardMDDOnline(mycondition); 
+} = blocksEfficacyRewardPreTMS(game); 
 
 var practiceavgRewardWindow=[];
 var practiceavgRewardWindowLength=avgRewardWindowLength;
@@ -236,12 +238,17 @@ var blockPartGarden = function(practiceNext){
 			avgRewardWindow=avgRewardWindow.concat(practiceavgRewardWindow)
 			var blockType = blockSequence.shift();
 			var cueSubset = cues[blockType];
-			if (game==1){
+			if (game==1 || game==5){
 				psiTurk.doInstructions(startGameInstructionsOrder1,MainPartGardenGroupPointsStroopFXC(blockType,cueSubset,'MainTask'))
 
+			}else if(game==2 || game==6){
+				psiTurk.doInstructions(startGameInstructionsOrder2,MainPartGardenGroupPointsStroopFXC(blockType,cueSubset,'MainTask'))
+			}else if(game==3 || game==7){
+				psiTurk.doInstructions(startGameInstructionsOrder3,MainPartGardenGroupPointsStroopFXC(blockType,cueSubset,'MainTask'))
 			}else{
-				psiTurk.doInstructions(startGameInstructionsOrder0,MainPartGardenGroupPointsStroopFXC(blockType,cueSubset,'MainTask'))
+				psiTurk.doInstructions(startGameInstructionsOrder4,MainPartGardenGroupPointsStroopFXC(blockType,cueSubset,'MainTask'))
 			}
+		    
 		    
 		    break;
 		  case 'MainTask':
@@ -263,7 +270,7 @@ var blockPartGarden = function(practiceNext){
 
 // what to start the experiment with 
 $(window).load( function(){
-		blockPartGarden('automaticity')
+		blockPartGarden('Untimedkeymapping')
  	}
 );
 

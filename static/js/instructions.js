@@ -126,23 +126,38 @@ instructionsFXCICR = ()=>{
 		];
 	
 		
-		
-			const startGameInstructionsOrder1 = [
-				"FXCICRInstructions/instruct-MainStart1.html",
-				"FXCICRInstructions/instruct-MainStart2.html",
-				"FXCICRInstructions/instruct-break-HighEfficacyLowReward.html",
-				"FXCICRInstructions/instruct-ready.html"
-			];
-			//return startGameInstructionsOrder
-	
-			const startGameInstructionsOrder0 = [
-				"FXCICRInstructions/instruct-MainStart1.html",
-				"FXCICRInstructions/instruct-MainStart2.html",
-				"FXCICRInstructions/instruct-break-HighEfficacyHighReward.html",
-				"FXCICRInstructions/instruct-ready.html"
-			];
-			//return startGameInstructionsOrder
+		const startGameInstructionsOrder1 = [
+			"FXCICRInstructions/instruct-MainStart1.html",
+			"FXCICRInstructions/instruct-MainStart2.html",
+			"FXCICRInstructions/instruct-break-HighEfficacyLowReward.html",
+			"FXCICRInstructions/instruct-ready.html"
+		];
+		//return startGameInstructionsOrder
 
+		const startGameInstructionsOrder2 = [
+			"FXCICRInstructions/instruct-MainStart1.html",
+			"FXCICRInstructions/instruct-MainStart2.html",
+			"FXCICRInstructions/instruct-break-LowEfficacyLowReward.html",
+			"FXCICRInstructions/instruct-ready.html"
+		];
+		//return startGameInstructionsOrder
+
+	
+
+		const startGameInstructionsOrder3 = [
+			"FXCICRInstructions/instruct-MainStart1.html",
+			"FXCICRInstructions/instruct-MainStart2.html",
+			"FXCICRInstructions/instruct-break-LowEfficacyHighReward.html",
+			"FXCICRInstructions/instruct-ready.html"
+		];
+
+
+		const startGameInstructionsOrder4 = [
+			"FXCICRInstructions/instruct-MainStart1.html",
+			"FXCICRInstructions/instruct-MainStart2.html",
+			"FXCICRInstructions/instruct-break-HighEfficacyHighReward.html",
+			"FXCICRInstructions/instruct-ready.html"
+		];
 		
 	
 
@@ -184,7 +199,9 @@ instructionsFXCICR = ()=>{
 		instructionEfficacyLowPages,
 		instructionEfficacyALLPages,
 		startGameInstructionsOrder1,
-		startGameInstructionsOrder0,
+		startGameInstructionsOrder2,
+		startGameInstructionsOrder3,
+		startGameInstructionsOrder4,
 		BreakRandomHighPage,
 		BreakPerformanceHighPage,
 		BreakRandomLowPage,
