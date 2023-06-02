@@ -78,7 +78,6 @@ var htmlParams = {
 	title:'#title', // where to display the title
 	stim:'#m', // where to display the image
 	tally:'#bm', // where to display the counter
-	board:'#background' // for the garden task where to display the board
 };
 
 
