@@ -25,6 +25,9 @@ console.log(game)
 
 var isTrialbased = false; 
 
+var MainTaskFill="MainTaskFill";
+var PracticeFill="PracticeFill";
+
 
 const gardenImageAll= '/static/images/BackgroundFarm.png'
 
@@ -84,7 +87,7 @@ var htmlParams = {
 var intervalDurations = [6000,7000,8000,9000]; /// how long the intervals should be 
 var itiDurations = [1000,1500,2000];  /// how long the itis  should be 
 var isiDurations = [500,750]; /// how long the isis  should be 
-var test = false; // tells you if you would like to run a short version for debugging
+var test = true; // tells you if you would like to run a short version for debugging
 
 
 //set the appropriate trial numbers and test versus real mode 
