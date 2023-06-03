@@ -3,17 +3,17 @@
 
 blocksEfficacyRewardPreTMS= (game)=> {
 	
-	var blockseq1 =['performanceLow','randomHigh','randomLow','performanceHigh'];
-	var blockseq2 = ['randomLow','performanceHigh','performanceLow','randomHigh'];
+	var blockseq1 =['performanceLow','randomHigh','randomLow','performanceHigh','performanceLow','randomHigh','randomLow','performanceHigh'];
+	var blockseq2 = ['randomLow','performanceHigh','performanceLow','randomHigh','randomLow','performanceHigh','performanceLow','randomHigh'];
 	
-	var blockseq3 = ['randomHigh','performanceLow','performanceHigh','randomLow'];
-	var blockseq4 = ['performanceHigh','randomLow','randomHigh','performanceLow'];
+	var blockseq3 = ['randomHigh','performanceLow','performanceHigh','randomLow','randomHigh','performanceLow','performanceHigh','randomLow'];
+	var blockseq4 = ['performanceHigh','randomLow','randomHigh','performanceLow','performanceHigh','randomLow','randomHigh','performanceLow'];
 
-	var blockseq5 = ['performanceLow','randomHigh','performanceHigh','randomLow'];
-	var blockseq6 = ['randomLow','performanceHigh','randomHigh','performanceLow'];
+	var blockseq5 = ['performanceLow','randomHigh','performanceHigh','randomLow','performanceLow','randomHigh','performanceHigh','randomLow'];
+	var blockseq6 = ['randomLow','performanceHigh','randomHigh','performanceLow','randomLow','performanceHigh','randomHigh','performanceLow'];
 	
-	var blockseq7 = ['randomHigh','performanceLow','randomLow','performanceHigh'];
-	var blockseq8 = ['performanceHigh','randomLow','performanceLow','randomHigh'];
+	var blockseq7 = ['randomHigh','performanceLow','randomLow','performanceHigh','randomHigh','performanceLow','randomLow','performanceHigh'];
+	var blockseq8 = ['performanceHigh','randomLow','performanceLow','randomHigh','performanceHigh','randomLow','performanceLow','randomHigh'];
 
 	var blockSequence;
 
