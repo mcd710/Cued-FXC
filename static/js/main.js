@@ -136,7 +136,7 @@
 					$("#scoreCounter").remove();
 					var score = initialBonus[cueType] + numSign[interval.cueType] * values[interval.cueType] * counter[0];
 					if(numSign[cueType]<0) score = Math.max(score,0);
-					var element = $("<p></p>").attr({id:'scoreCounter'}).text(tallyheadpractice+score.toFixed(0));
+					var element = $("<p></p>").attr({id:'scoreCounter'}).text(tallyHeading+score.toFixed(0));
 					element.css({'margin-top':'0px', 'border':'dashed', 'background': 'white', 'font-size':"25px"});
 					addElement(element,tag,center=true);
 					//$(tag).append($("<p></p>").attr({id:'scoreCounter'}).text(tallyHeading[cueType] + score.toFixed(0))); //0
