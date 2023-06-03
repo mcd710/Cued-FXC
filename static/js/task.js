@@ -115,7 +115,7 @@ var trialTimingParams = {
 	itiDuration:0,  
 	feedbackDur:2000,
 	thresholdRT:250,
-	deadline:2000
+	deadline:2500
 };
 
 // trial timing used only in practice as of now.
@@ -123,14 +123,14 @@ var trialPracticeTimingParams = { //called during key mapping practice , interef
 	itiDuration:500,  
 	feedbackDur:750,
 	thresholdRT:250,
-	deadline:2000
+	deadline:2500
 };
 
 var trialIntervalTimingParams = { //called when  you have trials within an interval
 	itiDuration:0,  // if fixation inbetween stim increase
 	feedbackDur:750, // if feedback inbetween stim too fast feedback
 	thresholdRT:250, // threshold for responding 
-	deadline:2000 // only used if a timed trial 
+	deadline:2500 // only used if a timed trial 
 };
 
 
