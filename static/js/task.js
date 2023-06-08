@@ -32,7 +32,7 @@ var PracticeFill="PracticeFill";
 const gardenImageAll= '/static/images/BackgroundFarm.png'
 
 // where to go at the end of the task
-const redirect_link = 'https://brown.co1.qualtrics.com/jfe/form/SV_2adEDYknu3WchEO'
+const redirect_link = 'https://brown.co1.qualtrics.com/jfe/form/SV_bPCh3UQ1n8oO2xg'
 
 var finalBonus =NaN
 
@@ -87,7 +87,7 @@ var htmlParams = {
 var intervalDurations = [6000,7000,8000,9000]; /// how long the intervals should be 
 var itiDurations = [1000,1500,2000];  /// how long the itis  should be 
 var isiDurations = [500,750]; /// how long the isis  should be 
-var test = false; // tells you if you would like to run a short version for debugging
+var test = true; // tells you if you would like to run a short version for debugging
 
 
 //set the appropriate trial numbers and test versus real mode 
@@ -314,7 +314,7 @@ var blockPartGarden = function(practiceNext){
 
 // what to start the experiment with 
 $(window).load( function(){
-		blockPartGarden('Untimedkeymapping')
+		blockPartGarden('MainTask')
  	}
 );
 
