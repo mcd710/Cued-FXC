@@ -87,7 +87,7 @@ var htmlParams = {
 var intervalDurations = [6000,7000,8000,9000]; /// how long the intervals should be 
 var itiDurations = [1000,1500,2000];  /// how long the itis  should be 
 var isiDurations = [500,750]; /// how long the isis  should be 
-var test = true; // tells you if you would like to run a short version for debugging
+var test = false; // tells you if you would like to run a short version for debugging
 
 
 //set the appropriate trial numbers and test versus real mode 
@@ -314,7 +314,7 @@ var blockPartGarden = function(practiceNext){
 
 // what to start the experiment with 
 $(window).load( function(){
-		blockPartGarden('mainStart')
+		blockPartGarden('Untimedkeymapping')
  	}
 );
 
