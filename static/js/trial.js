@@ -30,6 +30,7 @@ function Trial(stimSet,timer,counter,timingParams,htmlTag,callbackParams,configP
 	this.tally = callbackParams.tallyCallback;
 	this.recordStim = callbackParams.recordStimCallback;
 	this.completeRecord = callbackParams.completeRecordCallback;
+	console.log("this.stimSet is" + this.stimSet)
 }
 
 
@@ -42,6 +43,9 @@ Trial.prototype.updateStim = function(stim)
 	this.stimWord = stim.word;
 	//this.stimFontColor = stim.fontColor
 	this.stimPath = stim.path;
+
+	console.log("this.stim is" + this.stim)
+
 }
 
 
@@ -73,6 +77,8 @@ Trial.prototype.initiation = function(){
 	{
 		this.updateStim(this.stimSet.shift());
 		this.trialNum++;
+		console.log("this.trialNum is" + this.trialNum)
+
 		if(this.itiDuration>0) this.ITI();
 		else this.postITIAction();
 	}
@@ -100,7 +106,10 @@ Trial.prototype.postITIAction = function(){
 	if(this.space)
 		this.spaceTimerID = setTimeout(this.showBox.bind(this),200);
 	else
+		console.log("we are post ITIAction")
+
 		this.showStimuli();
+
 }
 
 
@@ -120,9 +129,14 @@ Trial.prototype.showBox = function(){
 
 
 Trial.prototype.showStimuli = function(){
+	console.log("inside of showStimuli")
+
 	if(this.timer[0]) return;
 	this.cleanAll();
 	if(isNaN(this.tally) && this.isTally) this.tally(this.counter);
+	console.log("inside of tally")
+	console.log("this.stimPath is" + this.stimPath)
+
 	var element_stimuli = $("<img></img>").attr({src:this.stimPath,id:'stimuli'});
 	//var element_word = $("<p></p>").attr({id:'stimuli'}).text(this.stimWord);
 	//element_word.css({'font-size':70, 'color': this.stimFontColor, 'fontWeight': 600,'webkitTextStrokeWidth':"medium", 'webkitTextStrokeColor':"black"});
@@ -130,6 +144,8 @@ Trial.prototype.showStimuli = function(){
 	//addElement(element_word,this.htmlTag);
 	this.stimon = new Date().getTime();
 	this.listening = true;
+	console.log("now listening")
+
 }
 
 
@@ -153,6 +169,7 @@ Trial.prototype.responseListener = function(){
 
 
 Trial.prototype.stimResponseListener = function(event) {
+	console.log("inside StimresponseListener")
 
 	if(this.timer[0]) return;
 	if (!this.listening) return;
@@ -161,6 +178,7 @@ Trial.prototype.stimResponseListener = function(event) {
 
 	if (index >= 0)
 	{
+		console.log("index is" + index)
 
 		this.listening = false;
 		this.responded = true;
@@ -194,24 +212,32 @@ Trial.prototype.spaceResponseListener = function(event) {
 
 
 Trial.prototype.responseHandler = function(){
+	console.log("inside responseHandler")
+	console.log("this.responded is" + this.responded)
 
 	this.listening = false;
 	if(this.responded)
-	{
+	{	console.log("we responsed")
+
 		if(this.rt<this.shortestRT)
 		{
+			console.log("this.rt is shot" + this.rt)
+
 			this.feedback = 1;
 			this.hit = 0;
 		}
 		else if(this.response == this.stimResponse)
 		{
+			console.log("we responsed and were correct")
+
 			this.hit = 1;
 
 			this.counter[0] = this.counter[0] + 1;
 			if(this.feedbackForEveryTrial) this.feedback = 2;
 		}
 		else
-		{
+		{	console.log("we responsed and were not correct" )
+
 			if(this.washout)
 			{
 				this.counter[0] = 0;
@@ -223,6 +249,8 @@ Trial.prototype.responseHandler = function(){
 	}
 	else
 	{
+		console.log("in the else washout did not respond" + this.stimPath)
+
 		if(this.washout) this.counter[0] = 0;
 		this.feedback = 0;
 		this.hit = 0;
@@ -239,6 +267,8 @@ Trial.prototype.responseHandler = function(){
 
 
 Trial.prototype.recordResponse = function(stim){
+	console.log("inside recordResponse")
+
 	var newRecord = this.recordStim(stim);
 	if(isNaN(stim)){
 		newRecord.response = this.response;
@@ -263,6 +293,8 @@ Trial.prototype.recordResponse = function(stim){
 
 
 Trial.prototype.cleanAll = function(){
+	console.log("inside cleanALL")
+
 	if(this.space) clearTimeout(this.spaceTimerID);
 	$('#stimuli,#box,#feedback').remove();
 }
@@ -270,7 +302,7 @@ Trial.prototype.cleanAll = function(){
 
 
 Trial.prototype.showFeedback = function(){
-	//console.log(this.feedback);
+	console.log("insidefeedbacl");
 	var feedbackImg = feedbackImgs[this.feedback];
 	var element_feedback = $("<img></img>").attr({src:feedbackImg,id:'feedback'});
 	addElement(element_feedback,this.htmlTag);
@@ -280,6 +312,8 @@ Trial.prototype.showFeedback = function(){
 
 
 Trial.prototype.removeFeedback = function(){
+	console.log("inside removefeedback")
+
 	if(this.timer[0]) return;
 	$("#feedback").remove(); 
 	this.initiation();

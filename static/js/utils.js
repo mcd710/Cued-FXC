@@ -39,6 +39,7 @@ function closeFullscreen() {
 /*Add element to the position and specify if we want to centralize the element*/
 function addElement(element,position,center=true)
 {
+	console.log("inside of adElement")
 
   if(center) {
    if (position == '#t'){
