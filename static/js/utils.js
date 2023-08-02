@@ -52,7 +52,7 @@ function addElement(element,position,center=true)
 
     }else{
         element.css({"position": "absolute",
-    "left":"50%","top":"55%",
+    "left":"50%","top":"50%", ///modified
     "transform":"translate(-50%, -50%)"});
 
     }
