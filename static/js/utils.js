@@ -42,22 +42,35 @@ function addElement(element,position,center=true)
 	console.log("inside of adElement")
 
   if(center) {
+    console.log("center is" + center)
+    console.log("position is" + position)
+
+
    if (position == '#t'){
+    console.log("inside t else" )
+
      element.css({"position": "absolute",
     "left":"50%","top":"25%",
     "transform":"translate(-50%, -50%)"});
     }else if( position == '#bm'){
+      console.log("inside bm else" )
+
       element.css({"position": "absolute",
       "left":"50%",
       "transform":"translate(-50%, -50%)"});
 
     }else{
+      console.log("inside final else" )
+
         element.css({"position": "absolute",
     "left":"50%","top":"50%", ///modified
     "transform":"translate(-50%, -50%)"});
 
     }
 }
+console.log("ready to append element" )
+console.log("element css is"+  element.css)
+
 
   $(position).append(element);
 }
