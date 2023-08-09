@@ -416,9 +416,9 @@ practiceBlocksGardenPointsStroop =(practiceType,nextPractice) =>()=>{
 			cuedTrialTimingParams.isiDuration = isiDurationSet.shift();
 		}
 		else{
-			intervalTimingParams.intervalDur = intervalDurationSet.shift();
-			intervalTimingParams.itiDuration = itiDurationSet.shift();
-			intervalTimingParams.isiDuration = isiDurationSet.shift();
+			intervalTimingParamsPractice.intervalDur = intervalDurationSet.shift();
+			intervalTimingParamsPractice.itiDuration = itiDurationSet.shift();
+			intervalTimingParamsPractice.isiDuration = isiDurationSet.shift();
 		}
 
 
@@ -432,7 +432,7 @@ practiceBlocksGardenPointsStroop =(practiceType,nextPractice) =>()=>{
 			 Record.blockNum = NaN;
 			 Record.intervalNum = intervalID;
 			 Record.intervalType = cue[1];
-			 Record.intervalLength = intervalTimingParams.intervalDur;
+			 Record.intervalLength = intervalTimingParamsPractice.intervalDur;
 			 psiTurk.recordTrialData(Record);
 		};
 
@@ -463,7 +463,7 @@ practiceBlocksGardenPointsStroop =(practiceType,nextPractice) =>()=>{
 			}
 			else{
 				stimSet = generateStimSet(possibleStimsInCongruent,possibleStimsCongruent,numIntervalTrials);
-				interval = new Interval(intervalTimingParams,htmlParams,cue,trialIntervalTimingParams,configParams,stimSet,callbacks);
+				interval = new Interval(intervalTimingParamsPractice,htmlParams,cue,trialIntervalTimingParams,configParams,stimSet,callbacks);
 			}
 			psiTurk.showPage("stages/stage.html");
 			var experiment = document.getElementById('experiment');

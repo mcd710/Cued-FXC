@@ -133,14 +133,23 @@ var trialIntervalTimingParams = { //called when  you have trials within an inter
 	deadline:2500 // only used if a timed trial 
 };
 
+var intervalTimingParamsPractice = {
+	intervalDur:NaN,
+	itiDuration:NaN,
+	cueDuration:1000,
+	feedbackDur:2200,
+	isiDuration:NaN
+};
+
 
 var intervalTimingParams = {
 	intervalDur:NaN,
 	itiDuration:NaN,
 	cueDuration:750,
-	feedbackDur:1750,
+	feedbackDur:2000,
 	isiDuration:NaN
 };
+
 
 
 var incorrect1 = 0;
