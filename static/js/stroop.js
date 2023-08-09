@@ -27,7 +27,19 @@ const paths=["/static/images/stimuli/XXXXX_RedInk.png",
 "/static/images/stimuli/Red_BlueInk.png", 
 "/static/images/stimuli/Yellow_BlueInk.png",
 "/static/images/stimuli/Green_BlueInk.png", 
-
+"/static/images/cues/StoryEfficacyReward/AutomaticityMapping.png", 
+"/static/images/cues/StoryEfficacyReward/AutomaticityMapping.png", 
+"/static/images/cues/StoryEfficacyReward/AutomaticityMappingFinger.png", 
+"/static/images/cues/StoryEfficacyReward/button.png", 
+"/static/images/cues/StoryEfficacyReward/dice.png", 
+"/static/images/cues/StoryEfficacyReward/FullBreakdown.png", 
+"/static/images/cues/StoryEfficacyReward/high_reward_high_efficacy.png", 
+"/static/images/cues/StoryEfficacyReward/high_reward_low_efficacy.png", 
+"/static/images/cues/StoryEfficacyReward/highValueCoin.png", 
+"/static/images/cues/StoryEfficacyReward/KeyMappingXXXs.png", 
+"/static/images/cues/StoryEfficacyReward/low_reward_high_efficacy.png", 
+"/static/images/cues/StoryEfficacyReward/low_reward_low_efficacy.png", 
+"/static/images/cues/StoryEfficacyReward/lowValueCoin.png"
 ]
 
 var possibleStimsNeutral = [
